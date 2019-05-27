@@ -1,0 +1,6 @@
+[submodule "mPython"]
+	path = source/mPython
+	url = https://github.com/labplus-cn/mPython
+[submodule "micropython"]
+	path = source/micropython
+	url = https://github.com/micropython/micropython
