@@ -32,7 +32,7 @@ BPI-BIT 是一款基于 ESP32 高性能芯片，且兼容 micro:bit 设计的开
 配合专业 IDE 的支持（如：VsCode、PyCharm），以便您轻松地将代码从电脑传输到板子中，从而体验程序创作的无穷乐趣！
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: MicroPython
 
    micropython
