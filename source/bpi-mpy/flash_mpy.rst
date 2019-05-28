@@ -15,7 +15,7 @@
 在 Windows 下
 ---------------------------
 
-- 从 `BPI-BIT-MicroPython/release <https://github.com/BPI-STEAM/BPI-BIT-MicroPython/releases/tag/FlashTool>`_ 中获取烧写工具， 国内可以用 `腾讯微云 <https://share.weiyun.com/5qGEjMu>`_ 下载获得。
+- 从 `BPI-BIT-MicroPython/release <https://github.com/BPI-STEAM/BPI-BIT-MicroPython/releases/tag/FlashTool>`_ 中获取烧写工具的链接，附有国内微云网盘分流。
 
 - 下载后打开 `FlashMicroPython-*.zip` 压缩包，然后运行里面的 Flashtool.exe 工具即可。
 
