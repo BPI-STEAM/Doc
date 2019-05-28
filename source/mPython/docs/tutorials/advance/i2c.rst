@@ -22,7 +22,7 @@ I2C协议是多个设备仅使用两条线（时钟和数据线）相互通信�
 Master
 ----------
 
-大部分I2C通讯类模块，操作方法类似。mPython板子充当I2C主设备，模块作为从机设备，响应主机请求。
+大部分I2C通讯类模块，操作方法类似。MicroPython板子充当I2C主设备，模块作为从机设备，响应主机请求。
 以下SHT20模块作为演示说明，如何读取从机设备数据。
 
 
@@ -76,7 +76,7 @@ Master
 .. code-block:: python
     :linenos:
 
-    from mpython import *                   # 导入mpython 所有对象
+    from MicroPython import *                   # 导入MicroPython 所有对象
                                                                                             
     def sht20_temperature():      
         """获取SHT20模块的温度值

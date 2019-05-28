@@ -1,13 +1,13 @@
 
-.. _mpython_code:
+.. _MicroPython_code:
 
-mpython.py源码
+MicroPython.py源码
 =============
 
 
-:download:`mpython.py源码下载</../ports/esp32/modules/mpython.py>` 
+:download:`MicroPython.py源码下载</../ports/esp32/modules/MicroPython.py>` 
 
 
 
-.. literalinclude:: /../ports/esp32/modules/mpython.py
+.. literalinclude:: /../ports/esp32/modules/MicroPython.py
     :linenos:

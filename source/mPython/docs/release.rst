@@ -3,12 +3,12 @@
 固件发布
 ========
 
-mpython_v1.4.0
+MicroPython_v1.4.0
 ------------
 
 ===============  ====================================
  **发布日期**：    2019/4/22
- **固件下载**:     :download:`mpython_firmware_1.4.0 </../firmware/mpython_firmware_1.4.0.zip>`
+ **固件下载**:     :download:`MicroPython_firmware_1.4.0 </../firmware/MicroPython_firmware_1.4.0.zip>`
 ===============  ====================================
 
 **日志**：
@@ -18,12 +18,12 @@ mpython_v1.4.0
 * 修改music已知Bug；
 
 
-mpython_v1.3.0
+MicroPython_v1.3.0
 ------------
 
 ===============  ====================================  
  **发布日期**：    2019/4/8
- **固件下载**:     :download:`mpython_firmware_1.3.0 </../firmware/mpython_firmware_1.3.0.zip>`
+ **固件下载**:     :download:`MicroPython_firmware_1.3.0 </../firmware/MicroPython_firmware_1.3.0.zip>`
 ===============  ====================================
 
 **日志**：
@@ -32,28 +32,28 @@ mpython_v1.3.0
 * 修正 ntptime.py 时区错误的bug;
 
 
-mpython_v1.2.0
+MicroPython_v1.2.0
 ------------
 
 ===============  ====================================  
  **发布日期**：    2019/1/29
- **固件下载**:     :download:`mpython_firmware_1.2.0 </../firmware/mpython_firmware_1.2.0.zip>`
+ **固件下载**:     :download:`MicroPython_firmware_1.2.0 </../firmware/MicroPython_firmware_1.2.0.zip>`
 ===============  ====================================
 
 **日志**：
 
-* mpython库内置到固件,文件系统不需要刷入了;
+* MicroPython库内置到固件,文件系统不需要刷入了;
 * 修改开机动画,变为静态画面,不占用开机时间;
 * 修改代码错误提示页面,可详细指示错误位置和详细信息,keyboardinterrupt不再出现错误提示
 * 修复i2c的读取blue:bit模块的一些问题;
 * 增强内置传感器读取稳定性,错误后重试5次才报错;
 
-mpython_v1.1.1
+MicroPython_v1.1.1
 --------------
 
 ===============  ====================================  
  **发布日期**：      
- **固件下载**:     :download:`mpython_firmware_1.1.1 </../firmware/mpython_firmware_1.1.1.zip>`
+ **固件下载**:     :download:`MicroPython_firmware_1.1.1 </../firmware/MicroPython_firmware_1.1.1.zip>`
 ===============  ====================================
 
 **日志**：

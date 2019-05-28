@@ -11,7 +11,7 @@
 
 repl示例::
 
-    >>> from mpython import *
+    >>> from MicroPython import *
     >>> buzz.on()
     >>> buzz.on(1000)
     >>> buzz.off()
@@ -19,7 +19,7 @@ repl示例::
 
 完成示例::
 
-    from mpython import *
+    from MicroPython import *
 
     s=Servo(0)
     while True:
@@ -52,7 +52,7 @@ reStructuredText语法
 
 提供本地项目内下载方式
 
-:download:`mPython板子V0.9原理图 </../docs/hardware/labplus_mPython_V0.9.pdf>`
+:download:`MicroPython板子V0.9原理图 </../docs/hardware/labplus_MicroPython_V0.9.pdf>`
 
 *斜体* 
 

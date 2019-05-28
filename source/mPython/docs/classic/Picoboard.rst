@@ -7,10 +7,10 @@ Picoboard-Scratch
 
 :: 
 
-    # mPython板子模拟Scratch PicoBoard
+    # MicroPython板子模拟Scratch PicoBoard
 
     #------------------------------------------------------
-    # Channel | PicoBoard       |  mPython                |
+    # Channel | PicoBoard       |  MicroPython                |
     #------------------------------------------------------
     # 4       | resistance-A    | press of the "A" button |
     # 2       | resistance-B    | accelerometer's x       |
@@ -25,12 +25,12 @@ Picoboard-Scratch
     # 操作说明：正常启动默认进入scratch模式；退回到repl模式，同时按下复位和button b后，
     #          先松开复位按键2秒后再松开button b
 
-    from mpython import *
+    from MicroPython import *
     from machine import UART
     from machine import Pin,ADC
 
     scratchMode=True
-    ext = MPythonPin(3,PinMode.ANALOG)
+    ext = MicroPythonPin(3,PinMode.ANALOG)
 
     #48*48
     scratchlogo= bytearray([
@@ -159,7 +159,7 @@ PicoBoard上的传感器与板子的一一对应，如下表：
 
 .. admonition:: 提示
 
-    当板子模拟PicoBoard在Scratch中使用时，注意板子的传感器的数值有所变化，如在mPython中，光线传感器的检测数值范围在0~4095之间，而在Scratch中，其数值范围为0~100。在Scratch中查看板子传感器参数的方法如下：在脚本栏“更多积木”下，点击相应的积木模块。以按键A为例，在按下与未按下两种条件下，点击“阻力A传感器的值”积木，未按下数值为0，按下数值为100，其他传感器查看方法同理。
+    当板子模拟PicoBoard在Scratch中使用时，注意板子的传感器的数值有所变化，如在MicroPython中，光线传感器的检测数值范围在0~4095之间，而在Scratch中，其数值范围为0~100。在Scratch中查看板子传感器参数的方法如下：在脚本栏“更多积木”下，点击相应的积木模块。以按键A为例，在按下与未按下两种条件下，点击“阻力A传感器的值”积木，未按下数值为0，按下数值为100，其他传感器查看方法同理。
 
 板子与Scratch连接
 +++++++
@@ -185,7 +185,7 @@ Scratch软件编辑图形化程序
 退出Scratch，返回repl模式
 +++++++
 
-掌握板在scratch模式时是无法读取文件和刷入程序的。如果想返回mPython2读取文件或刷入程序，必须使板子退出scratch模式，进入repl模式。方法如下：
+掌握板在scratch模式时是无法读取文件和刷入程序的。如果想返回MicroPython2读取文件或刷入程序，必须使板子退出scratch模式，进入repl模式。方法如下：
 * 同时按下复位键和button b后，先松开复位按键2秒后，当OLED显示屏上显示“replMode”字样时再松开button b，此时成功返回到repl模式，如图所示：
 
 .. image:: /images/classic/replmode.jpg

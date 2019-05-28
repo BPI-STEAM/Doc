@@ -21,8 +21,8 @@
 
 * 在使用前,需要先到贝壳物联 https://www.bigiot.net 注册账号,并增加智能设备。
 
-* 程序中,需要用到bigiot的mPython库,你可以到 https://github.com/labplus-cn/mPython-lib 获取。 将 bigiot.py 上传到文件系统中。
-  或者你也可以用 upip.install("mPython-bigiot") 的方法获取pypi包。
+* 程序中,需要用到bigiot的MicroPython库,你可以到 https://github.com/labplus-cn/MicroPython-lib 获取。 将 bigiot.py 上传到文件系统中。
+  或者你也可以用 upip.install("MicroPython-bigiot") 的方法获取pypi包。
 
 
 设备间通讯
@@ -68,21 +68,21 @@
 
 向ID: 7947设备发送消息::
 
-  >>> device.say(device_id = 7947, msg = 'hello I am mPython')
+  >>> device.say(device_id = 7947, msg = 'hello I am MicroPython')
 
 客户端
 ~~~~~~~~~
 
 向web端或微信等客户端发送消息,你可以在平台"个人信息"查看到你的用户ID::
 
-  >>> device.say(user_id = 5600, msg = 'hello I am mPython')
+  >>> device.say(user_id = 5600, msg = 'hello I am MicroPython')
 
 群组
 ~~~~~~~~~
 
 你也可以在平台设置多个智能设备组成群组,向群组发送消息,这样,该组成员均能接收到消息,类似IP组播功能::
 
-  >>> device.say(group_id = 145, msg = 'hello I am mPython')
+  >>> device.say(group_id = 145, msg = 'hello I am MicroPython')
 
 ``say(user_id, group_id, device_id, msg)`` 该函数用于设备或客户端的对话。``user_id`` 、``group_id`` 、``device_id`` 参数分别为用户ID、群组ID、设备ID。根据对话对象选择使用参数。
 ``msg`` 为对话消息,类型为字符串。

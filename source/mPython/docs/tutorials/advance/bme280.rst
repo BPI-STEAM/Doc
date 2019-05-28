@@ -14,7 +14,7 @@ BME280是一款集成温度、湿度、气压，三位一体的环境传感器�
 
 获取bme280温湿度、气压并显示至OLED屏的示例::
 
-    from mpython import *              # 导入mpython模块
+    from MicroPython import *              # 导入MicroPython模块
 
     while True:   
         oled.fill(0)                   # 清屏
@@ -25,7 +25,7 @@ BME280是一款集成温度、湿度、气压，三位一体的环境传感器�
         oled.show()   # 刷新屏幕
         sleep(2)      # 延时2秒
 
-mpython内已实例化 ``BME280`` 类,直接使用 ``bme280`` 对象即可。获取温度值,使用 ``temperature()`` 函数,单位摄氏度。获取湿度值,使用
+MicroPython内已实例化 ``BME280`` 类,直接使用 ``bme280`` 对象即可。获取温度值,使用 ``temperature()`` 函数,单位摄氏度。获取湿度值,使用
 ``humidity()`` ,单位%。获取大气压强,使用 ``pressure()`` ,单位Pa(帕)。
 
 

@@ -6,7 +6,7 @@
 
 例：触摸不同按键，点亮不同色RGB灯。
 ::
-  from mpython import *
+  from MicroPython import *
 
   while True:
       if(touchPad_P.read() < 100): 
@@ -41,9 +41,9 @@
           rgb.write()   
         
 
-首先导入 mpython模块，尝试用手指触摸P金手指处，使用 ``read()`` 读取值。观察变化::
+首先导入 MicroPython模块，尝试用手指触摸P金手指处，使用 ``read()`` 读取值。观察变化::
 
-  >>> from mpython import *
+  >>> from MicroPython import *
   >>> touchPad_P.read()
   643
   >>> touchPad_P.read()

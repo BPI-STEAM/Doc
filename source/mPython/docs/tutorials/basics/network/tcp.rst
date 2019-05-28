@@ -32,7 +32,7 @@ TCP编程
 本教程的这一部分将介绍如何作为客户端或服务端使用TCP套接字。有关更全面的socket模块的使用，请查阅 :mod:`usocket` 模块。
 以下教程需要使用到TCP网络调试工具。下文使用的是IOS的 **Network Test Utility** ，可在APP Store搜索安装，android系统请点击下载。 :download:`Network Test Utility.apk </../docs/tools/com.jca.udpsendreceive.2.apk>` 
 
-声明：这里的TCP客户端（tcpClient）是你的电脑或者手机，而TCP服务端（tcpServer）是mpython板子。
+声明：这里的TCP客户端（tcpClient）是你的电脑或者手机，而TCP服务端（tcpServer）是MicroPython板子。
 
 TCP客户端
 ~~~~~~~~
@@ -55,7 +55,7 @@ tcpClient示例:
     :linenos:
 
     import socket
-    from mpython import *
+    from MicroPython import *
 
     host = "172.25.1.63"          # TCP服务端的IP地址
     port = 5001                   # TCP服务端的端口
@@ -72,7 +72,7 @@ tcpClient示例:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)   # 创建TCP的套接字,也可以不给定参数。默认为TCP通讯方式
         s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # 设置socket属性
         s.connect((host,port))                                  # 设置要连接的服务器端的IP和端口,并连接
-        s.send("hello mPython,I am TCP Client")                 # 向服务器端发送数据
+        s.send("hello MicroPython,I am TCP Client")                 # 向服务器端发送数据
 
         while True:
             data = s.recv(1024)                                 # 从服务器端套接字中读取1024字节数据
@@ -103,7 +103,7 @@ tcpClient示例:
 TCP Server IP选择手机在该网内的IP地址 ，端口号可设范围0~65535。然后，点击Listen，开始监听端口。
 在程序中设置上文选择的TCP服务端IP地址 ``host`` 和端口号 ``port`` ，重启运行程序。
 
-当连接Server成功后，TCP Server会接收到Client发送的文本 ``hello mPython,I am TCP Client`` 。此时您在TCP Server发送文本给Client，板子会
+当连接Server成功后，TCP Server会接收到Client发送的文本 ``hello MicroPython,I am TCP Client`` 。此时您在TCP Server发送文本给Client，板子会
 接收到文本并将文本显示至oled屏上。
 
 
@@ -132,7 +132,7 @@ tcpServer示例:
     :linenos:
 
     import socket
-    from mpython import *
+    from MicroPython import *
 
     port=5001                   # TCP服务端的端口,range0~65535
     listenSocket=None              

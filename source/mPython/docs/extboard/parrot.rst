@@ -90,7 +90,7 @@
 Python库
 +++++++++
 
-- 掌控拓展板 ``parrot`` 模块: https://github.com/labplus-cn/mPython-lib
+- 掌控拓展板 ``parrot`` 模块: https://github.com/labplus-cn/MicroPython-lib
 - :ref:`auido<audio>` 模块 : 用于音频播放功能
 
 

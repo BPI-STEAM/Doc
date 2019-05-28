@@ -57,7 +57,7 @@ UART通信基本上使用2个引脚进行数据传输。Tx-用于发送数据的
 
 ::
 
-    from mpython import *                            # 导入mpython所有对象
+    from MicroPython import *                            # 导入MicroPython所有对象
 
     uart=UART(1,baudrate=9600,tx=Pin.P15,rx=Pin.P16) # 构建UART对象，设置波特率为9600，TX、RX 引脚分别为P15、P16
 
@@ -84,7 +84,7 @@ HC06(blue:bit 蓝牙从机模块)默认出厂的波特率为9600。所以我们�
 板子接收串口数据，并将数据显示至OLED屏幕上::
 
 
-    from mpython import *                               # 导入mpython所有对象
+    from MicroPython import *                               # 导入MicroPython所有对象
 
     uart=UART(1,baudrate=9600,tx=Pin.P15,rx=Pin.P16,timeout=200)    # 实例UART，设置波特率9600，TX、RX映射引脚为P15、P16，超时设为200ms
 

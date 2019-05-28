@@ -14,7 +14,7 @@
 
 [micropython 官方](http://docs.micropython.org/en/latest/esp32/quickref.html)
 
-[mPython 中文](https://mpython.readthedocs.io/zh/master/)
+[MicroPython 中文](https://MicroPython.readthedocs.io/zh/master/)
 
 ## python
 
@@ -32,7 +32,7 @@ pip install sphinx, sphinx_rtd_theme, recommonmark
 
 ```unix
 git submodule add https://github.com/micropython/micropython
-git submodule add https://github.com/labplus-cn/mPython
+git submodule add https://github.com/labplus-cn/MicroPython
 
 git submodule update --init --recursive
 ```

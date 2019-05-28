@@ -10,9 +10,9 @@
 准备
 -------
 
-首先,需要先将拓展板的 ``parrot`` 模块,你可以到 https://github.com/labplus-cn/mPython_parrot 获取。
+首先,需要先将拓展板的 ``parrot`` 模块,你可以到 https://github.com/labplus-cn/MicroPython_parrot 获取。
 将 ``parrot.py`` 上传到文件系统中。
-或者你也可以用 ``upip.install("mPython-parrot")`` 的方法获取pypi包。
+或者你也可以用 ``upip.install("MicroPython-parrot")`` 的方法获取pypi包。
 
 
 电机驱动
@@ -91,7 +91,7 @@ M1、M2,正转速度设为80::
 播放网络MP3音频::
 
     import audio                                    # 导入audio
-    from mpython import wifi                        # 导入wifi
+    from MicroPython import wifi                        # 导入wifi
 
     mywifi=wifi()                                   # 实例wifi类
     mywifi.connectWiFi('ssid','password')           # 连接 WiFi 网络
@@ -139,7 +139,7 @@ TTS是Text To Speech的缩写，即“从文本到语音”，是人机对话的
 
 ::
 
-    from mpython import *                                       # 导入mpython模块
+    from MicroPython import *                                       # 导入MicroPython模块
     import audio                                                # 导入audio模块
     import ntptime                                              # 导入授时模块
 

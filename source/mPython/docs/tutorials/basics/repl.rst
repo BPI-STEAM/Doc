@@ -3,7 +3,7 @@ REPL
 
 使用MicroPython的一个主要的优点是交互式的REPL，REPL（read-evaluate-print loop）代表读取﹣求值﹣输出循环。
 REPL对于学习一门新的编程语言具有很大的帮助，因为它能对初学者写的程序立刻做出回应，这意味着你执行代码，并能马上查看结果，而无需经过先编译再上传的繁琐步骤。
-如果mPython板子要让REPL在Windows上工作，您需要先安装cp2104的串口驱动程序。
+如果MicroPython板子要让REPL在Windows上工作，您需要先安装cp2104的串口驱动程序。
 
 
 串口连接
@@ -21,8 +21,8 @@ MicroPython将运行您输入的代码并打印结果（如果有的话）；如
 
 尝试在提示符下输入以下内容::
 
-    >>> print('hello mPython')
-    hello mPython
+    >>> print('hello MicroPython')
+    hello MicroPython
 
 
 请注意，您无需键入 ``>>>`` 箭头，它们表示您应在此提示符后键入文本，其下一行是响应的内容。
@@ -37,9 +37,9 @@ MicroPython将运行您输入的代码并打印结果（如果有的话）；如
     408
 
 
-可以尝试下载mPython的OLED显示屏上显示字符::
+可以尝试下载MicroPython的OLED显示屏上显示字符::
 
-    >>> from mpython import *
+    >>> from MicroPython import *
     >>> oled.DispChar('hello,world!',0,0)
     >>> oled.show()
     >>> 

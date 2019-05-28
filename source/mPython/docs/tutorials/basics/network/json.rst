@@ -24,7 +24,7 @@ http协议采用的是请求/响应模型，浏览器或客户端发出请求，
 
 例：将网站中的部分信息显示在OLED显示屏上
 ::
-    from mpython import*
+    from MicroPython import*
     import json
     import urequests           # urequests模块是一个用于网络访问的模块
 
@@ -55,9 +55,9 @@ http协议采用的是请求/响应模型，浏览器或客户端发出请求，
 
 我们在REPL交互式的编程环境下逐步解析，能更加直观地查看结果。
 
-使用前，导入mpython、json、urequests模块::
+使用前，导入MicroPython、json、urequests模块::
 
-    >>> from mpython import*
+    >>> from MicroPython import*
     >>> import json
     >>> import urequests
 

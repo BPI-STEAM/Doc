@@ -1,4 +1,4 @@
-mPython X IDE
+MicroPython X IDE
 ====================
 
 软件安装
@@ -6,19 +6,19 @@ mPython X IDE
 
 目前最新版本为0.2.4，支持Windows 7/8/10、Windows XP、Macos、树莓派、虚谷号： 
 
-http://static.steamaker.cn/files/mPythonXSetup0.2.4.exe
+http://static.steamaker.cn/files/MicroPythonXSetup0.2.4.exe
 (Win 7 / 8 / 10)
 
-http://static.steamaker.cn/files/mPythonXSetup0.2.4_XP.exe
+http://static.steamaker.cn/files/MicroPythonXSetup0.2.4_XP.exe
 (Win XP)
 
-http://static.steamaker.cn/files/mpythonx-0.2.4-mac.zip
+http://static.steamaker.cn/files/MicroPythonx-0.2.4-mac.zip
 (Mac OS)
 
-http://static.steamaker.cn/files/mpythonx-0.2.4-arm.tar.gz
+http://static.steamaker.cn/files/MicroPythonx-0.2.4-arm.tar.gz
 (树莓派)
 
-http://static.steamaker.cn/files/mpythonx-0.2.4-arm64.tar.gz
+http://static.steamaker.cn/files/MicroPythonx-0.2.4-arm64.tar.gz
 (虚谷号，待测试)
 
 附：板子的Mac驱动
@@ -39,14 +39,14 @@ https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip
 接入硬件
 -----------
 
-点击桌面快捷方式mPythonX，打开软件主界面。
+点击桌面快捷方式MicroPythonX，打开软件主界面。
 
-.. image:: /images/software/mPythonX/mPythonX_1.png
+.. image:: /images/software/MicroPythonX/MicroPythonX_1.png
 
 
 用USB线接入板子。正确识别后，“连接串口”处会出现COM口，如下图：
 
-.. image:: /images/software/mPythonX/mPythonX_2.png
+.. image:: /images/software/MicroPythonX/MicroPythonX_2.png
 
 
 
@@ -61,55 +61,55 @@ https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip
 
 “保存代码”只保存程序对应的代码，后缀为py：
 
-.. image:: /images/software/mPythonX/mPythonX_3.png
+.. image:: /images/software/MicroPythonX/MicroPythonX_3.png
 
 点击“本机读取”，加载保存的py文件：
 
-.. image:: /images/software/mPythonX/mPythonX_5.png
+.. image:: /images/software/MicroPythonX/MicroPythonX_5.png
 
 读取效果如图：
 
-.. image:: /images/software/mPythonX/mPythonX_4.png
+.. image:: /images/software/MicroPythonX/MicroPythonX_4.png
 
 “保存模块”保存程序对应的代码及图形化模块，后缀为xml：
 
-.. image:: /images/software/mPythonX/mPythonX_6.png
+.. image:: /images/software/MicroPythonX/MicroPythonX_6.png
 
 点击“本机读取”，加载保存的xml文件，读取效果如图：
 
-.. image:: /images/software/mPythonX/mPythonX_7.png
+.. image:: /images/software/MicroPythonX/MicroPythonX_7.png
 
 模块提示
 ````````
 鼠标停留在模块上会有提示：
 
-.. image:: /images/software/mPythonX/mPythonX_8.png
+.. image:: /images/software/MicroPythonX/MicroPythonX_8.png
 
 帮助文档
 ````````
 在模块上，点击鼠标右键：
 
-.. image:: /images/software/mPythonX/mPythonX_9.png
+.. image:: /images/software/MicroPythonX/MicroPythonX_9.png
 
 点击帮助，即可跳转至帮助文档：
 
-.. image:: /images/software/mPythonX/mPythonX_10.png
+.. image:: /images/software/MicroPythonX/MicroPythonX_10.png
 
 切换图形/代码模式
 ````````
 
 点击“代码模式”/“图形模式”，即可实现对应切换：
 
-.. image:: /images/software/mPythonX/mPythonX_11.png
+.. image:: /images/software/MicroPythonX/MicroPythonX_11.png
 
-.. image:: /images/software/mPythonX/mPythonX_12.png
+.. image:: /images/software/MicroPythonX/MicroPythonX_12.png
 
 改变图形区/代码区大小
 ````````
 
 鼠标停留在圈红的灰色三角上，按住左键左右拖动即可：
 
-.. image:: /images/software/mPythonX/mPythonX_13.png
+.. image:: /images/software/MicroPythonX/MicroPythonX_13.png
 
 
 代码编辑区
@@ -117,7 +117,7 @@ https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip
 
 代码联想：
 
-.. image:: /images/software/mPythonX/mPythonX_14.png
+.. image:: /images/software/MicroPythonX/MicroPythonX_14.png
 
 
 运行/刷入
@@ -130,7 +130,7 @@ https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip
 
 点击“连接串口”，按钮字样变成“断开连接”，即可开始运行/刷入：
 
-.. image:: /images/software/mPythonX/mPythonX_15.png
+.. image:: /images/software/MicroPythonX/MicroPythonX_15.png
 
 .. Note::
 
@@ -141,11 +141,11 @@ https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip
 
 圈红处是反馈的信息，包括硬件信息、代码报错信息等：
 
-.. image:: /images/software/mPythonX/mPythonX_16.png
+.. image:: /images/software/MicroPythonX/MicroPythonX_16.png
 
 比如，红字为代码报错信息：
 
-.. image:: /images/software/mPythonX/mPythonX_17.png
+.. image:: /images/software/MicroPythonX/MicroPythonX_17.png
 
 读出上一次刷入的代码
 ````````
@@ -158,7 +158,7 @@ https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip
 
 点击“恢复固件”，按照提示操作：
 
-.. image:: /images/software/mPythonX/mPythonX_18.png
+.. image:: /images/software/MicroPythonX/MicroPythonX_18.png
 
 .. Hint::
   

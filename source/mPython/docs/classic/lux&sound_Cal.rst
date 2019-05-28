@@ -5,7 +5,7 @@
 
 ::
 
-    from mpython import *
+    from MicroPython import *
 
     u=UI(oled)
     while True:

@@ -6,7 +6,7 @@
 例：定时警报器
 ::
 
-    from mpython import *
+    from MicroPython import *
     from machine import Timer
     import music
 
@@ -24,9 +24,9 @@
         oled.fill(0) 
 
 
-使用前，导入mpython、Timer、music模块::
+使用前，导入MicroPython、Timer、music模块::
 
-    from mpython import *
+    from MicroPython import *
     from machine import Timer
     import music
 

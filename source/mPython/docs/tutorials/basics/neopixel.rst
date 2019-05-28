@@ -1,13 +1,13 @@
 RGB LED
 =====================
 
-mPython板子载3颗WS2812灯珠，WS2812是一种集成了电流控制芯片的低功耗的RGB三色灯，可实现256级亮度显示，完成16777216种颜色的全真色彩显示。采用特殊的单线通讯方式控制RGB灯的颜色，使用简单。
+MicroPython板子载3颗WS2812灯珠，WS2812是一种集成了电流控制芯片的低功耗的RGB三色灯，可实现256级亮度显示，完成16777216种颜色的全真色彩显示。采用特殊的单线通讯方式控制RGB灯的颜色，使用简单。
 
 板载RGB LED
 ----------
 例：点亮RGB LED
 ::
-    from mpython import *
+    from MicroPython import *
 
     rgb[0] = (255, 0, 0)  # 设置为红色，全亮度
     rgb[1] = (0, 128, 0)  # 设定为绿色，半亮度
@@ -15,11 +15,11 @@ mPython板子载3颗WS2812灯珠，WS2812是一种集成了电流控制芯片的
     rgb.write()
 
 
-首先导入mpython模块::
+首先导入MicroPython模块::
 
-    from mpython import *
+    from MicroPython import *
     
-.. Note:: 导入mpython模块后，会为掌控创建一个NeoPixel对象rgb,控制板载的RGB只需对rgb对象操作。
+.. Note:: 导入MicroPython模块后，会为掌控创建一个NeoPixel对象rgb,控制板载的RGB只需对rgb对象操作。
 
 设置颜色::
 
@@ -51,7 +51,7 @@ mPython板子载3颗WS2812灯珠，WS2812是一种集成了电流控制芯片的
 例：点亮外部彩带
 ::
 
-    from mpython import *
+    from MicroPython import *
     import neopixel
     np = neopixel.NeoPixel(Pin(Pin.P15), n=24,bpp=3,timing=1)
 
@@ -140,4 +140,4 @@ mPython板子载3颗WS2812灯珠，WS2812是一种集成了电流控制芯片的
 .. Hint:: 
 
    | mPyhton提供 ``neopixel`` 增强版 ``ledstrip`` 模块，已封装有更丰富的neopixel显示效果，操作简单。详细说明，请到以下链接。
-   | mPython-ledstrip：https://github.com/labplus-cn/mPython_ledstrip
+   | MicroPython-ledstrip：https://github.com/labplus-cn/MicroPython_ledstrip

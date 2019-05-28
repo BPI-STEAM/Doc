@@ -38,8 +38,8 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
    bpi-dev/mpy-tutorials
    bpi-dev/mpy-release
 
-   mPython/docs/library/pythonStd/index.rst
-   mPython/docs/library/micropython/index.rst
+   MicroPython/docs/library/pythonStd/index.rst
+   MicroPython/docs/library/micropython/index.rst
    micropython/docs/index
 
 用户可以通过烧写 Webduino 固件，就能够使用面向全世界的 Webduino Blockly 积木化在线编程。
@@ -61,7 +61,7 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
 .. toctree::
    :maxdepth: 2
    :caption: 引用区域
-   mPython/docs/index
+   MicroPython/docs/index
    micropython/docs/index
 .. 
 

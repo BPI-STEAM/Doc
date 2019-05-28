@@ -9,7 +9,7 @@
 :: 
 
     import ntptime,network     # 导入国际标准时间、网络模块
-    from mpython import*
+    from MicroPython import*
     from machine import Timer  # 导入计时模块
 
     mywifi=wifi()
@@ -45,7 +45,7 @@
 
 .. admonition:: 提示
 
- 关于WiFi连接，可参见 :ref:`wifi类<mpython.wifi>` 模块了解更多使用方法。
+ 关于WiFi连接，可参见 :ref:`wifi类<MicroPython.wifi>` 模块了解更多使用方法。
  
 ::
 
@@ -94,7 +94,7 @@
 ::
     
     import ntptime,network   
-    from mpython import*
+    from MicroPython import*
     from machine import Timer
 
     mywifi=wifi()

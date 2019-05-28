@@ -5,7 +5,7 @@
 
 .. Attention:: 
 
-    你可以查阅 :ref:`板子接口引脚说明<mPythonPindesc>` ,了解可供使用的模拟引脚 。
+    你可以查阅 :ref:`板子接口引脚说明<MicroPythonPindesc>` ,了解可供使用的模拟引脚 。
 
 
 .. _analog_in:
@@ -24,9 +24,9 @@
 
 以下是使用P0引脚读取模拟输入::
 
-    from mpython import *           # 导入mpython模块
+    from MicroPython import *           # 导入MicroPython模块
 
-    p0=MPythonPin(0,PinMode.ANALOG)     # 实例化MPythonPin,将P0设置为"PinMode.ANALOG"模式
+    p0=MicroPythonPin(0,PinMode.ANALOG)     # 实例化MicroPythonPin,将P0设置为"PinMode.ANALOG"模式
     while True:
         value=p0.read_analog()          # 读取P0引脚模拟量
         oled.DispChar("analog:%d" %value,30,20)
@@ -36,12 +36,12 @@
 
 ::
     
-    from mpython import *
-    p0=MPythonPin(0,PinMode.ANALOG)
+    from MicroPython import *
+    p0=MicroPythonPin(0,PinMode.ANALOG)
 
 .. Note:: 
 
-    ``MPythonPin`` 实例化。``mode`` 设置为 ``PinMode.ANALOG`` 模拟输入模式。
+    ``MicroPythonPin`` 实例化。``mode`` 设置为 ``PinMode.ANALOG`` 模拟输入模式。
 
 
 
@@ -62,9 +62,9 @@ EXT鳄鱼夹
 
 EXT连接是板子的P3引脚::
 
-    from mpython import *           # 导入mpython模块
+    from MicroPython import *           # 导入MicroPython模块
 
-        p3=MPythonPin(3,PinMode.ANALOG)     # 实例化MPythonPin,将P3设置为"PinMode.ANALOG"模式
+        p3=MicroPythonPin(3,PinMode.ANALOG)     # 实例化MicroPythonPin,将P3设置为"PinMode.ANALOG"模式
         while True:
             value=p3.read_analog()          # 读取EXT(P3)引脚模拟量
             oled.DispChar("analog:%d" %value,30,20)
@@ -88,9 +88,9 @@ EXT连接是板子的P3引脚::
 
 输出某电压的PWM信号::
 
-    from mpython import *           # 导入mpython模块
+    from MicroPython import *           # 导入MicroPython模块
 
-    p0=MPythonPin(0,PinMode.PWM)     # 实例化MPythonPin,将P0设置为"PinMode.PWM"模式
+    p0=MicroPythonPin(0,PinMode.PWM)     # 实例化MicroPythonPin,将P0设置为"PinMode.PWM"模式
 
     voltage=2.0                      # 电压2V
     p0.write_analog(int(voltage/3.3*1023))    #计算对应电压PWM的占空比    

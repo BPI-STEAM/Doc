@@ -66,7 +66,7 @@ OneNET数据点上报格式
 完整程序示例::
 
     from umqtt.simple import MQTTClient
-    from mpython import *
+    from MicroPython import *
     from machine import Timer
     import json
 

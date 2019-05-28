@@ -138,9 +138,9 @@
 
 示例::
 
-  >>> print(random.choice("mPython"))
+  >>> print(random.choice("MicroPython"))
   m
-  >>> print(random.choice("mPython"))
+  >>> print(random.choice("MicroPython"))
   n
   >>> print(random.choice([0, 2, 4, 3]))
   3

@@ -1,4 +1,4 @@
-mPython2 IDE
+MicroPython2 IDE
 ====================
 
 软件安装
@@ -6,11 +6,11 @@ mPython2 IDE
 
 目前有三个下载地址（for Windows 64位、Windows 32位、MacOS）：
 
-http://static.steamaker.cn/files/mPython2_0.2.5_win64.exe
+http://static.steamaker.cn/files/MicroPython2_0.2.5_win64.exe
 
-http://static.steamaker.cn/files/mPython2_0.2.5_win32.exe
+http://static.steamaker.cn/files/MicroPython2_0.2.5_win32.exe
 
-http://static.steamaker.cn/files/mPython2_0.2.5_macos.zip
+http://static.steamaker.cn/files/MicroPython2_0.2.5_macos.zip
 
 
 根据操作系统选择不同的版本下载，目前支持Win 7 / 8 / 10、MacOS，不支持XP系统。
@@ -18,9 +18,9 @@ http://static.steamaker.cn/files/mPython2_0.2.5_macos.zip
 .. Attention:: 
 
   因为Python调用路径的原因，程序不可以安装在中文目录下。
-  程序默认会安装在Windows用户目录下，如：C:\\Users\\{用户名}\\AppData\\Local\\mPython2
+  程序默认会安装在Windows用户目录下，如：C:\\Users\\{用户名}\\AppData\\Local\\MicroPython2
   有的用户名为中文，使用默认路径会导致安装后的快捷方式无法正确打开
-  请修改路径，如下图，修改为：D:\\mPython2
+  请修改路径，如下图，修改为：D:\\MicroPython2
 
 
 .. image:: /images/software/software_1.png
@@ -40,12 +40,12 @@ http://static.steamaker.cn/files/mPython2_0.2.5_macos.zip
 接入硬件
 -----------
 
-点击桌面快捷方式mPython2，打开软件主界面。
+点击桌面快捷方式MicroPython2，打开软件主界面。
 
 .. image:: /images/software/software_3.png
 
 用USB线接入板子。如果是初次接入，Windows可能要花费比较多的时间才能识别出板子，正确识别后，
-软件会自动弹出提示，提示切换到：掌控（mPython）模式，如下图：
+软件会自动弹出提示，提示切换到：掌控（MicroPython）模式，如下图：
 
 .. image:: /images/software/software_4.png
 
@@ -83,14 +83,14 @@ http://static.steamaker.cn/files/mPython2_0.2.5_macos.zip
 
 写入基础库
 ````````
-板子文件区菜单自带基础库mpython.py，初次使用需要先把基础库写入板子。
-如图，在板子文件区任意地方，鼠标右键点击“写入基础库(mpython.py)”
+板子文件区菜单自带基础库MicroPython.py，初次使用需要先把基础库写入板子。
+如图，在板子文件区任意地方，鼠标右键点击“写入基础库(MicroPython.py)”
 
 .. image:: /images/software/software_9.png
 
 .. Note::
 
-  写入基础库的目的是：以后在程序中可以使用 from mpython import * 的语句
+  写入基础库的目的是：以后在程序中可以使用 from MicroPython import * 的语句
 
 向板子写入代码文件
 ````````
@@ -260,7 +260,7 @@ http://static.steamaker.cn/files/mPython2_0.2.5_macos.zip
 
 .. image:: /images/software/software_24.png
 
-文件系统出现boot.py及mpython.py即恢复固件成功。
+文件系统出现boot.py及MicroPython.py即恢复固件成功。
 
 .. image:: /images/software/software_25.png
 
@@ -273,6 +273,6 @@ http://static.steamaker.cn/files/mPython2_0.2.5_macos.zip
 
 .. image:: /images/software/software_27.png
 
-写入成功即可见板子文件增加了mpython.py。
+写入成功即可见板子文件增加了MicroPython.py。
 
 .. image:: /images/software/software_28.png

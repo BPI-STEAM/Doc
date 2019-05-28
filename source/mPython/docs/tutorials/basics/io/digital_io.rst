@@ -8,7 +8,7 @@
 
 .. Attention:: 
 
-    除P2(只限数字输入)P3,P4,P10以外,其他引脚均可是使用数字输入、输出模式。有关更详细说明,请查看 :ref:`板子接口引脚说明<mPythonPindesc>` 。
+    除P2(只限数字输入)P3,P4,P10以外,其他引脚均可是使用数字输入、输出模式。有关更详细说明,请查看 :ref:`板子接口引脚说明<MicroPythonPindesc>` 。
 
 
 数字输入
@@ -16,9 +16,9 @@
 
 首先,从如何读取引脚的数字输入开始。以下使用板子内置的按键a,作为按键输入::
 
-    from mpython import *           # 导入mpython模块
+    from MicroPython import *           # 导入MicroPython模块
 
-    p5=MPythonPin(5,PinMode.IN)     # 实例化MPythonPin,将按键a引脚(P5)设置为"PinMode.IN"模式
+    p5=MicroPythonPin(5,PinMode.IN)     # 实例化MicroPythonPin,将按键a引脚(P5)设置为"PinMode.IN"模式
 
     while True:
         value=p5.read_digital()      # 读取P5引脚的数字输入
@@ -32,13 +32,13 @@
     
 ::
 
-    from mpython import *
-    p5=MPythonPin(5,PinMode.IN) 
+    from MicroPython import *
+    p5=MicroPythonPin(5,PinMode.IN) 
     
 
-使用前，请务必先将 mpython 模块导入，方可使用。
+使用前，请务必先将 MicroPython 模块导入，方可使用。
 
-实例化引脚对象并设置模式。这里使用到 ``MPythonPin(pin, mode=PinMode.IN,pull=None)`` 类。
+实例化引脚对象并设置模式。这里使用到 ``MicroPythonPin(pin, mode=PinMode.IN,pull=None)`` 类。
 ``pin`` 是您要访问的引脚。如果未指定mode，则默认为 ``PinMode.IN`` 。如果未指定pull，则默认为 ``None`` 。
 
 ::
@@ -53,9 +53,9 @@
 
 以下是简单的驱动外部LED灯闪烁::
 
-    from mpython import *           # 导入mpython模块
+    from MicroPython import *           # 导入MicroPython模块
 
-    p0=MPythonPin(0,PinMode.OUT)     # 实例化MPythonPin,将P0设置为"PinMode.OUT"模式
+    p0=MicroPythonPin(0,PinMode.OUT)     # 实例化MicroPythonPin,将P0设置为"PinMode.OUT"模式
 
     while True:
         p0.write_digital(1)          # P0写高电平
@@ -66,18 +66,18 @@
 
 .. admonition:: 材料、连接方式
 
-    上面需要使用到一块面包板、1个LED灯、mPython拓展板、杜邦线。LED灯的正极连接至板子的P0引脚,LED负极连接至板子的GND。
+    上面需要使用到一块面包板、1个LED灯、MicroPython拓展板、杜邦线。LED灯的正极连接至板子的P0引脚,LED负极连接至板子的GND。
 
 .. image:: /images/tutorials/blink.gif
 
 ::
 
-    p0=MPythonPin(0,PinMode.OUT)  
+    p0=MicroPythonPin(0,PinMode.OUT)  
 
 
 .. Note:: 
 
-    ``MPythonPin`` 实例化。``mode`` 设置为 ``PinMode.OUT`` 数字输出模式。
+    ``MicroPythonPin`` 实例化。``mode`` 设置为 ``PinMode.OUT`` 数字输出模式。
 
 对P0引脚写高低电平::
 
@@ -101,9 +101,9 @@
 
 以下使用板子内置的按键a((P5引脚),作为输入中断,按下按键 A 时蜂鸣器发出声音::
 
-    from mpython import *           # 导入mpython模块
+    from MicroPython import *           # 导入MicroPython模块
     import music                    # 导入music模块
-    p5=MPythonPin(5,PinMode.IN)     # 实例化MPythonPin,将P5设置为"PinMode.IN"模式
+    p5=MicroPythonPin(5,PinMode.IN)     # 实例化MicroPythonPin,将P5设置为"PinMode.IN"模式
 
     def BuzzOn(_):                    # 定义中断的回调函数  
         music.play(music.BA_DING,wait=False)
@@ -115,9 +115,9 @@
     效果和时用 ``button_a.irq()`` 按键中断时一样的,button_a的中断也是使用到 ``Pin.irq`` 的方法。
 
 
-我们首先实例化MPythonPin,将P5引脚配置为 ``PinMode.IN`` ::
+我们首先实例化MicroPythonPin,将P5引脚配置为 ``PinMode.IN`` ::
 
-    p5=MPythonPin(5,PinMode.IN) 
+    p5=MicroPythonPin(5,PinMode.IN) 
 
 定义回调函数::
 
@@ -136,6 +136,6 @@
 .. Note::
 
     我们将P5设置为仅在下降沿触发  ``Pin.IRQ_FALLING`` （当它从高电平变为低电平时）。设置回调函数
-    handler="你定义中断处理的回调函数"。更详细的触发方式，请查阅 :ref:`MPythonPin.irq <MPythonPin.irq>` 。
+    handler="你定义中断处理的回调函数"。更详细的触发方式，请查阅 :ref:`MicroPythonPin.irq <MicroPythonPin.irq>` 。
 
 

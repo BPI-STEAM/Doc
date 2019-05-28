@@ -1,7 +1,7 @@
 硬件概述
 ====================
 
-mPython掌控是一块MicroPython微控制器板，很好的支持MicroPython/Python软件上功能。
+MicroPython掌控是一块MicroPython微控制器板，很好的支持MicroPython/Python软件上功能。
 
 .. image:: /images/掌控-立2.png
 
@@ -58,7 +58,7 @@ mPython掌控是一块MicroPython微控制器板，很好的支持MicroPython/Py
 .. image:: /images/布局-背面.png
   :width: 800px
 
-.. _mpython_pinout:
+.. _MicroPython_pinout:
 
 引脚定义
 --------------
@@ -72,7 +72,7 @@ mPython掌控是一块MicroPython微控制器板，很好的支持MicroPython/Py
 .. image:: /images/板子-pinout_wroom.png
   :width: 800px
 
-.. _mPythonPindesc:
+.. _MicroPythonPindesc:
 
 板子接口引脚说明
 ++++++++++++++++
@@ -118,7 +118,7 @@ mPython掌控是一块MicroPython微控制器板，很好的支持MicroPython/Py
 原理图
 ++++++
 
-* :download:`mPython板子V0.9原理图 </../docs/hardware/labplus_mPython_V0.9.pdf>`
+* :download:`MicroPython板子V0.9原理图 </../docs/hardware/labplus_MicroPython_V0.9.pdf>`
 
 主要数据手册
 +++++++
@@ -132,4 +132,4 @@ mPython掌控是一块MicroPython微控制器板，很好的支持MicroPython/Py
 外观规格图
 +++++++
 
-* :download:`mPython板子外观规格图 </../docs/hardware/掌控-外观规格图20190218..rar>`
+* :download:`MicroPython板子外观规格图 </../docs/hardware/掌控-外观规格图20190218..rar>`

@@ -4,7 +4,7 @@
 
 例：通过网络获取气象信息，并将气象信息反馈到oled屏上。
 ::
-    from mpython import*
+    from MicroPython import*
     import json
     import urequests                    #用于网络访问的模块
     from seniverse import *             #天气图标模块
@@ -77,9 +77,9 @@
     :align: center
     :scale: 60 %
 
-使用前，导入mpython、json、urequests、Timer和天气图标seniverse模块（:download:`seniverse模块 </../examples/06.网络/心知天气/seniverse.py>`，将seniverse模块文件导入板子文件根目录）::
+使用前，导入MicroPython、json、urequests、Timer和天气图标seniverse模块（:download:`seniverse模块 </../examples/06.网络/心知天气/seniverse.py>`，将seniverse模块文件导入板子文件根目录）::
 
-    from mpython import*
+    from MicroPython import*
     import json
     import urequests
     from seniverse import *

@@ -16,7 +16,7 @@ UI类
 
 构建UI对象。
 
-    - ``oled``  - 传入framebuf类的对象,如是mPython OLED显示屏,则oled对象。
+    - ``oled``  - 传入framebuf类的对象,如是MicroPython OLED显示屏,则oled对象。
 
 .. method:: UI.ProgressBar(x, y, width, height, progress)
 
@@ -29,7 +29,7 @@ UI类
 
 ::
 
-    from mpython import *
+    from MicroPython import *
 
     myUI=UI(oled)
     myUI.ProgressBar(30,30,70,8,60)
@@ -55,7 +55,7 @@ Clock类
 
 构建Clock对象。
 
-    - ``oled``  - 传入framebuf类的对象,如是mPython OLED显示屏,则oled对象。
+    - ``oled``  - 传入framebuf类的对象,如是MicroPython OLED显示屏,则oled对象。
     - ``x`` 、``y`` -左上角作为起点坐标
     - ``radius`` -钟表半径
 
@@ -75,7 +75,7 @@ Clock类
 
 ::
 
-    from mpython import*
+    from MicroPython import*
     from machine import Timer
     import time
 

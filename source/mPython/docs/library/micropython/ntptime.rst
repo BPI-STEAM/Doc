@@ -23,7 +23,7 @@
 
 示例::
 
-    from mpython import *
+    from MicroPython import *
     import ntptime
 
     mywifi=wifi()
@@ -39,6 +39,6 @@
     WiFi Connection Successful,Network Config:('172.20.10.4', '255.255.255.240', '172.20.10.1', '172.20.10.1')
     同步前本地时间：(2000, 1, 1, 0, 40, 8, 5, 1)
     同步后本地时间：(2018, 12, 27, 12, 10, 7, 3, 361)
-    MicroPython v1.0.1-dirty on 2018-11-23; mPython with ESP32
+    MicroPython v1.0.1-dirty on 2018-11-23; MicroPython with ESP32
     Type "help()" for more information.
     >>>

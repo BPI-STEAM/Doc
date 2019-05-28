@@ -18,7 +18,7 @@ DHT11数字温湿度传感器和板子连接需要借助掌控扩展版，在掌
 例：显示DHT11读取的温湿度
 ::
 
-    from mpython import *
+    from MicroPython import *
     from dht import DHT11
     
     dht=DHT11(Pin(Pin.P0))
@@ -38,12 +38,12 @@ DHT11数字温湿度传感器和板子连接需要借助掌控扩展版，在掌
     :align: center
 
 
-使用前，导入mpython模块和DHT11类::
+使用前，导入MicroPython模块和DHT11类::
 
-  from mpython import *
+  from MicroPython import *
   from dht import DHT11
 
-实例化DHT11类，并设置mPython引脚P0::
+实例化DHT11类，并设置MicroPython引脚P0::
 
   dht=DHT11(Pin(Pin.P0))
 

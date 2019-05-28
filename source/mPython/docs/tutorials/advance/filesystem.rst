@@ -21,7 +21,7 @@ microPython位允许您使用非常简单的文件系统来完成此操作。
 某些文件系统（例如笔记本电脑或PC上的文件系统）允许您将文件组织到目录中：命名容器将相关文件和子目录组合在一起。
 但是，MicroPython提供的文件系统是一个平面文件系统。平面文件系统没有目录 - 所有文件都只存储在同一个地方。
 
-Python编程语言包含易于使用且功能强大的方式来使用计算机的文件系统。mPython上的MicroPython实现了这些功能的有用子集
+Python编程语言包含易于使用且功能强大的方式来使用计算机的文件系统。MicroPython上的MicroPython实现了这些功能的有用子集
 ，使其易于在设备上读取和写入文件，同时还提供与其他Python版本的一致性。
 
 
@@ -120,7 +120,7 @@ boot.py和main.py，这两个文件在启动时由MicroPython专门处理。 首
 
 你可以导入并使用这样的 ``say_hello`` 函数::
 
-    from mpython import *
+    from MicroPython import *
     from hello import say_hello
 
     oled.DispChar(say_hello(),0,0)

@@ -8,7 +8,7 @@
 
 例：按A键开灯，按B键关灯
 ::
-  from mpython import *
+  from MicroPython import *
 
   while True:
       if button_a.value() == 0 :    #按键A按下 
@@ -27,9 +27,9 @@
               rgb.write()
 
 
-使用前，导入mpython模块::
+使用前，导入MicroPython模块::
 
-  from mpython import *
+  from MicroPython import *
 
 按键 A 和按键 B 按下::
 
@@ -51,7 +51,7 @@
 
 例：按下按键 A 打开板载灯和蜂鸣器，按下按键 B 关闭板载灯和蜂鸣器
 ::  
-    from mpython import *     #导入mpython模块
+    from MicroPython import *     #导入MicroPython模块
     import music              #导入music模块
 
     def ledon(_):             #先定义中断处理函数：开灯和蜂鸣器

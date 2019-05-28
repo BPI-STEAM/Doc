@@ -19,7 +19,7 @@ OneNET平台官网地址：https://open.iot.10086.cn/，登录成功进入开发
 
 .. image:: /images/classic/oneNet_1.gif
 
-在新建的产品下新建一个设备mPython。
+在新建的产品下新建一个设备MicroPython。
 
 .. image:: /images/classic/oneNet_2.gif
 
@@ -30,7 +30,7 @@ OneNET平台官网地址：https://open.iot.10086.cn/，登录成功进入开发
 程序示例::
 
     from umqtt.simple import MQTTClient
-    from mpython import *
+    from MicroPython import *
     from machine import Timer
 
     # MQTT服务器地址域名为：183.230.40.39,不变

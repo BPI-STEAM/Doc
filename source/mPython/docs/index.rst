@@ -1,23 +1,23 @@
-.. mPython板子 documentation master file, created by
+.. MicroPython板子 documentation master file, created by
    sphinx-quickstart on Tue Aug 28 17:25:35 2018.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-mPython帮助文档
+MicroPython帮助文档
 ======================================
 
 欢迎您，使用板子！
 
-mPython板子是一块MicroPython微控制器板，它集成ESP32高性能双核芯片，使用当下最流行的Python编程语言，以便您轻松地将代码从电脑传输到板子中，从而体验程序创作的无穷乐趣！
+MicroPython板子是一块MicroPython微控制器板，它集成ESP32高性能双核芯片，使用当下最流行的Python编程语言，以便您轻松地将代码从电脑传输到板子中，从而体验程序创作的无穷乐趣！
 
 .. image:: /images/掌控-动态.gif
 
 
 
-| GitHub开源: https://github.com/labplus-cn/mPython
-| mPython板子文档: https://mPython.readthedocs.io
-| mPythonX IDE 软件编程文档: https://mPythonX.readthedocs.io
-| mPython library(提供各类库): https://mPython-lib.readthedocs.io
+| GitHub开源: https://github.com/labplus-cn/MicroPython
+| MicroPython板子文档: https://MicroPython.readthedocs.io
+| MicroPythonX IDE 软件编程文档: https://MicroPythonX.readthedocs.io
+| MicroPython library(提供各类库): https://MicroPython-lib.readthedocs.io
 
 .. Hint::
 
@@ -29,7 +29,7 @@ mPython板子是一块MicroPython微控制器板，它集成ESP32高性能双核
 
 ---------
 
-mPython板子资料
+MicroPython板子资料
 ---------
 
 .. toctree::
@@ -87,18 +87,18 @@ MicroPython类库
 
 ---------
 
-mPython类库
+MicroPython类库
 -------------
 
 .. toctree::
    :maxdepth: 1
-   :caption: mPython类库
+   :caption: MicroPython类库
    :hidden:
    
-   library/mPython/index.rst
+   library/MicroPython/index.rst
                                              
 ======================================   ====================================================================  
- :ref:`mpython模块<mpython.py>`           提供了mPython板子特有拓展类。:ref:`mpython.py源码查看 <mpython_code>`
+ :ref:`MicroPython模块<MicroPython.py>`           提供了MicroPython板子特有拓展类。:ref:`MicroPython.py源码查看 <MicroPython_code>`
  :ref:`music模块<music.py>`               兼容micro:bit music 模块
  :ref:`urequests模块<urequests>`          从CPython移植过来的HTTP客户端的第三方库,提供各种HTTP请求方式
  :ref:`umqtt.simple模块<umqtt.simple>`    提供简单MQTT客户端功能 

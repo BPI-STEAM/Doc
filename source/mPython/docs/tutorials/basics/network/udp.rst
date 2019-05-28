@@ -48,7 +48,7 @@ UDP客户端的示例:
 .. code-block:: python
     :linenos:
 
-    from mpython import *
+    from MicroPython import *
     import socket 
     
     mywifi=wifi()                                           # 创建wifi对象
@@ -61,7 +61,7 @@ UDP客户端的示例:
         s.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)              # 设置套接字属性
 
         while True:
-            s.sendto(b'hello message from mPython\r\n',dst)                # 发送数据发送至目的ip
+            s.sendto(b'hello message from MicroPython\r\n',dst)                # 发送数据发送至目的ip
             sleep(2)
 
     # 当捕获异常,关闭套接字、网络
@@ -89,7 +89,7 @@ UDP服务端的示例:
 .. code-block:: python
     :linenos:
 
-    from mpython import *
+    from MicroPython import *
     import socket 
     
     mywifi=wifi()                                           # 创建wifi对象

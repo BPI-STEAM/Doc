@@ -29,7 +29,7 @@ audio 模块
 ::
 
 
-    from mpython import wifi                    # 导入wifi类
+    from MicroPython import wifi                    # 导入wifi类
     import audio                                # 导入音频播放
 
     mywifi=wifi()                               # 实例wifi
@@ -104,7 +104,7 @@ TTS
 
 ::
 
-    from mpython import *                                       # 导入mpython模块
+    from MicroPython import *                                       # 导入MicroPython模块
     import audio                                                # 导入audio模块
     import ntptime                                              # 导入授时模块
 

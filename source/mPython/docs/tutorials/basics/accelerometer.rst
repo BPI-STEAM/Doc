@@ -15,7 +15,7 @@
 
 例：通过OLED显示屏来观察3个轴加速度值的变化
 ::
-    from mpython import *
+    from MicroPython import *
     
     while True:
         oled.fill(0)     
@@ -31,9 +31,9 @@
         oled.show()
 
 
-使用前，导入mpython模块::
+使用前，导入MicroPython模块::
 
-    from mpython import *
+    from MicroPython import *
 
 获取X、Y、Z三轴的加速度::
 
@@ -65,7 +65,7 @@
 
 我们用加速度计制作一个上下左右各滚动的水平球::
 
-    from mpython import *    #导入mpython模块
+    from MicroPython import *    #导入MicroPython模块
 
     Center_x=63           #设定中心点（原点）x的坐标
     Center_y=31           #设定中心点（原点）y的坐标
@@ -132,7 +132,7 @@
 
 通过测量由于重力引起的加速度，可以计算出设备相对于水平面的倾斜角度::
 
-    from mpython import*
+    from MicroPython import*
     from math import acos,degrees
 
     while True:
@@ -145,9 +145,9 @@
             oled.fill(0)
 
 
-使用前，导入mpython模块和math模块中acos函数、degrees函数::
+使用前，导入MicroPython模块和math模块中acos函数、degrees函数::
 
-    from mpython import *
+    from MicroPython import *
     from math import acos,degrees
   
 获取X轴的加速度::

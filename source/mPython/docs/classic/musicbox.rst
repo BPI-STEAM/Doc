@@ -5,7 +5,7 @@
 
 ::
 
-    from mpython import *
+    from MicroPython import *
     import music
 
     aStatus=1

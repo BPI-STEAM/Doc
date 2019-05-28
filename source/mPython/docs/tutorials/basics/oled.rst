@@ -21,9 +21,9 @@
 
 .. image:: /images/掌控-正面.png
 
-使用前，须导入mpython模块::
+使用前，须导入MicroPython模块::
 
-  from mpython import *
+  from MicroPython import *
 
 文本显示::
 
@@ -187,9 +187,9 @@ pbm数据格式的前三行定于为图像标注。然后才是图像数据。�
   :align: center
 
 
-导入mpython和framebuf模块::
+导入MicroPython和framebuf模块::
 
-  from mpython import *
+  from MicroPython import *
   import framebuf
 
 用二进制只读格式打开每一帧图片::

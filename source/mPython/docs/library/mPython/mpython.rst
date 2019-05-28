@@ -1,11 +1,11 @@
 
-.. _mpython.py:
-:mod:`mpython`
+.. _MicroPython.py:
+:mod:`MicroPython`
 
-mpython 模块
+MicroPython 模块
 ==========================
 
-:ref:`mpython<mpython_code>` 是基于板子封装的专用库.
+:ref:`MicroPython<MicroPython_code>` 是基于板子封装的专用库.
 
 延时
 -------
@@ -159,7 +159,7 @@ button_[a,b]对象
 
 ::
 
-    >>> from mpython import *
+    >>> from MicroPython import *
     >>> button_a.irq(trigger=Pin.IRQ_FALLING, handler=lambda p:print("button-a press！")) 
 
 
@@ -190,7 +190,7 @@ rgb对象
 
 ::
 
-    from mpython import *
+    from MicroPython import *
 
     rgb[0] = (255, 0, 0)  # 设置为红色，全亮度
     rgb[1] = (0, 128, 0)  # 设定为绿色，半亮度
@@ -246,7 +246,7 @@ oled屏显示文本。
 
 ::
 
-    from mpython import *
+    from MicroPython import *
 
     oled.DispChar('你好世界', 38, 0)
     oled.DispChar('hello,world', 32, 16)
@@ -317,19 +317,19 @@ oled屏显示文本。
 i2c对象
 -------
 
-mPython板子已实例 ``I2C`` 类，P19、P20 为I2C的SCL、SDA引脚。I2C设备可连接板子I2C总线进行操作。
+MicroPython板子已实例 ``I2C`` 类，P19、P20 为I2C的SCL、SDA引脚。I2C设备可连接板子I2C总线进行操作。
 
 
 详细有关I2C的读写操作，请查看 :ref:`machine.I2C<machine.I2C>` 模块或 :ref:`I2C基础教程<tutorials_i2c>` 章节。
 
-MPythonPin类
+MicroPythonPin类
 -------
 
-.. class:: MPythonPin(pin, mode=PinMode.IN,pull=None)
+.. class:: MicroPythonPin(pin, mode=PinMode.IN,pull=None)
 
 构建Pin对象
 
-- ``pin`` 板子定义引脚号，具体定义看查看 :ref:`板子引脚定义<mpython_pinout>` 。
+- ``pin`` 板子定义引脚号，具体定义看查看 :ref:`板子引脚定义<MicroPython_pinout>` 。
 
 - ``mode`` 引脚模式，未设定时默认mode=PinMode
 
@@ -347,24 +347,24 @@ MPythonPin类
 
 示例::
 
-        >>> from mpython import MPythonPin       #导入MPython模块
-        >>> P0=MPythonPin(0,PinMode.IN)          #构建引脚0对象，设置数字输入模式
+        >>> from MicroPython import MicroPythonPin       #导入MicroPython模块
+        >>> P0=MicroPythonPin(0,PinMode.IN)          #构建引脚0对象，设置数字输入模式
 
 
 
-.. method:: MPythonPin.read_digital()
+.. method:: MicroPythonPin.read_digital()
 
 返回该IO引脚电平值。1代表高电平，0代表低电平
 
-.. method:: MPythonPin.write_digital(value)
+.. method:: MicroPythonPin.write_digital(value)
 
 IO引脚输出电平控制。``value`` =1时输出高电平， ``value`` =0时输出低电平。
 
-.. method:: MPythonPin.read_analog()
+.. method:: MicroPythonPin.read_analog()
 
 读取ADC并返回读取结果，返回的值将在0到4095之间。
 
-.. method:: MPythonPin.write_analog(duty, freq=1000):
+.. method:: MicroPythonPin.write_analog(duty, freq=1000):
 
 设置输出PWM信号的占空比。
 
@@ -372,9 +372,9 @@ IO引脚输出电平控制。``value`` =1时输出高电平， ``value`` =0时�
 - ``freq`` PWM波频率,0 < freq ≤ 0x0001312D（十进制：0 < freq ≤ 78125）
 
 
-.. _MPythonPin.irq:
+.. _MicroPythonPin.irq:
 
-.. method:: MPythonPin.irq(handler=None, trigger=Pin.IRQ_RISING):
+.. method:: MicroPythonPin.irq(handler=None, trigger=Pin.IRQ_RISING):
 
 如果引脚模式配置为 ``IN`` ,可配置该引脚的触发源处于活动状态时调用的中断处理程序。
 
@@ -392,7 +392,7 @@ IO引脚输出电平控制。``value`` =1时输出高电平， ``value`` =0时�
        这些值可以一起进行 ``OR`` 运算以触发多个事件。
 
 
-.. _mpython.wifi:
+.. _MicroPython.wifi:
 
 wifi类
 ------

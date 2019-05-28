@@ -51,7 +51,7 @@ HTTP Server
 
     import socket
     import network,time
-    from mpython import *
+    from MicroPython import *
 
     mywifi=wifi()     #实例化wifi类
 
@@ -61,7 +61,7 @@ HTTP Server
     HTTP/1.0 200 OK
 
     <meta charset="utf-8">
-    欢迎使用mPython！你的光线传感器值是:%d
+    欢迎使用MicroPython！你的光线传感器值是:%d
     """
 
     def main():

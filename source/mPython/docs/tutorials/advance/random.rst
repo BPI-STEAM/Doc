@@ -5,7 +5,7 @@
 
 例如，以下是如何在oled显示屏上随机显示名称::
 
-  from mpython import *
+  from MicroPython import *
   import random
 
   names = ["Mary", "Yolanda", "Damien", "Alia", "Kushal", "Mei Xiu", "Zoltan" ]
@@ -26,7 +26,7 @@
 
 MicroPython附带了几个有用的随机数方法。这是如何制作一个简单的骰子::
 
-  from mpython import *
+  from MicroPython import *
   import random
 
   oled.DispChar(str(random.randint(1,6)),60,20)
@@ -40,7 +40,7 @@ MicroPython附带了几个有用的随机数方法。这是如何制作一个简
 
 假如你想设置随机范围或递增基数，你可以使用random.randrange()::
 
-  from mpython import *
+  from MicroPython import *
   import random
 
   oled.DispChar(str(random.randrange(0,10,2)),60,20)
@@ -54,7 +54,7 @@ MicroPython附带了几个有用的随机数方法。这是如何制作一个简
 
 有时您需要带小数点的数字。你可以使用 ``random.random`` 方法生成0.0到1.0的随机浮点数。如果你需要较大的随机浮点数加的结果 ``random.uniform`` ::
 
-  from mpython import *
+  from MicroPython import *
   import random
 
   oled.DispChar(str(random.random()),30,10)
@@ -75,7 +75,7 @@ MicroPython中的随机数其实是一个稳定算法得出的稳定结果序列
 示例::
 
   import random
-  from mpython import *
+  from MicroPython import *
 
 
   for i in range(0,2):
@@ -99,7 +99,7 @@ MicroPython中的随机数其实是一个稳定算法得出的稳定结果序列
 
   # 使用random随机生成飘雪效果
 
-  from mpython import *
+  from MicroPython import *
   from random import randint
 
   class snow():

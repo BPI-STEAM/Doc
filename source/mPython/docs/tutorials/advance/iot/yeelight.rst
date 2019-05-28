@@ -39,7 +39,7 @@ Yeelight第三方控制协议：https://www.yeelight.com/download/Yeelight_Inter
 
   Yeelight配置过程
   
-- 板子提供 ``yeelight`` 驱动库,该库可在 ``mPython-lib`` https://github.com/labplus-cn/mPython-lib 获取。将 ``yeelight.py`` 下载至板子的文件系统。
+- 板子提供 ``yeelight`` 驱动库,该库可在 ``MicroPython-lib`` https://github.com/labplus-cn/MicroPython-lib 获取。将 ``yeelight.py`` 下载至板子的文件系统。
 
 - 板子连接到Yeelight相同的局域网内。 
 
@@ -60,7 +60,7 @@ Yeelight第三方控制协议：https://www.yeelight.com/download/Yeelight_Inter
 
 板子和Yeelight灯泡在同局域网内后,我们要控制灯泡,首先需要知道该灯泡的IP地址,我们可以使用 ``discover_bulbs()`` 函数::
 
-    from mpython import *                   # 导入mpython模块
+    from MicroPython import *                   # 导入MicroPython模块
     from yeelight import *                  # 导入yeelight模块
 
     my_wifi = wifi()                        # 连接到与YeeLight相同的局域网内
@@ -136,7 +136,7 @@ Value亮度参数,未提供支持。只需设置 ``hue`` 、``saturation`` 参�
   Yeelight,目前WiFi智能设备最多支持4个同时TCP连接。连接尝试将被拒绝。对于每个连接，都有一个命令消息配额限制，
   也就是每分钟60个指令。所有LAN也有一个总配额限制,144。
 
-有关更详细的 ``yeelight`` 模块的API说明,请查阅 https://mpython-lib.readthedocs.io
+有关更详细的 ``yeelight`` 模块的API说明,请查阅 https://MicroPython-lib.readthedocs.io
 
 
 

@@ -43,7 +43,7 @@
 
 我们结合加速度计制作一个通过左右倾斜板子来控制舵机的角度::
 
-    from mpython import * 
+    from MicroPython import * 
     from servo import Servo   
 
     myServo=Servo(0,min_us=500, max_us=2500)      #构建Servo对象
@@ -60,15 +60,15 @@
 
 
 
-舵机和板子的连接需要借助掌控扩展板。你可以查阅 :ref:`板子接口引脚说明<mPythonPindesc>` ,了解可供使用的PWM模拟输出的引脚 。在这里使用引脚P0。将板子插在掌控扩展板上，通过双母头杜邦线将舵机和扩展板进行连接，舵机上的电源线Vcc（舵机连接线的红色）连接扩展板的电源口“V”，地线GND(舵机连接线的棕色)连接扩展板的地线口“G”，控制信号线(舵机连接线的橙色)连接扩展板的引脚“0”。
+舵机和板子的连接需要借助掌控扩展板。你可以查阅 :ref:`板子接口引脚说明<MicroPythonPindesc>` ,了解可供使用的PWM模拟输出的引脚 。在这里使用引脚P0。将板子插在掌控扩展板上，通过双母头杜邦线将舵机和扩展板进行连接，舵机上的电源线Vcc（舵机连接线的红色）连接扩展板的电源口“V”，地线GND(舵机连接线的棕色)连接扩展板的地线口“G”，控制信号线(舵机连接线的橙色)连接扩展板的引脚“0”。
 
 .. image:: /images/classic/Servoconnect.jpg
     :scale: 60 %
     :align: center
 
-使用前，导入mpython、servo模块::
+使用前，导入MicroPython、servo模块::
 
-  from mpython import *
+  from MicroPython import *
   from servo import Servo
 
 构建Servo对象，设置舵机脉冲宽度参数::

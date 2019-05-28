@@ -82,7 +82,7 @@ MQTT是一种基于发布 - 订阅的“轻量级”消息传递协议，用于�
 首先导入需要的模块::
 
     from umqtt.simple import MQTTClient    # 导入umqtt.simple模块,用于简单的mqtt客户端功能  
-    from mpython import *                  # 导入mpython模块
+    from MicroPython import *                  # 导入MicroPython模块
 
 板子先连接上互联网::
 
@@ -153,7 +153,7 @@ publish后,你可以在Easy IoT工作间的该设备“查看详情”中,查询
 以下示例用到mqtt订阅主题功能做的远程控制开关灯::
 
     from umqtt.simple import MQTTClient    
-    from mpython import *   
+    from MicroPython import *   
     from machine import Timer               
 
     SERVER = "182.254.130.180"            # Easy IoT的MQTT服务器地址

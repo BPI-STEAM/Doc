@@ -5,7 +5,7 @@
 
 ::
 
-    from mpython import *               # 导入mpython模块
+    from MicroPython import *               # 导入MicroPython模块
     import music                        # 导入music模块
 
     note=["C4:2","D4:2","E4:2","F4:2","G4:2","A4:2","B4:2"]     # 定义7音阶的元组

@@ -5,7 +5,7 @@
 
 例：显示声音值
 ::
-    from mpython import *
+    from MicroPython import *
     
     while True:
         oled.fill(0) 
@@ -14,10 +14,10 @@
         oled.show()
 
 
-使用前，导入mpython模块
+使用前，导入MicroPython模块
 ::
 
-  from mpython import *
+  from MicroPython import *
 
 我们使用 ``sound.read()`` 获取麦克风的数据。
 ::

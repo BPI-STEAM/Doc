@@ -65,9 +65,9 @@ RGB光环板
 
 有关neopixel用法，可查阅 :ref:`RGB LED-外部灯带<neopixel_strip>`  章节 和 :ref:`neopixel<neopixel>` 模块 ，此处不再重复。
 
-除 ``neopixel`` 模块外,mPython板子还提供 ``ledstrip`` 模块(neopixel增强版)，封装多种显示效果，使用简单。 
+除 ``neopixel`` 模块外,MicroPython板子还提供 ``ledstrip`` 模块(neopixel增强版)，封装多种显示效果，使用简单。 
 
-| *mPython-ledstrip:* https://github.com/labplus-cn/mPython_ledstrip
+| *MicroPython-ledstrip:* https://github.com/labplus-cn/MicroPython_ledstrip
 
 使用前，先将ledstrip.py拷至板子::
 
@@ -104,19 +104,19 @@ RGB光环板
 blue:bit模块
 +++++++++++
 
-有关blue:bit模块的基本的使用方法，可查阅wiki了解。板子使用blue:bit模块，首先要将 ``bluebit.py`` 驱动库上传至文件系统。bluebit for mPython library可在下文地址获取。
+有关blue:bit模块的基本的使用方法，可查阅wiki了解。板子使用blue:bit模块，首先要将 ``bluebit.py`` 驱动库上传至文件系统。bluebit for MicroPython library可在下文地址获取。
 
 | *bluebit套装Wiki*：http://wiki.labplus.cn/index.php?title=Bluebit
-| *bluebit for mPython library*: https://github.com/labplus-cn/mPython_bluebit
+| *bluebit for MicroPython library*: https://github.com/labplus-cn/MicroPython_bluebit
 
 按键模块
 ~~~~~~
 
 按键模块的 ``Do`` 连接到拓展板的 ``P5`` ；``VCC`` 、``GND`` 分别连接至板子的 ``3.3V`` 、``GND`` ::
 
-    from mpython import *           # 导入mpython模块
+    from MicroPython import *           # 导入MicroPython模块
 
-    p5=MPythonPin(5,PinMode.IN)     # 实例化MPythonPin,将按键a引脚(P5)设置为"PinMode.IN"模式
+    p5=MicroPythonPin(5,PinMode.IN)     # 实例化MicroPythonPin,将按键a引脚(P5)设置为"PinMode.IN"模式
 
     while True:
         value=p5.read_digital()      # 读取P5引脚的数字输入
@@ -134,7 +134,7 @@ blue:bit模块
 超声波模块的 ``TRIG``、``ECHO`` 连接到拓展板的 ``SCL`` 、``SDA`` ；``VCC`` 、``GND`` 分别连接至拓展板的 ``3.3V`` 、``GND`` ::
 
     from bluebit import *               # 导入bluebit
-    from mpython import *               # 导入mpython
+    from MicroPython import *               # 导入MicroPython
 
     ultr=Ultrasonic()                   # 实例Ultrasonic类
 
@@ -150,7 +150,7 @@ blue:bit模块
 颜色模块的 ``SCL``、``SDA`` 连接到拓展板的 ``SCL`` 、``SDA`` ；``VCC`` 、``GND`` 分别连接至拓展板的 ``3.3V`` 、``GND`` ::
 
     from bluebit import *               # 导入bluebit
-    from mpython import *               # 导入mpython
+    from MicroPython import *               # 导入MicroPython
 
     color=Color()                       # 实例Color类
 
@@ -175,9 +175,9 @@ blue:bit模块
 
 通过鳄鱼夹线将阻性元件(如光敏、热敏电阻)接到板子的 ``EXT`` 和 ``GND`` 焊盘，读取P3引脚的模拟输入::
 
-    from mpython import *           # 导入mpython模块
+    from MicroPython import *           # 导入MicroPython模块
 
-        p3=MPythonPin(3,PinMode.ANALOG)     # 实例化MPythonPin,将P3设置为"PinMode.ANALOG"模式
+        p3=MicroPythonPin(3,PinMode.ANALOG)     # 实例化MicroPythonPin,将P3设置为"PinMode.ANALOG"模式
         while True:
             value=p3.read_analog()          # 读取EXT(P3)引脚模拟量
             oled.DispChar("analog:%d" %value,30,20)

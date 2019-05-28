@@ -5,7 +5,7 @@
 
 例：光控灯::
 
-    from mpython import *
+    from MicroPython import *
 
     while True:
         oled.fill(0)                                   #清屏

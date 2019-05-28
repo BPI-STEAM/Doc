@@ -12,7 +12,7 @@ Servo类
 
 .. Hint:: 
 
-    作为Servo控制引脚须为支持PWM(模拟输出)的引脚。板子支持PWM的引脚,详情可查阅 :ref:`板子接口引脚说明<mPythonPindesc>` 。
+    作为Servo控制引脚须为支持PWM(模拟输出)的引脚。板子支持PWM的引脚,详情可查阅 :ref:`板子接口引脚说明<MicroPythonPindesc>` 。
 
 .. Attention:: 
 
@@ -41,7 +41,7 @@ Servo类
 
 ::
 
-    from mpython import *
+    from MicroPython import *
     from servo import Servo                 #导入舵机模块
 
     s=Servo(0)
