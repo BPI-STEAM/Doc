@@ -18,7 +18,7 @@ Welcome to BPI-STEAM documentation!
 
 .. image:: ../images/facade.gif
 
-BPI-BIT 是一款基于 ESP32 高性能芯片，且兼容 micro:bit 设计的开源 STEAM 教育产品。
+BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源 STEAM 教育产品。
 
 .. toctree::
    :maxdepth: 2

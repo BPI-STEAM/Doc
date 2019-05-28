@@ -2,8 +2,6 @@
 发布中心
 =====================================================
 
-MicroPython是 Python 3 语言的精简实现 ，包括Python标准库的一小部分，经过优化可在微控制器和受限环境中运行。
-
 这里是 BPI-STEAM 体系的 MicroPyhton 固件、软件的 release 版本发布中心。
 
 release firmware
