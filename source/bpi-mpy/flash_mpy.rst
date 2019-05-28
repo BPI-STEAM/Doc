@@ -19,7 +19,7 @@
 
 - 下载后打开 `FlashMicroPython-*.zip` 压缩包，然后运行里面的 Flashtool.exe 工具即可。
 
-.. image:: https://user-images.githubusercontent.com/32978053/55951621-4a1a7180-5c8a-11e9-8ab8-302d3f482725.png
+.. image:: flash_mpy/flash_mpy.png
 
 - 请先插入硬件后打开软件，这个软件会自动运行烧写。
 
