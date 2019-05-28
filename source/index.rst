@@ -26,7 +26,6 @@ BPI-BIT 是一款基于 ESP32 高性能芯片，且兼容 micro:bit 设计的开
    
    bpi-steam/readme
    bpi-steam/driver
-   bpi-dev/release-area
 
 用户可以通过烧写 MicroPython 固件，就能够使用当下世界上最流行的 Python 语言进行编程。
 
@@ -36,10 +35,8 @@ BPI-BIT 是一款基于 ESP32 高性能芯片，且兼容 micro:bit 设计的开
    :maxdepth: 2
    :caption: MicroPython
 
-   micropython
-
+   bpi-dev/mpy-tutorials
    bpi-dev/mpy-release
-   bpi-dev/mpy-tools
 
    mPython/docs/library/pythonStd/index.rst
    mPython/docs/library/micropython/index.rst
@@ -53,10 +50,8 @@ BPI-BIT 是一款基于 ESP32 高性能芯片，且兼容 micro:bit 设计的开
    :maxdepth: 2
    :caption: Webduino
    
-   webduino
-
+   bpi-dev/web-tutorials
    bpi-dev/web-release
-   bpi-dev/web-tools
 
 .. toctree::
    :maxdepth: 2
