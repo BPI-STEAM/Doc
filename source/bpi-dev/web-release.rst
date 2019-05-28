@@ -25,5 +25,6 @@ WebBit 本地积木化软件
 ------------------
 
 - `使用教程 <https://tutorials.webduino.io/zh-tw/docs/webbit/index.html>`_ & `项目主页 <https://webbit.webduino.io/blockly/>`_
+- `历史版本 & 更新日志 <https://github.com/BPI-STEAM/BPI-BIT-WebDuino>`_
 
 .. image:: images/github-desktop-webduino.png
