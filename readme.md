@@ -1,4 +1,4 @@
-# &emsp;&emsp;&emsp;&emsp;&emsp; BPI-STEAM/Docs 基础手册（公开编辑）
+# &emsp;&emsp;&emsp;&emsp; BPI-STEAM/Docs 基础手册（公开编辑）
 
 [![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badge/)
 
