@@ -1,4 +1,6 @@
-# build
+# &emsp;&emsp;&emsp;&emsp;&emsp; BPI-STEAM/Docs 基础手册（公开编辑）
+
+[![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badge/)
 
 [![Documentation Status](https://readthedocs.org/projects/bpi-steam-docs/badge/?version=latest)](https://bpi-steam-docs.readthedocs.io/zh_CN/latest/?badge=latest)
 
