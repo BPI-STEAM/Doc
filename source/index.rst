@@ -22,6 +22,7 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
    :caption: BPI-BIT
    
    bpi-steam/readme
@@ -36,9 +37,13 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
    :caption: MicroPython
 
    bpi-dev/mpy-tutorials
+   bpi-mpy/advanced
+   bpi-mpy/samples
+
    bpi-dev/mpy-release
 
    MicroPython/docs/library/pythonStd/index.rst
@@ -52,6 +57,7 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
    :caption: Webduino
    
    bpi-dev/web-tutorials
@@ -66,6 +72,7 @@ BPI-BIT 大幅度的兼容 microbit 的底座硬件设计与使用，你可以�
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
    :caption: 拓展板
 
 .. 

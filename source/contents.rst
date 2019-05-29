@@ -22,10 +22,14 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
    :caption: BPI-BIT
    
    bpi-steam/readme
    bpi-steam/driver
+
+使用 MicroPython 编程
+---------------------------
 
 用户可以通过烧写 MicroPython 固件，就能够使用当下世界上最流行的 Python 语言进行编程。
 
@@ -33,6 +37,7 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
    :caption: MicroPython
 
    bpi-dev/mpy-tutorials
@@ -42,19 +47,29 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
    MicroPython/docs/library/micropython/index.rst
    micropython/docs/index
 
-用户可以通过烧写 Webduino 固件，就能够使用面向全世界的 Webduino Blockly 积木化在线编程。
+使用 Webduino 编程
+---------------------------
 
-只需要浏览器，随时查看云端和托管你的代码，配合 Github 上各种有趣的插件系统与多语言化环境，享受全世界流行的积木编程吧!
+用户可以通过烧写 Webduino 固件，就能够使用面向全世界的 Webduino Blockly 积木化在线编程。
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
    :caption: Webduino
    
    bpi-dev/web-tutorials
    bpi-dev/web-release
 
+只需要浏览器，随时查看云端和托管你的代码，配合 Github 上各种有趣的插件系统与多语言化环境，享受全世界流行的积木编程吧!
+
+拓展板支持
+---------------------------
+
+BPI-BIT 大幅度的兼容 microbit 的底座硬件设计与使用，你可以直接使用 Microbit 的拓展板或查看我们提出的以下拓展板设计方案进行拓展应用。
+
 .. toctree::
    :maxdepth: 2
+   :numbered:
    :caption: 拓展板
 
 .. 
