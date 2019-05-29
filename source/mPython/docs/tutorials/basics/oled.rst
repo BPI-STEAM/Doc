@@ -67,7 +67,7 @@ OLED显示屏还支持设置屏幕的亮度::
     :linenos:
 
 
-.. image:: /images/tutorials/drawline.gif
+.. image:: ../../images/tutorials/drawline.gif
    :scale: 100 %
    :align: center
 
@@ -136,7 +136,7 @@ OLED可绘制一些点、直线、矩形等形状。
 * 步骤2.选择参数，输出数据类型[C语言数组]、  扫描模式[水平扫描]、输出灰度[单色]、宽高[128*64]
 * 步骤3.点击保存，自动生成取模数据。
 
-.. image:: /images/tutorials/image2lcd.png
+.. image:: ../../images/tutorials/image2lcd.png
 
 
 将取模数据赋值给bmp数组中，然后显示在OLED显示屏上。
@@ -144,7 +144,7 @@ OLED可绘制一些点、直线、矩形等形状。
 .. literalinclude:: /../examples/01.显示屏/chinamap.py
     :linenos:
 
-.. image:: /images/tutorials/earth.png
+.. image:: ../../images/tutorials/earth.png
   :scale: 50 %
   :align: center
 
@@ -183,7 +183,7 @@ pbm数据格式的前三行定于为图像标注。然后才是图像数据。�
     :caption: 逐帧读取图像数据流并在OLED显示屏上显示出来:
     :linenos:
 
-.. image:: /images/tutorials/scatman.gif
+.. image:: ../../images/tutorials/scatman.gif
   :align: center
 
 

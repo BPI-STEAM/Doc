@@ -134,4 +134,4 @@ MicroPython中的随机数其实是一个稳定算法得出的稳定结果序列
       oled.show()                  #显示oled
 
 
-.. image:: /images/tutorials/snowing.gif
+.. image:: ../../images/tutorials/snowing.gif

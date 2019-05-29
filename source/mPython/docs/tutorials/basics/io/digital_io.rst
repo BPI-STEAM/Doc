@@ -68,7 +68,7 @@
 
     上面需要使用到一块面包板、1个LED灯、MicroPython拓展板、杜邦线。LED灯的正极连接至板子的P0引脚,LED负极连接至板子的GND。
 
-.. image:: /images/tutorials/blink.gif
+.. image:: ../../images/tutorials/blink.gif
 
 ::
 

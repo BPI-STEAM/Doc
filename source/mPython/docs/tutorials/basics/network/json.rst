@@ -16,7 +16,7 @@ http协议采用的是请求/响应模型，浏览器或客户端发出请求，
 
 例如，想从 http://ip-api.com/json/ 这个开放的接口中获取IP地址等信息，我们将地址直接在浏览器输入，可以看到：
 
-.. image:: /images/tutorials/httpjson.png
+.. image:: ../../images/tutorials/httpjson.png
     :align: center
     :scale: 100 %
 
@@ -48,7 +48,7 @@ http协议采用的是请求/响应模型，浏览器或客户端发出请求，
     oled.DispChar('IP:%s' % ipDict['query'],0,45)        #将IP地址信息显示到OLED显示屏上
     oled.show()
 
-.. image:: /images/tutorials/json.jpg
+.. image:: ../../images/tutorials/json.jpg
     :align: center
     :scale: 70 %
 

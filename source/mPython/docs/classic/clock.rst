@@ -139,6 +139,6 @@ UI.Clock(x, y, radius)用于构建钟表对象，x、y为OLED显示屏上的起�
 
 清除时钟，也就是将显示在OLED显示屏上的时间清除以显示所获取的新时间，否则会导致各个时间值重叠显示在OLED上。
 
-.. image:: /images/classic/analog.jpg
+.. image:: ../images/classic/analog.jpg
     :scale: 50 %
     :align: center

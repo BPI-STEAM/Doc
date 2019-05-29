@@ -184,7 +184,7 @@ blue:bit模块
             oled.show()
             oled.fill(0)
 
-.. image:: /images/tutorials/ext.png
+.. image:: ../../images/tutorials/ext.png
     :width: 180
     :align: center
 

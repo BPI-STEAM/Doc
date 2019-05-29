@@ -81,6 +81,6 @@ button_a.irq(trigger=Pin.IRQ_FALLING, handler=ledon) 是调用的中断处理程
 
 当按下按键时为低电平（0），否则高电平（1），在按键按下的过程中，从高电平（1）变为低电平（0）的那一瞬间叫作下降沿，从低电平（0）变为高电平（1）的那一瞬间叫作上升沿。
 
-.. image:: /images/tutorials/falling.png
+.. image:: ../../images/tutorials/falling.png
     :align: center
 
