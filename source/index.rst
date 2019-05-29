@@ -8,7 +8,7 @@ Welcome to BPI-STEAM documentation!
 
 .. Hint::
 
-    欢迎来到 BPI-STEAM 的系列用户文档发布网站，本项目托管于 `Github Docs <https://github.com/BPI-STEAM/Docs>`_ 。
+    欢迎来到 BPI-STEAM 的系列用户文档发布网站，本项目托管于 `Github BPI-STEAM <https://github.com/BPI-STEAM>`_ 开源组织。
 
 .. Attention::
 
