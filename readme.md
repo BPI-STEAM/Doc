@@ -34,7 +34,7 @@ The document content is in [source](https://github.com/BPI-STEAM/Docs/tree/maste
 
 [micropython 官方](http://docs.micropython.org/en/latest/esp32/quickref.html)
 
-[MicroPython 中文](https://MicroPython.readthedocs.io/zh/master/)
+[mPython中文](https://mPython.readthedocs.io/zh/master/)
 
 ## python
 
@@ -52,7 +52,7 @@ pip install sphinx, sphinx_rtd_theme, recommonmark
 
 ```unix
 git submodule add https://github.com/micropython/micropython
-git submodule add https://github.com/labplus-cn/MicroPython
+git submodule add https://github.com/labplus-cn/mPython
 
 git submodule update --init --recursive
 ```
