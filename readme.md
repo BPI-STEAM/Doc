@@ -6,6 +6,20 @@
 
 The document content is in [source](https://github.com/BPI-STEAM/Docs/tree/master/source).
 
+文档结构如下：（如果你需要操作，请扫一遍关键目录，可以用 markdown 也可以用 rst，看自己喜欢）
+
+- [source](https://github.com/BPI-STEAM/Docs/tree/master/source)
+- [source/bpi-dev](https://github.com/BPI-STEAM/Docs/tree/master/source/bpi-dev) 工具类、归档类、目录类相关。
+- [source/bpi-mpy](https://github.com/BPI-STEAM/Docs/tree/master/source/bpi-mpy) micropython 教程相关。
+- [source/bpi-web](https://github.com/BPI-STEAM/Docs/tree/master/source/bpi-web) webduino 教程相关。
+- [source/bpi-steam](https://github.com/BPI-STEAM/Docs/tree/master/source/bpi-steam) bpi-bit 产品、介绍相关。
+- mPython/docs 引用掌控板的公共文档。
+- micropython/docs 引用官方英文的公共文档。
+- conf.py 自动化部署脚本，不需要修改
+- contents.rst 和 index.rst 为 根目录（进入网站左边一排），需保持一致。
+
+如果想提交内容，直接提交即可，提交后，项目会自动编译部署到网站，而你只需要在本地 build 核对一下即可，如果出现问题请提交 issue 或直接反馈到群里。
+
 ## related and thank them
 
 感谢以下文档提供的公共部分内容，我们将保留引用信息链接。
