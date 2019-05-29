@@ -4,7 +4,7 @@
 
 ## how to edit
 
-The document content is in [source](https://github.com/BPI-STEAM/Dev/tree/master/source).
+The document content is in [source](https://github.com/BPI-STEAM/Docs/tree/master/source).
 
 ## related and thank them
 
