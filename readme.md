@@ -2,6 +2,10 @@
 
 [![Documentation Status](https://readthedocs.org/projects/bpi-steam-docs/badge/?version=latest)](https://bpi-steam-docs.readthedocs.io/zh_CN/latest/?badge=latest)
 
+## how to edit
+
+The document content is in [source](https://github.com/BPI-STEAM/Dev/tree/master/source).
+
 ## related and thank them
 
 感谢以下文档提供的公共部分内容，我们将保留引用信息链接。
