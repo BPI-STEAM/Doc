@@ -10,4 +10,4 @@ MicroPython是 Python 3 语言的精简实现 ，包括Python标准库的一小�
    ../bpi-mpy/know_github
    ../bpi-mpy/flash_mpy
    ../bpi-mpy/simple_use
-   
+   ../bpi-mpy/basics/index
