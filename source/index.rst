@@ -40,11 +40,11 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
    :numbered:
    :caption: MicroPython
 
-   bpi-dev/mpy-tutorials
-   bpi-mpy/advanced
+   bpi-mpy/tutorials/index
+   bpi-mpy/advanced/index
    bpi-mpy/samples
-   bpi-mpy/bpi_bit/index
-   bpi-dev/mpy-release
+   bpi-mpy/modules/index
+   bpi-mpy/release
    mPython/docs/library/pythonStd/index.rst
    mPython/docs/library/micropython/index.rst
    micropython/docs/index
@@ -59,8 +59,8 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
    :numbered:
    :caption: Webduino
    
-   bpi-dev/web-tutorials
-   bpi-dev/web-release
+   bpi-web/tutorials
+   bpi-web/release
 
 只需浏览器，即可随时查看云端和托管你的代码，配合 Github 上各种有趣的插件系统与多语言化环境，享受全世界流行的积木编程吧!
 
