@@ -8,11 +8,11 @@ Welcome to BPI-STEAM documentation!
 
 .. Hint::
 
-    欢迎来到 BPI-STEAM 的系列用户文档发布网站，本项目托管于 `Github Docs <https://github.com/BPI-STEAM/Docs>`_ 。
+    欢迎来到 BPI-STEAM 的系列用户文档发布网站，本项目托管于 `Github BPI-STEAM <https://github.com/BPI-STEAM>`_ 开源组织。
 
 .. Attention::
 
-    由于开源发展迅速，文档中存在着英文最新的参考文档，有助于开发者在日后的学习和查阅 API 所用，无法完全中文内容，还请谅解。
+    由于开源发展迅速，文档中存在着最新的英文参考文档，有助于开发者在日后的学习和查阅 API 所用，无法完全中文内容，还请谅解。
 
 为您介绍一下 BPI-BIT 这款产品的基本信息。
 
@@ -31,7 +31,7 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
 使用 MicroPython 编程
 ---------------------------
 
-用户可以通过烧写 MicroPython 固件，就能够使用当下世界上最流行的 Python 语言进行编程。
+用户通过烧写 MicroPython 固件，就可以使用当下世界上最流行的 Python 语言进行编程。
 
 配合专业 IDE 的支持（如：VsCode、PyCharm），以便您轻松地将代码从电脑传输到板子中，从而体验程序创作的无穷乐趣！
 
@@ -52,7 +52,7 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
 使用 Webduino 编程
 ---------------------------
 
-用户可以通过烧写 Webduino 固件，就能够使用面向全世界的 Webduino Blockly 积木化在线编程。
+用户通过烧写 Webduino 固件，就可以使用面向全世界的 Webduino Blockly 积木化在线编程。
 
 .. toctree::
    :maxdepth: 2
@@ -62,7 +62,7 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
    bpi-dev/web-tutorials
    bpi-dev/web-release
 
-只需要浏览器，随时查看云端和托管你的代码，配合 Github 上各种有趣的插件系统与多语言化环境，享受全世界流行的积木编程吧!
+只需浏览器，即可随时查看云端和托管你的代码，配合 Github 上各种有趣的插件系统与多语言化环境，享受全世界流行的积木编程吧!
 
 拓展板支持
 ---------------------------
