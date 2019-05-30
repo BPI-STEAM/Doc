@@ -36,4 +36,4 @@
 
     有问题可以到 `中文社区 <https://forum.banana-pi.org.cn/c/bpi-bit>`_ 反馈。
 
-.. image:: ../../images/logo.png
+.. image:: _static/footer.png

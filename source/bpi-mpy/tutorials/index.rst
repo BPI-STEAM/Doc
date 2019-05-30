@@ -7,7 +7,6 @@ MicroPython是 Python 3 语言的精简实现 ，包括Python标准库的一小�
    :maxdepth: 2
    :numbered:
 
-   know_github
    flash_mpy
    simple_use
    repl
