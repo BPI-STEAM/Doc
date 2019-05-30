@@ -81,7 +81,7 @@ BPI-BIT 大幅度的兼容 microbit 的底座硬件设计与使用，你可以�
    micropython/docs/index
 .. 
 
-.. image:: _static//footer.png
+.. image:: _static/footer.png
 
 Indices and tables
 ==================
