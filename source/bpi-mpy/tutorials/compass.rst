@@ -17,7 +17,7 @@
 
 .. figure:: compass/prompt.png
 
-compass.is_calibrated ()
+.. function:: compass.is_calibrated ()
 
 如果罗盘校准成功，返回True，否则返回False。
 
