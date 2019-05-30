@@ -32,3 +32,4 @@ print 打印出来的数据
 温度枪实测的温度
 
 .. figure:: temperature/tem1.jpg
+

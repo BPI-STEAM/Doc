@@ -3,7 +3,7 @@
 .. module:: music
 
 music 模块
-=======
+==============
 
 music模块与microbit的music使用方法相同。
 
