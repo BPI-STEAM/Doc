@@ -4,8 +4,8 @@
 .. toctree::
    :maxdepth: 2
 
-   ../bpi-web/flash_web
-
+   tutorials/index
+   
 .. Hint::
 
     由于简体版相对过时，推荐直接看繁体版体验最新功能。
