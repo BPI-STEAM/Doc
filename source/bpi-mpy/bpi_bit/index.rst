@@ -1,7 +1,7 @@
 内建模块
 =============
 
-以下模块是 BPI-BIT MicroPython 的当前固件所拥有的全部模块，下方提供文档出来的是官方没有内建（build-in）的模块。
+以下模块是 BPI-BIT MicroPython 的当前固件所拥有的全部模块，底部列表提供非官方内建（build-in）的模块文档。
 
 .. image:: all_modules.png
 
