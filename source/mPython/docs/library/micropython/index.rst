@@ -1,9 +1,9 @@
 .. _microPythonModu:
 
-MicroPython类库
+MicroPython 类库
 ===============
 
-以下库中提供了特定于MicroPython-ESP32实现的功能。
+以下库中提供了特定于 MicroPython-ESP32 实现的功能。
 
 
 .. toctree::

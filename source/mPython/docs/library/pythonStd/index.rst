@@ -1,6 +1,6 @@
 .. _pythonStd:
 
-Python标准库
+Python 标准库
 ===========
 
 标准的Python库被 “微型化”后，就是micropython标准库。它们仅仅提供了该模块的核心功能。一些模块没有直接使用标准的Python的名字，而是冠以"u"，例如 ``ujson`` 代替 ``json`` 。也就是说micropython标准库（=微型库），只实现了一部分模块功能。
