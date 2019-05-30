@@ -25,7 +25,7 @@ LED 面板显示的内容
 
 .. figure:: temperature/tem.gif
 
-print 打印出来的数据
+REPL 打印出来的数据
 
 .. figure:: temperature/tem2.png
 
