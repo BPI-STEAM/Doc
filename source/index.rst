@@ -45,8 +45,8 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
    bpi-mpy/samples
    bpi-mpy/bpi_bit/index
    bpi-dev/mpy-release
-   MicroPython/docs/library/pythonStd/index.rst
-   MicroPython/docs/library/micropython/index.rst
+   mPython/docs/library/pythonStd/index.rst
+   mPython/docs/library/micropython/index.rst
    micropython/docs/index
 
 使用 Webduino 编程
