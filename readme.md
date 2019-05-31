@@ -28,7 +28,7 @@ The document content is in [source](https://github.com/BPI-STEAM/Docs/tree/maste
 
 ## related and thank them
 
-感谢以下文档提供的公共部分内容，我们将保留引用信息链接。
+感谢以下文档提供的公共部分内容，我将保留引用信息链接。
 
 [esp32 中文](https://docs.singtown.com/micropython/zh/latest/esp32/index.html)
 

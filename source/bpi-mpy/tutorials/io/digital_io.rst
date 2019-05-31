@@ -115,7 +115,7 @@
     效果和时用 ``button_a.irq()`` 按键中断时一样的,button_a的中断也是使用到 ``Pin.irq`` 的方法。
 
 
-我们首先实例化MicroPythonPin,将P5引脚配置为 ``PinMode.IN`` ::
+我首先实例化MicroPythonPin,将P5引脚配置为 ``PinMode.IN`` ::
 
     p5=MicroPythonPin(5,PinMode.IN) 
 

@@ -27,7 +27,7 @@ radio
 
 |
 
-首先我们需要 ``import radio`` ,导入无线模块。然后 ``radio.on()`` ,开启无线功能。配置无线通道 ``radio.config(channel)`` ,channel参数可设置1~13个通道。
+首先我需要 ``import radio`` ,导入无线模块。然后 ``radio.on()`` ,开启无线功能。配置无线通道 ``radio.config(channel)`` ,channel参数可设置1~13个通道。
 使用 ``radio.send()`` 发送广播消息,消息类型为字符串。接收端,在相同channel,使用 ``radio.receive()`` 来接收广播数据。 ``receive(True)`` 返回数据类型为(msg,mac)。
 mac为网络设备的MAC地址,地址均唯一。如,想做单播应用,可过滤其他MAC设备发送的消息。默认下 ``receive()`` ,返回的数据类型为msg,是不带MAC地址的。
 

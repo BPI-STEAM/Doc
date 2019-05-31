@@ -30,10 +30,11 @@
     :numbered:
 
     mpfs
+    leds
     wifi
+    wireless
+    vscode
     mqtt
+    codelab
+    pycharm
     
-leds
-vscode
-pycharm
-wireless

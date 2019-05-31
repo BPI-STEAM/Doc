@@ -19,7 +19,7 @@
 
   from MicroPython import *
 
-我们使用 ``sound.read()`` 获取麦克风的数据。
+我使用 ``sound.read()`` 获取麦克风的数据。
 ::
 
     sound.read()

@@ -57,7 +57,7 @@
 
     用在某些值（未指定）后结束后的任意引用点返回一个递增的毫秒计数器。该值应被视为不透明的，且仅适用于ticks_diff()。
 
-    自动换行值未显式显示，但为简化讨论，我们将其称为 *TICKS_MAX* 。 该值的周期为  *TICKS_PERIOD = TICKS_MAX + 1* 。
+    自动换行值未显式显示，但为简化讨论，我将其称为 *TICKS_MAX* 。 该值的周期为  *TICKS_PERIOD = TICKS_MAX + 1* 。
      *TICKS_PERIOD* 须为2的幂，但也会因端口不同而不同。同一周期值用于 `ticks_ms()` 、 `ticks_us()` 、
       `ticks_cpu()` 函数（为简单起见）。因此，这些函数将返回一个介于 *[0 .. TICKS_MAX]* 的值，包括 *TICKS_PERIOD* 值。
     注意：仅使用非负值。多数情况下，您应将这些函数返回的值视为透明。对之唯一可用的操作为下述的 `ticks_diff()` 和 `ticks_add()` 函数。

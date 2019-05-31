@@ -170,7 +170,7 @@ publish后,你可以在Easy IoT工作间的该设备“查看详情”中,查询
         def sub_cb(topic, msg):             # 当接收到订阅消息时的回调函数
             print((topic, msg))             # 打印接收的主题消息
     
-            if topic == TOPIC.encode():     # 如果topic为我们设备的topic时,由于收到为字节类型。这里需要将 TOPIC 转换为字节类型。
+            if topic == TOPIC.encode():     # 如果topic为我设备的topic时,由于收到为字节类型。这里需要将 TOPIC 转换为字节类型。
  
                 if msg == b"on":                # 如果消息为“on”,亮灯  
                         rgb.fill((0,20,0))

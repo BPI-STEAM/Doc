@@ -30,7 +30,7 @@
 * ``music.POWER_UP`` 
 * ``music.POWER_DOWN`` 
 
-我们可以播放一些内置旋律:: 
+我可以播放一些内置旋律:: 
 
     import music
    

@@ -78,7 +78,7 @@
 .. function:: deepsleep()
 
     停止CPU和所有外围设备（包括网络接口，如果有）。执行从主脚本恢复，就像重置一样。
-    可以检查重置原因以了解我们来自哪里 :data:`machine.DEEPSLEEP` 。为了唤醒实际发生，应首先配置唤醒源，如 :class:`Pin` 更改或 :class:`RTC` 超时。
+    可以检查重置原因以了解我来自哪里 :data:`machine.DEEPSLEEP` 。为了唤醒实际发生，应首先配置唤醒源，如 :class:`Pin` 更改或 :class:`RTC` 超时。
 
 
 .. function:: wake_reason()
