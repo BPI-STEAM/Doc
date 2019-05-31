@@ -21,7 +21,7 @@ MicroPython板子是一块MicroPython微控制器板，它集成ESP32高性能�
 
 .. Hint::
 
-    我们已将板子项目的软硬件资源分享至GitHub，供各位板子爱好者学习阅览！
+    我已将板子项目的软硬件资源分享至GitHub，供各位板子爱好者学习阅览！
 
 .. Attention::
 

@@ -24,7 +24,7 @@
     from microbit import *
     display.show(Image.HAPPY)
 
-如你所见，板子显示了一个笑脸，我们已经成功了运行 MicroPython 代码。
+如你所见，板子显示了一个笑脸，我已经成功了运行 MicroPython 代码。
 
 .. image:: simple_use/display.png
 

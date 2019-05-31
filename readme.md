@@ -22,9 +22,13 @@ The document content is in [source](https://github.com/BPI-STEAM/Docs/tree/maste
 
 如果想提交内容，直接提交即可，提交后，项目会自动编译部署到网站，而你只需要在本地 build 核对一下即可，如果出现问题请提交 issue 或直接反馈到群里。
 
+### micropytho list
+
+![](micropython.png)
+
 ## related and thank them
 
-感谢以下文档提供的公共部分内容，我们将保留引用信息链接。
+感谢以下文档提供的公共部分内容，我将保留引用信息链接。
 
 [esp32 中文](https://docs.singtown.com/micropython/zh/latest/esp32/index.html)
 

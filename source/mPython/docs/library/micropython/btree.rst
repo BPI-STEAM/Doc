@@ -15,7 +15,7 @@
 
     import btree
 
-    # First, we need to open a stream which holds a database 首先，我们需要打开一个包含数据库的流
+    # First, we need to open a stream which holds a database 首先，我需要打开一个包含数据库的流
     # This is usually a file, but can be in-memory database 这通常是一个文件，也可能是一个内存数据库
     # using uio.BytesIO, a raw flash partition, etc. 使用uio.BytesIO，一个原始闪分区
     # Oftentimes, you want to create a database file if it doesn't
