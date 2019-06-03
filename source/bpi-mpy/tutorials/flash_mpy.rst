@@ -35,5 +35,3 @@
 .. Attention::
 
     有问题可以到 `中文社区 <https://forum.banana-pi.org.cn/c/bpi-bit>`_ 反馈。
-
-.. image:: _static/footer.png
