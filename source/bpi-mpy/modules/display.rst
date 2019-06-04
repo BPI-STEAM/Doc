@@ -1,7 +1,7 @@
 .. _display.py:
 
-.. module:: _display
+.. module:: display
 
-_display 模块
+display 模块
 ==============
 
