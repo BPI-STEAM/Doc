@@ -11,7 +11,6 @@
     :maxdepth: 1
     :numbered:
     
-    test
     microbit
     urequests
     umqtt.simple
