@@ -22,7 +22,7 @@ copyright = '2019, Open Source'
 author = 'junhuanchen'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.2'
+release = 'alpha'
 
 
 # -- General configuration ---------------------------------------------------
@@ -95,8 +95,10 @@ html_theme_options = {
     # 'navigation_depth': 4,  # Depth of the headers shown in the navigation bar
 }
 
+html_logo = '_static/logo.png'
 
-html_logo = 'logo.png'
+html_use_index = True
+html_show_sphinx = True
 
 from recommonmark.parser import CommonMarkParser
 source_parsers = {
