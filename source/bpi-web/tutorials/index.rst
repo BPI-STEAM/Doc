@@ -3,7 +3,7 @@
 
 .. Hint::
 
-    `Windwos7+ exe 安装程序 <https://github.com/BPI-STEAM/BPI-BIT-MicroPython/releases/tag/DevTools>`_
+    `教育版安装程序（ Windwos7+ ） <https://github.com/BPI-STEAM/BPI-BIT-MicroPython/releases/tag/DevTools>`_
     
 .. toctree::
    :maxdepth: 2
