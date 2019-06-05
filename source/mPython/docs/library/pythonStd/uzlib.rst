@@ -6,7 +6,7 @@
 
 这个模块实现了相应 :term:`CPython` 模块的一个子集，如下所述。有关更多信息，请参阅原始CPython文档: `zlib <https://docs.python.org/3.5/library/zlib.html#module-zlib>`_
 
-该模块允许解压用DEFLATE算法（常用于zlib库和gzip压缩程式）压缩的二进制数据。压缩尚未实现。
+该模块允许解压用DEFLATE算法（常用于zlib库和gzip压缩程序）压缩的二进制数据。压缩尚未实现。
 
 函数
 ---------
