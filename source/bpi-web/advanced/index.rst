@@ -15,7 +15,6 @@
     :maxdepth: 1
     :numbered:
     
-    detail
     setting
     blockly
     rgbmatrix
