@@ -13,20 +13,24 @@ release firmware
 
 源自于台湾 Webduino 官方提供的支持固件，添加了许多额外的特性，如 物联网开发、代码托管、积木编程 等等。
 
-- `使用教程 <https://github.com/BPI-STEAM/BPI-BIT-WebDuino>`_ & `项目主页 <https://github.com/webduinoio/wafirmata>`_
-- `历史版本 & 更新日志 <https://github.com/BPI-STEAM/BPI-BIT-WebDuino>`_
+- `使用教程 <https://github.com/BPI-STEAM/BPI-BIT-WebDuino>`_
+- `项目主页 <https://github.com/webduinoio/wafirmata>`_
 
-Webduino 在线编程（国内）
+WebBit 教育版
 ------------------------------------
 
-- `使用教程 <https://webduino.com.cn/site/zh_cn/tutorials.html>`_ & `在线网站 <https://webduino.com.cn/site/zh_cn/index.html>`_
-
-.. image:: images/github-browser-webduino.png
-
-WebBit 本地积木化软件
-------------------------------------
-
-- `使用教程 <https://tutorials.webduino.io/zh-tw/docs/webbit/index.html>`_ & `在线网站 <https://webbit.webduino.io/blockly/>`_
-- `历史版本 & 更新日志 <https://github.com/BPI-STEAM/BPI-BIT-WebDuino/releases>`_
+- `在线文档 <https://tutorials.webduino.io/zh-tw/docs/webbit/index.html>`_ & `在线网站 <https://webbit.webduino.io/blockly/>`_
+- `离线软件 <https://github.com/BPI-STEAM/BPI-BIT-WebDuino/releases>`_
 
 .. image:: images/github-desktop-webduino.png
+
+Webduino 开发版
+------------------------------------
+
+.. Hint::
+
+    在线教程已同步到进阶教程，请查看左侧列表。
+
+- `在线教程 <https://webduino.com.cn/site/zh_cn/tutorials.html>`_ & `在线网站 <https://webduino.com.cn/site/zh_cn/index.html>`_
+
+.. image:: images/github-browser-webduino.png
