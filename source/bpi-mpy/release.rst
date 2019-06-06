@@ -47,7 +47,7 @@ mpfshell-lite
 vscode-mpfshell
 ---------------------------
 
-应用于 宇宙第二 的 IDE （VsCode）的 Mpfshell 插件。
+应用于 VSCode 的 Mpfshell 插件。
 
 - `使用教程 <https://marketplace.visualstudio.com/items?itemName=junhuanchen.mpfshell>`_ & `项目主页 <https://github.com/junhuanchen/vscode-mpfshell>`_
 - `历史版本 & 更新日志 <https://marketplace.visualstudio.com/items/junhuanchen.mpfshell/changelog>`_
@@ -57,7 +57,7 @@ vscode-mpfshell
 pycharm-mpfshell
 ---------------------------
 
-应用于 宇宙第一 的 Python IDE（Pycharm）的 Mpfshell 插件。
+应用于 Pycharm 专业 IDE 的 Mpfshell 插件。
 
 - `使用教程 <https://github.com/junhuanchen/intellij-micropython>`_ & `项目主页 <https://github.com/junhuanchen/intellij-micropython>`_
 - `历史版本 & 更新日志 <https://github.com/junhuanchen/intellij-micropython/releases>`_
