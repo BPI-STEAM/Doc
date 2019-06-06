@@ -11,7 +11,6 @@
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
 
    flash_web.rst
    info/index
