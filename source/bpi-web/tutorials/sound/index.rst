@@ -3,6 +3,7 @@
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
 
    sound-effect
    speak-aloud
