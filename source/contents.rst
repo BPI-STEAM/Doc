@@ -27,6 +27,22 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
    bpi-steam/readme
    bpi-steam/driver
 
+使用 Webduino 编程
+---------------------------
+
+用户通过烧写 Webduino 固件，就可以使用面向全世界的 Webduino Blockly 积木化在线编程。
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Webduino
+   
+   bpi-web/tutorials/index
+   bpi-web/advanced/index
+   bpi-web/modules/index
+   bpi-web/release
+
+只需浏览器，即可随时查看云端和托管你的代码，配合 Github 上各种有趣的插件系统与多语言化环境，享受全世界流行的积木编程吧!
+
 使用 MicroPython 编程
 ---------------------------
 
@@ -46,21 +62,21 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
    mPython/docs/library/micropython/index.rst
    mPython/docs/library/pythonStd/index.rst
 
-使用 Webduino 编程
+使用 Aduino 开发
 ---------------------------
 
-用户通过烧写 Webduino 固件，就可以使用面向全世界的 Webduino Blockly 积木化在线编程。
+.. Hint::
+
+    使用 Arduino 将不会阐述过多基础内容，请自行具备 C/C++ 的语言开发基础。
+
+BPI-BIT 提供了入门 Arduino 的软件工具和最佳示例，这将成为你进入嵌入式专业开发的最低门槛。
 
 .. toctree::
    :maxdepth: 2
-   :caption: Webduino
-   
-   bpi-web/tutorials/index
-   bpi-web/advanced/index
-   bpi-web/modules/index
-   bpi-web/release
-
-只需浏览器，即可随时查看云端和托管你的代码，配合 Github 上各种有趣的插件系统与多语言化环境，享受全世界流行的积木编程吧!
+   :caption: Aduino
+   bpi-adu/tutorials/index
+   bpi-adu/advanced/index
+   bpi-adu/modules/index
 
 拓展板支持
 ---------------------------
