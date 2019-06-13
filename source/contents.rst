@@ -62,18 +62,19 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
    mPython/docs/library/micropython/index.rst
    mPython/docs/library/pythonStd/index.rst
 
-使用 Aduino 开发
+使用 Aduino 编程
 ---------------------------
 
 .. Hint::
 
-    使用 Arduino 将不会阐述过多基础内容，请自行具备 C/C++ 的语言开发基础。
+    Arduino 将不会阐述过多基础内容，请自行具备 C/C++ 的语言开发基础。
 
 BPI-BIT 提供了入门 Arduino 的软件工具和最佳示例，这将成为你进入嵌入式专业开发的最低门槛。
 
 .. toctree::
    :maxdepth: 2
    :caption: Aduino
+   
    bpi-adu/tutorials/index
    bpi-adu/advanced/index
    bpi-adu/modules/index
