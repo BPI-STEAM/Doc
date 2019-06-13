@@ -62,7 +62,7 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
    mPython/docs/library/micropython/index.rst
    mPython/docs/library/pythonStd/index.rst
 
-使用 Aduino 编程
+使用 Arduino 编程
 ---------------------------
 
 .. Hint::
