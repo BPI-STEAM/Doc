@@ -33,6 +33,17 @@
 
 ![](img/tutorials/zh_cn/setting-04.jpg)
 
+**新版界面介绍：**
+![](img/tutorials/zh_cn/new-interface.png)
+
+上图可以看到我们将新版本界面分为了三个部分，第一部分是设置板子基本信息，同时反馈bit板Device ID，第二个部分设置板子需要连接的WiFi，可以同时设置三个WiFi，方便用户在开发环境与演示环境等不同场景键无缝切换，免去了换个地方即要重设WiFi的麻烦。第三个部分显示板子现在连接的WiFi信息以及版本信息。同时上图中的Device ID依旧为长ID，但是可以通过点击下面的按钮获取短ID，但是此时需要板子保持联网状态。点击获取`Shoren the ID`之后，会看到如下过程信息：
+
+![](img/tutorials/zh_cn/new-interface-getShortID.png)
+
+获取短ID结果：
+
+![](img/tutorials/zh_cn/new-interface-shortID.png)
+
 > 小提醒，版本号 Ver 0.1.06_0719_01 之后的版本，若红灯闪完后亮起「**蓝灯**」而不是绿灯，表示已有新版本可以进行 OTA 更新。
 
 ### 3. OTA 远程更新
