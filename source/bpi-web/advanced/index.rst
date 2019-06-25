@@ -7,7 +7,7 @@ Webduino Bit 在线标准版
 
 .. Hint::
 
-    请在标准环境下进行 `Webduino Blockly 标准版 <https://bit.webduino.com.cn/blockly/>`_ 开发。
+    请在标准环境下进行 `Webduino Blockly 标准版 <https://bit.webduino.com.cn/blockly/?lang=zh-hans>`_ 开发。
 
 以下教程对应的教学网站：`在线教学文件 <https://bit.webduino.com.cn/site/zh_cn/tutorials.html>`_ 。
 
