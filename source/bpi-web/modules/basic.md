@@ -2,7 +2,7 @@
 
 ## 载入拓展积木
 
-> 以此示例模板为例：[webduino-blockly-template](https://bpi.org.cn/webduino-blockly-template/) 。
+> 以此示例模板为例：[webduino-blockly-template](https://bpi-steam.com/webduino-blockly-template/) 。
 
 进入 [ webduino blockly Bit ](https://bit.webduino.com.cn/blockly/?lang=zh-hans)。
 
@@ -12,7 +12,7 @@
 
 ![](basic/1.png)
 
-在该框粘贴拓展 `https://bpi.org.cn/webduino-blockly-template/blockly.json` 地址并点击 汇入 即可。
+在该框粘贴拓展 `https://bpi-steam.com/webduino-blockly-template/blockly.json` 地址并点击 汇入 即可。
 
 ![](basic/2.png)
 
@@ -48,4 +48,4 @@
 
 ![](basic/9.png)
 
-如果想要自己制作和设计积木，可以参考[开发者文档](http://dev.bpi.org.cn)。
+如果想要自己制作和设计积木，可以参考[开发者文档](http://dev.bpi-steam.com)。
