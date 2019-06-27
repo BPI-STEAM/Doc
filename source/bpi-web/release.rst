@@ -22,7 +22,7 @@ WebBit 教育版
 - `在线文档 <https://tutorials.webduino.io/zh-tw/docs/webbit/index.html>`_ & `在线网站 <https://webbit.webduino.io/blockly/>`_
 - `离线软件 <https://github.com/BPI-STEAM/BPI-BIT-WebDuino/releases>`_
 
-.. image:: images/github-desktop-webduino.png
+.. image:: ../bpi-mpy/images/github-desktop-webduino.png
 
 Webduino 开发版
 ------------------------------------
@@ -33,4 +33,4 @@ Webduino 开发版
 
 - `在线教程 <https://webduino.com.cn/site/zh_cn/tutorials.html>`_ & `在线网站 <https://webduino.com.cn/site/zh_cn/index.html>`_
 
-.. image:: images/github-browser-webduino.png
+.. image:: ../bpi-mpy/images/github-browser-webduino.png
