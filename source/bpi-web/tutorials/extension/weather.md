@@ -1,82 +1,80 @@
-# 氣象資訊
+# 气象资讯
 
-氣象資訊積木能夠即時從中央氣象局取得開放資料，包含即時氣象、空氣品質、天氣預報、地震資訊、水庫水情和雷達回波圖...等常用氣象資訊，透過這些氣象資訊搭配物聯網的實作，更能落實氣象資訊的有效應用。
+气象资讯积木能够即时从中央气象局取得开放资料，包含即时气象、空气品质、天气预报、地震资讯、水库水情和雷达回波图...等常用气象资讯，透过这些气象资讯搭配物联网的实作，更能落实气象资讯的有效应用。
 
-## 氣象資訊積木清單
+## 气象资讯积木清单
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-01.jpg)
+![气象资讯](../images/zh-tw/docs/webbit/extension/weather-01.jpg)
 
-## 取得氣象資料
+## 取得气象资料
 
-氣象資訊有一塊「取得氣象資訊」積木，可以取得六種常用資訊，分別是「空氣品質」、「即時觀測」、「天氣預報」、「地震資訊」、「水庫水情」和「雷達回波圖」。
+气象资讯有一块「取得气象资讯」积木，可以取得六种常用资讯，分别是「空气品质」、「即时观测」、「天气预报」、「地震资讯」、「水库水情」和「雷达回波图」。
 
-> 取得氣象資訊的積木屬於「*取得資訊後才會繼續執行後方程序*」的類型，當編輯畫面中有這塊積木，*執行時當程序遇到這塊積木會暫停，直到取得氣象資訊之後才會再繼續*。
+> 取得气象资讯的积木属于「*取得资讯后才会继续执行后方程序*」的类型，当编辑画面中有这块积木，*执行时当程序遇到这块积木会暂停，直到取得气象资讯之后才会再继续*。
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-03.jpg)
+![气象资讯](../images/zh-tw/docs/webbit/extension/weather-03.jpg)
 
-## 空氣品質
+## 空气品质
 
-「空氣品質」積木能夠顯示空氣品質的相關資訊，包含 AQI、PM2.5、PM10...等相關數值以及綜合指標的文字描述，偵測的地點為中央氣象局在台灣的觀測站台，可選擇離住家最近的地點作為觀測依據。
+「空气品质」积木能够显示空气品质的相关资讯，包含AQI、PM2.5、PM10...等相关数值以及综合指标的文字描述，侦测的地点为中央气象局在台湾的观测站台，可选择离住家最近的地点作为观测依据。
 
-> 空氣品質積木需搭配「取得氣象資料」積木取得「空氣品質」資訊。
+> 空气品质积木需搭配「取得气象资料」积木取得「空气品质」资讯。
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-02.jpg)
+![气象资讯](../images/zh-tw/docs/webbit/extension/weather-02.jpg)
 
-下圖的例子，取得前鎮區空氣品質資料，並透過小怪獸講出空氣品質綜合指標，以及個別的偵測數值。
+下图的例子，取得前镇区空气品质资料，并透过小怪兽讲出空气品质综合指标，以及个别的侦测数值。
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-04.jpg)
+![气象资讯](../images/zh-tw/docs/webbit/extension/weather-04.jpg)
 
-## 即時觀測
+## 即时观测
 
-「即時觀測」積木能夠顯示目前天氣的相關資訊，包含溫度、濕度、風力、累積雨量...等相關數值，偵測的地點為中央氣象局在台灣的觀測站台，可選擇離住家最近的地點作為觀測依據。
+「即时观测」积木能够显示目前天气的相关资讯，包含温度、湿度、风力、累积雨量...等相关数值，侦测的地点为中央气象局在台湾的观测站台，可选择离住家最近的地点作为观测依据。
 
-> 即時觀測積木需搭配「取得氣象資料」積木取得「即時觀測」資訊。
+> 即时观测积木需搭配「取得气象资料」积木取得「即时观测」资讯。
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-05.jpg)
+![气象资讯](../images/zh-tw/docs/webbit/extension/weather-05.jpg)
 
-下圖的例子，分別透過小怪獸講出高雄與台北的即時氣象資訊。
+下图的例子，分别透过小怪兽讲出高雄与台北的即时气象资讯。
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-06.jpg)
+![气象资讯](../images/zh-tw/docs/webbit/extension/weather-06.jpg)
 
-## 氣象預報
+## 气象预报
 
-「氣象預報」積木能夠顯示未來六小時、十八小時和三十六小時的氣象預報，預報地點為台灣的主要縣市，可選住家所在縣市作為觀測依據。
+「气象预报」积木能够显示未来六小时、十八小时和三十六小时的气象预报，预报地点为台湾的主要县市，可选住家所在县市作为观测依据。
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-07.jpg)
+![气象资讯](../images/zh-tw/docs/webbit/extension/weather-07.jpg)
 
-下圖的例子，分別透過小怪獸講出高雄八小時的氣象預報，以及新竹十八小時的氣象預報。
+下图的例子，分别透过小怪兽讲出高雄八小时的气象预报，以及新竹十八小时的气象预报。
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-08.jpg)
+![气象资讯](../images/zh-tw/docs/webbit/extension/weather-08.jpg)
 
-## 水庫水情
+## 水库水情
 
-「水庫水情」積木能夠取得全台灣所有水庫的水情資心，包含蓄水百分比、有效蓄水量和降雨量...等。
+「水库水情」积木能够取得全台湾所有水库的水情资心，包含蓄水百分比、有效蓄水量和降雨量...等。
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-09.jpg)
+![气象资讯](../images/zh-tw/docs/webbit/extension/weather-09.jpg)
 
-下圖的例子，分別透過小怪獸講出石門水庫和曾文水庫的水情資訊。
+下图的例子，分别透过小怪兽讲出石门水库和曾文水库的水情资讯。
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-10.jpg)
-
-
-## 地震資訊
-
-「地震資訊」積木能夠取得最近 1~3 次的地震資訊。
-
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-11.jpg)
-
-下圖的例子，透過小怪獸講出最近一次的地震資訊 ( 範例日期為 5/17 )。
-
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-12.jpg)
-
-## 雷達回波
-
-「雷達回波」積木能夠取得一張雷達回波圖，圖片格式為 jpg。
-
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-13.jpg)
-
-下圖的例子，透過小怪獸展示雷達回波圖。
-
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-14.jpg)
+![气象资讯](../images/zh-tw/docs/webbit/extension/weather-10.jpg)
 
 
+## 地震资讯
+
+「地震资讯」积木能够取得最近 1~3 次的地震资讯。
+
+![气象资讯](../images/zh-tw/docs/webbit/extension/weather-11.jpg)
+
+下图的例子，透过小怪兽讲出最近一次的地震资讯 ( 范例日期为 5/17 )。
+
+![气象资讯](../images/zh-tw/docs/webbit/extension/weather-12.jpg)
+
+## 雷达回波
+
+「雷达回波」积木能够取得一张雷达回波图，图片格式为 jpg。
+
+![气象资讯](../images/zh-tw/docs/webbit/extension/weather-13.jpg)
+
+下图的例子，透过小怪兽展示雷达回波图。
+
+![气象资讯](../images/zh-tw/docs/webbit/extension/weather-14.jpg)

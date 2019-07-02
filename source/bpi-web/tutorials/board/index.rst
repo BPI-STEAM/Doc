@@ -11,4 +11,3 @@
    photocell-thermistor
    buzzer
    mpu9250
-   

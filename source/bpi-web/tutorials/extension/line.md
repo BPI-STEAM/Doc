@@ -1,95 +1,93 @@
 # LINE 聊天操控
 
-編輯器預設 LINE 即時通訊相關功能，除了支援 LINE Notify 的推播，更可以接收 LINE 的聊天訊息，透過聊天的方式操控 開發板或和小怪獸進行互動。
+编辑器预设 LINE 即时通讯相关功能，除了支援 LINE Notify 的推播，更可以接收 LINE 的聊天讯息，透过聊天的方式操控 开发板或和小怪兽进行互动。
 
-## LINE 聊天操控積木清單
+## LINE 聊天操控积木清单
 
-LINE 聊天操控的積木包含發送推播專用的 LINE Notify 積木、聊天專用 LINE Chat 積木，以及接收訊息、回傳訊息、表情符號三種積木。
+LINE 聊天操控的积木包含发送推播专用的 LINE Notify 积木、聊天专用 LINE Chat 积木，以及接收讯息、回传讯息、表情符号三种积木。
 
 ![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-01.jpg)
 
 ## LINE Notify
 
-LINE Notify 是 LINE 所提供的一項非常方便的推播服務，每個人的 LINE 帳號都可以使用，使用之前，必須先前往 LINE Notify 的網站 ( [https://notify-bot.line.me/zh_TW/](https://notify-bot.line.me/zh_TW/#_blank) )，使用自己的 LINE 帳號登入，申請 LINE Notify 權杖。
+LINE Notify 是LINE 所提供的一项非常方便的推播服务，每个人的LINE 帐号都可以使用，使用之前，必须先前往LINE Notify 的网站( [https://notify-bot.line.me/zh_TW /](https://notify-bot.line.me/zh_TW/#_blank) )，使用自己的LINE 帐号登入，申请LINE Notify 权杖。
 
-> 更多詳細資訊可參考：[自建 LINE Notify 訊息通知](https://www.oxxostudio.tw/articles/201806/line-notify.html#_blank)
+> 更多详细资讯可参考：[自建 LINE Notify 讯息通知](https://www.oxxostudio.tw/articles/201806/line-notify.html#_blank)
 
 ![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-02.jpg)
 
-登入後，滑鼠移至上方個人帳號，選擇「個人頁面」。
+登入后，滑鼠移至上方个人帐号，选择「个人页面」。
 
 ![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-03.jpg)
 
-在個人頁面可以發行「權杖」，權杖的作用在於讓「連動的服務」可以透過 LINE Notify 發送訊息通知，發行後的權杖與其名稱會出現在上方的清單中，如果之前有申請過像是 IFTTT 的連動通知，就會發現上方出現 IFTTT 的服務。
+在个人页面可以发行「权杖」，权杖的作用在于让「连动的服务」可以透过LINE Notify 发送讯息通知，发行后的权杖与其名称会出现在上方的清单中，如果之前有申请过像是IFTTT 的连动通知，就会发现上方出现IFTTT 的服务。
 
 ![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-04.jpg)
 
-點選「發行權杖」，指定權杖名稱 ( 傳送通知訊息時所顯示的名稱 )，以及選擇是要一對一接收，或是讓群組也可以接收通知。
+点选「发行权杖」，指定权杖名称 ( 传送通知讯息时所显示的名称 )，以及选择是要一对一接收，或是让群组也可以接收通知。
 
 ![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-05.jpg)
 
-點選「發行」，會出現一段權杖代碼，由於這段代碼「**只會出現一次**」，請先複製這段代碼，找個筆記本或文件儲存這段代碼，就可以點選下方按鈕「關閉」。
+点选「发行」，会出现一段权杖代码，由于这段代码「**只会出现一次**」，请先复制这段代码，找个笔记本或文件储存这段代码，就可以点选下方按钮「关闭」。
 
 ![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-06.jpg)
 
-完成後在連動的服務裡，就會出現了自訂的服務。
+完成后在连动的服务里，就会出现了自订的服务。
 
 ![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-07.jpg)
 
-同時，LINE 訊息裡也會收到 LINE Notify 發出「已發行個人存取權杖」的訊息，到這一步 LINE Notify 已經設定完成，已經可以開始從 發送訊息。
+同时，LINE 讯息里也会收到 LINE Notify 发出「已发行个人存取权杖」的讯息，到这一步 LINE Notify 已经设定完成，已经可以开始从 发送讯息。
 
 ![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-08.jpg)
 
-回到 編輯器，使用 LINE Notify 積木，在 Token 的位置填入剛剛產生的權杖代碼，在發送訊息的位置填入欲發送的訊息，執行後，自己的 LINE 就會收到 LINE Notify 的訊息。
+回到 编辑器，使用 LINE Notify 积木，在 Token 的位置填入刚刚产生的权杖代码，在发送讯息的位置填入欲发送的讯息，执行后，自己的 LINE 就会收到 LINE Notify 的讯息。
 
-> 「LINE Notify」積木屬於「*發送訊息後才會繼續執行後方程序*」的類型 ( 點擊前方問號小圖示會提示 )，當編輯畫面中有這塊積木，*執行時當程序遇到這塊積木會暫停，直到發送訊息後後才會再繼續*。
+> 「LINE Notify」积木属于「*发送讯息后才会继续执行后方程序*」的类型( 点击前方问号小图示会提示)，当编辑画面中有这块积木，*执行时当程序遇到这块积木会暂停，直到发送讯息后后才会再继续*。
 
 ![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-10.jpg)
 
-搭配 開發板，也可以做到按下 A 開關就發送 A，按下開關 B 就發送 B 的效果。
+搭配 开发板，也可以做到按下 A 开关就发送 A，按下开关 B 就发送 B 的效果。
 
 ![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-11.jpg)
 
-如果要發送圖片，只要填入圖片網址即可發送，搭配 開發板，也可以做到按下 A 開關就發送一張皮卡丘的圖片。
+如果要发送图片，只要填入图片网址即可发送，搭配 开发板，也可以做到按下 A 开关就发送一张皮卡丘的图片。
 
 ![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-13.jpg)
 
-如果要傳送表情貼圖，可使用「表情貼圖」積木，表情貼圖有三種 ( 初次安裝 LINE 時預設的三種 )，每種貼圖分成表情代號 ( STKID ) 和 表情主題 ( STKPKGID )，可以透過 [表情清單](https://devdocs.line.me/files/sticker_list.pdf#_blank)查詢對應的號碼，輸入指定的號碼，執行後就可以發送表情貼圖，舉例來說，搭配 開發板，按下 A 開關就發送生氣圖案，按下 B 開關就發送開心圖案。
+如果要传送表情贴图，可使用「表情贴图」积木，表情贴图有三种( 初次安装LINE 时预设的三种)，每种贴图分成表情代号( STKID ) 和表情主题( STKPKGID )，可以透过[表情清单](https://devdocs.line.me/files/sticker_list.pdf#_blank)查询对应的号码，输入指定的号码，执行后就可以发送表情贴图，举例来说，搭配开发板，按下A 开关就发送生气图案，按下B 开关就发送开心图案。
 
 ![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-12.jpg)
 
 ## LINE Chat 聊天操控
 
-「LINE Chat」積木能讓我們透過「聊天」的方式，接收從 LINE 發送過來的訊息，透過訊息和 編輯器或 開發板互動。
+「LINE Chat」积木能让我们透过「聊天」的方式，接收从 LINE 发送过来的讯息，透过讯息和 编辑器或 开发板互动。
 
-> LINE Chat 積木是屬於「一來一往」的積木，，接收一則訊息才能回應一則訊息，無法像 LINE Notify 積木可以主動發送訊息，或接收一則訊息而回傳多則訊息。
+> LINE Chat 积木是属于「一来一往」的积木，，接收一则讯息才能回应一则讯息，无法像 LINE Notify 积木可以主动发送讯息，或接收一则讯息而回传多则讯息。
 
 ![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-14.jpg)
 
-要使用 LINE Chat 功能，必須先加入 Webduino Bot 為 LINE 的好友，*使用 LINE 掃描下方 QRCode 加入好友*。
+要使用 LINE Chat 功能，必须先加入 Webduino Bot 为 LINE 的好友，*使用 LINE 扫描下方 QRCode 加入好友*。
 
 ![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-15.jpg)
 
-加入好友後，會收到一則歡迎訊息，歡迎訊息包含了三個提示：
+加入好友后，会收到一则欢迎讯息，欢迎讯息包含了三个提示：
 
-> - 輸入「id」兩個英文字母，取得頻道名稱 ( 不是你的 id )。
-> - 輸入「newid」產生新的頻道名稱。
-> - 輸入「id:名稱」自訂頻道名稱 ( 可能會重複 )。
+> - 输入「id」两个英文字母，取得频道名称 ( 不是你的 id )。
+> - 输入「newid」产生新的频道名称。
+> - 输入「id:名称」自订频道名称 ( 可能会重复 )。
 
-按照指示，輸入 i 和 d 兩個英文字母，就會收到系統配發的聊天頻道名稱，如果是系統配發的頻道名稱，每個人的聊天頻道都不相同，如果是自訂頻道名稱，則可能會和別人的名稱重複，也就可能會收到別人的訊息。
+按照指示，输入i 和d 两个英文字母，就会收到系统配发的聊天频道名称，如果是系统配发的频道名称，每个人的聊天频道都不相同，如果是自订频道名称，则可能会和别人的名称重复，也就可能会收到别人的讯息。
 
 ![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-16.jpg)
 
-在 編輯畫面放入 LINE Chat 的積木，接收到訊息時讓小怪獸說出 LINE 的訊息，執行後，就可用 LINE 傳送訊息給 Webduino Bot，訊息收到的當下，小怪獸就會說出訊息。
+在 编辑画面放入 LINE Chat 的积木，接收到讯息时让小怪兽说出 LINE 的讯息，执行后，就可用 LINE 传送讯息给 Webduino Bot，讯息收到的当下，小怪兽就会说出讯息。
 
 ![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-17.jpg)
 
-如果要回傳訊息，只需要放入回傳訊息的積木，寫入回傳的內容 ( 支援文字、表情貼圖和圖片，使用方式請參考上方 LINE Notify 教學 )，執行後，就會在收到訊息後回傳對應的訊息，下圖的範例會在收到訊息後，回傳一模一樣的訊息。
+如果要回传讯息，只需要放入回传讯息的积木，写入回传的内容( 支援文字、表情贴图和图片，使用方式请参考上方LINE Notify 教学)，执行后，就会在收到讯息后回传对应的讯息，下图的范例会在收到讯息后，回传一模一样的讯息。
 
 ![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-18.jpg)
 
-除了單純的接收訊息，也可以使用 LINE Chat 來控制 開發板，透過邏輯判斷，就能收到「開燈」的文字就點亮 LED，收到「紅色」的指令就發出紅光，實現真正物聯網的應用情境。
+除了单纯的接收讯息，也可以使用LINE Chat 来控制开发板，透过逻辑判断，就能收到「开灯」的文字就点亮LED，收到「红色」的指令就发出红光，实现真正物联网的应用情境。
 
 ![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-19.jpg)
-
-

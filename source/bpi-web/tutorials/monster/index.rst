@@ -6,5 +6,3 @@
 
    basic
    event
-
-   

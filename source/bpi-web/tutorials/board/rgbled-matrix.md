@@ -1,135 +1,132 @@
-# 矩陣 LED
+# 矩阵 LED
 
-開發板的正中央內嵌了 25 顆全彩 LED 所組成的的矩陣，每個 LED 都可透過紅、綠、藍三種顏色進行混合產生各種不同顏色，透過不同位置的燈號與顏色搭配顯示，就能呈現各種圖案造型。
+开发板的正中央内嵌了25 颗全彩LED 所组成的的矩阵，每个LED 都可透过红、绿、蓝三种颜色进行混合产生各种不同颜色，透过不同位置的灯号与颜色搭配显示，就能呈现各种图案造型。
 
-## 矩陣 LED 積木清單
+## 矩阵 LED 积木清单
 
-矩陣 LED 積木清單包含顯示顏色、關燈、繪製圖案、預設圖案、指定第幾顆燈的顏色、跑馬燈和亮度等積木。
+矩阵 LED 积木清单包含显示颜色、关灯、绘制图案、预设图案、指定第几颗灯的颜色、跑马灯和亮度等积木。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-01.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-01.jpg)
 
-> *使用矩陣 LED 積木必須搭配「開發板」積木*，選擇模擬器，執行後會控制右側模擬器燈號，選擇 USB，執行後會透過 USB 連線方式控制實體開發板，選擇 Wi-Fi 則可透過 Wi-Fi 指定 Device ID 操控。
-> - USB 控制模式為「安裝版編輯器」限定，請參考 [編輯器](../index.html#software)
-> - Wi-Fi 模式需要開發板連接 Wi-Fi，請參考 [硬體開發板 ( 初始化設定 )](../info/setup.html)
+> *使用矩阵LED 积木必须搭配「开发板」积木*，选择模拟器，执行后会控制右侧模拟器灯号，选择USB，执行后会透过USB 连线方式控制实体开发板，选择Wi-Fi 则可透过Wi-Fi 指定Device ID 操控。
+> - USB 控制模式为「安装版编辑器」限定，请参考 [编辑器](../index.html#software)
+> - Wi-Fi 模式需要开发板连接 Wi-Fi，请参考 [硬体开发板 ( 初始化设定 )](../info/setup.html)
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-02.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-02.jpg)
 
-## 顯示顏色
+## 显示颜色
 
-「顯示顏色」積木可以讓 25 顆燈同時亮起指定的顏色。( 若選擇黑色，效果等同不亮燈 )
+「显示颜色」积木可以让 25 颗灯同时亮起指定的颜色。 ( 若选择黑色，效果等同不亮灯 )
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-04.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-04.jpg)
 
-開發板選擇模擬器，顯示顏色積木選擇紅色，執行後，虛擬的開發板 25 顆燈都變成紅色。( 若手邊有 開發板，可以使用 USB 或 Wi-Fi 連線控制 )
+开发板选择模拟器，显示颜色积木选择红色，执行后，虚拟的开发板 25 颗灯都变成红色。 ( 若手边有 开发板，可以使用 USB 或 Wi-Fi 连线控制 )
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-03.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-03.jpg)
 
-## 繪製圖案
+## 绘制图案
 
-「繪製圖案」積木能夠自定義每顆燈不同的顏色，繪製一個 5x5 的圖案。
+「绘制图案」积木能够自定义每颗灯不同的颜色，绘制一个 5x5 的图案。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-05.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-05.jpg)
 
-點選積木上方的顏色區塊就能選擇不同顏色，如果是同顏色，重複點擊就可以還原為黑色 ( 直接使用黑色也是同樣的效果 )。
+点选积木上方的颜色区块就能选择不同颜色，如果是同颜色，重复点击就可以还原为黑色 ( 直接使用黑色也是同样的效果 )。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-07.gif)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-07.gif)
 
-例如繪製一朵花，讓花瓣為紅色，花梗和葉子為綠色，執行後，虛擬的開發板就會呈現一朵彩色的花。
+例如绘制一朵花，让花瓣为红色，花梗和叶子为绿色，执行后，虚拟的开发板就会呈现一朵彩色的花。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-06.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-06.jpg)
 
-## 預設圖案
+## 预设图案
 
-「預設圖案」積木提供 56 種預設圖案，以及一個隨機圖案選項 ( 60 種圖案隨機取出一種 )。
+「预设图案」积木提供 56 种预设图案，以及一个随机图案选项 ( 60 种图案随机取出一种 )。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-08.gif)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-08.gif)
 
-選擇圖案和顏色，執行後，虛擬的開發板就會出現對應的圖案和顏色。
+选择图案和颜色，执行后，虚拟的开发板就会出现对应的图案和颜色。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-09.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-09.jpg)
 
 
-## 顯示一個字
+## 显示一个字
 
-「顯示一個字」積木可以顯示*單一個*大小寫英文字母、數字或標點符號，並指定顯示的顏色。( 不支援中文字 )
+「显示一个字」积木可以显示*单一个*大小写英文字母、数字或标点符号 ，并指定显示的颜色。 ( 不支援中文字 )
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-10.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-10.jpg)
 
-在文字積木輸入字母或數字並指定顏色，執行後就會看到指定顏色的字母或數字出現。
+在文字积木输入字母或数字并指定颜色，执行后就会看到指定颜色的字母或数字出现。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-11.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-11.jpg)
 
-## 跑馬燈
+## 跑马灯
 
-「跑馬燈」積木可以透過跑馬燈的方式，以指定的顏色顯示一串文字，跑馬燈可以只進行一次或無限次重複播放，並能設定文字移動的速度。( 不支援中文字 )
+「跑马灯」积木可以透过跑马灯的方式，以指定的颜色显示一串文字，跑马灯可以只进行一次或无限次重复播放，并能设定文字移动的速度。 ( 不支援中文字 )
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-12.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-12.jpg)
 
-如果設定跑馬燈次數為「一次」，跑馬燈積木會是「*執行完成才會繼續執行後方程序*」的類型 ( 點擊前方問號小圖示會提示 )，*跑馬燈結束後才會接著執行其他程序*，若設定為「無限次」，*後方程序會繼續執行，但和 LED 矩陣有關的行為會被跑馬燈所取代*，使用上要特別注意。
+如果设定跑马灯次数为「一次」，跑马灯积木会是「*执行完成才会继续执行后方程序*」的类型( 点击前方问号小图示会提示)，*跑马灯结束后才会接着执行其他程序*，若设定为「无限次」，*后方程序会继续执行，但和LED 矩阵有关的行为会被跑马灯所取代*，使用上要特别注意。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-13.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-13.jpg)
 
-下圖的例子，執行後會先出現紅色 Hello 文字的跑馬燈，結束後緊接著出現綠色笑臉。
+下图的例子，执行后会先出现红色 Hello 文字的跑马灯，结束后紧接着出现绿色笑脸。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-14.gif)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-14.gif)
 
-## 陣列控制燈號
+## 阵列控制灯号
 
-「陣列控制燈號」積木可以使用陣列的方式控制矩陣 LED 燈號的運作。
+「阵列控制灯号」积木可以使用阵列的方式控制矩阵 LED 灯号的运作。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-15.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-15.jpg)
 
-陣列的順序對應到 開發板的燈號順序，開發板燈號 1~25 的順序為從左到右、從上到下。
+阵列的顺序对应到 开发板的灯号顺序，开发板灯号 1~25 的顺序为从左到右、从上到下。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-16.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-16.jpg)
 
-舉例來說，若設定陣列的三個值為紅色、綠色和藍色，開發板的第 1~3 個燈就會呈現對應的顏色。
+举例来说，若设定阵列的三个值为红色、绿色和蓝色，开发板的第 1~3 个灯就会呈现对应的颜色。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-17.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-17.jpg)
 
-如果是多維陣列，會按照陣列元素的順序進行顯示，若元素內容留空，該顆 LED 會呈現熄燈狀態。
+如果是多维阵列，会按照阵列元素的顺序进行显示，若元素内容留空，该颗 LED 会呈现熄灯状态。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-18.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-18.jpg)
 
-## 第幾顆燈
+## 第几颗灯
 
-「第幾顆燈」積木可以指定第幾顆燈的顏色。
+「第几颗灯」积木可以指定第几颗灯的颜色。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-19.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-19.jpg)
 
-第幾顆燈的順序對應到 開發板的燈號順序，開發板燈號 1~25 的順序為從左到右、從上到下。
+第几颗灯的顺序对应到 开发板的灯号顺序，开发板灯号 1~25 的顺序为从左到右、从上到下。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-16.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-16.jpg)
 
-分別指定不同位置的燈號顏色，執行後就會看見指定位置的燈號亮起。
+分别指定不同位置的灯号颜色，执行后就会看见指定位置的灯号亮起。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-20.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-20.jpg)
 
-## X、Y 座標控制燈號
+## X、Y 座标控制灯号
 
-「X、Y 座標控制燈號」積木可以透過 X 和 Y 的座標值指定燈號的顏色顯示。
+「X、Y 座标控制灯号」积木可以透过 X 和 Y 的座标值指定灯号的颜色显示。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-21.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-21.jpg)
 
-開發板的 X、Y 座標以左上角為 ( 1, 1 )，往右 X 加 1，往下 Y 加 1，依此類推。
+开发板的 X、Y 座标以左上角为 ( 1, 1 )，往右 X 加 1，往下 Y 加 1，依此类推。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-22.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-22.jpg)
 
-分別指定不同 X、Y 的燈號顏色，執行後就會看見指定位置的燈號亮起。
+分别指定不同 X、Y 的灯号颜色，执行后就会看见指定位置的灯号亮起。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-23.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-23.jpg)
 
 ## 亮度
 
-「亮度」積木可以控制「*全部 LED 燈*」的亮度，該積木無法指定單一顆燈的亮度，亮度最暗到最亮的數值為 0 ~20，預設值 10。
+「亮度」积木可以控制「*全部 LED 灯*」的亮度，该积木无法指定单一颗灯的亮度，亮度最暗到最亮的数值为 0 ~20，预设值 10。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-24.jpg)
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-24.jpg)
 
-## 關燈
+## 关灯
 
-「關燈」積木可以關閉「*全部 LED 燈*」，效果等同於把 25 顆燈的顏色同時設定為黑色。
+「关灯」积木可以关闭「*全部 LED 灯*」，效果等同于把 25 颗灯的颜色同时设定为黑色。
 
-![矩陣 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-25.jpg)
-
-
-
+![矩阵 LED](../images/zh-tw/docs/webbit/board/rgbled-matrix-25.jpg)

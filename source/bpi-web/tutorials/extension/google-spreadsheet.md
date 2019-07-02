@@ -1,133 +1,129 @@
-# Google 試算表
+# Google 试算表
 
-透過 編輯器的 Google 試算表功能，只需要簡單幾個步驟，就能將 Google 試算表當作資料庫，儲存傳感器所接收到的訊號數值，或透過開發板顯示試算表讀取的資料。
+透过 编辑器的 Google 试算表功能，只需要简单几个步骤，就能将 Google 试算表当作资料库，储存传感器所接收到的讯号数值，或透过开发板显示试算表读取的资料。
 
-## 建立並設定試算表權限
+## 建立并设定试算表权限
 
-使用 編輯器操作 Google 試算表之前，*必須先建立試算表，並設定試算表的權限*，所以請先用 Google 帳號登入 Google 雲端硬碟，在雲端硬碟裡建立一份全新的空白試算表。
+使用 编辑器操作 Google 试算表之前，*必须先建立试算表，并设定试算表的权限*，所以请先用 Google 帐号登入 Google 云端硬碟，在云端硬碟里建立一份全新的空白试算表。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-01.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-01.jpg)
 
-開啟試算表後，在左上方輸入試算表名稱，就能完成建立 Google 試算表的動作，*「試算表」表示整份試算表，每份試算表內可以包含許多「工作表」*，兩者可分別給予不同名稱。
+开启试算表后，在左上方输入试算表名称，就能完成建立Google 试算表的动作，*「试算表」表示整份试算表，每份试算表内可以包含许多「工作表」*，两者可分别给予不同名称。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-02.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-02.jpg)
 
-點選試算表右上角的「共用」，設定試算表的權限。
+点选试算表右上角的「共用」，设定试算表的权限。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-03.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-03.jpg)
 
-開啟共用設定視窗，點選「進階」。
+开启共用设定视窗，点选「进阶」。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-04.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-04.jpg)
 
-每份新建立的試算表權限都是「私人 - 只有您能存取」，點選後方的「變更」就可進行設定。
+每份新建立的试算表权限都是「私人 - 只有您能存取」，点选后方的「变更」就可进行设定。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-05.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-05.jpg)
 
-將試算表的權限，設定為*「任何知道連結的使用者」，都可以「編輯」*，按下儲存，試算表的權限就設定完成。
+将试算表的权限，设定为*「任何知道连结的使用者」，都可以「编辑」*，按下储存，试算表的权限就设定完成。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-06.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-06.jpg)
 
-## Google 試算表積木清單
+## Google 试算表积木清单
 
-Google 試算表積木包含試算表初始化、讀取資料、寫入資料、刪除列或欄、增加列或欄...等功能。
+Google 试算表积木包含试算表初始化、读取资料、写入资料、删除列或栏、增加列或栏...等功能。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-07.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-07.jpg)
 
-## 試算表初始化
+## 试算表初始化
 
-「試算表初始化」積木可以設定試算表的網址和工作表名稱，在操作試算表的任何功能之前，都需要先使用試算表初始化的積木。
+「试算表初始化」积木可以设定试算表的网址和工作表名称，在操作试算表的任何功能之前，都需要先使用试算表初始化的积木。
 
-> 注意，請勿將「試算表」名稱填入「工作表」名稱的位置。
+> 注意，请勿将「试算表」名称填入「工作表」名称的位置。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-08.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-08.jpg)
 
-## 寫入資料
+## 写入资料
 
-「寫入資料」積木能夠將資料寫入試算表，並能指定從上方第一列寫入或將資料放在最後一列。
+「写入资料」积木能够将资料写入试算表，并能指定从上方第一列写入或将资料放在最后一列。
 
-> 寫入資料積木屬於「*寫入資料後才會繼續執行後方程序*」的類型，當編輯畫面中有這塊積木，*執行時當程序遇到這塊積木會暫停，直到資料寫入後才會再繼續*。
+> 写入资料积木属于「*写入资料后才会继续执行后方程序*」的类型，当编辑画面中有这块积木，*执行时当程序遇到这块积木会暂停，直到资料写入后才会再继续*。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-09.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-09.jpg)
 
-點選積木前方的藍色小齒輪，可以增加寫入資料的欄位數量。
+点选积木前方的蓝色小齿轮，可以增加写入资料的栏位数量。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-10.gif)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-10.gif)
 
-先使用初始化試算表積木，填入自己的試算表網址，再放上寫入資料的積木，執行後就會看見試算表內出現時間和文字。
+先使用初始化试算表积木，填入自己的试算表网址，再放上写入资料的积木，执行后就会看见试算表内出现时间和文字。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-11.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-11.jpg)
 
-搭配重複迴圈，就能不斷寫入資料到試算表內。
+搭配重复回圈，就能不断写入资料到试算表内。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-12.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-12.jpg)
 
-## 指定儲存格寫入資料
+## 指定储存格写入资料
 
-「指定儲存格寫入資料」可以將資料寫入指定的儲存格，格式除了單一數值，也支援二維陣列格式的資料。
+「指定储存格写入资料」可以将资料写入指定的储存格，格式除了单一数值，也支援二维阵列格式的资料。
 
-> 指定儲存格寫入資料積木屬於「*寫入資料後才會繼續執行後方程序*」的類型，當編輯畫面中有這塊積木，*執行時當程序遇到這塊積木會暫停，直到資料寫入後才會再繼續*。
+> 指定储存格写入资料积木属于「*写入资料后才会继续执行后方程序*」的类型，当编辑画面中有这块积木，*执行时当程序遇到这块积木会暂停，直到资料写入后才会再继续*。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-13.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-13.jpg)
 
-以下圖的例子，執行後會在 b2 儲存格，寫入「寫入資料」四個字。
+以下图的例子，执行后会在 b2 储存格，写入「写入资料」四个字。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-14.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-14.jpg)
 
-除了可以指定單一儲存格，這塊積木也*支援「範圍」儲存格和「二維陣列」的資料格式*，例如要將資料寫入 `a1:b3` 的儲存格範圍，就需要使用 `[[a,b],[c,d],[e,f]]` 二維陣列資料，*二維陣列的第一層為縱列 ( 1、2、3... )，第二層為橫欄 ( A、B、C... )*。
+除了可以指定单一储存格，这块积木也*支援「范围」储存格和「二维阵列」的资料格式*，例如要将资料写入`a1:b3` 的储存格范围，就需要使用`[ [a,b],[c,d],[e,f]]` 二维阵列资料，*二维阵列的第一层为纵列( 1、2、3... )，第二层为横栏( A、B、C... )*。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-15.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-15.jpg)
 
-以下圖的例子，執行後會在 A1 寫入 a，B1 寫入 b，A2 寫入 c，B2 寫入 d...依此類推。
+以下图的例子，执行后会在 A1 写入 a，B1 写入 b，A2 写入 c，B2 写入 d...依此类推。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-16.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-16.jpg)
 
 
-## 讀取資料
+## 读取资料
 
-「讀取資料」積木可以讀取單一儲存格、整份工作表或最後一列、最後一欄的號碼。
+「读取资料」积木可以读取单一储存格、整份工作表或最后一列、最后一栏的号码。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-17.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-17.jpg)
 
-「讀取資料」積木屬於「*讀取完成才會繼續執行後方程序*」的類型 ( 點擊前方問號小圖示會提示 )，當編輯畫面中有這塊積木，*執行時當程序遇到這塊積木會暫停，直到取得資料後才會再繼續*。
+「读取资料」积木属于「*读取完成才会继续执行后方程序*」的类型( 点击前方问号小图示会提示)，当编辑画面中有这块积木，*执行时当程序遇到这块积木会暂停，直到取得资料后才会再继续*。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-18.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-18.jpg)
 
-首先準備一份有資料的試算表，下圖範例使用復仇者聯盟的成員稱號和姓名。
+首先准备一份有资料的试算表，下图范例使用复仇者联盟的成员称号和姓名。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-19.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-19.jpg)
 
-若使用「讀取單一儲存格」的積木，就能在讀取到資料後，讓小怪獸分別講出對應儲存格的內容。
+若使用「读取单一储存格」的积木，就能在读取到资料后，让小怪兽分别讲出对应储存格的内容。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-20.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-20.jpg)
 
-若需要讀取的資料量比較多，建議使用「讀取所有資料」的積木，該積木讀取到的資料，*會以「二維陣列」的方式呈現*，故而可以使用陣列積木進行操作，以下方的例子，搭配重複迴圈，就能在讀取資料後，讓小怪獸依序念出復仇者聯盟成員的稱號和姓名。
+若需要读取的资料量比较多，建议使用「读取所有资料」的积木，该积木读取到的资料，*会以「二维阵列」的方式呈现*，故而可以使用阵列积木进行操作，以下方的例子，搭配重复回圈，就能在读取资料后，让小怪兽依序念出复仇者联盟成员的称号和姓名。
 
-> 取得資料的二維陣列的*第一層為縱列 ( 1、2、3... )，第二層為橫欄 ( A、B、C... )*。
+> 取得资料的二维阵列的*第一层为纵列 ( 1、2、3... )，第二层为横栏 ( A、B、C... )*。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-21.gif)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-21.gif)
 
-取得的資料除了資料內容，也包含了資料所在的最後一列和最後一欄，可以透過相關積木取得對應的編號 ( 橫向欄位使用數字表現，a 對應 1，b 對應 2，依此類推 )，以復仇者聯盟成員試算表的內容為例，取得的最後一列為 7，最後一欄為 2。
+取得的资料除了资料内容，也包含了资料所在的最后一列和最后一栏，可以透过相关积木取得对应的编号( 横向栏位使用数字表现，a 对应1，b 对应2，依此类推)，以复仇者联盟成员试算表的内容为例，取得的最后一列为7，最后一栏为2。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-22.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-22.jpg)
 
 
-## 刪除列或欄
+## 删除列或栏
 
-「刪除列或欄」積木可以刪除一個區間的列或欄，列號以數字表現，欄號使用英文表示。
+「删除列或栏」积木可以删除一个区间的列或栏，列号以数字表现，栏号使用英文表示。
 
-> 刪除列或欄的積木屬於「*刪除後才會繼續執行後方程序*」的類型，當編輯畫面中有這塊積木，*執行時當程序遇到這塊積木會暫停，直到刪除了列或欄之後才會再繼續*。
+> 删除列或栏的积木属于「*删除后才会继续执行后方程序*」的类型，当编辑画面中有这块积木，*执行时当程序遇到这块积木会暂停，直到删除了列或栏之后才会再继续*。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-23.jpg)
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-23.jpg)
 
-## 增加列或欄
+## 增加列或栏
 
-「增加列或欄」積木可以增加一個區間的列或欄，列可以選擇增加在上方或下方，欄可以選擇增加在左方還是右方。
+「增加列或栏」积木可以增加一个区间的列或栏，列可以选择增加在上方或下方，栏可以选择增加在左方还是右方。
 
-> 增加列或欄的積木屬於「*增加後才會繼續執行後方程序*」的類型，當編輯畫面中有這塊積木，*執行時當程序遇到這塊積木會暫停，直到增加了列或欄之後才會再繼續*。
+> 增加列或栏的积木属于「*增加后才会继续执行后方程序*」的类型，当编辑画面中有这块积木，*执行时当程序遇到这块积木会暂停，直到增加了列或栏之后才会再继续*。
 
-![Google 試算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-24.jpg)
-
-
-
-
+![Google 试算表](../images/zh-tw/docs/webbit/extension/google-spreadsheet-24.jpg)
