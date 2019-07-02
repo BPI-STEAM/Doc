@@ -8,12 +8,12 @@ Web:bit 离线教育版
 - `在线编程<https://webbit.webduino.io/blockly/>`_ & `学习手册（繁体版） <https://tutorials.webduino.io/zh-tw/docs/webbit/index.html >`_
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 2
 
-   flash_web.rst
-   info/index
-   basic/index
-   monster/index
-   detect/index
-   sound/index
-   board/index
+    flash_web.rst
+    info/index
+    basic/index
+    monster/index
+    detect/index
+    sound/index
+    board/index
