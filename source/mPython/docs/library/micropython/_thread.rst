@@ -13,12 +13,12 @@
     import time
 
     def th_func(delay, id):
-        while True:
-            time.sleep(delay)
-            print('Running thread %d' % id)
+       while True:
+          time.sleep(delay)
+          print('Running thread %d' % id)
 
     for i in range(2):
-        _thread.start_new_thread(th_func, (i + 1, i))
+       _thread.start_new_thread(th_func, (i + 1, i))
 
 方法
 ~~~~~~~
@@ -86,4 +86,4 @@
 
     a_lock = _thread.allocate_lock()
     with a_lock:
-        print("a_lock is locked while this executes")
+       print("a_lock is locked while this executes")

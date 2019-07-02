@@ -17,10 +17,10 @@ Functions
    Convert binary data to hexadecimal representation. Returns bytes string.
 
    .. admonition:: Difference to CPython
-      :class: attention
+     :class: attention
 
-      If additional argument, *sep* is supplied, it is used as a separator
-      between hexadecimal values.
+     If additional argument, *sep* is supplied, it is used as a separator
+     between hexadecimal values.
 
 .. function:: unhexlify(data)
 

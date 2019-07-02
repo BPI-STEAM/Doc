@@ -14,7 +14,7 @@ Constructors
 
    Create an LED object associated with the given LED:
    
-     - ``id`` is the LED number, 1-4.
+    - ``id`` is the LED number, 1-4.
 
 
 Methods

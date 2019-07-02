@@ -54,7 +54,7 @@ The modes are:
 1. Green LED only, *standard boot*: run ``boot.py`` then ``main.py``.
 2. Orange LED only, *safe boot*: don't run any scripts on boot-up.
 3. Green and orange LED together, *filesystem reset*: resets the flash
-   filesystem to its factory state, then boots in safe mode.
+    filesystem to its factory state, then boots in safe mode.
 
 If your filesystem becomes corrupt, boot into mode 3 to fix it.
 If resetting the filesystem while plugged into your compute doesn't work,
@@ -69,7 +69,7 @@ There are currently 2 kinds of errors that you might see:
 1. If the red and green LEDs flash alternatively, then a Python script
     (eg ``main.py``) has an error.  Use the REPL to debug it.
 2. If all 4 LEDs cycle on and off slowly, then there was a hard fault.
-   This cannot be recovered from and you need to do a hard reset.
+    This cannot be recovered from and you need to do a hard reset.
 
 Guide for using the pyboard with Windows
 ----------------------------------------

@@ -7,6 +7,6 @@ See the `getting started guide
 <https://github.com/micropython/micropython/wiki/Getting-Started>`_ for further information.
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
 
-   cmodules.rst
+    cmodules.rst

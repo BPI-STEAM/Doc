@@ -13,10 +13,10 @@ Below is a quick reference for ESP32-based boards.  If it is your first time
 working with this board it may be useful to get an overview of the microcontroller:
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
 
-   general.rst
-   tutorial/intro.rst
+    general.rst
+    tutorial/intro.rst
 
 Installing MicroPython
 ----------------------
@@ -36,15 +36,15 @@ The :mod:`machine` module::
 
     import machine
 
-    machine.freq()          # get the current frequency of the CPU
+    machine.freq()           # get the current frequency of the CPU
     machine.freq(240000000) # set the CPU frequency to 240 MHz
 
 The :mod:`esp` module::
 
     import esp
 
-    esp.osdebug(None)       # turn off vendor O/S debugging messages
-    esp.osdebug(0)          # redirect vendor O/S debugging messages to UART(0)
+    esp.osdebug(None)        # turn off vendor O/S debugging messages
+    esp.osdebug(0)           # redirect vendor O/S debugging messages to UART(0)
 
     # low level methods to interact with flash storage
     esp.flash_size()
@@ -59,7 +59,7 @@ The :mod:`esp32` module::
 
     esp32.hall_sensor()     # read the internal hall sensor
     esp32.raw_temperature() # read the internal temperature of the MCU, in Farenheit
-    esp32.ULP()             # access to the Ultra-Low-Power Co-processor
+    esp32.ULP()              # access to the Ultra-Low-Power Co-processor
 
 Note that the temperature sensor in the ESP32 will typically read higher than
 ambient due to the IC getting warm while it runs.  This effect can be minimised
@@ -73,16 +73,16 @@ The :mod:`network` module::
     import network
 
     wlan = network.WLAN(network.STA_IF) # create station interface
-    wlan.active(True)       # activate the interface
-    wlan.scan()             # scan for access points
-    wlan.isconnected()      # check if the station is connected to an AP
+    wlan.active(True)        # activate the interface
+    wlan.scan()              # scan for access points
+    wlan.isconnected()       # check if the station is connected to an AP
     wlan.connect('essid', 'password') # connect to an AP
-    wlan.config('mac')      # get the interface's MAC adddress
-    wlan.ifconfig()         # get the interface's IP/netmask/gw/DNS addresses
+    wlan.config('mac')       # get the interface's MAC adddress
+    wlan.ifconfig()          # get the interface's IP/netmask/gw/DNS addresses
 
     ap = network.WLAN(network.AP_IF) # create access-point interface
     ap.config(essid='ESP-AP') # set the ESSID of the access point
-    ap.active(True)         # activate the interface
+    ap.active(True)          # activate the interface
 
 A useful function for connecting to your local WiFi network is::
 
@@ -91,10 +91,10 @@ A useful function for connecting to your local WiFi network is::
         wlan = network.WLAN(network.STA_IF)
         wlan.active(True)
         if not wlan.isconnected():
-            print('connecting to network...')
-            wlan.connect('essid', 'password')
-            while not wlan.isconnected():
-                pass
+             print('connecting to network...')
+             wlan.connect('essid', 'password')
+             while not wlan.isconnected():
+                 pass
         print('network config:', wlan.ifconfig())
 
 Once the network is established the :mod:`socket <usocket>` module can be used
@@ -108,9 +108,9 @@ Use the :mod:`time <utime>` module::
 
     import time
 
-    time.sleep(1)           # sleep for 1 second
-    time.sleep_ms(500)      # sleep for 500 milliseconds
-    time.sleep_us(10)       # sleep for 10 microseconds
+    time.sleep(1)            # sleep for 1 second
+    time.sleep_ms(500)       # sleep for 500 milliseconds
+    time.sleep_us(10)        # sleep for 10 microseconds
     start = time.ticks_ms() # get millisecond counter
     delta = time.ticks_diff(time.ticks_ms(), start) # compute time difference
 
@@ -138,12 +138,12 @@ Use the :ref:`machine.Pin <machine.Pin>` class::
     from machine import Pin
 
     p0 = Pin(0, Pin.OUT)    # create output pin on GPIO0
-    p0.on()                 # set pin to "on" (high) level
-    p0.off()                # set pin to "off" (low) level
-    p0.value(1)             # set pin to on/high
+    p0.on()                  # set pin to "on" (high) level
+    p0.off()                 # set pin to "off" (low) level
+    p0.value(1)              # set pin to on/high
 
     p2 = Pin(2, Pin.IN)     # create input pin on GPIO2
-    print(p2.value())       # get value, 0 or 1
+    print(p2.value())        # get value, 0 or 1
 
     p4 = Pin(4, Pin.IN, Pin.PULL_UP) # enable internal pull-up resistor
     p5 = Pin(5, Pin.OUT, value=1) # set pin high on creation
@@ -179,12 +179,12 @@ Use the ``machine.PWM`` class::
 
     from machine import Pin, PWM
 
-    pwm0 = PWM(Pin(0))      # create PWM object from a pin
-    pwm0.freq()             # get current frequency
-    pwm0.freq(1000)         # set frequency
-    pwm0.duty()             # get current duty cycle
-    pwm0.duty(200)          # set duty cycle
-    pwm0.deinit()           # turn off PWM on the pin
+    pwm0 = PWM(Pin(0))       # create PWM object from a pin
+    pwm0.freq()              # get current frequency
+    pwm0.freq(1000)          # set frequency
+    pwm0.duty()              # get current duty cycle
+    pwm0.duty(200)           # set duty cycle
+    pwm0.deinit()            # turn off PWM on the pin
 
     pwm2 = PWM(Pin(2), freq=20000, duty=512) # create and configure in one go
 
@@ -200,12 +200,12 @@ Use the :ref:`machine.ADC <machine.ADC>` class::
 
     from machine import ADC
 
-    adc = ADC(Pin(32))          # create ADC object on ADC pin
-    adc.read()                  # read value, 0-4095 across voltage range 0.0v - 1.0v
+    adc = ADC(Pin(32))           # create ADC object on ADC pin
+    adc.read()                    # read value, 0-4095 across voltage range 0.0v - 1.0v
 
     adc.atten(ADC.ATTN_11DB)    # set 11dB input attentuation (voltage range roughly 0.0v - 3.6v)
-    adc.width(ADC.WIDTH_9BIT)   # set 9 bit return values (returned range 0-511)
-    adc.read()                  # read value using the newly configured attenuation and width
+    adc.width(ADC.WIDTH_9BIT)    # set 9 bit return values (returned range 0-511)
+    adc.read()                    # read value using the newly configured attenuation and width
 
 ESP32 specific ADC class method reference:
 
@@ -216,29 +216,29 @@ ESP32 specific ADC class method reference:
     at the cost of accuracy (the same number of bits now represents a wider
     range). The possible attenuation options are:
 
-      - ``ADC.ATTN_0DB``: 0dB attenuation, gives a maximum input voltage
+       - ``ADC.ATTN_0DB``: 0dB attenuation, gives a maximum input voltage
         of 1.00v - this is the default configuration
-      - ``ADC.ATTN_2_5DB``: 2.5dB attenuation, gives a maximum input voltage
+       - ``ADC.ATTN_2_5DB``: 2.5dB attenuation, gives a maximum input voltage
         of approximately 1.34v
-      - ``ADC.ATTN_6DB``: 6dB attenuation, gives a maximum input voltage
+       - ``ADC.ATTN_6DB``: 6dB attenuation, gives a maximum input voltage
         of approximately 2.00v
-      - ``ADC.ATTN_11DB``: 11dB attenuation, gives a maximum input voltage
+       - ``ADC.ATTN_11DB``: 11dB attenuation, gives a maximum input voltage
         of approximately 3.6v
 
 .. Warning::
-   Despite 11dB attenuation allowing for up to a 3.6v range, note that the
-   absolute maximum voltage rating for the input pins is 3.6v, and so going
-   near this boundary may be damaging to the IC!
+    Despite 11dB attenuation allowing for up to a 3.6v range, note that the
+    absolute maximum voltage rating for the input pins is 3.6v, and so going
+    near this boundary may be damaging to the IC!
 
 .. method:: ADC.width(width)
 
     This method allows for the setting of the number of bits to be utilised
     and returned during ADC reads. Possible width options are:
 
-      - ``ADC.WIDTH_9BIT``: 9 bit data
-      - ``ADC.WIDTH_10BIT``: 10 bit data
-      - ``ADC.WIDTH_11BIT``: 11 bit data
-      - ``ADC.WIDTH_12BIT``: 12 bit data - this is the default configuration
+       - ``ADC.WIDTH_9BIT``: 9 bit data
+       - ``ADC.WIDTH_10BIT``: 10 bit data
+       - ``ADC.WIDTH_11BIT``: 11 bit data
+       - ``ADC.WIDTH_12BIT``: 12 bit data - this is the default configuration
 
 Software SPI bus
 ----------------
@@ -256,22 +256,22 @@ class::
 
     spi.init(baudrate=200000) # set the baudrate
 
-    spi.read(10)            # read 10 bytes on MISO
-    spi.read(10, 0xff)      # read 10 bytes while outputing 0xff on MOSI
+    spi.read(10)             # read 10 bytes on MISO
+    spi.read(10, 0xff)       # read 10 bytes while outputing 0xff on MOSI
 
     buf = bytearray(50)     # create a buffer
-    spi.readinto(buf)       # read into the given buffer (reads 50 bytes in this case)
+    spi.readinto(buf)        # read into the given buffer (reads 50 bytes in this case)
     spi.readinto(buf, 0xff) # read into the given buffer and output 0xff on MOSI
 
     spi.write(b'12345')     # write 5 bytes on MOSI
 
-    buf = bytearray(4)      # create a buffer
+    buf = bytearray(4)       # create a buffer
     spi.write_readinto(b'1234', buf) # write to MOSI and read from MISO into the buffer
     spi.write_readinto(buf, buf) # write buf to MOSI and read MISO back into buf
 
 .. Warning::
-   Currently *all* of ``sck``, ``mosi`` and ``miso`` *must* be specified when
-   initialising Software SPI. 
+    Currently *all* of ``sck``, ``mosi`` and ``miso`` *must* be specified when
+    initialising Software SPI. 
 
 Hardware SPI bus
 ----------------
@@ -285,11 +285,11 @@ their reliability at high speeds. Hardware SPI channels are limited
 to 40MHz when used on pins other than the default ones listed below.
 
 =====  ===========  ============
-\      HSPI (id=1)   VSPI (id=2)
+\       HSPI (id=1)    VSPI (id=2)
 =====  ===========  ============
-sck    14           18
-mosi   13           23
-miso   12           19
+sck    14            18
+mosi    13            23
+miso    12            19
 =====  ===========  ============
 
 Hardware SPI has the same methods as Software SPI above::
@@ -311,7 +311,7 @@ and is accessed via the :ref:`machine.I2C <machine.I2C>` class::
     # construct an I2C bus
     i2c = I2C(scl=Pin(5), sda=Pin(4), freq=100000)
 
-    i2c.readfrom(0x3a, 4)   # read 4 bytes from slave device with address 0x3a
+    i2c.readfrom(0x3a, 4)    # read 4 bytes from slave device with address 0x3a
     i2c.writeto(0x3a, '12') # write '12' to slave device with address 0x3a
 
     buf = bytearray(10)     # create a buffer with 10 bytes
@@ -366,11 +366,11 @@ The OneWire driver is implemented in software and works on all pins::
     import onewire
 
     ow = onewire.OneWire(Pin(12)) # create a OneWire bus on GPIO12
-    ow.scan()               # return a list of devices on the bus
-    ow.reset()              # reset the bus
-    ow.readbyte()           # read a byte
-    ow.writebyte(0x12)      # write a byte on the bus
-    ow.write('123')         # write bytes on the bus
+    ow.scan()                # return a list of devices on the bus
+    ow.reset()               # reset the bus
+    ow.readbyte()            # read a byte
+    ow.writebyte(0x12)       # write a byte on the bus
+    ow.write('123')          # write bytes on the bus
     ow.select_rom(b'12345678') # select a specific device by its ROM code
 
 There is a specific driver for DS18S20 and DS18B20 devices::
@@ -395,11 +395,11 @@ Use the ``neopixel`` module::
     from machine import Pin
     from neopixel import NeoPixel
 
-    pin = Pin(0, Pin.OUT)   # set GPIO0 to output to drive NeoPixels
-    np = NeoPixel(pin, 8)   # create NeoPixel driver on GPIO0 for 8 pixels
+    pin = Pin(0, Pin.OUT)    # set GPIO0 to output to drive NeoPixels
+    np = NeoPixel(pin, 8)    # create NeoPixel driver on GPIO0 for 8 pixels
     np[0] = (255, 255, 255) # set the first pixel to white
-    np.write()              # write data to all pixels
-    r, g, b = np[0]         # get first pixel colour
+    np.write()               # write data to all pixels
+    r, g, b = np[0]          # get first pixel colour
 
 For low-level driving of a NeoPixel::
 
@@ -407,10 +407,10 @@ For low-level driving of a NeoPixel::
     esp.neopixel_write(pin, grb_buf, is800khz)
 
 .. Warning::
-   By default ``NeoPixel`` is configured to control the more popular *800kHz*
-   units. It is possible to use alternative timing to control other (typically
-   400kHz) devices by passing ``timing=0`` when constructing the
-   ``NeoPixel`` object.
+    By default ``NeoPixel`` is configured to control the more popular *800kHz*
+    units. It is possible to use alternative timing to control other (typically
+    400kHz) devices by passing ``timing=0`` when constructing the
+    ``NeoPixel`` object.
 
 
 Capacitive Touch
@@ -421,7 +421,7 @@ Use the ``TouchPad`` class in the ``machine`` module::
     from machine import TouchPad, Pin
 
     t = TouchPad(Pin(14))
-    t.read()              # Returns a smaller number when touched 
+    t.read()               # Returns a smaller number when touched 
 
 ``TouchPad.read`` returns a value relative to the capacitive variation. Small numbers (typically in
 the *tens*) are common when a pin is touched, larger numbers (above *one thousand*) when 
@@ -438,7 +438,7 @@ Note that TouchPads can be used to wake an ESP32 from sleep::
     import esp32
 
     t = TouchPad(Pin(14))
-    t.config(500)               # configure the threshold at which the pin is considered touched
+    t.config(500)                # configure the threshold at which the pin is considered touched
     esp32.wake_on_touch(True)
     machine.lightsleep()        # put the MCU to sleep until a touchpad is touched
 

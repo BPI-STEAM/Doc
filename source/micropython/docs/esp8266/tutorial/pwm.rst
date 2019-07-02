@@ -58,9 +58,9 @@ For the next part we will use timing and some math, so import these modules::
 Then create a function to pulse the LED::
 
     >>> def pulse(l, t):
-    ...     for i in range(20):
-    ...         l.duty(int(math.sin(i / 10 * math.pi) * 500 + 500))
-    ...         time.sleep_ms(t)
+    ...    for i in range(20):
+    ...        l.duty(int(math.sin(i / 10 * math.pi) * 500 + 500))
+    ...        time.sleep_ms(t)
 
 You can try this function out using::
 
@@ -69,7 +69,7 @@ You can try this function out using::
 For a nice effect you can pulse many times in a row::
 
     >>> for i in range(10):
-    ...     pulse(led, 20)
+    ...    pulse(led, 20)
 
 Remember you can use ctrl-C to interrupt the code.
 

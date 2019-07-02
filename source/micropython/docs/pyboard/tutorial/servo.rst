@@ -54,7 +54,7 @@ long to take (in milliseconds) to reach the desired angle.  For example, to
 take 1 second (1000 milliseconds) to go from the current position to 50 degrees,
 use ::
 
-     >>> servo1.angle(50, 1000)
+    >>> servo1.angle(50, 1000)
 
 This command will return straight away and the servo will continue to move
 to the desired angle, and stop when it gets there.  You can use this feature

@@ -74,7 +74,7 @@ Compiled regular expression. Instances of this class are created using
 `ure.compile()`.
 
 .. method:: regex.match(string)
-            regex.search(string)
+          regex.search(string)
 
    Similar to the module-level functions :meth:`match` and :meth:`search`.
    Using methods is (much) more efficient if the same regex is applied to

@@ -20,15 +20,15 @@
 
 .. code:: python
 
-   import light
-   from time import sleep_ms
-   R = light.Intensity(39)
-   L = light.Intensity(36)
+    import light
+    from time import sleep_ms
+    R = light.Intensity(39)
+    L = light.Intensity(36)
 
-   while True:
-       print('R=',R.read())
-       print('L=',L.read())
-       sleep_ms(1000)
+    while True:
+        print('R=',R.read())
+        print('L=',L.read())
+        sleep_ms(1000)
 
 我们要使用 light 这个模块，首先就要先导入这个模块，可以通过 import light
 来导入。
@@ -52,20 +52,20 @@
 
 .. code:: python
 
-   import light
-   from display import*
-   ts = light.Gesture()
-   display = Display()
-   t = 0
-   while True:
-       res = ts.get_gesture()
-       if res != None:
-           t = t+1
-           print(res, t)
-           if res == 'right':
-               display.show(Image.ARROW_E)
-           else:
-               display.show(Image.ARROW_W)
+    import light
+    from display import*
+    ts = light.Gesture()
+    display = Display()
+    t = 0
+    while True:
+        res = ts.get_gesture()
+        if res != None:
+            t = t+1
+            print(res, t)
+            if res == 'right':
+                display.show(Image.ARROW_E)
+            else:
+                display.show(Image.ARROW_W)
 
 首先导入我们的 light 模块，然后实例化 Gesture() 这个类，ts = light.Gesture() 通过这段代码完成了检测手势动作的初始化
 

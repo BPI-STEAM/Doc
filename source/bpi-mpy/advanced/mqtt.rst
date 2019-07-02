@@ -48,47 +48,47 @@ MQTT 服务器的传输模式可以认为是大家通过各自的内部约定后
 
 .. code:: python
 
-   import wifi
-   wifi.start()
+    import wifi
+    wifi.start()
 
-   server_ip = "mq.tongxinmao.com" # 在线公共的 MQTT 服务器
-   client_id = "umqtt_client" # 客户端 ID ，随意定义，用来标识自己发出的数据。
+    server_ip = "mq.tongxinmao.com" # 在线公共的 MQTT 服务器
+    client_id = "umqtt_client" # 客户端 ID ，随意定义，用来标识自己发出的数据。
 
-   import time
+    import time
 
-   from umqtt.robust import MQTTClient
+    from umqtt.robust import MQTTClient
 
-   try:
-       # see https://github.com/micropython/micropython-lib/blob/master/umqtt.simple/umqtt/simple.py
-       c = MQTTClient(client_id, server_ip, 18830) # 配置连接，这个是连通信猫的服务器配置，端口是 18830，一般默认的是 1883
+    try:
+        # see https://github.com/micropython/micropython-lib/blob/master/umqtt.simple/umqtt/simple.py
+        c = MQTTClient(client_id, server_ip, 18830) # 配置连接，这个是连通信猫的服务器配置，端口是 18830，一般默认的是 1883
 
-       c.DEBUG = True # 输出 Debug 信息
+        c.DEBUG = True # 输出 Debug 信息
 
-       def sub_cb(topic, msg):
-           print((topic, msg))
-           c.publish(topic, msg) # 无论收到什么订阅的信息都以同样的主题和数据传回。
+        def sub_cb(topic, msg):
+            print((topic, msg))
+            c.publish(topic, msg) # 无论收到什么订阅的信息都以同样的主题和数据传回。
 
-       c.set_callback(sub_cb) # 把向远端订阅（subscribe）的数据接收回调处理。
+        c.set_callback(sub_cb) # 把向远端订阅（subscribe）的数据接收回调处理。
 
-       if not c.connect(clean_session=False):
-           c.subscribe(b"foo_topic") # 订阅一个 foo_topic 的主题（topic）
+        if not c.connect(clean_session=False):
+            c.subscribe(b"foo_topic") # 订阅一个 foo_topic 的主题（topic）
 
-       c.publish(b"foo_topic", b"hello") # 向  foo_topic 的主题（topic）发送 hello 字符串。
+        c.publish(b"foo_topic", b"hello") # 向  foo_topic 的主题（topic）发送 hello 字符串。
 
-       while 1:
-           # 让芯片运行慢一点，便于观察现象。
-           time.sleep(1)
+        while 1:
+            # 让芯片运行慢一点，便于观察现象。
+            time.sleep(1)
 
-           # 等待处理 MQTT 的数据
-           if c.check_msg() is not None:
-               c.wait_msg()
+            # 等待处理 MQTT 的数据
+            if c.check_msg() is not None:
+                c.wait_msg()
 
-           # 没数据可以处理的时候可以做点别的事情
-           else:
-               print('other operator')
+            # 没数据可以处理的时候可以做点别的事情
+            else:
+                print('other operator')
 
-   finally:
-       c.disconnect() # 调试程序事重开服务，要记得收尾，否则将重启板子才可以继续。
+    finally:
+        c.disconnect() # 调试程序事重开服务，要记得收尾，否则将重启板子才可以继续。
 
 .. _通信猫 MQTT 服务器: http://www.tongxinmao.com/txm/webmqtt.php
 .. _mosquitto Windows: https://github.com/BPI-STEAM/BPI-BIT-MicroPython/releases/tag/windows-mosquitto
@@ -99,16 +99,16 @@ MQTT 服务器的传输模式可以认为是大家通过各自的内部约定后
 以上便是 MQTT 的具体实例，运行起来的应该有如下效果。
 
 1. 板子将向订阅了 foo_topic 主题的发送一条 ``hello``
-   数据，此时在网页上订阅该主题的用户应该会得到该数据，并显示出来。
+    数据，此时在网页上订阅该主题的用户应该会得到该数据，并显示出来。
 
 2. 板子订阅了 foo_topic 主题，所以会接收到 1 自己先前发送的 ``hello``
-   数据，然后根据代码可知，它会把这条接收的数据原封不动的发回去，所以这时候板子会在
-   foo_topic 主题上循环接收和发送数据。
+    数据，然后根据代码可知，它会把这条接收的数据原封不动的发回去，所以这时候板子会在
+    foo_topic 主题上循环接收和发送数据。
 
 3. 如果我们在网页端部分向 foo_topic
-   主题发送了数据，则板子会接收到数据并对应显示数据，例如图中所看到的
-   ``11 22 3311`` 数据，注意这时候，你发的新数据也会参与 2
-   中所提及的循环输出数据了。
+    主题发送了数据，则板子会接收到数据并对应显示数据，例如图中所看到的
+    ``11 22 3311`` 数据，注意这时候，你发的新数据也会参与 2
+    中所提及的循环输出数据了。
 
 .. image:: mqtt/online_test.png
 

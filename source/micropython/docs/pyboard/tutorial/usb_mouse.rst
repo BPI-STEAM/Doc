@@ -53,8 +53,8 @@ Let's make the mouse oscillate left and right::
     >>> import math
     >>> def osc(n, d):
     ...   for i in range(n):
-    ...     hid.send((0, int(20 * math.sin(i / 10)), 0, 0))
-    ...     pyb.delay(d)
+    ...    hid.send((0, int(20 * math.sin(i / 10)), 0, 0))
+    ...    pyb.delay(d)
     ...
     >>> osc(100, 50)
 
@@ -104,8 +104,8 @@ In ``main.py`` put the following code::
     hid = pyb.USB_HID()
 
     while not switch():
-        hid.send((0, accel.x(), accel.y(), 0))
-        pyb.delay(20)
+       hid.send((0, accel.x(), accel.y(), 0))
+       pyb.delay(20)
 
 Save your file, eject/unmount your pyboard drive, and reset it using the RST
 switch.  It should now act as a mouse, and the angle of the board will move

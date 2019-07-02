@@ -32,7 +32,7 @@ Functions
    24..31 (16 + 8..15), meaning that input stream has gzip header.
 
    .. admonition:: Difference to CPython
-      :class: attention
+     :class: attention
 
-      This class is MicroPython extension. It's included on provisional
-      basis and may be changed considerably or removed in later versions.
+     This class is MicroPython extension. It's included on provisional
+     basis and may be changed considerably or removed in later versions.

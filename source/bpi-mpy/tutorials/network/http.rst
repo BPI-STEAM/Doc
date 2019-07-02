@@ -24,11 +24,11 @@ HTTP GET request
         s.connect(addr)
         s.send(bytes('GET /%s HTTP/1.0\r\nHost: %s\r\n\r\n' % (path, host), 'utf8'))
         while True:
-            data = s.recv(100)
-            if data:
-                print(str(data, 'utf8'), end='')
-            else:
-                break
+             data = s.recv(100)
+             if data:
+                 print(str(data, 'utf8'), end='')
+             else:
+                 break
         s.close()
 
 .. Hint::
@@ -55,7 +55,7 @@ HTTP Server
 
     mywifi=wifi()     #实例化wifi类
 
-    mywifi.connectWiFi("ssid","password")                  # WiFi连接，设置ssid 和password
+    mywifi.connectWiFi("ssid","password")                    # WiFi连接，设置ssid 和password
 
     CONTENT = b"""\
     HTTP/1.0 200 OK
@@ -73,20 +73,20 @@ HTTP Server
         s.bind(addr)
         s.listen(5)
         print("Listening, connect your browser to http://%s:80/" %addr[0])
-        oled.DispChar('Connect your browser',0,0,)                       #oled显示板子ip地址
+        oled.DispChar('Connect your browser',0,0,)                        #oled显示板子ip地址
         oled.DispChar('http://%s' %addr[0],0,16)
         oled.show()
         while True:
-            res = s.accept()
-            client_s = res[0]
-            client_addr = res[1]
-            print("Client address:", client_addr)
-            print("Client socket:", client_s)
-            req = client_s.recv(4096)
-            print("Request:")
-            print(req)
-            client_s.send(CONTENT % light.read())
-            client_s.close()
+             res = s.accept()
+             client_s = res[0]
+             client_addr = res[1]
+             print("Client address:", client_addr)
+             print("Client socket:", client_s)
+             req = client_s.recv(4096)
+             print("Request:")
+             print(req)
+             client_s.send(CONTENT % light.read())
+             client_s.close()
 
 
 

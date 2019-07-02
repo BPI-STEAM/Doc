@@ -35,7 +35,7 @@ Methods
    
    The 8-tuple has the following format:
    
-       (year, month, day, weekday, hours, minutes, seconds, subseconds)
+      (year, month, day, weekday, hours, minutes, seconds, subseconds)
 
    ``weekday`` is 1-7 for Monday through Sunday.
 
@@ -57,7 +57,7 @@ Methods
    Get information about the startup time and reset source.
 
     - The lower 0xffff are the number of milliseconds the RTC took to
-      start up.
+     start up.
     - Bit 0x10000 is set if a power-on reset occurred.
     - Bit 0x20000 is set if an external reset occurred
 

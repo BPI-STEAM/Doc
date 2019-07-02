@@ -12,19 +12,19 @@
 
 
 数字输入
-------------------   
+------------------    
 
 首先,从如何读取引脚的数字输入开始。以下使用板子内置的按键a,作为按键输入::
 
-    from MicroPython import *           # 导入MicroPython模块
+    from MicroPython import *            # 导入MicroPython模块
 
     p5=MicroPythonPin(5,PinMode.IN)     # 实例化MicroPythonPin,将按键a引脚(P5)设置为"PinMode.IN"模式
 
     while True:
-        value=p5.read_digital()      # 读取P5引脚的数字输入
-        oled.DispChar("Button_a:%d" %value,30,20)   # 将读取到值显示至oled上
-        oled.show()                                  # 刷新
-        oled.fill(0)                                 # 清屏
+        value=p5.read_digital()       # 读取P5引脚的数字输入
+        oled.DispChar("Button_a:%d" %value,30,20)    # 将读取到值显示至oled上
+        oled.show()                                    # 刷新
+        oled.fill(0)                                    # 清屏
 
 .. Note::
 
@@ -53,15 +53,15 @@
 
 以下是简单的驱动外部LED灯闪烁::
 
-    from MicroPython import *           # 导入MicroPython模块
+    from MicroPython import *            # 导入MicroPython模块
 
     p0=MicroPythonPin(0,PinMode.OUT)     # 实例化MicroPythonPin,将P0设置为"PinMode.OUT"模式
 
     while True:
-        p0.write_digital(1)          # P0写高电平
-        sleep(1)                     #  延时
-        p0.write_digital(0)          # P0写高电平
-        sleep(1)                     #  延时
+        p0.write_digital(1)           # P0写高电平
+        sleep(1)                       #  延时
+        p0.write_digital(0)           # P0写高电平
+        sleep(1)                       #  延时
 
 
 .. admonition:: 材料、连接方式
@@ -101,14 +101,14 @@
 
 以下使用板子内置的按键a((P5引脚),作为输入中断,按下按键 A 时蜂鸣器发出声音::
 
-    from MicroPython import *           # 导入MicroPython模块
-    import music                    # 导入music模块
+    from MicroPython import *            # 导入MicroPython模块
+    import music                     # 导入music模块
     p5=MicroPythonPin(5,PinMode.IN)     # 实例化MicroPythonPin,将P5设置为"PinMode.IN"模式
 
-    def BuzzOn(_):                    # 定义中断的回调函数  
+    def BuzzOn(_):                     # 定义中断的回调函数  
         music.play(music.BA_DING,wait=False)
 
-    p5.irq(trigger=Pin.IRQ_FALLING,handler=BuzzOn)            # 设置P5引脚中断的回调函数
+    p5.irq(trigger=Pin.IRQ_FALLING,handler=BuzzOn)             # 设置P5引脚中断的回调函数
 
 .. Hint:: 
 
@@ -121,12 +121,12 @@
 
 定义回调函数::
 
-    def BuzzOn(_):                  
+    def BuzzOn(_):                    
         music.play(music.BA_DING,wait=False)
 
 .. Note:: 
 
-   回调函数，**必须包含一个参数**,否则无法使用, 上面 ``BuzzOn()`` 定义回调函数,参数为 ``_``,你可以任意定义该参数。  
+    回调函数，**必须包含一个参数**,否则无法使用, 上面 ``BuzzOn()`` 定义回调函数,参数为 ``_``,你可以任意定义该参数。  
 
 
 最后我们需要告诉引脚何时触发，以及在检测到事件时调用的函数::

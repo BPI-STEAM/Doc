@@ -17,8 +17,8 @@
 
 .. code:: python
 
-   import wifi # booy.py default enable
-   wifi.try_connect()
+    import wifi # booy.py default enable
+    wifi.try_connect()
 
 效果如下图，默认 boot.py 里会默认调用
 ``import wifi``\ ，所以你也可以直接在 REPL 中调用
@@ -104,9 +104,9 @@ SmartConfig 配网
 
 .. code:: python
 
-   WIFI_SSID = '你的WIFI热点名称'
-   WIFI_PSWD = '你的WIFI热点密码'
-   HOST_NAME = '你板子的网络名称' # 可选
+    WIFI_SSID = '你的WIFI热点名称'
+    WIFI_PSWD = '你的WIFI热点密码'
+    HOST_NAME = '你板子的网络名称' # 可选
 
 （现在已经可以先 ``get wifi_cfg.py`` 取回配置）与 ``mpfshell``
 同一个目录中使用 ``put wifi_cfg.py``, 将其替换掉现在的 WIFI 连接配置。

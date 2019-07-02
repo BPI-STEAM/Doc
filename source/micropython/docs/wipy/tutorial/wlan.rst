@@ -19,8 +19,8 @@ You can check the current mode (which is always ``WLAN.AP`` after power up)::
     to run these commands interactively over the WLAN.
 
     There are two ways around this::
-     1. put this setup code into your :ref:`boot.py file<wipy_filesystem>` so that it gets executed automatically after reset.
-     2. :ref:`duplicate the REPL on UART <wipy_uart>`, so that you can run commands via USB.
+    1. put this setup code into your :ref:`boot.py file<wipy_filesystem>` so that it gets executed automatically after reset.
+    2. :ref:`duplicate the REPL on UART <wipy_uart>`, so that you can run commands via USB.
 
 Connecting to your home router
 ------------------------------
@@ -36,13 +36,13 @@ Now you can proceed to scan for networks::
 
     nets = wlan.scan()
     for net in nets:
-        if net.ssid == 'mywifi':
-            print('Network found!')
-            wlan.connect(net.ssid, auth=(net.sec, 'mywifikey'), timeout=5000)
-            while not wlan.isconnected():
-                machine.idle() # save power while waiting
-            print('WLAN connection succeeded!')
-            break
+       if net.ssid == 'mywifi':
+          print('Network found!')
+          wlan.connect(net.ssid, auth=(net.sec, 'mywifikey'), timeout=5000)
+          while not wlan.isconnected():
+             machine.idle() # save power while waiting
+          print('WLAN connection succeeded!')
+          break
 
 Assigning a static IP address when booting
 ------------------------------------------
@@ -55,15 +55,15 @@ IP address so that you can access it via telnet or FTP, use the following script
    wlan = WLAN() # get current object, without changing the mode
 
    if machine.reset_cause() != machine.SOFT_RESET:
-       wlan.init(WLAN.STA)
-       # configuration below MUST match your home router settings!!
-       wlan.ifconfig(config=('192.168.178.107', '255.255.255.0', '192.168.178.1', '8.8.8.8'))
+      wlan.init(WLAN.STA)
+      # configuration below MUST match your home router settings!!
+      wlan.ifconfig(config=('192.168.178.107', '255.255.255.0', '192.168.178.1', '8.8.8.8'))
 
    if not wlan.isconnected():
-       # change the line below to match your network ssid, security and password
-       wlan.connect('mywifi', auth=(WLAN.WPA2, 'mywifikey'), timeout=5000)
-       while not wlan.isconnected():
-           machine.idle() # save power while waiting
+      # change the line below to match your network ssid, security and password
+      wlan.connect('mywifi', auth=(WLAN.WPA2, 'mywifikey'), timeout=5000)
+      while not wlan.isconnected():
+         machine.idle() # save power while waiting
 
 .. note::
 

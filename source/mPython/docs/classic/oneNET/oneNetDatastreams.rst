@@ -50,14 +50,14 @@ OneNET数据点上报格式
 我们自定义一个pubdata方法，该方法的功能是组合成协议要求的报文格式::
 
     def pubdata(data):
-        j_d = json.dumps(data)
-        j_l = len(j_d)
-        arr = bytearray(j_l + 3)
-        arr[0] = 1 #publish数据类型为json
-        arr[1] = int(j_l / 256) # json数据长度 高位字节
-        arr[2] = j_l % 256      # json数据长度 低位字节
-        arr[3:] = j_d.encode('ascii') # json数据
-        return arr
+       j_d = json.dumps(data)
+       j_l = len(j_d)
+       arr = bytearray(j_l + 3)
+       arr[0] = 1 #publish数据类型为json
+       arr[1] = int(j_l / 256) # json数据长度 高位字节
+       arr[2] = j_l % 256     # json数据长度 低位字节
+       arr[3:] = j_d.encode('ascii') # json数据
+       return arr
 
 设备使用publish报文来上传数据点。$dp为系统上传数据点的指令（2个字节的字符串）::
 
@@ -92,23 +92,23 @@ OneNET数据点上报格式
     }
     ]}
 
-    tim1 = Timer(1)       # 创建定时器
+    tim1 = Timer(1)      # 创建定时器
 
     def pubdata(data):
-        j_d = json.dumps(data)
-        j_l = len(j_d)
-        arr = bytearray(j_l + 3)
-        arr[0] = 1 #publish数据类型为json
-        arr[1] = int(j_l / 256) # json数据长度 高位字节
-        arr[2] = j_l % 256      # json数据长度 低位字节
-        arr[3:] = j_d.encode('ascii') # json数据
-        return arr
+       j_d = json.dumps(data)
+       j_l = len(j_d)
+       arr = bytearray(j_l + 3)
+       arr[0] = 1 #publish数据类型为json
+       arr[1] = int(j_l / 256) # json数据长度 高位字节
+       arr[2] = j_l % 256     # json数据长度 低位字节
+       arr[3:] = j_d.encode('ascii') # json数据
+       return arr
 
     def publishSenser():
-        message['datastreams'][0]['datapoints'][0]['value']=sound.read()
-        message['datastreams'][1]['datapoints'][0]['value']=light.read()
-        c.publish('$dp',pubdata(message))                   #publish报文上传数据点
-        print('publish message:',message)
+       message['datastreams'][0]['datapoints'][0]['value']=sound.read()
+       message['datastreams'][1]['datapoints'][0]['value']=light.read()
+       c.publish('$dp',pubdata(message))                #publish报文上传数据点
+       print('publish message:',message)
 
 
     mywifi.connectWiFi("ssid","password")
@@ -116,7 +116,7 @@ OneNET数据点上报格式
     c = MQTTClient(CLIENT_ID, SERVER,6002,username,password)
     c.connect()
     print("Connected to %s" % SERVER)
-    tim1.init(period=1000, mode=Timer.PERIODIC, callback=lambda _:publishSenser())     #每隔一秒上传数据点
+    tim1.init(period=1000, mode=Timer.PERIODIC, callback=lambda _:publishSenser())    #每隔一秒上传数据点
 
 
 效果展示

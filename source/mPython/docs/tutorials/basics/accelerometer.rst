@@ -18,17 +18,17 @@
     from MicroPython import *
     
     while True:
-        oled.fill(0)     
-        x1 = accelerometer.get_x()
-        y1 = accelerometer.get_y()
-        z1 = accelerometer.get_z()
-        oled.DispChar("加速度x:", 0, 0)
-        oled.DispChar(str(x1), 48, 0)
-        oled.DispChar("加速度y:", 0, 16)
-        oled.DispChar(str(y1), 48, 16)
-        oled.DispChar("加速度z:", 0, 32)
-        oled.DispChar(str(z1), 48, 32)
-        oled.show()
+       oled.fill(0)    
+       x1 = accelerometer.get_x()
+       y1 = accelerometer.get_y()
+       z1 = accelerometer.get_z()
+       oled.DispChar("加速度x:", 0, 0)
+       oled.DispChar(str(x1), 48, 0)
+       oled.DispChar("加速度y:", 0, 16)
+       oled.DispChar(str(y1), 48, 16)
+       oled.DispChar("加速度z:", 0, 32)
+       oled.DispChar(str(z1), 48, 32)
+       oled.show()
 
 
 使用前，导入MicroPython模块::
@@ -48,7 +48,7 @@
 
 您可以尝试板子按以下放置，观察3轴数据:
 
-* 平放桌面       --(0,0,-1)
+* 平放桌面      --(0,0,-1)
 * 翻转平放桌面   --(0,0,1)
 * 板子下板边直立与桌面 --(1,0,0) 
 * 板子左板边直立与桌面 --(0,1,0) 
@@ -67,33 +67,33 @@
 
     from MicroPython import *    #导入MicroPython模块
 
-    Center_x=63           #设定中心点（原点）x的坐标
-    Center_y=31           #设定中心点（原点）y的坐标
+    Center_x=63         #设定中心点（原点）x的坐标
+    Center_y=31         #设定中心点（原点）y的坐标
 
     while True:
-        
-        x=accelerometer.get_x()         #获取X轴的加速度
-        y=accelerometer.get_y()         #获取Y轴的加速度
+       
+       x=accelerometer.get_x()        #获取X轴的加速度
+       y=accelerometer.get_y()        #获取Y轴的加速度
 
-        if y<=1 and y>=-1:
-            offsetX=int(numberMap(y,1,-1,-64,64))   #映射Y轴偏移值
-        if x<=1 and x>=-1:
-            offsetY=int(numberMap(x,1,-1,32,-32))   #映射X轴偏移值
-        move_x=Center_x+offsetX                 #水平球在X坐标上的移动
-        move_y=Center_y+offsetY                 #水平球在Y坐标上的移动
+       if y<=1 and y>=-1:
+          offsetX=int(numberMap(y,1,-1,-64,64))   #映射Y轴偏移值
+       if x<=1 and x>=-1:
+          offsetY=int(numberMap(x,1,-1,32,-32))   #映射X轴偏移值
+       move_x=Center_x+offsetX              #水平球在X坐标上的移动
+       move_y=Center_y+offsetY              #水平球在Y坐标上的移动
 
-        oled.circle(Center_x,Center_y,6,1)      #画中心固定圆：空心
-        oled.fill_circle(move_x,move_y,4,1)     #画移动的水平球：实心
-        oled.DispChar("%0.1f,%0.1f" %(x,y),85,0)    #显示水平球在X、Y轴的加速度值
+       oled.circle(Center_x,Center_y,6,1)     #画中心固定圆：空心
+       oled.fill_circle(move_x,move_y,4,1)    #画移动的水平球：实心
+       oled.DispChar("%0.1f,%0.1f" %(x,y),85,0)    #显示水平球在X、Y轴的加速度值
 
-        if offsetX==0 and offsetY==0:
-            rgb.fill((0,10,0))          #水平球在中心位置亮绿灯，亮度为10
-            rgb.write()
-        else:
-            rgb.fill((0,0,0))           #水平球不在中心位置灭灯
-            rgb.write()
-        oled.show()
-        oled.fill(0)
+       if offsetX==0 and offsetY==0:
+          rgb.fill((0,10,0))        #水平球在中心位置亮绿灯，亮度为10
+          rgb.write()
+       else:
+          rgb.fill((0,0,0))         #水平球不在中心位置灭灯
+          rgb.write()
+       oled.show()
+       oled.fill(0)
 
 .. image:: ../../images/tutorials/gravity.gif
     :align: center
@@ -103,9 +103,9 @@
 当检测到板子在X轴和Y轴方向倾斜时（范围-1g 至+1g），将X轴、Y轴的偏移值也就是加速度值（范围-1至1）分别映射在以设定的中心点为原点的X坐标上的Y坐标（范围32至-32）、X坐标（范围-64至64）上::
 
     if y<=1 and y>=-1:
-        offsetX=int(numberMap(y,1,-1,-64,64))
+       offsetX=int(numberMap(y,1,-1,-64,64))
     if x<=1 and x>=-1:
-        offsetY=int(numberMap(x,1,-1,32,-32))
+       offsetY=int(numberMap(x,1,-1,32,-32))
 
 .. Note::
 
@@ -119,11 +119,11 @@
 如果水平球移动到中心位置，则亮绿灯，否则不亮灯::
 
     if offsetX==0 and offsetY==0:
-        rgb.fill((0,10,0))          #水平球在中心位置亮绿灯，亮度为10
-        rgb.write()
+       rgb.fill((0,10,0))        #水平球在中心位置亮绿灯，亮度为10
+       rgb.write()
     else:
-        rgb.fill((0,0,0))           #水平球不在中心位置灭灯
-        rgb.write()
+       rgb.fill((0,0,0))         #水平球不在中心位置灭灯
+       rgb.write()
 
 
 
@@ -136,13 +136,13 @@
     from math import acos,degrees
 
     while True:
-        x=accelerometer.get_x()
-        if x<=1 and x>=-1:
-            rad_x=acos(x)                              #计算x的反余弦弧度值
-            deg_x=90-degrees(rad_x)                    #计算夹角的角度
-            oled.DispChar('%.2f°' %deg_x,50,25)        #OLED显示屏显示
-            oled.show()
-            oled.fill(0)
+       x=accelerometer.get_x()
+       if x<=1 and x>=-1:
+          rad_x=acos(x)                        #计算x的反余弦弧度值
+          deg_x=90-degrees(rad_x)                #计算夹角的角度
+          oled.DispChar('%.2f°' %deg_x,50,25)       #OLED显示屏显示
+          oled.show()
+          oled.fill(0)
 
 
 使用前，导入MicroPython模块和math模块中acos函数、degrees函数::

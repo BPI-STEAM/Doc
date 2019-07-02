@@ -11,20 +11,20 @@
   from MicroPython import *
 
   while True:
-      if button_a.value() == 0 :    #按键A按下 
-          sleep_ms(20)  
-          if button_a.value()==0:
-              rgb[0] = (255,0,0)    # 设置为红色
-              rgb[1] = (255,0,0)
-              rgb[2] = (255,0,0)
-          rgb.write()
-      if button_b.value() == 0 :    #按键B按下 
-          sleep_ms(20)
-          if button_b.value()==0:
-              rgb[0] = (0, 0, 0)    #关灯
-              rgb[1] = (0, 0, 0)
-              rgb[2] = (0, 0, 0)
-              rgb.write()
+     if button_a.value() == 0 :    #按键A按下 
+        sleep_ms(20)  
+        if button_a.value()==0:
+            rgb[0] = (255,0,0)    # 设置为红色
+            rgb[1] = (255,0,0)
+            rgb[2] = (255,0,0)
+        rgb.write()
+     if button_b.value() == 0 :    #按键B按下 
+        sleep_ms(20)
+        if button_b.value()==0:
+            rgb[0] = (0, 0, 0)    #关灯
+            rgb[1] = (0, 0, 0)
+            rgb[2] = (0, 0, 0)
+            rgb.write()
 
 
 使用前，导入MicroPython模块::
@@ -33,8 +33,8 @@
 
 按键 A 和按键 B 按下::
 
-  button_a.value() == 0      #按键 A 按下
-  button_b.value() == 0      #按键 B 按下
+  button_a.value() == 0     #按键 A 按下
+  button_b.value() == 0     #按键 B 按下
 
 .. Note::
 
@@ -51,25 +51,25 @@
 
 例：按下按键 A 打开板载灯和蜂鸣器，按下按键 B 关闭板载灯和蜂鸣器
 ::  
-    from MicroPython import *     #导入MicroPython模块
-    import music              #导入music模块
+    from MicroPython import *    #导入MicroPython模块
+    import music            #导入music模块
 
-    def ledon(_):             #先定义中断处理函数：开灯和蜂鸣器
-        rgb.fill((128,0,0))   #打开板载灯，全部设置为红色，半亮度
-        rgb.write()           #将颜色输出到灯
-        music.pitch(1000)     #打开蜂鸣器：1000赫兹
+    def ledon(_):           #先定义中断处理函数：开灯和蜂鸣器
+       rgb.fill((128,0,0))   #打开板载灯，全部设置为红色，半亮度
+       rgb.write()         #将颜色输出到灯
+       music.pitch(1000)    #打开蜂鸣器：1000赫兹
 
-    def ledoff(_):            #先定义中断处理函数：关灯和蜂鸣器
-        rgb.fill((0,0,0))     #关闭全部板载灯
-        rgb.write()           #将颜色输出到灯
-        music.pitch(0)        #关闭蜂鸣器
+    def ledoff(_):          #先定义中断处理函数：关灯和蜂鸣器
+       rgb.fill((0,0,0))    #关闭全部板载灯
+       rgb.write()         #将颜色输出到灯
+       music.pitch(0)       #关闭蜂鸣器
 
-    button_a.irq(trigger=Pin.IRQ_FALLING, handler=ledon)     #设置按键 A 中断,下降沿触发，开灯和蜂鸣器
+    button_a.irq(trigger=Pin.IRQ_FALLING, handler=ledon)    #设置按键 A 中断,下降沿触发，开灯和蜂鸣器
 
     button_b.irq(trigger=Pin.IRQ_FALLING, handler=ledoff)    #设置按键 B 中断,下降沿触发，关灯和蜂鸣器
 
-    while True:                            #在没有中断时，程序执行在循环内
-        pass
+    while True:                       #在没有中断时，程序执行在循环内
+       pass
    
 .. Note:: 以上程序默认情况下，程序在循环内空等不执行任何指令。当检测到a,b按键中断按时，回调对应的函数。
 

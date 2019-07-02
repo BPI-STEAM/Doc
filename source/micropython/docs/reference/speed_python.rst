@@ -98,9 +98,9 @@ of slice it points too.
 .. code:: python
 
     ba = bytearray(10000)  # big array
-    func(ba[30:2000])      # a copy is passed, ~2K new allocation
+    func(ba[30:2000])     # a copy is passed, ~2K new allocation
     mv = memoryview(ba)    # small object is allocated
-    func(mv[30:2000])      # a pointer to memory is passed
+    func(mv[30:2000])     # a pointer to memory is passed
 
 A `memoryview` can only be applied to objects supporting the buffer protocol - this
 includes arrays but not lists. Small caveat is that while memoryview object is live,
@@ -132,14 +132,14 @@ The following enables any function or method to be timed by adding an
 .. code:: python
 
     def timed_function(f, *args, **kwargs):
-        myname = str(f).split(' ')[1]
-        def new_func(*args, **kwargs):
-            t = utime.ticks_us()
-            result = f(*args, **kwargs)
-            delta = utime.ticks_diff(utime.ticks_us(), t)
-            print('Function {} Time = {:6.3f}ms'.format(myname, delta/1000))
-            return result
-        return new_func
+       myname = str(f).split(' ')[1]
+       def new_func(*args, **kwargs):
+          t = utime.ticks_us()
+          result = f(*args, **kwargs)
+          delta = utime.ticks_diff(utime.ticks_us(), t)
+          print('Function {} Time = {:6.3f}ms'.format(myname, delta/1000))
+          return result
+       return new_func
 
 MicroPython code improvements
 -----------------------------
@@ -164,12 +164,12 @@ by caching the object in a local variable:
 .. code:: python
 
     class foo(object):
-        def __init__(self):
-            ba = bytearray(100)
-        def bar(self, obj_display):
-            ba_ref = self.ba
-            fb = obj_display.framebuffer
-            # iterative code using these two objects
+       def __init__(self):
+          ba = bytearray(100)
+       def bar(self, obj_display):
+          ba_ref = self.ba
+          fb = obj_display.framebuffer
+          # iterative code using these two objects
 
 This avoids the need repeatedly to look up ``self.ba`` and ``obj_display.framebuffer``
 in the body of the method ``bar()``.
@@ -205,8 +205,8 @@ no adaptation (but see below). It is invoked by means of a function decorator:
 
     @micropython.native
     def foo(self, arg):
-        buf = self.linebuf # Cached object
-        # code
+       buf = self.linebuf # Cached object
+       # code
 
 There are certain limitations in the current implementation of the native code emitter. 
 
@@ -233,7 +233,7 @@ bit manipulations. It is invoked using a decorator:
 
     @micropython.viper
     def foo(self, arg: int) -> int:
-        # code
+       # code
 
 As the above fragment illustrates it is beneficial to use Python type hints to assist the Viper optimiser. 
 Type hints provide information on the data types of arguments and of the return value; these
@@ -271,10 +271,10 @@ Typical usage is to cache variables:
 
     @micropython.viper
     def foo(self, arg: int) -> int:
-        buf = ptr8(self.linebuf) # self.linebuf is a bytearray or bytes object
-        for x in range(20, 30):
-            bar = buf[x] # Access a data item through the pointer
-            # code omitted
+       buf = ptr8(self.linebuf) # self.linebuf is a bytearray or bytes object
+       for x in range(20, 30):
+          bar = buf[x] # Access a data item through the pointer
+          # code omitted
 
 In this instance the compiler "knows" that ``buf`` is the address of an array of bytes;
 it can emit code to rapidly compute the address of ``buf[x]`` at runtime. Where casts are
@@ -304,9 +304,9 @@ The following example illustrates the use of a ``ptr16`` cast to toggle pin X1 `
     BIT0 = const(1)
     @micropython.viper
     def toggle_n(n: int):
-        odr = ptr16(stm.GPIOA + stm.GPIO_ODR)
-        for _ in range(n):
-            odr[0] ^= BIT0
+       odr = ptr16(stm.GPIOA + stm.GPIO_ODR)
+       for _ in range(n):
+          odr[0] ^= BIT0
 
 A detailed technical description of the three code emitters may be found
 on Kickstarter here `Note 1 <https://www.kickstarter.com/projects/214379695/micro-python-python-for-microcontrollers/posts/664832>`_

@@ -18,15 +18,15 @@
 
     示例::
 
-        try:
-            uos.mkdir("my_dir")
-        except OSError as exc:
-            if exc.args[0] == uerrno.EEXIST:
-                print("Directory already exists")
+       try:
+          uos.mkdir("my_dir")
+       except OSError as exc:
+          if exc.args[0] == uerrno.EEXIST:
+             print("Directory already exists")
 
 .. data:: errorcode
 
     字典将数字错误代码映射到带有符号错误代码的字符串（参见上文）::
 
-        >>> print(uerrno.errorcode[uerrno.EEXIST])
-        EEXIST
+       >>> print(uerrno.errorcode[uerrno.EEXIST])
+       EEXIST

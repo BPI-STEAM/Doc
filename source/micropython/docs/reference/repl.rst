@@ -27,20 +27,20 @@ provided:
 
     >>> for i in range(30):
     ...     if i > 3:
-    ...         _
+    ...          _
 
 Now enter ``break`` followed by RETURN and press BACKSPACE:
 
     >>> for i in range(30):
     ...     if i > 3:
-    ...         break
+    ...          break
     ...     _
 
 Finally type ``print(i)``, press RETURN, press BACKSPACE and press RETURN again:
 
     >>> for i in range(30):
     ...     if i > 3:
-    ...         break
+    ...          break
     ...     print(i)
     ...
     0
@@ -64,9 +64,9 @@ Then type ``m`` and press TAB and it should expand to ``machine``.
 Enter a dot ``.`` and press TAB again. You should see something like:
 
     >>> machine.
-    __name__        info            unique_id       reset
-    bootloader      freq            rng             idle
-    sleep           deepsleep       disable_irq     enable_irq
+    __name__        info             unique_id        reset
+    bootloader       freq             rng              idle
+    sleep            deepsleep        disable_irq     enable_irq
     Pin
 
 The word will be expanded as much as possible until multiple possibilities exist.
@@ -75,7 +75,7 @@ For example, type ``machine.Pin.AF3`` and press TAB and it will expand to
 expansions:
 
     >>> machine.Pin.AF3_TIM
-    AF3_TIM10       AF3_TIM11       AF3_TIM8        AF3_TIM9
+    AF3_TIM10        AF3_TIM11        AF3_TIM8        AF3_TIM9
     >>> machine.Pin.AF3_TIM
 
 Interrupting a running program
@@ -99,7 +99,7 @@ For example:
     6467
     6468
     Traceback (most recent call last):
-      File "<stdin>", line 2, in <module>
+       File "<stdin>", line 2, in <module>
     KeyboardInterrupt:
     >>>
 
@@ -109,21 +109,21 @@ Paste Mode
 If you want to paste some code into your terminal window, the auto-indent feature
 will mess things up. For example, if you had the following python code: ::
 
-   def foo():
-       print('This is a test to show paste mode')
-       print('Here is a second line')
-   foo()
+    def foo():
+        print('This is a test to show paste mode')
+        print('Here is a second line')
+    foo()
 
 and you try to paste this into the normal REPL, then you will see something like
 this:
 
     >>> def foo():
-    ...         print('This is a test to show paste mode')
-    ...             print('Here is a second line')
-    ...             foo()
+    ...          print('This is a test to show paste mode')
+    ...              print('Here is a second line')
+    ...              foo()
     ...
     Traceback (most recent call last):
-      File "<stdin>", line 3
+       File "<stdin>", line 3
     IndentationError: unexpected indent
 
 If you press Ctrl-E, then you will enter paste mode, which essentially turns off

@@ -16,23 +16,23 @@ Functions
    将字符串转换为十六进制表示的字符串。 
 
    .. admonition:: 与CPython的区别
-      :class: attention
+     :class: attention
 
-      如果提供了附加参数sep，则它将用作十六进制值之间的分隔符。
+     如果提供了附加参数sep，则它将用作十六进制值之间的分隔符。
    
    没有sep参数::
 
-      >>> ubinascii.hexlify('\x11\x22123')
-      b'1122313233'
-      >>> ubinascii.hexlify('abcdfg')
-      b'616263646667'
+     >>> ubinascii.hexlify('\x11\x22123')
+     b'1122313233'
+     >>> ubinascii.hexlify('abcdfg')
+     b'616263646667'
    
    如果指定了第二个参数sep，它将用于分隔两个十六进制数::
 
-      >>> ubinascii.hexlify('\x11\x22123', ' ')
-      b'11 22 31 32 33'
-      >>> ubinascii.hexlify('\x11\x22123', ',')
-      b'11,22,31,32,33'
+     >>> ubinascii.hexlify('\x11\x22123', ' ')
+     b'11 22 31 32 33'
+     >>> ubinascii.hexlify('\x11\x22123', ',')
+     b'11,22,31,32,33'
 
 
 
@@ -42,8 +42,8 @@ Functions
 
    示例::
 
-      >>> ubinascii.unhexlify('313233')
-      b'123'
+     >>> ubinascii.unhexlify('313233')
+     b'123'
 
 
 

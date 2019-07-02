@@ -66,9 +66,9 @@
 
 
    .. admonition:: Difference to CPython
-      :class: attention
+     :class: attention
 
-      Tuples returned may contain more than 2 elements as described above.
+     Tuples returned may contain more than 2 elements as described above.
 
 .. method:: poll.ipoll([timeout])
 
@@ -76,6 +76,6 @@
 
 
    .. admonition:: 与CPython区别
-      :class: attention
+     :class: attention
 
-      该函数是MicroPython的扩展。
+     该函数是MicroPython的扩展。

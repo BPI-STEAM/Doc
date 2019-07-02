@@ -4,17 +4,17 @@ Reset and boot modes
 There are soft resets and hard resets. 
 
    - A soft reset simply clears the state of the MicroPython virtual machine, 
-     but leaves hardware peripherals unaffected. To do a soft reset, simply press 
-     **Ctrl+D** on the REPL, or within a script do::
+    but leaves hardware peripherals unaffected. To do a soft reset, simply press 
+    **Ctrl+D** on the REPL, or within a script do::
 
-        import sys
-        sys.exit()
+       import sys
+       sys.exit()
 
    - A hard reset is the same as performing a power cycle to the board. In order to
-     hard reset the WiPy, press the switch on the board or::
+    hard reset the WiPy, press the switch on the board or::
 
-        import machine
-        machine.reset()
+       import machine
+       machine.reset()
 
 Safe boot
 ---------

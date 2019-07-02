@@ -61,6 +61,6 @@ Constants
 ---------
 
 .. data:: esp32.WAKEUP_ALL_LOW
-          esp32.WAKEUP_ANY_HIGH
+           esp32.WAKEUP_ANY_HIGH
 
-   Selects the wake level for pins.
+    Selects the wake level for pins.

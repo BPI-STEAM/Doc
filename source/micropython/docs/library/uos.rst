@@ -19,11 +19,11 @@ General functions
    underlying machine and/or its operating system.  The tuple has five fields
    in the following order, each of them being a string:
 
-        * ``sysname`` -- the name of the underlying system
-        * ``nodename`` -- the network name (can be the same as ``sysname``)
-        * ``release`` -- the version of the underlying system
-        * ``version`` -- the MicroPython version and build date
-        * ``machine`` -- an identifier for the underlying hardware (eg board, CPU)
+       * ``sysname`` -- the name of the underlying system
+       * ``nodename`` -- the network name (can be the same as ``sysname``)
+       * ``release`` -- the version of the underlying system
+       * ``version`` -- the MicroPython version and build date
+       * ``machine`` -- an identifier for the underlying hardware (eg board, CPU)
 
 .. function:: urandom(n)
 
@@ -50,15 +50,15 @@ Filesystem access
    The tuples have the form *(name, type, inode[, size])*:
 
     - *name* is a string (or bytes if *dir* is a bytes object) and is the name of
-      the entry;
+     the entry;
     - *type* is an integer that specifies the type of the entry, with 0x4000 for
-      directories and 0x8000 for regular files;
+     directories and 0x8000 for regular files;
     - *inode* is an integer corresponding to the inode of the file, and may be 0
-      for filesystems that don't have such a notion.
+     for filesystems that don't have such a notion.
     - Some platforms may return a 4-tuple that includes the entry's *size*.  For
-      file entries, *size* is an integer representing the size of the file
-      or -1 if unknown.  Its meaning is currently undefined for directory
-      entries.
+     file entries, *size* is an integer representing the size of the file
+     or -1 if unknown.  Its meaning is currently undefined for directory
+     entries.
 
 .. function:: listdir([dir])
 
@@ -90,16 +90,16 @@ Filesystem access
 
    Returns a tuple with the filesystem information in the following order:
 
-        * ``f_bsize`` -- file system block size
-        * ``f_frsize`` -- fragment size
-        * ``f_blocks`` -- size of fs in f_frsize units
-        * ``f_bfree`` -- number of free blocks
-        * ``f_bavail`` -- number of free blocks for unpriviliged users
-        * ``f_files`` -- number of inodes
-        * ``f_ffree`` -- number of free inodes
-        * ``f_favail`` -- number of free inodes for unpriviliged users
-        * ``f_flag`` -- mount flags
-        * ``f_namemax`` -- maximum filename length
+       * ``f_bsize`` -- file system block size
+       * ``f_frsize`` -- fragment size
+       * ``f_blocks`` -- size of fs in f_frsize units
+       * ``f_bfree`` -- number of free blocks
+       * ``f_bavail`` -- number of free blocks for unpriviliged users
+       * ``f_files`` -- number of inodes
+       * ``f_ffree`` -- number of free inodes
+       * ``f_favail`` -- number of free inodes for unpriviliged users
+       * ``f_flag`` -- mount flags
+       * ``f_namemax`` -- maximum filename length
 
    Parameters related to inodes: ``f_files``, ``f_ffree``, ``f_avail``
    and the ``f_flags`` parameter may return ``0`` as they can be unavailable
@@ -176,7 +176,7 @@ represented by VFS classes.
 
     .. staticmethod:: mkfs(block_dev)
 
-        Build a FAT filesystem on *block_dev*.
+       Build a FAT filesystem on *block_dev*.
 
 Block devices
 -------------
@@ -194,53 +194,53 @@ used by a particular filesystem driver to store the data for its filesystem.
 
     .. method:: readblocks(block_num, buf)
 
-        Starting at the block given by the index *block_num*, read blocks from
-        the device into *buf* (an array of bytes).
-        The number of blocks to read is given by the length of *buf*,
-        which will be a multiple of the block size.
+       Starting at the block given by the index *block_num*, read blocks from
+       the device into *buf* (an array of bytes).
+       The number of blocks to read is given by the length of *buf*,
+       which will be a multiple of the block size.
 
     .. method:: writeblocks(block_num, buf)
 
-        Starting at the block given by the index *block_num*, write blocks from
-        *buf* (an array of bytes) to the device.
-        The number of blocks to write is given by the length of *buf*,
-        which will be a multiple of the block size.
+       Starting at the block given by the index *block_num*, write blocks from
+       *buf* (an array of bytes) to the device.
+       The number of blocks to write is given by the length of *buf*,
+       which will be a multiple of the block size.
 
     .. method:: ioctl(op, arg)
 
-        Control the block device and query its parameters.  The operation to
-        perform is given by *op* which is one of the following integers:
+       Control the block device and query its parameters.  The operation to
+       perform is given by *op* which is one of the following integers:
 
-          - 1 -- initialise the device (*arg* is unused)
-          - 2 -- shutdown the device (*arg* is unused)
-          - 3 -- sync the device (*arg* is unused)
-          - 4 -- get a count of the number of blocks, should return an integer
-            (*arg* is unused)
-          - 5 -- get the number of bytes in a block, should return an integer,
-            or ``None`` in which case the default value of 512 is used
-            (*arg* is unused)
+        - 1 -- initialise the device (*arg* is unused)
+        - 2 -- shutdown the device (*arg* is unused)
+        - 3 -- sync the device (*arg* is unused)
+        - 4 -- get a count of the number of blocks, should return an integer
+          (*arg* is unused)
+        - 5 -- get the number of bytes in a block, should return an integer,
+          or ``None`` in which case the default value of 512 is used
+          (*arg* is unused)
 
 By way of example, the following class will implement a block device that stores
 its data in RAM using a ``bytearray``::
 
     class RAMBlockDev:
-        def __init__(self, block_size, num_blocks):
-            self.block_size = block_size
-            self.data = bytearray(block_size * num_blocks)
+       def __init__(self, block_size, num_blocks):
+          self.block_size = block_size
+          self.data = bytearray(block_size * num_blocks)
 
-        def readblocks(self, block_num, buf):
-            for i in range(len(buf)):
-                buf[i] = self.data[block_num * self.block_size + i]
+       def readblocks(self, block_num, buf):
+          for i in range(len(buf)):
+             buf[i] = self.data[block_num * self.block_size + i]
 
-        def writeblocks(self, block_num, buf):
-            for i in range(len(buf)):
-                self.data[block_num * self.block_size + i] = buf[i]
+       def writeblocks(self, block_num, buf):
+          for i in range(len(buf)):
+             self.data[block_num * self.block_size + i] = buf[i]
 
-        def ioctl(self, op, arg):
-            if op == 4: # get number of blocks
-                return len(self.data) // self.block_size
-            if op == 5: # get block size
-                return self.block_size
+       def ioctl(self, op, arg):
+          if op == 4: # get number of blocks
+             return len(self.data) // self.block_size
+          if op == 5: # get block size
+             return self.block_size
 
 It can be used as follows::
 

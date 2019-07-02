@@ -58,8 +58,8 @@
     用在某些值（未指定）后结束后的任意引用点返回一个递增的毫秒计数器。该值应被视为不透明的，且仅适用于ticks_diff()。
 
     自动换行值未显式显示，但为简化讨论，我将其称为 *TICKS_MAX* 。 该值的周期为  *TICKS_PERIOD = TICKS_MAX + 1* 。
-     *TICKS_PERIOD* 须为2的幂，但也会因端口不同而不同。同一周期值用于 `ticks_ms()` 、 `ticks_us()` 、
-      `ticks_cpu()` 函数（为简单起见）。因此，这些函数将返回一个介于 *[0 .. TICKS_MAX]* 的值，包括 *TICKS_PERIOD* 值。
+    *TICKS_PERIOD* 须为2的幂，但也会因端口不同而不同。同一周期值用于 `ticks_ms()` 、 `ticks_us()` 、
+     `ticks_cpu()` 函数（为简单起见）。因此，这些函数将返回一个介于 *[0 .. TICKS_MAX]* 的值，包括 *TICKS_PERIOD* 值。
     注意：仅使用非负值。多数情况下，您应将这些函数返回的值视为透明。对之唯一可用的操作为下述的 `ticks_diff()` 和 `ticks_add()` 函数。
 
     注意：在这些值上直接执行标准的数学操作(+, -)或关系运算符(<, <=, >, >=)将导致无效的结果。
@@ -89,16 +89,16 @@
 
    Examples::
 
-        # Find out what ticks value there was 100ms ago 找到100ms前的ticks值
-        print(ticks_add(time.ticks_ms(), -100))
+       # Find out what ticks value there was 100ms ago 找到100ms前的ticks值
+       print(ticks_add(time.ticks_ms(), -100))
 
-        # Calculate deadline for operation and test for it 计算操作和测试的截止时间
-        deadline = ticks_add(time.ticks_ms(), 200)
-        while ticks_diff(deadline, time.ticks_ms()) > 0:
-            do_a_little_of_something()
+       # Calculate deadline for operation and test for it 计算操作和测试的截止时间
+       deadline = ticks_add(time.ticks_ms(), 200)
+       while ticks_diff(deadline, time.ticks_ms()) > 0:
+          do_a_little_of_something()
 
-        # Find out TICKS_MAX used by this port 找到该端口使用的TICKS_MAX
-        print(ticks_add(0, -1))
+       # Find out TICKS_MAX used by this port 找到该端口使用的TICKS_MAX
+       print(ticks_add(0, -1))
 
 
 .. function:: ticks_diff(ticks1, ticks2)
@@ -127,27 +127,27 @@
 
    * 使用超时轮询。在此种情况下，事件顺序已知，您只需处理 `ticks_diff()` 的正结果::
 
-        # Wait for GPIO pin to be asserted, but at most 500us 等待GPIO注脚确认，单最多等待500us
-        start = time.ticks_us()
-        while pin.value() == 0:
-            if time.ticks_diff(time.ticks_us(), start) > 500:
-                raise TimeoutError
+       # Wait for GPIO pin to be asserted, but at most 500us 等待GPIO注脚确认，单最多等待500us
+       start = time.ticks_us()
+       while pin.value() == 0:
+          if time.ticks_diff(time.ticks_us(), start) > 500:
+             raise TimeoutError
 
    * 安排事件。在此种情况下，若某一事件超期，则 `ticks_diff()` 的结果可能为负::
 
-        # This code snippet is not optimized 这一代码片段没有经过优化
-        now = time.ticks_ms()
-        scheduled_time = task.scheduled_time()
-        if ticks_diff(now, scheduled_time) > 0:
-            print("Too early, let's nap")
-            sleep_ms(ticks_diff(now, scheduled_time))
-            task.run()
-        elif ticks_diff(now, scheduled_time) == 0:
-            print("Right at time!")
-            task.run()
-        elif ticks_diff(now, scheduled_time) < 0:
-            print("Oops, running late, tell task to run faster!")
-            task.run(run_faster=true)
+       # This code snippet is not optimized 这一代码片段没有经过优化
+       now = time.ticks_ms()
+       scheduled_time = task.scheduled_time()
+       if ticks_diff(now, scheduled_time) > 0:
+          print("Too early, let's nap")
+          sleep_ms(ticks_diff(now, scheduled_time))
+          task.run()
+       elif ticks_diff(now, scheduled_time) == 0:
+          print("Right at time!")
+          task.run()
+       elif ticks_diff(now, scheduled_time) < 0:
+          print("Oops, running late, tell task to run faster!")
+          task.run(run_faster=true)
 
    注意：请勿将 `time()` 值传递给 `ticks_diff()` ，您应在此使用正常的数学运算。但是请注意 `time()` 可能（且将会）溢出。这被称为 https://en.wikipedia.org/wiki/Year_2038_problem .
 
@@ -160,10 +160,10 @@
    若您需要日历时间，无参数的 ``localtime()`` 不失为佳选。
 
    .. admonition:: Difference to CPython
-      :class: attention
+     :class: attention
 
-      在CPython中，该函数返回自Unix时刻，即1970-01-01 00:00 UTC始的浮点数形式的秒数，
-      其精度通常可达微秒。使用MicroPython时，只有Unix端口使用相同时刻，若浮点精度允许，
-      则返回次秒级精度。嵌入式硬件通常不具有浮点精度，可表示长时间范围和次秒级秒精度，
-      因此它们使用具有第二精度的整数值。某些嵌入式硬件也缺乏电池供电的RTC，
-      因此，返回自上次接通电源后或其他相关的制定硬件点的秒数（例：重置）。
+     在CPython中，该函数返回自Unix时刻，即1970-01-01 00:00 UTC始的浮点数形式的秒数，
+     其精度通常可达微秒。使用MicroPython时，只有Unix端口使用相同时刻，若浮点精度允许，
+     则返回次秒级精度。嵌入式硬件通常不具有浮点精度，可表示长时间范围和次秒级秒精度，
+     因此它们使用具有第二精度的整数值。某些嵌入式硬件也缺乏电池供电的RTC，
+     因此，返回自上次接通电源后或其他相关的制定硬件点的秒数（例：重置）。

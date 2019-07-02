@@ -22,12 +22,12 @@ IO 在计算机中指 Input/Output ，也就是输入和输出，简称 IO 口�
 
 .. code:: python
 
-   from microbit import *
-   while True:
-       if pin1.is_touched():
-           display.show(Image.HAPPY)
-       else:
-           display.show(Image.SAD)
+    from microbit import *
+    while True:
+        if pin1.is_touched():
+            display.show(Image.HAPPY)
+        else:
+            display.show(Image.SAD)
 
 这个时候你需要一只手触摸在 1 号标签的引脚上，就可以能看到板子由 悲 转 喜
 了，如果你松开了，它又会改变表情了，是生气吗？XD
@@ -68,8 +68,8 @@ IO 在计算机中指 Input/Output ，也就是输入和输出，简称 IO 口�
 
 .. code:: python
 
-   from microbit import *
-   pin2.write_digital(1)
+    from microbit import *
+    pin2.write_digital(1)
 
 可以看到它亮了起来，那就说明我们可以控制了它的亮，这是不是就和最开始入门教程的一致了？
 
@@ -79,13 +79,13 @@ IO 在计算机中指 Input/Output ，也就是输入和输出，简称 IO 口�
 
 .. code:: python
 
-   from microbit import *
+    from microbit import *
 
-   while True:
-       pin2.write_digital(1)
-       sleep(200)
-       pin2.write_digital(0)
-       sleep(1000)
+    while True:
+        pin2.write_digital(1)
+        sleep(200)
+        pin2.write_digital(0)
+        sleep(1000)
 
 运行效果如下：
 
@@ -93,10 +93,10 @@ IO 在计算机中指 Input/Output ，也就是输入和输出，简称 IO 口�
 
 .. Note::
 
-   1. 使用 pin2 引脚进行输出 1 ， 这会让 LED 存在变成高电平，简单认为上就是这个引脚有电压了，效果相当于直接接了电源正极。（原理上应该理解为两个引脚之间形成电势差）。
-   
-   2. 首先先将其点亮，即为 `pin2.write_digital(1)`，之后使用 `sleep(200) ` 让板子休息 200 毫秒。
+    1. 使用 pin2 引脚进行输出 1 ， 这会让 LED 存在变成高电平，简单认为上就是这个引脚有电压了，效果相当于直接接了电源正极。（原理上应该理解为两个引脚之间形成电势差）。
+    
+    2. 首先先将其点亮，即为 `pin2.write_digital(1)`，之后使用 `sleep(200) ` 让板子休息 200 毫秒。
 
-   3. 然后就将其熄灭，也就是 `pin2.write_digital(0)`，之后再休息 1000 毫秒，也就是 1 秒。
+    3. 然后就将其熄灭，也就是 `pin2.write_digital(0)`，之后再休息 1000 毫秒，也就是 1 秒。
 
-   4. 将上述过程重新来一遍。
+    4. 将上述过程重新来一遍。

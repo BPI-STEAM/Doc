@@ -146,13 +146,13 @@ MicroPython提供了可按照如下方式使用的 ``const`` 关键字:
 .. code::
 
     while True:
-        var = spi.read(100)
-        # process data 处理数据
+       var = spi.read(100)
+       # process data 处理数据
 
     buf = bytearray(100)
     while True:
-        spi.readinto(buf)
-        # process data in buf 在缓冲区中处理对象
+       spi.readinto(buf)
+       # process data in buf 在缓冲区中处理对象
 
 第一个循环在每次传递时创建一个缓冲区，第二个循环则重新使用一个预分配的缓冲区；这在内存碎片化方面既快又有效。
 
@@ -163,8 +163,8 @@ MicroPython提供了可按照如下方式使用的 ``const`` 关键字:
 .. code::
 
     def foo(bar):
-        for x in bar:
-            print(x)
+       for x in bar:
+          print(x)
     foo((1, 2, 0xff))
     foo(b'\1\2\xff')
 
@@ -258,7 +258,7 @@ RAM将被GC回收。但是，若 ``bar`` 被分配到更高地址，从 ``foo`` 
     print('-----------------------------')
     print('Initial free: {} allocated: {}'.format(gc.mem_free(), gc.mem_alloc()))
     def func():
-        a = bytearray(10000)
+       a = bytearray(10000)
     gc.collect()
     print('Func definition: {} allocated: {}'.format(gc.mem_free(), gc.mem_alloc()))
     func()

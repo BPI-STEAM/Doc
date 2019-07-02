@@ -1,7 +1,7 @@
 .. MicroPython板子 documentation master file, created by
-   sphinx-quickstart on Tue Aug 28 17:25:35 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+    sphinx-quickstart on Tue Aug 28 17:25:35 2018.
+    You can adapt this file completely to your liking, but it should at least
+    contain the root `toctree` directive.
 
 MicroPython帮助文档
 ======================================
@@ -33,19 +33,19 @@ MicroPython板子资料
 ---------
 
 .. toctree::
-   :maxdepth: 2
-   
-   board/index.rst
+    :maxdepth: 2
+    
+    board/index.rst
 
 
 ---------
 
 .. toctree::
-   :maxdepth: 2
-   :caption: 板子教程
+    :maxdepth: 2
+    :caption: 板子教程
 
-   tutorials/basics/index.rst
-   tutorials/advance/index.rst
+    tutorials/basics/index.rst
+    tutorials/advance/index.rst
 
 ---------
 
@@ -64,18 +64,18 @@ MicroPython类库
 ----------------
 
 .. toctree::
-   :maxdepth: 1
-   :caption: MicroPython类库
-   :hidden:
-   
-   library/pythonStd/index.rst
-   library/micropython/index.rst
+    :maxdepth: 1
+    :caption: MicroPython类库
+    :hidden:
+    
+    library/pythonStd/index.rst
+    library/micropython/index.rst
 
 
-=========================================   ======================================================
- :ref:`Python标准库<pythonStd>`               兼容CPython,内含Python内建函数、常用module
- :ref:`MicroPython类库<microPythonModu>`      MicroPython的ESP32硬件控制层的模块     
-=========================================   ======================================================
+=========================================    ======================================================
+ :ref:`Python标准库<pythonStd>`                兼容CPython,内含Python内建函数、常用module
+ :ref:`MicroPython类库<microPythonModu>`       MicroPython的ESP32硬件控制层的模块     
+=========================================    ======================================================
 
 
 您可以通过 ``help()`` 发现可用的内置库，在REPL中输入以下内容来导入::
@@ -91,48 +91,48 @@ MicroPython类库
 -------------
 
 .. toctree::
-   :maxdepth: 1
-   :caption: MicroPython类库
-   :hidden:
-   
-   library/MicroPython/index.rst
-                                             
-======================================   ====================================================================  
- :ref:`MicroPython模块<MicroPython.py>`           提供了MicroPython板子特有拓展类。:ref:`MicroPython.py源码查看 <MicroPython_code>`
- :ref:`music模块<music.py>`               兼容micro:bit music 模块
- :ref:`urequests模块<urequests>`          从CPython移植过来的HTTP客户端的第三方库,提供各种HTTP请求方式
+    :maxdepth: 1
+    :caption: MicroPython类库
+    :hidden:
+    
+    library/MicroPython/index.rst
+                                                
+======================================    ====================================================================  
+ :ref:`MicroPython模块<MicroPython.py>`            提供了MicroPython板子特有拓展类。:ref:`MicroPython.py源码查看 <MicroPython_code>`
+ :ref:`music模块<music.py>`                兼容micro:bit music 模块
+ :ref:`urequests模块<urequests>`           从CPython移植过来的HTTP客户端的第三方库,提供各种HTTP请求方式
  :ref:`umqtt.simple模块<umqtt.simple>`    提供简单MQTT客户端功能 
- :ref:`servo模块<servo_api>`              舵机驱动 
- :ref:`gui模块<gui>`                      提供GUI类的绘制元素 
- :ref:`audio模块<audio>`                  音频播放录音
- :ref:`radio模块<radio>`                  无线广播
-======================================   ====================================================================
+ :ref:`servo模块<servo_api>`               舵机驱动 
+ :ref:`gui模块<gui>`                        提供GUI类的绘制元素 
+ :ref:`audio模块<audio>`                    音频播放录音
+ :ref:`radio模块<radio>`                    无线广播
+======================================    ====================================================================
 
 ---------
 
 .. toctree::
-   :maxdepth: 1
-   :caption: MicroPython 语法
+    :maxdepth: 1
+    :caption: MicroPython 语法
 
-   reference/index.rst
+    reference/index.rst
  
 有关MicroPython特定语言功能的语言参考信息
 
 
 
 .. toctree::
-   :hidden:
-   
-   release.rst
+    :hidden:
+    
+    release.rst
 
 
 掌控拓展板
 ----------
 
 .. toctree::
-   :hidden:
+    :hidden:
 
-   extboard/index.rst
+    extboard/index.rst
 
 .. image:: /images/extboard/extboard_250.png
   :scale: 80 %

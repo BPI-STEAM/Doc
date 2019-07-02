@@ -93,22 +93,22 @@ Methods
 
 .. method:: WLAN.ifconfig([(ip, subnet, gateway, dns)])
 
-   Get/set IP-level network interface parameters: IP address, subnet mask,
-   gateway and DNS server. When called with no arguments, this method returns
-   a 4-tuple with the above information. To set the above values, pass a
-   4-tuple with the required information.  For example::
+    Get/set IP-level network interface parameters: IP address, subnet mask,
+    gateway and DNS server. When called with no arguments, this method returns
+    a 4-tuple with the above information. To set the above values, pass a
+    4-tuple with the required information.  For example::
 
     nic.ifconfig(('192.168.0.4', '255.255.255.0', '192.168.0.1', '8.8.8.8'))
 
 .. method:: WLAN.config('param')
 .. method:: WLAN.config(param=value, ...)
 
-   Get or set general network interface parameters. These methods allow to work
-   with additional parameters beyond standard IP configuration (as dealt with by
-   `WLAN.ifconfig()`). These include network-specific and hardware-specific
-   parameters. For setting parameters, keyword argument syntax should be used,
-   multiple parameters can be set at once. For querying, parameters name should
-   be quoted as a string, and only one parameter can be queries at time::
+    Get or set general network interface parameters. These methods allow to work
+    with additional parameters beyond standard IP configuration (as dealt with by
+    `WLAN.ifconfig()`). These include network-specific and hardware-specific
+    parameters. For setting parameters, keyword argument syntax should be used,
+    multiple parameters can be set at once. For querying, parameters name should
+    be quoted as a string, and only one parameter can be queries at time::
 
     # Set WiFi access point name (formally known as ESSID) and WiFi channel
     ap.config(essid='My AP', channel=11)
@@ -116,17 +116,17 @@ Methods
     print(ap.config('essid'))
     print(ap.config('channel'))
 
-   Following are commonly supported parameters (availability of a specific parameter
-   depends on network technology type, driver, and `MicroPython port`).
+    Following are commonly supported parameters (availability of a specific parameter
+    depends on network technology type, driver, and `MicroPython port`).
 
-   =============  ===========
-   Parameter      Description
-   =============  ===========
-   mac            MAC address (bytes)
-   essid          WiFi access point name (string)
-   channel        WiFi channel (integer)
-   hidden         Whether ESSID is hidden (boolean)
-   authmode       Authentication mode supported (enumeration, see module constants)
-   password       Access password (string)
-   dhcp_hostname  The DHCP hostname to use
-   =============  ===========
+    =============  ===========
+    Parameter       Description
+    =============  ===========
+    mac             MAC address (bytes)
+    essid           WiFi access point name (string)
+    channel        WiFi channel (integer)
+    hidden          Whether ESSID is hidden (boolean)
+    authmode        Authentication mode supported (enumeration, see module constants)
+    password        Access password (string)
+    dhcp_hostname  The DHCP hostname to use
+    =============  ===========

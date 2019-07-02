@@ -2,7 +2,7 @@
 ======================================
 
 .. module:: array
-   :synopsis: efficient arrays of numeric data
+    :synopsis: efficient arrays of numeric data
 
 |see_cpython_module| :mod:`python:array`.
 

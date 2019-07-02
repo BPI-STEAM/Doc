@@ -27,7 +27,7 @@ Functions
         * ``SLEEP_NONE`` -- all functions enabled,
         * ``SLEEP_MODEM`` -- modem sleep, shuts down the WiFi Modem circuit.
         * ``SLEEP_LIGHT`` -- light sleep, shuts down the WiFi Modem circuit
-          and suspends the processor periodically.
+           and suspends the processor periodically.
 
     The system enters the set sleep mode automatically when possible.
 

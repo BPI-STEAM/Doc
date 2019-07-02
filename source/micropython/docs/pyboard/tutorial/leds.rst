@@ -13,8 +13,8 @@ This is all very well but we would like this process to be automated. Open the f
 
     led = pyb.LED(2)
     while True:
-        led.toggle()
-        pyb.delay(1000)
+       led.toggle()
+       pyb.delay(1000)
 
 When you save, the red light on the pyboard should turn on for about a second. To run the script, do a soft reset (CTRL-D). The pyboard will then restart and you should see a green light continuously flashing on and off. Success, the first step on your path to building an army of evil robots! When you are bored of the annoying flashing light then press CTRL-C at your terminal to stop it running.
  
@@ -38,9 +38,9 @@ Next we will set up an infinite loop that cycles through each of the LEDs turnin
 
     n = 0
     while True:
-      n = (n + 1) % 4
-      leds[n].toggle()
-      pyb.delay(50)
+     n = (n + 1) % 4
+     leds[n].toggle()
+     pyb.delay(50)
 
 Here, n keeps track of the current LED and every time the loop is executed we cycle to the next n (the % sign is a modulus operator that keeps n between 0 and 3.) Then we access the nth LED and toggle it. If you run this you should see each of the LEDs turning on then all turning off again in sequence.
 
@@ -48,17 +48,17 @@ One problem you might find is that if you stop the script and then start it agai
 
     leds = [pyb.LED(i) for i in range(1,5)]
     for l in leds: 
-        l.off()
+       l.off()
 
     n = 0
     try:
-       while True:
-          n = (n + 1) % 4
-          leds[n].toggle()
-          pyb.delay(50)
+      while True:
+        n = (n + 1) % 4
+        leds[n].toggle()
+        pyb.delay(50)
     finally:
-        for l in leds:
-            l.off()
+       for l in leds:
+          l.off()
 
 The Special LEDs
 ----------------
@@ -68,8 +68,8 @@ The yellow and blue LEDs are special. As well as turning them on and off, you ca
     led = pyb.LED(4)
     intensity = 0
     while True:
-        intensity = (intensity + 1) % 255
-        led.intensity(intensity)
-        pyb.delay(20)
+       intensity = (intensity + 1) % 255
+       led.intensity(intensity)
+       pyb.delay(20)
 
 You can call intensity() on LEDs 1 and 2 but they can only be off or on. 0 sets them off and any other number up to 255 turns them on.

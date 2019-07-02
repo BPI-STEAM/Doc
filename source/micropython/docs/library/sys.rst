@@ -21,14 +21,14 @@ Functions
    `sys.stdout` by default).
 
    .. admonition:: Difference to CPython
-      :class: attention
+     :class: attention
 
-      This is simplified version of a function which appears in the
-      ``traceback`` module in CPython. Unlike ``traceback.print_exception()``,
-      this function takes just exception value instead of exception type,
-      exception value, and traceback object; *file* argument should be
-      positional; further arguments are not supported. CPython-compatible
-      ``traceback`` module can be found in `micropython-lib`.
+     This is simplified version of a function which appears in the
+     ``traceback`` module in CPython. Unlike ``traceback.print_exception()``,
+     this function takes just exception value instead of exception type,
+     exception value, and traceback object; *file* argument should be
+     positional; further arguments are not supported. CPython-compatible
+     ``traceback`` module can be found in `micropython-lib`.
 
 Constants
 ---------
@@ -54,10 +54,10 @@ Constants
    minimal ports).
 
    .. admonition:: Difference to CPython
-      :class: attention
+     :class: attention
 
-      CPython mandates more attributes for this object, but the actual useful
-      bare minimum is implemented in MicroPython.
+     CPython mandates more attributes for this object, but the actual useful
+     bare minimum is implemented in MicroPython.
 
 .. data:: maxsize
 
@@ -73,16 +73,16 @@ Constants
     bits = 0
     v = sys.maxsize
     while v:
-        bits += 1
-        v >>= 1
+       bits += 1
+       v >>= 1
     if bits > 32:
-        # 64-bit (or more) platform
-        ...
+       # 64-bit (or more) platform
+       ...
     else:
-        # 32-bit (or less) platform
-        # Note that on 32-bit platform, value of bits may be less than 32
-        # (e.g. 31) due to peculiarities described above, so use "> 16",
-        # "> 32", "> 64" style of comparisons.
+       # 32-bit (or less) platform
+       # Note that on 32-bit platform, value of bits may be less than 32
+       # (e.g. 31) due to peculiarities described above, so use "> 16",
+       # "> 32", "> 64" style of comparisons.
 
 .. data:: modules
 

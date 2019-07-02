@@ -28,9 +28,9 @@
     def print_time( threadName, delay):
     count = 0
     while count < 5:
-        time.sleep(delay)
-        count += 1
-        print ("%s: %s sec" % ( threadName, time.localtime()[5] ))
+       time.sleep(delay)
+       count += 1
+       print ("%s: %s sec" % ( threadName, time.localtime()[5] ))
 
 启动我们的线程，我们只需调用 _thread 模块的 start_new_thread 函数，将第一个参数指定为我们先前定义的 ``print_time`` 函数，并将其指定为对应于线程函数参数的2元组。
 
@@ -42,30 +42,30 @@
 最后,使用 ``while`` 条件判断,使程序在死循环中,不执行任何指令::
 
     while True:
-        pass
+       pass
 
 
 完成代码如下,开启两线程并循环迭代打印输出::
 
     import _thread   # 导入线程模块
-    import time      # 导入时间模块 
+    import time     # 导入时间模块 
 
     def print_time( threadName, delay):  # 定义线程函数,打印线程编号和运行时间
-        count = 0
-        while count < 5:
-            time.sleep(delay)
-            count += 1
-            print ("%s: %s sec" % ( threadName, time.localtime()[5] ))
+       count = 0
+       while count < 5:
+          time.sleep(delay)
+          count += 1
+          print ("%s: %s sec" % ( threadName, time.localtime()[5] ))
 
     # Create two threads as follows
     try:
-        _thread.start_new_thread( print_time, ("Thread-1", 2, ) )  # 启动线程1
-        _thread.start_new_thread( print_time, ("Thread-2", 4, ) )  # 启动线程2
+       _thread.start_new_thread( print_time, ("Thread-1", 2, ) )  # 启动线程1
+       _thread.start_new_thread( print_time, ("Thread-2", 4, ) )  # 启动线程2
     except:
-        print ("Error: unable to start thread")
+       print ("Error: unable to start thread")
 
     while True:  # 主体循环
-        pass     # 空指令
+       pass    # 空指令
 
 
 程序执行,会产生以下结果::

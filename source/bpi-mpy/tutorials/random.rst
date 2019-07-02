@@ -12,12 +12,12 @@ MicroPython 附带了一个随机数模块，可以很容易地在代码中引�
 
 .. code:: python
 
-   from microbit import *
-   import random
+    from microbit import *
+    import random
 
-   names = ["Mary", "Yolanda", "Damien", "Alia", "Kushal", "Mei Xiu","Zoltan" ]
+    names = ["Mary", "Yolanda", "Damien", "Alia", "Kushal", "Mei Xiu","Zoltan" ]
 
-   display.scroll(random.choice(names))
+    display.scroll(random.choice(names))
 
 列表(names)包含7个不同的名字的字符串。使用 random.choice 方法将列表(names)作为参数，并返回随机选择的项。这个项(随机选择的名称)作为 display.scroll 的参数。效果就是你可以在led显示面板上面看到被随机选中的名字
 
@@ -28,10 +28,10 @@ MicroPython 附带了一个随机数模块，可以很容易地在代码中引�
 
 .. code:: python
 
-   from microbit import *
-   import random
+    from microbit import *
+    import random
 
-   display.show(str(random.randint(1, 6)))
+    display.show(str(random.randint(1, 6)))
 
 板子每次执行这段函数，它都会显示 1 到 6 之间的数字。 random.randint() 在两个参数1和6之间返回一个整数(包括6)。注意因为 show 函数显示时需要一个字符，所以这里使用 str 函数将数值转换为字符(例如，我们将 6 通过 str(6) 转换为“6”)。
 如果你想要一个介于 0 和 N 之间的数字，那么就用 random.randrange() 函数。如果你给它一个参数，它会返回随机整数，但不包括参数 N 的值(这与 random.randint() 不同)。有时你需要有小数点的数字。这些被称为浮点数，那怎么产生随机的浮点数呢？这时候就要使用random.random(),这个函数只会返回0.0到1.0之间的浮点数。那么如何产生大一些的浮点数呢，聪明的你心中应该有答案了吧。那就是同时使用 random.randrange 和 random.random
@@ -39,11 +39,11 @@ MicroPython 附带了一个随机数模块，可以很容易地在代码中引�
 .. code:: python
 
 
-   from microbit import *
-   import random
+    from microbit import *
+    import random
 
-   answer = random.randrange(100) + random.random()
-   display.scroll(str(answer))
+    answer = random.randrange(100) + random.random()
+    display.scroll(str(answer))
 
 种子随机数
 --------------------
@@ -54,12 +54,12 @@ MicroPython 附带了一个随机数模块，可以很容易地在代码中引�
 
 .. code:: python
 
-   from microbit import *
-   import random
+    from microbit import *
+    import random
 
-   random.seed(1337)
-   while True:
-       if button_a.was_pressed():
-           display.show(str(random.randint(1, 6)))
+    random.seed(1337)
+    while True:
+        if button_a.was_pressed():
+            display.show(str(random.randint(1, 6)))
 
 运行上面的程序我们总是得到相同的结果，在led面板上显示’5’,因为在这里我们给定的种子是一个固定的值所以这个程序总是产生一个固定的数

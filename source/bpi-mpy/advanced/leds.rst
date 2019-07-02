@@ -17,13 +17,13 @@
 
 .. code:: python
 
-      from machine import Pin
+       from machine import Pin
 
 再次输入
 
 .. code:: python
 
-      Pin(18, Pin.OUT).value(1)
+       Pin(18, Pin.OUT).value(1)
 
 .. figure:: leds/light_up.png
 
@@ -35,7 +35,7 @@
 
 .. code:: python
 
-      Pin(18, Pin.OUT).value(0)
+       Pin(18, Pin.OUT).value(0)
 
 .. figure:: leds/light_down.png
 
@@ -50,15 +50,15 @@
 
 .. code:: python
 
-      from machine import Pin
-      import time
-      led = Pin(18, Pin.OUT) # get a led on gpio 18.
-      print('turn on')
-      led.value(1) # turn on
-      print('sleep 1s')
-      time.sleep(1) # sleep 1s
-      print('turn off')
-      led.value(0) # turn off
+       from machine import Pin
+       import time
+       led = Pin(18, Pin.OUT) # get a led on gpio 18.
+       print('turn on')
+       led.value(1) # turn on
+       print('sleep 1s')
+       time.sleep(1) # sleep 1s
+       print('turn off')
+       led.value(0) # turn off
 
 .. figure:: leds/mian_light.png
 
@@ -66,18 +66,18 @@
 
 .. code:: python
 
-      from machine import Pin
-      import time
-      led = Pin(18, Pin.OUT) # get a led on gpio 18.
-      while True:
-            print('turn on')
-            led.value(1) # turn on
-            print('sleep 1s')
-            time.sleep(1) # sleep 1s
-            print('turn off')
-            led.value(0) # turn off
-            print('sleep 1s')
-            time.sleep(1) # sleep 1s
+       from machine import Pin
+       import time
+       led = Pin(18, Pin.OUT) # get a led on gpio 18.
+       while True:
+             print('turn on')
+             led.value(1) # turn on
+             print('sleep 1s')
+             time.sleep(1) # sleep 1s
+             print('turn off')
+             led.value(0) # turn off
+             print('sleep 1s')
+             time.sleep(1) # sleep 1s
 
 .. figure:: leds/blink_led.png
 
@@ -88,10 +88,10 @@
 
 .. code:: python
 
-      from pixel import Pixel
-      View = Pixel()
-      RGB = (10, 10, 10)
-      View.LoadXY(2, 2, RGB)
-      View.Show()
+       from pixel import Pixel
+       View = Pixel()
+       RGB = (10, 10, 10)
+       View.LoadXY(2, 2, RGB)
+       View.Show()
 
 使用 ``runfile main.py`` 执行即可。

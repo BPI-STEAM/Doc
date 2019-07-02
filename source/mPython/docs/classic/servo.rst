@@ -44,15 +44,15 @@
 我结合加速度计制作一个通过左右倾斜板子来控制舵机的角度::
 
     from MicroPython import * 
-    from servo import Servo   
+    from servo import Servo    
 
-    myServo=Servo(0,min_us=500, max_us=2500)      #构建Servo对象
+    myServo=Servo(0,min_us=500, max_us=2500)       #构建Servo对象
 
     while True:
-        y=accelerometer.get_y()          #获取Y轴的加速度
+        y=accelerometer.get_y()           #获取Y轴的加速度
         if y<=1 and y>=-1:
-            angle=int(numberMap(y,1,-1,0,180))    #映射Y轴加速度值
-        myServo.write_angle(angle)       #写舵机角度
+             angle=int(numberMap(y,1,-1,0,180))    #映射Y轴加速度值
+        myServo.write_angle(angle)        #写舵机角度
         oled.DispChar("angle:%d" %angle,40,25)
         oled.show()
         oled.fill(0)
@@ -90,6 +90,6 @@
 
 输出舵机角度并在OLED显示屏上显示::
 
-    myServo.write_angle(angle)       #写舵机角度
-            oled.DispChar("angle:%d" %angle,40,25)
-            oled.show()
+    myServo.write_angle(angle)        #写舵机角度
+             oled.DispChar("angle:%d" %angle,40,25)
+             oled.show()

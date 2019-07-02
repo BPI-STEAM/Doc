@@ -24,7 +24,7 @@ http://static.steamaker.cn/files/MicroPython2_0.2.5_macos.zip
 
 
 .. image:: /images/software/software_1.png
-      :scale: 80 %
+       :scale: 80 %
 
 .. Hint::
   

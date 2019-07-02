@@ -13,8 +13,8 @@
 
 .. code:: python
 
-   import music
-   music.play(music.NYAN)
+    import music
+    music.play(music.NYAN)
 
 可以看到有如下列表，这都是我们内置的音乐。
 
@@ -56,7 +56,7 @@
 
 .. code:: python
 
-   NOTE[octave][:duration]
+    NOTE[octave][:duration]
 
 首先要有一丁点的乐理基本理解。
 
@@ -92,9 +92,9 @@ duration 指这一节点的拍子数，简单理解为该节点音符播放持�
 
 .. code:: python
 
-   import music
-   music.play([ "C4", "D4", "E4", "F4", "G4", "A4", "B4", "C5"])
-   music.play([ "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8"])
+    import music
+    music.play([ "C4", "D4", "E4", "F4", "G4", "A4", "B4", "C5"])
+    music.play([ "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8"])
 
 播放二只老虎
 ----------------------------------------
@@ -103,22 +103,22 @@ duration 指这一节点的拍子数，简单理解为该节点音符播放持�
 
 .. code:: python
 
-   import music
+    import music
 
-   tune = ["C4:4", "D4:4", "E4:4", "C4:4", "C4:4", "D4:4", "E4:4", "C4:4",
-           "E4:4", "F4:4", "G4:8", "E4:4", "F4:4", "G4:8"]
-   music.play(tune)
+    tune = ["C4:4", "D4:4", "E4:4", "C4:4", "C4:4", "D4:4", "E4:4", "C4:4",
+            "E4:4", "F4:4", "G4:8", "E4:4", "F4:4", "G4:8"]
+    music.play(tune)
 
 而且神奇的是并不只会这样哦，它还可以进一步简化作曲过程，比如说，现在的节点
 ‘C4:4’ 将会影响到之后的八度配置，直到有新的替换。 所以你可以这样写：
 
 .. code:: python
 
-   import music
+    import music
 
-   tune = ["C4:4", "D", "E", "C", "C", "D", "E", "C", "E", "F", "G:8",
-           "E:4", "F", "G:8"]
-   music.play(tune)
+    tune = ["C4:4", "D", "E", "C", "C", "D", "E", "C", "E", "F", "G:8",
+            "E:4", "F", "G:8"]
+    music.play(tune)
 
 是不是产生了同样的效果了呢？
 
@@ -129,13 +129,13 @@ music 让你制作非音符的声音，比如下面这里我们就创建了一�
 
 .. code:: python
 
-   from microbit import *
-   import music
-   while True:
-       music.pitch(range(880, 1760, 16), 15)
-       sleep(50)
-       music.pitch(range(1760, 880, -16), 15)
-       sleep(50)
+    from microbit import *
+    import music
+    while True:
+        music.pitch(range(880, 1760, 16), 15)
+        sleep(50)
+        music.pitch(range(1760, 880, -16), 15)
+        sleep(50)
 
 稍微注意了，music.pitch 方法是使用它的实例，它需要一个频率，440 的频率相当于一场用来调音的音乐会 a 的频率。
 
@@ -184,12 +184,12 @@ Theme Tunes (50 tunes)`_ `Zip file of Christmas Tunes (70 tunes)`_
 
 .. code:: python
 
-   import music
-   music.set_tempo(ticks=16, bpm=45)
-   tune = ['D#6', 'D#', 'D#:2', 'F', 'G', 'G#', 'G#', 'G', 'F', 'F:6',
-           'D:2', 'D', 'D', 'D', 'D#','F', 'G', 'G', 'F', 'D#', 'D#:6',
-           'D#:2', 'D#', 'D#', 'D#', 'F', 'G', 'G#', 'G#', 'G', 'F', 'F:4']
-   music.play(tune)
+    import music
+    music.set_tempo(ticks=16, bpm=45)
+    tune = ['D#6', 'D#', 'D#:2', 'F', 'G', 'G#', 'G#', 'G', 'F', 'F:6',
+            'D:2', 'D', 'D', 'D', 'D#','F', 'G', 'G', 'F', 'D#', 'D#:6',
+            'D#:2', 'D#', 'D#', 'D#', 'F', 'G', 'G#', 'G#', 'G', 'F', 'F:4']
+    music.play(tune)
 
 .. _fizban99: https://github.com/fizban99
 

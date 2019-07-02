@@ -8,18 +8,18 @@
     from MicroPython import *
 
     while True:
-        oled.fill(0)                                   #清屏
-        oled.DispChar("亮度:",30,16)                    #显示亮度
-        oled.DispChar("%d" % (light.read()), 60, 16)    #显示板载光线传感器
-        oled.show()                                     #刷新
-        sleep_ms(100)                                   #延时100ms
+       oled.fill(0)                            #清屏
+       oled.DispChar("亮度:",30,16)                #显示亮度
+       oled.DispChar("%d" % (light.read()), 60, 16)    #显示板载光线传感器
+       oled.show()                              #刷新
+       sleep_ms(100)                            #延时100ms
 
-        if light.read() < 200 :                    # 当光线小于200，灯亮
-            rgb.fill((50,50,50))
-            rgb.write()
-        else:                                      # 否则，灯灭
-            rgb.fill((0,0,0))
-            rgb.write()
+       if light.read() < 200 :                # 当光线小于200，灯亮
+          rgb.fill((50,50,50))
+          rgb.write()
+       else:                               # 否则，灯灭
+          rgb.fill((0,0,0))
+          rgb.write()
 
 
 使用 ``light`` 对象来获取光线传感器数据::

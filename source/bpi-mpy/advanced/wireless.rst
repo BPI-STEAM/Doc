@@ -30,7 +30,7 @@ mpfshell 适配了 webrepl 的，也就是说，基于 mpfshell 的 pycharm
 1. webrepl 标准路径为 ``ws://192.168.30.116:8266``\ 。
 
 2. mpfshell 的路径则为
-   ``ws:192.168.30.116,1234``\ ，区别在于后者允许顺带密码，从而免去了连接认证。
+    ``ws:192.168.30.116,1234``\ ，区别在于后者允许顺带密码，从而免去了连接认证。
 
 至此，你已经可以像过去有线一样使用它了，如果期间出现任何问题，只需要重启板子即可，它会自动上电连接网络并打开
 Webrepl 的支持服务。
@@ -54,8 +54,8 @@ FTP 标准文件系统操作服务
 
 .. code:: python
 
-   import ftptiny
-   ftptiny.FtpTiny().start()
+    import ftptiny
+    ftptiny.FtpTiny().start()
 
 .. figure:: wireless/ftp.png
 
@@ -66,8 +66,8 @@ WebDAV HTTP 文件系统服务（在 20190312 后固件暂时移除了）
 
 .. code:: python
 
-   import webdav
-   webdav.start()
+    import webdav
+    webdav.start()
 
 .. figure:: wireless/webdav.png
 
@@ -117,17 +117,17 @@ MDns 反向域名解析服务
 
 .. code:: python
 
-   try:
-       import network
-       mdns = network.mDNS()
-       mdns.start("bpibit", "MicroPython with mDNS")
-       _ = mdns.addService('_ftp', '_tcp', 21, "MicroPython",
-                           {"board": "ESP32", "service": "bpibit FTP File transfer", "passive": "True"})
-       _ = mdns.addService('_telnet', '_tcp', 23, "MicroPython", {"board": "ESP32", "service": "bpibit Telnet REPL"})
-       _ = mdns.addService('_http', '_tcp', 80, "MicroPython", {"board": "ESP32", "service": "bpibit Web server"})
-       print("mDNS started")
-   except Exception as e:
-       print("mDNS not started")
+    try:
+        import network
+        mdns = network.mDNS()
+        mdns.start("bpibit", "MicroPython with mDNS")
+        _ = mdns.addService('_ftp', '_tcp', 21, "MicroPython",
+                             {"board": "ESP32", "service": "bpibit FTP File transfer", "passive": "True"})
+        _ = mdns.addService('_telnet', '_tcp', 23, "MicroPython", {"board": "ESP32", "service": "bpibit Telnet REPL"})
+        _ = mdns.addService('_http', '_tcp', 80, "MicroPython", {"board": "ESP32", "service": "bpibit Web server"})
+        print("mDNS started")
+    except Exception as e:
+        print("mDNS not started")
 
 在电脑中可以使用 ``bpibit.local`` 替代 IP
 地址访问它，如下图，你也可以取自己想要的名字，改掉代码里的

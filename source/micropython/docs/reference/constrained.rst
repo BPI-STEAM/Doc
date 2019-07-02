@@ -221,7 +221,7 @@ function ``foo()``:
 
     def foo(bar):
         for x in bar:
-            print(x)
+             print(x)
     foo((1, 2, 0xff))
     foo(b'\1\2\xff')
 
@@ -241,7 +241,7 @@ instances so the process of eliminating Unicode can be painless.
 
 .. code::
 
-    s = 'the quick brown fox'   # A string instance
+    s = 'the quick brown fox'    # A string instance
     b = b'the quick brown fox'  # A bytes instance
 
 Where it is necessary to convert between strings and bytes the :meth:`str.encode`
@@ -253,7 +253,7 @@ were a string.
 
 .. code::
 
-    foo = b'   empty whitespace'
+    foo = b'    empty whitespace'
     foo = foo.lstrip()
 
 **Runtime compiler execution**
@@ -376,16 +376,16 @@ may be interpreted as follows:
 ====== =================
 Symbol Meaning
 ====== =================
-   .   free block
-   h   head block
-   =   tail block
-   m   marked head block
-   T   tuple
-   L   list
-   D   dict
-   F   float
-   B   byte code
-   M   module
+    .    free block
+    h    head block
+    =    tail block
+    m    marked head block
+    T    tuple
+    L    list
+    D    dict
+    F    float
+    B    byte code
+    M    module
 ====== =================
 
 Each letter represents a single block of memory, a block being 16 bytes. So each

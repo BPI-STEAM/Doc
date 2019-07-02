@@ -10,13 +10,13 @@
 
 .. code:: python
 
-   from microbit import *
+    from microbit import *
 
-   while True:
-       temp = temperature() # get temperature ℃
-       print(temp)
-       display.scroll(str(temp))
-       sleep(10000)
+    while True:
+        temp = temperature() # get temperature ℃
+        print(temp)
+        display.scroll(str(temp))
+        sleep(10000)
 
 实测对比效果
 ---------------------------

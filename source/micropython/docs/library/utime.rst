@@ -126,16 +126,16 @@ Functions
 
    Examples::
 
-        # Find out what ticks value there was 100ms ago
-        print(ticks_add(time.ticks_ms(), -100))
+       # Find out what ticks value there was 100ms ago
+       print(ticks_add(time.ticks_ms(), -100))
 
-        # Calculate deadline for operation and test for it
-        deadline = ticks_add(time.ticks_ms(), 200)
-        while ticks_diff(deadline, time.ticks_ms()) > 0:
-            do_a_little_of_something()
+       # Calculate deadline for operation and test for it
+       deadline = ticks_add(time.ticks_ms(), 200)
+       while ticks_diff(deadline, time.ticks_ms()) > 0:
+          do_a_little_of_something()
 
-        # Find out TICKS_MAX used by this port
-        print(ticks_add(0, -1))
+       # Find out TICKS_MAX used by this port
+       print(ticks_add(0, -1))
 
 
 .. function:: ticks_diff(ticks1, ticks2)
@@ -173,30 +173,30 @@ Functions
    `ticks_diff()` is designed to accommodate various usage patterns, among them:
 
    * Polling with timeout. In this case, the order of events is known, and you will deal
-     only with positive results of `ticks_diff()`::
+    only with positive results of `ticks_diff()`::
 
-        # Wait for GPIO pin to be asserted, but at most 500us
-        start = time.ticks_us()
-        while pin.value() == 0:
-            if time.ticks_diff(time.ticks_us(), start) > 500:
-                raise TimeoutError
+       # Wait for GPIO pin to be asserted, but at most 500us
+       start = time.ticks_us()
+       while pin.value() == 0:
+          if time.ticks_diff(time.ticks_us(), start) > 500:
+             raise TimeoutError
 
    * Scheduling events. In this case, `ticks_diff()` result may be negative
-     if an event is overdue::
+    if an event is overdue::
 
-        # This code snippet is not optimized
-        now = time.ticks_ms()
-        scheduled_time = task.scheduled_time()
-        if ticks_diff(scheduled_time, now) > 0:
-            print("Too early, let's nap")
-            sleep_ms(ticks_diff(scheduled_time, now))
-            task.run()
-        elif ticks_diff(scheduled_time, now) == 0:
-            print("Right at time!")
-            task.run()
-        elif ticks_diff(scheduled_time, now) < 0:
-            print("Oops, running late, tell task to run faster!")
-            task.run(run_faster=true)
+       # This code snippet is not optimized
+       now = time.ticks_ms()
+       scheduled_time = task.scheduled_time()
+       if ticks_diff(scheduled_time, now) > 0:
+          print("Too early, let's nap")
+          sleep_ms(ticks_diff(scheduled_time, now))
+          task.run()
+       elif ticks_diff(scheduled_time, now) == 0:
+          print("Right at time!")
+          task.run()
+       elif ticks_diff(scheduled_time, now) < 0:
+          print("Oops, running late, tell task to run faster!")
+          task.run(run_faster=true)
 
    Note: Do not pass `time()` values to `ticks_diff()`, you should use
    normal mathematical operations on them. But note that `time()` may (and will)
@@ -215,15 +215,15 @@ Functions
    `localtime()` without an argument is a better choice.
 
    .. admonition:: Difference to CPython
-      :class: attention
+     :class: attention
 
-      In CPython, this function returns number of
-      seconds since Unix epoch, 1970-01-01 00:00 UTC, as a floating-point,
-      usually having microsecond precision. With MicroPython, only Unix port
-      uses the same Epoch, and if floating-point precision allows,
-      returns sub-second precision. Embedded hardware usually doesn't have
-      floating-point precision to represent both long time ranges and subsecond
-      precision, so they use integer value with second precision. Some embedded
-      hardware also lacks battery-powered RTC, so returns number of seconds
-      since last power-up or from other relative, hardware-specific point
-      (e.g. reset).
+     In CPython, this function returns number of
+     seconds since Unix epoch, 1970-01-01 00:00 UTC, as a floating-point,
+     usually having microsecond precision. With MicroPython, only Unix port
+     uses the same Epoch, and if floating-point precision allows,
+     returns sub-second precision. Embedded hardware usually doesn't have
+     floating-point precision to represent both long time ranges and subsecond
+     precision, so they use integer value with second precision. Some embedded
+     hardware also lacks battery-powered RTC, so returns number of seconds
+     since last power-up or from other relative, hardware-specific point
+     (e.g. reset).

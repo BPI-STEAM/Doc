@@ -144,13 +144,13 @@ Directory::
 
     my_project/
     ├── modules/
-    │   └──example/
-    │       ├──example.c
-    │       └──micropython.mk
+    │    └──example/
+    │        ├──example.c
+    │        └──micropython.mk
     └── micropython/
         ├──ports/
-       ... ├──stm32/
-          ...
+        ... ├──stm32/
+           ...
 
 Building for stm32 port:
 

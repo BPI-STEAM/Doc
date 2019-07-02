@@ -34,11 +34,11 @@ Master
 
 读取SHT20温度函数::
 
-    def sht20_temperature():             
-        i2c.writeto(0x40,b'\xf3')               
-        sleep_ms(70)                                   
-        t=i2c.readfrom(0x40, 2)                         
-        return -46.86+175.72*(t[0]*256+t[1])/65535      
+    def sht20_temperature():           
+       i2c.writeto(0x40,b'\xf3')            
+       sleep_ms(70)                            
+       t=i2c.readfrom(0x40, 2)                    
+       return -46.86+175.72*(t[0]*256+t[1])/65535     
 
 ``i2c.writeto(addr, buf)`` 为I2C写操作函数，向 I2C设备为 ``addr`` ，发送 ``buf`` 缓存字节。板子需要向SHT20发送 ``0xf3`` 字节，告诉它，我们需要读取温度数据，延时70毫秒后
 再向SHT20读取使用2字节数据。读取操作使用 ``i2c.readfrom(addr, nbytes)`` ，``nbytes`` 为读取字节数。
@@ -61,10 +61,10 @@ Master
 湿度读取的方式也类似，首先发送“0xf5”字节，告诉SHT20我们要读取湿度数据，最后按公式转换湿度单位::
 
     def sht20_humidity():
-        i2c.writeto(0x40,b'\xf5')                 
-        sleep_ms(25)                                    
-        t=i2c.readfrom(0x40, 2)                      
-        return -6+125*(t[0]*256+t[1])/65535           
+       i2c.writeto(0x40,b'\xf5')              
+       sleep_ms(25)                             
+       t=i2c.readfrom(0x40, 2)                  
+       return -6+125*(t[0]*256+t[1])/65535         
 
 .. Hint:: 
 
@@ -76,30 +76,30 @@ Master
 .. code-block:: python
     :linenos:
 
-    from MicroPython import *                   # 导入MicroPython 所有对象
-                                                                                            
-    def sht20_temperature():      
-        """获取SHT20模块的温度值
-        返回:温度
-        """        
-        i2c.writeto(0x40,b'\xf3')                       # 向0x40地址即SHT20写字节“0xf3”
-        sleep_ms(70)                                    # SHT20测量需要时间，须等待
-        t=i2c.readfrom(0x40, 2)                         # 从x40地址即SHT20，读取2字节数据
-        return -46.86+175.72*(t[0]*256+t[1])/65535      # 对读取数据进行温度转换处理 T=-46.86+175.72*St/2^16
+    from MicroPython import *                # 导入MicroPython 所有对象
+                                                                          
+    def sht20_temperature():     
+       """获取SHT20模块的温度值
+       返回:温度
+       """       
+       i2c.writeto(0x40,b'\xf3')                   # 向0x40地址即SHT20写字节“0xf3”
+       sleep_ms(70)                             # SHT20测量需要时间，须等待
+       t=i2c.readfrom(0x40, 2)                    # 从x40地址即SHT20，读取2字节数据
+       return -46.86+175.72*(t[0]*256+t[1])/65535     # 对读取数据进行温度转换处理 T=-46.86+175.72*St/2^16
 
     def sht20_humidity():
-        """获取SHT20模块的湿度值
-        返回:湿度
-        """ 
-        i2c.writeto(0x40,b'\xf5')                       # 向0x40地址即SHT20写字节“0xf5”
-        sleep_ms(25)                                    # SHT20测量需要时间，须等待
-        t=i2c.readfrom(0x40, 2)                         # 从x40地址即SHT20，读取2字节数据
-        return -6+125*(t[0]*256+t[1])/65535             # 对读取数据进行湿度转换处理 RH=-6+125*Srh/2^16
+       """获取SHT20模块的湿度值
+       返回:湿度
+       """ 
+       i2c.writeto(0x40,b'\xf5')                   # 向0x40地址即SHT20写字节“0xf5”
+       sleep_ms(25)                             # SHT20测量需要时间，须等待
+       t=i2c.readfrom(0x40, 2)                    # 从x40地址即SHT20，读取2字节数据
+       return -6+125*(t[0]*256+t[1])/65535           # 对读取数据进行湿度转换处理 RH=-6+125*Srh/2^16
 
     while True: 
-        temper=sht20_temperature()
-        humid=sht20_humidity()
-        print("sht20 temperature: %0.1fC sht20 humidity: %0.1f%%" %(temper,humid))
-        oled.DispChar("温度:%0.1f度, 湿度:%d%%" %(temper,humid),10,25)
-        oled.show()
-        sleep(1)
+       temper=sht20_temperature()
+       humid=sht20_humidity()
+       print("sht20 temperature: %0.1fC sht20 humidity: %0.1f%%" %(temper,humid))
+       oled.DispChar("温度:%0.1f度, 湿度:%d%%" %(temper,humid),10,25)
+       oled.show()
+       sleep(1)

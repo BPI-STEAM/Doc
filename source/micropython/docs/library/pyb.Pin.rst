@@ -38,8 +38,8 @@ and can query mappings::
 Users can also add their own mapping function::
 
     def MyMapper(pin_name):
-       if pin_name == "LeftMotorDir":
-           return pyb.Pin.cpu.A0
+      if pin_name == "LeftMotorDir":
+         return pyb.Pin.cpu.A0
 
     pyb.Pin.mapper(MyMapper)
 
@@ -102,23 +102,23 @@ Methods
 
    Initialise the pin:
 
-     - ``mode`` can be one of:
+    - ``mode`` can be one of:
 
-        - ``Pin.IN`` - configure the pin for input;
-        - ``Pin.OUT_PP`` - configure the pin for output, with push-pull control;
-        - ``Pin.OUT_OD`` - configure the pin for output, with open-drain control;
-        - ``Pin.AF_PP`` - configure the pin for alternate function, pull-pull;
-        - ``Pin.AF_OD`` - configure the pin for alternate function, open-drain;
-        - ``Pin.ANALOG`` - configure the pin for analog.
+       - ``Pin.IN`` - configure the pin for input;
+       - ``Pin.OUT_PP`` - configure the pin for output, with push-pull control;
+       - ``Pin.OUT_OD`` - configure the pin for output, with open-drain control;
+       - ``Pin.AF_PP`` - configure the pin for alternate function, pull-pull;
+       - ``Pin.AF_OD`` - configure the pin for alternate function, open-drain;
+       - ``Pin.ANALOG`` - configure the pin for analog.
 
-     - ``pull`` can be one of:
+    - ``pull`` can be one of:
 
-        - ``Pin.PULL_NONE`` - no pull up or down resistors;
-        - ``Pin.PULL_UP`` - enable the pull-up resistor;
-        - ``Pin.PULL_DOWN`` - enable the pull-down resistor.
+       - ``Pin.PULL_NONE`` - no pull up or down resistors;
+       - ``Pin.PULL_UP`` - enable the pull-up resistor;
+       - ``Pin.PULL_DOWN`` - enable the pull-down resistor.
 
-     - when mode is ``Pin.AF_PP`` or ``Pin.AF_OD``, then af can be the index or name
-       of one of the alternate functions associated with a pin.
+    - when mode is ``Pin.AF_PP`` or ``Pin.AF_OD``, then af can be the index or name
+      of one of the alternate functions associated with a pin.
 
    Returns: ``None``.
 
@@ -126,10 +126,10 @@ Methods
 
    Get or set the digital logic level of the pin:
 
-     - With no argument, return 0 or 1 depending on the logic level of the pin.
-     - With ``value`` given, set the logic level of the pin.  ``value`` can be
-       anything that converts to a boolean.  If it converts to ``True``, the pin
-       is set high, otherwise it is set low.
+    - With no argument, return 0 or 1 depending on the logic level of the pin.
+    - With ``value`` given, set the logic level of the pin.  ``value`` can be
+      anything that converts to a boolean.  If it converts to ``True``, the pin
+      is set high, otherwise it is set low.
 
 .. method:: Pin.__str__()
 

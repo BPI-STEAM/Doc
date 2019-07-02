@@ -20,8 +20,8 @@ sub-fields.
 .. seealso::
 
     Module :mod:`ustruct`
-        Standard Python way to access binary data structures (doesn't scale
-        well to large and complex structures).
+       Standard Python way to access binary data structures (doesn't scale
+       well to large and complex structures).
 
 Usage examples::
 
@@ -30,9 +30,9 @@ Usage examples::
     # Example 1: Subset of ELF file header
     # https://wikipedia.org/wiki/Executable_and_Linkable_Format#File_header
     ELF_HEADER = {
-        "EI_MAG": (0x0 | uctypes.ARRAY, 4 | uctypes.UINT8),
-        "EI_DATA": 0x5 | uctypes.UINT8,
-        "e_machine": 0x12 | uctypes.UINT16,
+       "EI_MAG": (0x0 | uctypes.ARRAY, 4 | uctypes.UINT8),
+       "EI_DATA": 0x5 | uctypes.UINT8,
+       "e_machine": 0x12 | uctypes.UINT16,
     }
 
     # "f" is an ELF file opened in binary mode
@@ -45,14 +45,14 @@ Usage examples::
 
     # Example 2: In-memory data structure, with pointers
     COORD = {
-        "x": 0 | uctypes.FLOAT32,
-        "y": 4 | uctypes.FLOAT32,
+       "x": 0 | uctypes.FLOAT32,
+       "y": 4 | uctypes.FLOAT32,
     }
 
     STRUCT1 = {
-        "data1": 0 | uctypes.UINT8,
-        "data2": 4 | uctypes.UINT32,
-        "ptr": (8 | uctypes.PTR, COORD),
+       "data1": 0 | uctypes.UINT8,
+       "data2": 4 | uctypes.UINT32,
+       "ptr": (8 | uctypes.PTR, COORD),
     }
 
     # Suppose you have address of a structure of type STRUCT1 in "addr"
@@ -63,16 +63,16 @@ Usage examples::
 
     # Example 3: Access to CPU registers. Subset of STM32F4xx WWDG block
     WWDG_LAYOUT = {
-        "WWDG_CR": (0, {
-            # BFUINT32 here means size of the WWDG_CR register
-            "WDGA": 7 << uctypes.BF_POS | 1 << uctypes.BF_LEN | uctypes.BFUINT32,
-            "T": 0 << uctypes.BF_POS | 7 << uctypes.BF_LEN | uctypes.BFUINT32,
-        }),
-        "WWDG_CFR": (4, {
-            "EWI": 9 << uctypes.BF_POS | 1 << uctypes.BF_LEN | uctypes.BFUINT32,
-            "WDGTB": 7 << uctypes.BF_POS | 2 << uctypes.BF_LEN | uctypes.BFUINT32,
-            "W": 0 << uctypes.BF_POS | 7 << uctypes.BF_LEN | uctypes.BFUINT32,
-        }),
+       "WWDG_CR": (0, {
+          # BFUINT32 here means size of the WWDG_CR register
+          "WDGA": 7 << uctypes.BF_POS | 1 << uctypes.BF_LEN | uctypes.BFUINT32,
+          "T": 0 << uctypes.BF_POS | 7 << uctypes.BF_LEN | uctypes.BFUINT32,
+       }),
+       "WWDG_CFR": (4, {
+          "EWI": 9 << uctypes.BF_POS | 1 << uctypes.BF_LEN | uctypes.BFUINT32,
+          "WDGTB": 7 << uctypes.BF_POS | 2 << uctypes.BF_LEN | uctypes.BFUINT32,
+          "W": 0 << uctypes.BF_POS | 7 << uctypes.BF_LEN | uctypes.BFUINT32,
+       }),
     }
 
     WWDG = uctypes.struct(0x40002c00, WWDG_LAYOUT)
@@ -89,9 +89,9 @@ encodes field names as keys and other properties required to access them as
 associated values::
 
     {
-        "field1": <properties>,
-        "field2": <properties>,
-        ...
+       "field1": <properties>,
+       "field2": <properties>,
+       ...
     }
 
 Currently, ``uctypes`` requires explicit specification of offsets for each
@@ -109,8 +109,8 @@ Following are encoding examples for various field types:
 * Recursive structures::
 
     "sub": (offset, {
-        "b0": 0 | uctypes.UINT8,
-        "b1": 1 | uctypes.UINT8,
+       "b0": 0 | uctypes.UINT8,
+       "b1": 1 | uctypes.UINT8,
     })
 
   i.e. value is a 2-tuple, first element of which is an offset, and second is
@@ -121,7 +121,7 @@ Following are encoding examples for various field types:
 
 * Arrays of primitive types::
 
-      "arr": (offset | uctypes.ARRAY, size | uctypes.UINT8),
+     "arr": (offset | uctypes.ARRAY, size | uctypes.UINT8),
 
   i.e. value is a 2-tuple, first element of which is ARRAY flag ORed
   with offset, and second is scalar element type ORed number of elements
@@ -227,19 +227,19 @@ Module contents
    at the given memory address.
 
 .. data:: UINT8
-          INT8
-          UINT16
-          INT16
-          UINT32
-          INT32
-          UINT64
-          INT64
+        INT8
+        UINT16
+        INT16
+        UINT32
+        INT32
+        UINT64
+        INT64
 
    Integer types for structure descriptors. Constants for 8, 16, 32,
    and 64 bit types are provided, both signed and unsigned.
 
 .. data:: FLOAT32
-          FLOAT64
+        FLOAT64
 
    Floating-point types for structure descriptors.
 
@@ -249,7 +249,7 @@ Module contents
    C's void pointers: ``(uctypes.PTR, uctypes.VOID)``.
 
 .. data:: PTR
-          ARRAY
+        ARRAY
 
    Type constants for pointers and arrays. Note that there is no explicit
    constant for structures, it's implicit: an aggregate type without ``PTR``

@@ -12,27 +12,27 @@ MicroPython的交互式解释器模式 （又称REPL）
 若您的光标一直停在开始时，点击返回键将执行您输入的代码。以下演示了您在输入for语句后将看到的（下划线显示光标的位置）:
 
     >>> for i in range(3):
-    ...     _
+    ...    _
 
 若您输入if语句，则将提供额外的缩进级别:
 
     >>> for i in range(30):
-    ...     if i > 3:
-    ...         _
+    ...    if i > 3:
+    ...        _
 
 现在输入 ``break`` ，然后点击回车键，再点击退格键:
 
     >>> for i in range(30):
-    ...     if i > 3:
-    ...         break
-    ...     _
+    ...    if i > 3:
+    ...        break
+    ...    _
 
 最后，键入 ``print(i)`` ，依次点击回车键、退格键和回车键:
 
     >>> for i in range(30):
-    ...     if i > 3:
-    ...         break
-    ...     print(i)
+    ...    if i > 3:
+    ...        break
+    ...    print(i)
     ...
     0
     1
@@ -49,16 +49,16 @@ MicroPython的交互式解释器模式 （又称REPL）
 例如，键入 ``m`` 并点击TAB，则其将扩展为 ``machine`` 。键入一个点 ``.`` 并点击TAB，您将看到如下:
 
     >>> machine.
-    __name__        info            unique_id       reset
-    bootloader      freq            rng             idle
-    sleep           deepsleep       disable_irq     enable_irq
+    __name__       info          unique_id      reset
+    bootloader     freq          rng           idle
+    sleep         deepsleep      disable_irq    enable_irq
     Pin
 
 该词将尽可能扩展，直至出现多种可能性。例如：键入 ``machine.Pin.AF3`` 并点击TAB键，
 则其将扩展为 ``machine.Pin.AF3_TIM`` 。长按TAB一秒，则显示可能的扩展:
 
     >>> machine.Pin.AF3_TIM
-    AF3_TIM10       AF3_TIM11       AF3_TIM8        AF3_TIM9
+    AF3_TIM10      AF3_TIM11      AF3_TIM8       AF3_TIM9
     >>> machine.Pin.AF3_TIM
 
 中断一个运行程序
@@ -69,7 +69,7 @@ MicroPython的交互式解释器模式 （又称REPL）
 例如:
 
     >>> for i in range(1000000):
-    ...     print(i)
+    ...    print(i)
     ...
     0
     1
@@ -80,7 +80,7 @@ MicroPython的交互式解释器模式 （又称REPL）
     6467
     6468
     Traceback (most recent call last):
-      File "<stdin>", line 2, in <module>
+     File "<stdin>", line 2, in <module>
     KeyboardInterrupt:
     >>>
 
@@ -90,19 +90,19 @@ MicroPython的交互式解释器模式 （又称REPL）
 若您想将某些代码粘贴到您的终端窗口中，自动缩进特性将会成为障碍。例如，若您有以下python代码: ::
 
    def foo():
-       print('This is a test to show paste mode')
-       print('Here is a second line')
+      print('This is a test to show paste mode')
+      print('Here is a second line')
    foo()
 
 您试图将此代码粘贴到常规REPL中，那么您将会看到以下内容:
 
     >>> def foo():
-    ...         print('This is a test to show paste mode')
-    ...             print('Here is a second line')
-    ...             foo()
+    ...        print('This is a test to show paste mode')
+    ...           print('Here is a second line')
+    ...           foo()
     ...
     Traceback (most recent call last):
-      File "<stdin>", line 3
+     File "<stdin>", line 3
     IndentationError: unexpected indent
 
 若您点击Ctrl-E，则将进入粘贴模式，即关闭自动缩进特性，并将提示符从 ``>>>`` 更改为 ``===`` 。例如:
@@ -110,8 +110,8 @@ MicroPython的交互式解释器模式 （又称REPL）
     >>>
     paste mode; Ctrl-C to cancel, Ctrl-D to finish
     === def foo():
-    ===     print('This is a test to show paste mode')
-    ===     print('Here is a second line')
+    ===    print('This is a test to show paste mode')
+    ===    print('Here is a second line')
     === foo()
     ===
     This is a test to show paste mode

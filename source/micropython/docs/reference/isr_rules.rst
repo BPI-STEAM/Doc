@@ -74,10 +74,10 @@ example causes two LED's to flash at different rates.
     micropython.alloc_emergency_exception_buf(100)
     class Foo(object):
         def __init__(self, timer, led):
-            self.led = led
-            timer.callback(self.cb)
+             self.led = led
+             timer.callback(self.cb)
         def cb(self, tim):
-            self.led.toggle()
+             self.led.toggle()
 
     red = Foo(pyb.Timer(4, freq=1), pyb.LED(1))
     green = Foo(pyb.Timer(2, freq=0.8), pyb.LED(2))
@@ -133,19 +133,19 @@ and to pass that reference in the ISR. For example:
 
     class Foo():
         def __init__(self):
-            self.bar_ref = self.bar  # Allocation occurs here
-            self.x = 0.1
-            tim = pyb.Timer(4)
-            tim.init(freq=2)
-            tim.callback(self.cb)
+             self.bar_ref = self.bar  # Allocation occurs here
+             self.x = 0.1
+             tim = pyb.Timer(4)
+             tim.init(freq=2)
+             tim.callback(self.cb)
 
         def bar(self, _):
-            self.x *= 1.2
-            print(self.x)
+             self.x *= 1.2
+             print(self.x)
 
         def cb(self, t):
-            # Passing self.bar would cause allocation.
-            micropython.schedule(self.bar_ref, 0)
+             # Passing self.bar would cause allocation.
+             micropython.schedule(self.bar_ref, 0)
 
 Other techniques are to define and instantiate the method in the constructor
 or to pass :meth:`Foo.bar` with the argument *self*.
@@ -301,21 +301,21 @@ the critical section. One way to achieve this is to issue ``pyb.disable_irq()`` 
     def callback1(t):
         global data, index
         for x in range(5):
-            data[index] = pyb.rng() # simulate input
-            index += 1
-            if index >= ARRAYSIZE:
-                raise BoundsException('Array bounds exceeded')
+             data[index] = pyb.rng() # simulate input
+             index += 1
+             if index >= ARRAYSIZE:
+                 raise BoundsException('Array bounds exceeded')
 
     tim4 = pyb.Timer(4, freq=100, callback=callback1)
 
     for loop in range(1000):
         if index > 0:
-            irq_state = pyb.disable_irq() # Start of critical section
-            for x in range(index):
-                print(data[x])
-            index = 0
-            pyb.enable_irq(irq_state) # End of critical section
-            print('loop {}'.format(loop))
+             irq_state = pyb.disable_irq() # Start of critical section
+             for x in range(index):
+                 print(data[x])
+             index = 0
+             pyb.enable_irq(irq_state) # End of critical section
+             print('loop {}'.format(loop))
         pyb.delay(1)
 
     tim4.callback(None)
@@ -330,7 +330,7 @@ A critical section can comprise a single line of code and a single variable. Con
     def main():
         # Code to set up the interrupt callback omitted
         while True:
-            count += 1
+             count += 1
 
 This example illustrates a subtle source of bugs. The line ``count += 1`` in the main loop carries a specific race
 condition hazard known as a read-modify-write. This is a classic cause of bugs in real time systems. In the main loop

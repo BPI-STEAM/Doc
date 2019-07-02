@@ -24,9 +24,9 @@
     # DO NOT open database with "a+b" access mode. 请勿打开带有"a+b"访问编码的数据库。
 
     try:
-        f = open("mydb", "r+b")
+       f = open("mydb", "r+b")
     except OSError:
-        f = open("mydb", "w+b")
+       f = open("mydb", "w+b")
 
     # Now open a database itself 现在打开一个数据库
     db = btree.open(f)
@@ -53,7 +53,7 @@
     #   b'two'
     #   b'three'
     for word in db.values(b"2"):
-        print(word)
+       print(word)
 
     del db[b"2"]
 
@@ -64,7 +64,7 @@
     #  b"1"
     #  b"3"
     for key in db:
-        print(key)
+       print(key)
 
     db.close()
 
@@ -98,10 +98,10 @@
    将缓存中的任何数据刷新到底层流。
 
 .. method:: btree.__getitem__(key)
-            btree.get(key, default=None)
-            btree.__setitem__(key, val)
-            btree.__detitem__(key)
-            btree.__contains__(key)
+          btree.get(key, default=None)
+          btree.__setitem__(key, val)
+          btree.__detitem__(key)
+          btree.__contains__(key)
 
    标准字典方法。
 
@@ -110,8 +110,8 @@
    B树对象可被直接迭代（与字典相似）以按顺序访问所有键。
 
 .. method:: btree.keys([start_key, [end_key, [flags]]])
-            btree.values([start_key, [end_key, [flags]]])
-            btree.items([start_key, [end_key, [flags]]])
+          btree.values([start_key, [end_key, [flags]]])
+          btree.items([start_key, [end_key, [flags]]])
 
    这些方法类似于标准字典方法，但也可使用可选参数来迭代一个键子范围，而不是整个数据库。
    注意：这三种方法中， *start_key* 和 *end_key* 参数都代表键值。例如， ``values()`` 方法将迭代与给定键范围对应的值。

@@ -22,13 +22,13 @@
         oled.show()
     else:
 
-        def get_time(_):   #定义时钟刷屏时间
-            t = time.localtime()
-            print("%d年%d月%d日 %d:%d:%d"%(t[0],t[1],t[2],t[3],t[4],t[5]))  
-            oled.DispChar("{}年{}月{}日" .format(t[0],t[1],t[2]),20,8)
-            oled.DispChar("{}:{}:{}" .format(t[3],t[4],t[5]),38,25)
-            oled.show()
-            oled.fill(0)  
+        def get_time(_):    #定义时钟刷屏时间
+             t = time.localtime()
+             print("%d年%d月%d日 %d:%d:%d"%(t[0],t[1],t[2],t[3],t[4],t[5]))  
+             oled.DispChar("{}年{}月{}日" .format(t[0],t[1],t[2]),20,8)
+             oled.DispChar("{}:{}:{}" .format(t[3],t[4],t[5]),38,25)
+             oled.show()
+             oled.fill(0)  
 
         tim1 = Timer(1) 
 
@@ -50,7 +50,7 @@
 ::
 
     try:
-        ntptime.settime()   #获取国际标准时间
+        ntptime.settime()    #获取国际标准时间
     except OSError :
         oled.DispChar("ntp链接超时,请重启!",0,20)    
         oled.show()
@@ -75,7 +75,7 @@
     oled.DispChar("{}年{}月{}日" .format(t[0],t[1],t[2]),20,8)
     oled.DispChar("{}:{}:{}" .format(t[3],t[4],t[5]),38,25)
     oled.show()
-    oled.fill(0)   #清屏
+    oled.fill(0)    #清屏
 
 获取时间后，在OLED显示屏上显示出来。
 
@@ -93,7 +93,7 @@
 
 ::
     
-    import ntptime,network   
+    import ntptime,network    
     from MicroPython import*
     from machine import Timer
 
@@ -106,13 +106,13 @@
         oled.DispChar("ntp链接超时,请重启!",0,20)
         oled.show()
     else:
-        clock=Clock(oled,64,32,30)      
+        clock=Clock(oled,64,32,30)       
 
         def Refresh(_):
-            clock.settime()
-            clock.drawClock()
-            oled.show()
-            clock.clear()
+             clock.settime()
+             clock.drawClock()
+             oled.show()
+             clock.clear()
         
         tim1 = Timer(1)
 
@@ -135,7 +135,7 @@ UI.Clock(x, y, radius)用于构建钟表对象，x、y为OLED显示屏上的起�
 
 清除钟表：
 ::
-    clock.clear()   
+    clock.clear()    
 
 清除时钟，也就是将显示在OLED显示屏上的时间清除以显示所获取的新时间，否则会导致各个时间值重叠显示在OLED上。
 

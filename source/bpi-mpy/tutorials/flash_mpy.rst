@@ -10,9 +10,9 @@
     使用请确认已经安装驱动，且已经得知自己的硬件串口名称，例如：COM5、ttyUSB0。
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 2
 
-   ../bpi-steam/driver
+    ../bpi-steam/driver
 
 在 Windows 下
 ---------------------------

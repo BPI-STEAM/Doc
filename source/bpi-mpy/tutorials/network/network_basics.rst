@@ -11,7 +11,7 @@ STA模式
 
 板子以基于network模块封装 :ref:`MicroPython.wifi()<MicroPython.wifi>` 类简化wifi连接设置::
 
-    from MicroPython import *       #导入MicroPython模块
+    from MicroPython import *        #导入MicroPython模块
 
     mywifi=wifi()     #实例化wifi类
     mywifi.connectWiFi("ssid","password")  # WiFi连接，设置ssid 和password
@@ -54,9 +54,9 @@ AP模式
 
 ::
 
-    from MicroPython import wifi                    # 导入MicroPython模块的wifi类
+    from MicroPython import wifi                     # 导入MicroPython模块的wifi类
 
-    mywifi=wifi()                               # 实例wifi
+    mywifi=wifi()                                 # 实例wifi
     mywifi.enable_APWiFi("MicroPython-wifi", 13)    # 配置并打开AP模式,第一参数:wifi名称,使用信道
 
 ``wifi.enable_APWiFi(essid,channel=10)`` 用于配置并开启AP模式函数, ``essid`` 参数为wifi名称, ``channel`` 参数为wifi信道。AP模式开启后,其他板子或网络设备就能连接该网络,进行网络通信。

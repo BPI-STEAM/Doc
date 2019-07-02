@@ -13,16 +13,16 @@ Steps below represent a high-level workflow when creating and consuming
 packages:
 
 1. Python modules and packages are turned into distribution package
-   archives, and published at the Python Package Index (PyPI).
+    archives, and published at the Python Package Index (PyPI).
 2. `upip` package manager can be used to install a distribution package
-   on a `MicroPython port` with networking capabilities (for example,
-   on the Unix port).
+    on a `MicroPython port` with networking capabilities (for example,
+    on the Unix port).
 3. For ports without networking capabilities, an "installation image"
-   can be prepared on the Unix port, and transferred to a device by
-   suitable means.
+    can be prepared on the Unix port, and transferred to a device by
+    suitable means.
 4. For low-memory ports, the installation image can be frozen as the
-   bytecode into MicroPython executable, thus minimizing the memory
-   storage overheads.
+    bytecode into MicroPython executable, thus minimizing the memory
+    storage overheads.
 
 The sections below describe this process in details.
 
@@ -59,10 +59,10 @@ packages not compatible with `CPython`'s package manager, ``pip``.
 This isn't considered a big problem, because:
 
 1. Packages can be installed with `upip`, and then can be used with
-   CPython (if they are compatible with it).
+    CPython (if they are compatible with it).
 2. In the other direction, majority of CPython packages would be
-   incompatible with MicroPython by various reasons, first of all,
-   the reliance on features not implemented by MicroPython.
+    incompatible with MicroPython by various reasons, first of all,
+    the reliance on features not implemented by MicroPython.
 
 Summing up, the MicroPython distribution package archives are highly
 optimized for MicroPython's target environments, which are highly
@@ -164,19 +164,19 @@ for a given `MicroPython port` from the C source code. Consequently,
 the process is:
 
 1. Follow the instructions for a particular port on setting up a
-   toolchain and building the port. For example, for ESP8266 port,
-   study instructions in ``ports/esp8266/README.md`` and follow them.
-   Make sure you can build the port and deploy the resulting
-   executable/firmware successfully before proceeding to the next steps.
+    toolchain and building the port. For example, for ESP8266 port,
+    study instructions in ``ports/esp8266/README.md`` and follow them.
+    Make sure you can build the port and deploy the resulting
+    executable/firmware successfully before proceeding to the next steps.
 2. Build `MicroPython Unix port` and make sure it is in your PATH and
-   you can execute ``micropython``.
+    you can execute ``micropython``.
 3. Change to port's directory (e.g. ``ports/esp8266/`` for ESP8266).
 4. Run ``make clean-frozen``. This step cleans up any previous
-   modules which were installed for freezing (consequently, you need
-   to skip this step to add additional modules, instead of starting
-   from scratch).
+    modules which were installed for freezing (consequently, you need
+    to skip this step to add additional modules, instead of starting
+    from scratch).
 5. Run ``micropython -m upip install -p modules <packages>...`` to
-   install packages you want to freeze.
+    install packages you want to freeze.
 6. Run ``make clean``.
 7. Run ``make``.
 
@@ -186,17 +186,17 @@ the bytecode inside, which you can deploy the usual way.
 Few notes:
 
 1. Step 5 in the sequence above assumes that the distribution package
-   is available from PyPI. If that is not the case, you would need
-   to copy Python source files manually to ``modules/`` subdirectory
-   of the port port directory. (Note that upip does not support
-   installing from e.g. version control repositories).
+    is available from PyPI. If that is not the case, you would need
+    to copy Python source files manually to ``modules/`` subdirectory
+    of the port port directory. (Note that upip does not support
+    installing from e.g. version control repositories).
 2. The firmware for baremetal devices usually has size restrictions,
-   so adding too many frozen modules may overflow it. Usually, you
-   would get a linking error if this happens. However, in some cases,
-   an image may be produced, which is not runnable on a device. Such
-   cases are in general bugs, and should be reported and further
-   investigated. If you face such a situation, as an initial step,
-   you may want to decrease the amount of frozen modules included.
+    so adding too many frozen modules may overflow it. Usually, you
+    would get a linking error if this happens. However, in some cases,
+    an image may be produced, which is not runnable on a device. Such
+    cases are in general bugs, and should be reported and further
+    investigated. If you face such a situation, as an initial step,
+    you may want to decrease the amount of frozen modules included.
 
 
 Creating distribution packages
@@ -270,8 +270,8 @@ your application has the following structure::
         __main__.py
         utils.py
         data/
-            page.html
-            image.png
+             page.html
+             image.png
 
 ``__main__.py`` and ``utils.py`` should access resources using the
 following calls::

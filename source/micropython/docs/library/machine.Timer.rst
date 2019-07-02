@@ -29,36 +29,36 @@ Constructors
 
 .. class:: Timer(id, ...)
 
-   Construct a new timer object of the given id. Id of -1 constructs a
-   virtual timer (if supported by a board).
+    Construct a new timer object of the given id. Id of -1 constructs a
+    virtual timer (if supported by a board).
 
 Methods
 -------
 
 .. method:: Timer.init(\*, mode=Timer.PERIODIC, period=-1, callback=None)
 
-   Initialise the timer. Example::
+    Initialise the timer. Example::
 
-       tim.init(period=100)                         # periodic with 100ms period
-       tim.init(mode=Timer.ONE_SHOT, period=1000)   # one shot firing after 1000ms
+        tim.init(period=100)                           # periodic with 100ms period
+        tim.init(mode=Timer.ONE_SHOT, period=1000)    # one shot firing after 1000ms
 
-   Keyword arguments:
+    Keyword arguments:
 
      - ``mode`` can be one of:
 
-       - ``Timer.ONE_SHOT`` - The timer runs once until the configured
-         period of the channel expires.
-       - ``Timer.PERIODIC`` - The timer runs periodically at the configured
-         frequency of the channel.
+        - ``Timer.ONE_SHOT`` - The timer runs once until the configured
+          period of the channel expires.
+        - ``Timer.PERIODIC`` - The timer runs periodically at the configured
+          frequency of the channel.
 
 .. method:: Timer.deinit()
 
-   Deinitialises the timer. Stops the timer, and disables the timer peripheral.
+    Deinitialises the timer. Stops the timer, and disables the timer peripheral.
 
 Constants
 ---------
 
 .. data:: Timer.ONE_SHOT
-          Timer.PERIODIC
+           Timer.PERIODIC
 
-   Timer operating mode.
+    Timer operating mode.

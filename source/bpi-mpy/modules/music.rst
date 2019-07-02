@@ -74,7 +74,7 @@ page about scientific pitch notation`_.  例如，middle "C"是 ``c4`` 和concer
     - ``wait`` 阻塞：如果 ``wait`` 设置为 ``True``, 为阻塞,否则未不。
 
     - ``loop`` ：如果 ``loop`` 设置为 ``True`` ，则重复调整直到stop被调用（见下文）或阻塞调用被中断。
-   
+    
 
 .. function:: pitch(frequency, duration=-1, pin=Pin.P6, wait=True)
 
@@ -91,7 +91,7 @@ page about scientific pitch notation`_.  例如，middle "C"是 ``c4`` 和concer
 
 .. function:: stop()
     
-   停止给定引脚上的所有音乐播放。
+    停止给定引脚上的所有音乐播放。
 
 
 .. function:: reset()

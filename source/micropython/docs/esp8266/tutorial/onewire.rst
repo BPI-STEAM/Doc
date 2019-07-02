@@ -26,12 +26,12 @@ and connect a 4.7k Ohm resistor between the data pin and the power pin.  ::
 
     # loop 10 times and print all temperatures
     for i in range(10):
-        print('temperatures:', end=' ')
-        ds.convert_temp()
-        time.sleep_ms(750)
-        for rom in roms:
-            print(ds.read_temp(rom), end=' ')
-        print()
+       print('temperatures:', end=' ')
+       ds.convert_temp()
+       time.sleep_ms(750)
+       for rom in roms:
+          print(ds.read_temp(rom), end=' ')
+       print()
 
 Note that you must execute the ``convert_temp()`` function to initiate a
 temperature reading, then wait at least 750ms before reading the value.

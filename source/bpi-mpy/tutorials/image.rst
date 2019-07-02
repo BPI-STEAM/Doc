@@ -5,8 +5,8 @@
 
 .. code:: python
 
-   from microbit import *
-   display.show(Image.HAPPY)
+    from microbit import *
+    display.show(Image.HAPPY)
 
 运行效果如下
 
@@ -80,15 +80,15 @@ So Easy!!!
 
 .. code:: python
 
-   from microbit import *
+    from microbit import *
 
-   boat = Image("05050:"
-                "05050:"
-                "05050:"
-                "99999:"
-                "09990")
+    boat = Image("05050:"
+                 "05050:"
+                 "05050:"
+                 "99999:"
+                 "09990")
 
-   display.show(boat)
+    display.show(boat)
 
 .. image:: images/emoj2.jpg
 
@@ -102,7 +102,7 @@ So Easy!!!
 
 .. code:: python
 
-   boat = Image("05050:05050:05050:99999:09990")
+    boat = Image("05050:05050:05050:99999:09990")
 
 制作简单的动画
 ---------------------------
@@ -117,7 +117,7 @@ So Easy!!!
 
 .. code:: python
 
-   shopping = ["Eggs", "Bacon", "Tomatoes" ]
+    shopping = ["Eggs", "Bacon", "Tomatoes" ]
 
 这种方式叫 list ，也就是列表，我们简单地创造了一个叫 shopping 的列表，然后它包含了3个元素，Python 知道它是一个列表，因为它有一对括号[]，在列表中的元素被逗号分隔，然后在这个实例中，items包含了三个字符串，“Eggs”.“Bacon”以及“Tomatoes”。我们要知道，它们都是字符串对象，因为它们用“”进行分割。
 
@@ -127,20 +127,20 @@ So Easy!!!
 
 .. code:: python
 
-   shopping = [2, 3, 5，11 ]
+    shopping = [2, 3, 5，11 ]
 
 列表同样存放许多不同类型的变量：
 
 .. code:: python
 
-   mixed_up_list = ["hello!", 1.234, Image.HAPPY]
+    mixed_up_list = ["hello!", 1.234, Image.HAPPY]
 
 注意到最后一个元素没有，它是一个 Image 对象，所以我们可以告诉 Python 去存放一个Image的list，不过在内置的方法中，有已经做好的二个对象。他们叫 Image.ALL_CLOCKS 和 Image.ALL_ARROWS。
 
 .. code:: python
 
-   from microbit import *
-   display.show(Image.ALL_CLOCKS, loop=True, delay=100)
+    from microbit import *
+    display.show(Image.ALL_CLOCKS, loop=True, delay=100)
 
 和单张 image 一样，我们使用 display.show 让它在设备上显示，然而，我们告诉 Python 使用 Image.ALL_CLOCKS 这个列表 然后它会理解并按顺序展示这个 list 所有元素， 我们也可以告诉 Python 保持循环状态，通过 *loop=True*\ ，另外，我们也可以设置这个动画切换图片的时间。通过下面一条代码。\ ``delay=100``\ 。
 
@@ -150,46 +150,46 @@ So Easy!!!
 
 .. code:: python
 
-   from microbit import *
+    from microbit import *
 
-   boat1 = Image("05050:"
-                 "05050:"
-                 "05050:"
-                 "99999:"
-                 "09990")
+    boat1 = Image("05050:"
+                  "05050:"
+                  "05050:"
+                  "99999:"
+                  "09990")
 
-   boat2 = Image("00000:"
-                 "05050:"
-                 "05050:"
-                 "05050:"
-                 "99999")
+    boat2 = Image("00000:"
+                  "05050:"
+                  "05050:"
+                  "05050:"
+                  "99999")
 
-   boat3 = Image("00000:"
-                 "00000:"
-                 "05050:"
-                 "05050:"
-                 "05050")
+    boat3 = Image("00000:"
+                  "00000:"
+                  "05050:"
+                  "05050:"
+                  "05050")
 
-   boat4 = Image("00000:"
-                 "00000:"
-                 "00000:"
-                 "05050:"
-                 "05050")
+    boat4 = Image("00000:"
+                  "00000:"
+                  "00000:"
+                  "05050:"
+                  "05050")
 
-   boat5 = Image("00000:"
-                 "00000:"
-                 "00000:"
-                 "00000:"
-                 "05050")
+    boat5 = Image("00000:"
+                  "00000:"
+                  "00000:"
+                  "00000:"
+                  "05050")
 
-   boat6 = Image("00000:"
-                 "00000:"
-                 "00000:"
-                 "00000:"
-                 "00000")
+    boat6 = Image("00000:"
+                  "00000:"
+                  "00000:"
+                  "00000:"
+                  "00000")
 
-   all_boats = [boat1, boat2, boat3, boat4, boat5, boat6]
-   display.show(all_boats, delay=500, loop=True)
+    all_boats = [boat1, boat2, boat3, boat4, boat5, boat6]
+    display.show(all_boats, delay=500, loop=True)
 
 
 .. Note:: 
@@ -205,9 +205,9 @@ So Easy!!!
 
 .. code:: python
 
-   from microbit import *
-   from display import *
-   display.show(Image.ALL_CLOCKS, color=Blue, loop=True, delay=100)
+    from microbit import *
+    from display import *
+    display.show(Image.ALL_CLOCKS, color=Blue, loop=True, delay=100)
 
 我们这里还是利用上面那个例子，通过简单的修改来改变它的颜色。我们可以看到与前面代码示例最大的不同就是在 show() 函数中添加了 color=Blue 。 这段代码要添加到Image的后面，也就是 show() 的第二个参数的位置。此时显示的颜色已经被我们修改了。
 
@@ -219,9 +219,9 @@ So Easy!!!
 
 .. code:: python
 
-   from microbit import *
-   mycolor = [3, 1, 1]
-   display.show(Image.ALL_CLOCKS, color=mycolor, loop=True, delay=500)
+    from microbit import *
+    mycolor = [3, 1, 1]
+    display.show(Image.ALL_CLOCKS, color=mycolor, loop=True, delay=500)
 
 .. image:: images/mycolor.gif
 

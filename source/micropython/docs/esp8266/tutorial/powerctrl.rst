@@ -55,7 +55,7 @@ the device just woke from a deep-sleep.  For example, to print the reset cause
 you can use::
 
     if machine.reset_cause() == machine.DEEPSLEEP_RESET:
-        print('woke from a deep sleep')
+       print('woke from a deep sleep')
     else:
-        print('power on or hard reset')
+       print('power on or hard reset')
 

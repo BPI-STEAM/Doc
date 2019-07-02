@@ -2,7 +2,7 @@
 ===============================================
 
 .. module:: lcd160cr
-   :synopsis: control of LCD160CR display
+    :synopsis: control of LCD160CR display
 
 This module provides control of the MicroPython LCD160CR display.
 
@@ -42,11 +42,11 @@ Constructors
     Construct an LCD160CR object.  The parameters are:
 
         - *connect* is a string specifying the physical connection of the LCD
-          display to the board; valid values are "X", "Y", "XY", "YX".
-          Use "X" when the display is connected to a pyboard in the X-skin
-          position, and "Y" when connected in the Y-skin position.  "XY"
-          and "YX" are used when the display is connected to the right or
-          left side of the pyboard, respectively.
+           display to the board; valid values are "X", "Y", "XY", "YX".
+           Use "X" when the display is connected to a pyboard in the X-skin
+           position, and "Y" when connected in the Y-skin position.  "XY"
+           and "YX" are used when the display is connected to the right or
+           left side of the pyboard, respectively.
         - *pwr* is a Pin object connected to the LCD's power/enabled pin.
         - *i2c* is an I2C object connected to the LCD's I2C interface.
         - *spi* is an SPI object connected to the LCD's SPI interface.
@@ -61,13 +61,13 @@ Constructors
     The default values are:
 
         - "X" is for the X-skin and uses:
-          ``pwr=Pin("X4")``, ``i2c=I2C("X")``, ``spi=SPI("X")``
+           ``pwr=Pin("X4")``, ``i2c=I2C("X")``, ``spi=SPI("X")``
         - "Y" is for the Y-skin and uses:
-          ``pwr=Pin("Y4")``, ``i2c=I2C("Y")``, ``spi=SPI("Y")``
+           ``pwr=Pin("Y4")``, ``i2c=I2C("Y")``, ``spi=SPI("Y")``
         - "XY" is for the right-side and uses:
-          ``pwr=Pin("X4")``, ``i2c=I2C("Y")``, ``spi=SPI("X")``
+           ``pwr=Pin("X4")``, ``i2c=I2C("Y")``, ``spi=SPI("X")``
         - "YX" is for the left-side and uses:
-          ``pwr=Pin("Y4")``, ``i2c=I2C("X")``, ``spi=SPI("Y")``
+           ``pwr=Pin("Y4")``, ``i2c=I2C("X")``, ``spi=SPI("Y")``
 
     See `this image <http://micropython.org/resources/LCD160CRv10-positions.jpg>`_
     for how the display can be connected to the pyboard.
@@ -190,17 +190,17 @@ To draw text one sets the position, color and font, and then uses
 
         - *font* is the font family to use, valid values are 0, 1, 2, 3.
         - *scale* is a scaling value for each character pixel, where the pixels
-          are drawn as a square with side length equal to *scale + 1*.  The value
-          can be between 0 and 63.
+           are drawn as a square with side length equal to *scale + 1*.  The value
+           can be between 0 and 63.
         - *bold* controls the number of pixels to overdraw each character pixel,
-          making a bold effect.  The lower 2 bits of *bold* are the number of
-          pixels to overdraw in the horizontal direction, and the next 2 bits are
-          for the vertical direction.  For example, a *bold* value of 5 will
-          overdraw 1 pixel in both the horizontal and vertical directions.
+           making a bold effect.  The lower 2 bits of *bold* are the number of
+           pixels to overdraw in the horizontal direction, and the next 2 bits are
+           for the vertical direction.  For example, a *bold* value of 5 will
+           overdraw 1 pixel in both the horizontal and vertical directions.
         - *trans* can be either 0 or 1 and if set to 1 the characters will be
-          drawn with a transparent background.
+           drawn with a transparent background.
         - *scroll* can be either 0 or 1 and if set to 1 the display will do a
-          soft scroll if the text moves to the next line.
+           soft scroll if the text moves to the next line.
 
 .. method:: LCD160CR.write(s)
 
@@ -267,14 +267,14 @@ Touch screen methods
     Configure the touch panel:
 
         - If *calib* is ``True`` then the call will trigger a touch calibration of
-          the resistive touch sensor.  This requires the user to touch various
-          parts of the screen.
+           the resistive touch sensor.  This requires the user to touch various
+           parts of the screen.
         - If *save* is ``True`` then the touch parameters will be saved to NVRAM
-          to persist across reset/power up.
+           to persist across reset/power up.
         - If *irq* is ``True`` then the display will be configured to pull the IRQ
-          line low when a touch force is detected.  If *irq* is ``False`` then this
-          feature is disabled.  If *irq* is ``None`` (the default value) then no
-          change is made to this setting.
+           line low when a touch force is detected.  If *irq* is ``False`` then this
+           feature is disabled.  If *irq* is ``None`` (the default value) then no
+           change is made to this setting.
 
 .. method:: LCD160CR.is_touched()
 
@@ -326,13 +326,13 @@ Advanced commands
     Configure a window region for scrolling:
 
         - *win* is the window id to configure.  There are 0..7 standard windows for
-          general purpose use.  Window 8 is the text scroll window (the ticker).
+           general purpose use.  Window 8 is the text scroll window (the ticker).
         - *x*, *y*, *w*, *h* specify the location of the window in the display.
         - *vec* specifies the direction and speed of scroll: it is a 16-bit value
-          of the form ``0bF.ddSSSSSSSSSSSS``.  *dd* is 0, 1, 2, 3 for +x, +y, -x,
-          -y scrolling. *F* sets the speed format, with 0 meaning that the window
-          is shifted *S % 256* pixel every frame, and 1 meaning that the window
-          is shifted 1 pixel every *S* frames.
+           of the form ``0bF.ddSSSSSSSSSSSS``.  *dd* is 0, 1, 2, 3 for +x, +y, -x,
+           -y scrolling. *F* sets the speed format, with 0 meaning that the window
+           is shifted *S % 256* pixel every frame, and 1 meaning that the window
+           is shifted 1 pixel every *S* frames.
         - *pat* is a 16-bit pattern mask for the background.
         - *fill* is the fill color.
         - *color* is the extra color, either of the text or pattern foreground.
@@ -343,7 +343,7 @@ Advanced commands
     
         - *win* is the window id, 0..8.
         - *param* is the parameter number to configure, 0..7, and corresponds
-          to the parameters in the `set_scroll_win` method.
+           to the parameters in the `set_scroll_win` method.
         - *value* is the value to set.
 
 .. method:: LCD160CR.set_scroll_buf(s)
@@ -380,15 +380,15 @@ Constants
 ---------
 
 .. data:: lcd160cr.PORTRAIT
-          lcd160cr.LANDSCAPE
-          lcd160cr.PORTRAIT_UPSIDEDOWN
-          lcd160cr.LANDSCAPE_UPSIDEDOWN
+           lcd160cr.LANDSCAPE
+           lcd160cr.PORTRAIT_UPSIDEDOWN
+           lcd160cr.LANDSCAPE_UPSIDEDOWN
 
-   Orientations of the display, used by :meth:`LCD160CR.set_orient`.
+    Orientations of the display, used by :meth:`LCD160CR.set_orient`.
 
 .. data:: lcd160cr.STARTUP_DECO_NONE
-          lcd160cr.STARTUP_DECO_MLOGO
-          lcd160cr.STARTUP_DECO_INFO
+           lcd160cr.STARTUP_DECO_MLOGO
+           lcd160cr.STARTUP_DECO_INFO
 
-   Types of start-up decoration, can be OR'ed together, used by
-   :meth:`LCD160CR.set_startup_deco`.
+    Types of start-up decoration, can be OR'ed together, used by
+    :meth:`LCD160CR.set_startup_deco`.

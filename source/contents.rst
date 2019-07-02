@@ -1,7 +1,7 @@
 .. Introduction to BPI-STEAM documentation master file, created by
-   sphinx-quickstart on Sun May 26 22:43:43 2019.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+    sphinx-quickstart on Sun May 26 22:43:43 2019.
+    You can adapt this file completely to your liking, but it should at least
+    contain the root `toctree` directive.
 
 Welcome to BPI-STEAM documentation!
 =====================================================
@@ -85,8 +85,8 @@ BPI-BIT 提供了入门 Arduino 的软件工具和最佳示例，这将成为你
 BPI-BIT 大幅度的兼容 microbit 的底座硬件设计与使用，你可以查看以下支持的 Microbit 的拓展板或根据拓展板设计方案进行拓展应用。
 
 .. toctree::
-   :maxdepth: 2
-   :caption: 拓展板
+    :maxdepth: 2
+    :caption: 拓展板
 
 .. 
 .. toctree::

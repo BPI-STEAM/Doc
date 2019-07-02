@@ -218,8 +218,8 @@ appropriate argument to ``setup()`` call::
     import sdist_upip
 
     setup(
-        ...,
-        cmdclass={'sdist': sdist_upip.sdist}
+       ...,
+       cmdclass={'sdist': sdist_upip.sdist}
     )
 
 The sdist_upip.py module as referenced above can be found in
@@ -268,11 +268,11 @@ Let's trace the complete process using the following example. Suppose
 your application has the following structure::
 
     my_app/
-        __main__.py
-        utils.py
-        data/
-            page.html
-            image.png
+       __main__.py
+       utils.py
+       data/
+          page.html
+          image.png
 
 ``__main__.py`` and ``utils.py`` should access resources using the
 following calls::

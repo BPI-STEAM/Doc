@@ -10,20 +10,20 @@ Picoboard-Scratch
     # MicroPython板子模拟Scratch PicoBoard
 
     #------------------------------------------------------
-    # Channel | PicoBoard       |  MicroPython                |
+    # Channel | PicoBoard        |  MicroPython                 |
     #------------------------------------------------------
-    # 4       | resistance-A    | press of the "A" button |
-    # 2       | resistance-B    | accelerometer's x       |
-    # 1       | resistance-C    | accelerometer's y       |
-    # 0       | resistance-D    | ext                     |
-    # 3       | button          | press of the "B" button |
-    # 5       | light           | light                   |
-    # 6       | Sound           | Sound                   |
-    # 7       | Slider          | TouchPad                |
+    # 4        | resistance-A    | press of the "A" button |
+    # 2        | resistance-B    | accelerometer's x        |
+    # 1        | resistance-C    | accelerometer's y        |
+    # 0        | resistance-D    | ext                       |
+    # 3        | button           | press of the "B" button |
+    # 5        | light            | light                    |
+    # 6        | Sound            | Sound                    |
+    # 7        | Slider           | TouchPad                 |
     # -----------------------------------------------------
 
     # 操作说明：正常启动默认进入scratch模式；退回到repl模式，同时按下复位和button b后，
-    #          先松开复位按键2秒后再松开button b
+    #           先松开复位按键2秒后再松开button b
 
     from MicroPython import *
     from machine import UART
@@ -54,7 +54,7 @@ Picoboard-Scratch
     0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
     ])
 
-    if button_b.value()==0:               #启动检测 button b 按下进入repl
+    if button_b.value()==0:                #启动检测 button b 按下进入repl
         scratchMode=False
         #print('replMode')
         oled.DispChar('replMode',30,20)
@@ -65,19 +65,19 @@ Picoboard-Scratch
 
     def ScanTouchpad():
         if touchPad_P.read() <200:
-            return int(1023/10)
+             return int(1023/10)
         elif touchPad_Y.read()<200:
-            return int(1023/10*2)
+             return int(1023/10*2)
         elif touchPad_T.read()<200:
-            return int(1023/10*3)
+             return int(1023/10*3)
         elif touchPad_H.read()<200:
-            return int(1023/10*4)
+             return int(1023/10*4)
         elif touchPad_O.read()<200:
-            return int(1023/10*5)
+             return int(1023/10*5)
         elif touchPad_N.read()<200:
-            return int(1023/10*6)
+             return int(1023/10*6)
         else:
-            return 0
+             return 0
 
 
     while scratchMode:
@@ -88,58 +88,58 @@ Picoboard-Scratch
 
         # Create and send Scratch data packet
         def convert(a, b):
-            sensor = bytearray(2)
-            upper = (b & 0x380) >> 7
-            sensor[1] = b & 0x7f
-            sensor[0] = (1 << 7) | a << 3 | upper
-            uart.write(sensor)
+             sensor = bytearray(2)
+             upper = (b & 0x380) >> 7
+             sensor[1] = b & 0x7f
+             sensor[0] = (1 << 7) | a << 3 | upper
+             uart.write(sensor)
 
         request = bytearray(1)
 
         while True:
 
-            if uart.readinto(request) == 1 and request[0] == 0x01:       #当接收到scratch发来的0x01字节
-                rgb.fill((0,20,0))
-                rgb.write()
-                convert(15, 0x04)
-                sleep_us(10)
-                extValue=int(ext.read_analog()/4)                              # Get ext
-                convert(0,extValue)
-                reading = accelerometer.get_y()*1000                    # Get accelerometer's y
-                if reading >= 0:
-                    reading = int(reading / 2) + 512
-                    convert(1, reading)
-                else:
-                    reading = 512 - abs(int(reading / 2))
-                    convert(1, reading)
+             if uart.readinto(request) == 1 and request[0] == 0x01:        #当接收到scratch发来的0x01字节
+                 rgb.fill((0,20,0))
+                 rgb.write()
+                 convert(15, 0x04)
+                 sleep_us(10)
+                 extValue=int(ext.read_analog()/4)                                # Get ext
+                 convert(0,extValue)
+                 reading = accelerometer.get_y()*1000                     # Get accelerometer's y
+                 if reading >= 0:
+                     reading = int(reading / 2) + 512
+                     convert(1, reading)
+                 else:
+                     reading = 512 - abs(int(reading / 2))
+                     convert(1, reading)
 
-                reading = accelerometer.get_x()*1000                    # Get accelerometer's x
-                if reading >= 0:
-                    reading = int(reading / 2) + 512
-                    convert(2, reading)
-                else:
-                    reading = 512 - abs(int(reading / 2))
-                    convert(2, reading)
+                 reading = accelerometer.get_x()*1000                     # Get accelerometer's x
+                 if reading >= 0:
+                     reading = int(reading / 2) + 512
+                     convert(2, reading)
+                 else:
+                     reading = 512 - abs(int(reading / 2))
+                     convert(2, reading)
 
-                if button_b.value()==0:                                 # Get button B state
-                    convert(3, 0)
-                else:
-                    convert(3, 1023)
+                 if button_b.value()==0:                                    # Get button B state
+                     convert(3, 0)
+                 else:
+                     convert(3, 1023)
 
-                if button_a.value()==0:                                 #  Get button A state
-                    convert(4, 1023)
-                else:
-                    convert(4, 0)
+                 if button_a.value()==0:                                    #  Get button A state
+                     convert(4, 1023)
+                 else:
+                     convert(4, 0)
 
-                convert(5, 1023-light.read())                            #  Get light senser
+                 convert(5, 1023-light.read())                              #  Get light senser
 
-                convert(6, sound.read())                                 #  Get Sound senser
+                 convert(6, sound.read())                                    #  Get Sound senser
 
-                convert(7, ScanTouchpad())                               #  Get TouchPad value
+                 convert(7, ScanTouchpad())                                 #  Get TouchPad value
 
-            else:
-                rgb.fill((0,0,0))
-                rgb.write()
+             else:
+                 rgb.fill((0,0,0))
+                 rgb.write()
 
 此程序是将板子与Scratch建立联系，当刷入该程序后，板子就与Scratch PicoBoard建立了联系，这样板子就能够模拟PicoBoard上的传感器来使用。
 PicoBoard上的传感器与板子的一一对应，如下表：
@@ -151,10 +151,10 @@ PicoBoard上的传感器与板子的一一对应，如下表：
 阻力B        按键X
 阻力C        按键Y
 阻力D        ext(P3)
-按键         按键B
-光线         光线
-声音         声音
-滑杆         触摸按键
+按键          按键B
+光线          光线
+声音          声音
+滑杆          触摸按键
 ==========  ====================================  
 
 .. admonition:: 提示

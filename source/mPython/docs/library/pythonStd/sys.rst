@@ -22,10 +22,10 @@ Functions
     通过回溯到类文件对象文件（或 ``sys.stdout`` 默认情况下）来打印异常。
 
    .. admonition:: 与CPython的区别
-      :class: attention
+     :class: attention
 
-        这是 ``traceback``  CPython模块中出现的函数的简化版本 。与 ``traceback.print_exception()`` 此不同，此函数仅使用异常值而不是异常类型，异常值和回溯对象; file参数应该是位置的; 不支持其他参数。
-        ``traceback``  可以找到CPython兼容 模块 ``micropython-lib`` 。
+       这是 ``traceback``  CPython模块中出现的函数的简化版本 。与 ``traceback.print_exception()`` 此不同，此函数仅使用异常值而不是异常类型，异常值和回溯对象; file参数应该是位置的; 不支持其他参数。
+       ``traceback``  可以找到CPython兼容 模块 ``micropython-lib`` 。
 
 常量
 ---------
@@ -50,8 +50,8 @@ Functions
 
     示例::
 
-        >>> print(sys.implementation)
-        (name='micropython', version=(1, 9, 1))
+       >>> print(sys.implementation)
+       (name='micropython', version=(1, 9, 1))
 
 .. data:: maxsize
 
@@ -60,19 +60,19 @@ Functions
 
     此属性对于检测平台的“位数”（32位与64位等）非常有用。建议不要直接将此属性与某个值进行比较，而是计算其中的位数::
 
-        bits = 0
-        v = sys.maxsize
-        while v:
-            bits += 1
-            v >>= 1
-        if bits > 32:
-            # 64-bit (or more) platform
-            ...
-        else:
-            # 32-bit (or less) platform
-            # Note that on 32-bit platform, value of bits may be less than 32
-            # (e.g. 31) due to peculiarities described above, so use "> 16",
-            # "> 32", "> 64" style of comparisons.
+       bits = 0
+       v = sys.maxsize
+       while v:
+          bits += 1
+          v >>= 1
+       if bits > 32:
+          # 64-bit (or more) platform
+          ...
+       else:
+          # 32-bit (or less) platform
+          # Note that on 32-bit platform, value of bits may be less than 32
+          # (e.g. 31) due to peculiarities described above, so use "> 16",
+          # "> 32", "> 64" style of comparisons.
 
 .. data:: modules
 

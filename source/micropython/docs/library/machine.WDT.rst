@@ -22,15 +22,15 @@ Constructors
 
 .. class:: WDT(id=0, timeout=5000)
 
-   Create a WDT object and start it. The timeout must be given in seconds and
-   the minimum value that is accepted is 1 second. Once it is running the timeout
-   cannot be changed and the WDT cannot be stopped either.
+    Create a WDT object and start it. The timeout must be given in seconds and
+    the minimum value that is accepted is 1 second. Once it is running the timeout
+    cannot be changed and the WDT cannot be stopped either.
 
 Methods
 -------
 
 .. method:: wdt.feed()
 
-   Feed the WDT to prevent it from resetting the system. The application
-   should place this call in a sensible place ensuring that the WDT is
-   only fed after verifying that everything is functioning correctly.
+    Feed the WDT to prevent it from resetting the system. The application
+    should place this call in a sensible place ensuring that the WDT is
+    only fed after verifying that everything is functioning correctly.

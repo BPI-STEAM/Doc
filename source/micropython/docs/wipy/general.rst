@@ -11,17 +11,17 @@ means that floating point numbers cannot be used anywhere in the code, and that
 all divisions must be performed using '//' instead of '/'. Example::
 
     >>> r = 4 // 2  # this will work
-    >>> r = 4 / 2   # this WON'T
+    >>> r = 4 / 2    # this WON'T
 
 Before applying power
 ---------------------
 
 .. warning::
 
-   The GPIO pins of the WiPy are NOT 5V tolerant, connecting them to voltages higher
-   than 3.6V will cause irreparable damage to the board. ADC pins, when configured
-   in analog mode cannot withstand voltages above 1.8V. Keep these considerations in
-   mind when wiring your electronics.
+    The GPIO pins of the WiPy are NOT 5V tolerant, connecting them to voltages higher
+    than 3.6V will cause irreparable damage to the board. ADC pins, when configured
+    in analog mode cannot withstand voltages above 1.8V. Keep these considerations in
+    mind when wiring your electronics.
 
 WLAN default behaviour
 ----------------------
@@ -43,7 +43,7 @@ work quite well too. The default credentials are: **user:** ``micro``, **passwor
 See :class:`network.Server` for info on how to change the defaults.
 For instance, on a linux shell (when connected to the WiPy in AP mode)::
 
-   $ telnet 192.168.1.1
+    $ telnet 192.168.1.1
 
 .. _wipy_filesystem:
 
@@ -66,7 +66,7 @@ See :class:`network.Server` for info on how to change the defaults.
 The recommended clients are: Linux stock FTP (also in OSX), Filezilla and FireFTP.
 For example, on a linux shell::
 
-   $ ftp 192.168.1.1
+    $ ftp 192.168.1.1
 
 The FTP server on the WiPy doesn't support active mode, only passive, therefore,
 if using the native unix ftp client, just after logging in do::
@@ -106,13 +106,13 @@ read the **release notes** before.
 
 .. note::
 
-   The ``bootloader.bin`` found inside ``Binaries.zip`` is there only for reference, it's not
-   needed for the Over The Air update.
+    The ``bootloader.bin`` found inside ``Binaries.zip`` is there only for reference, it's not
+    needed for the Over The Air update.
 
 In order to check your software version, do::
 
-   >>> import os
-   >>> os.uname().release
+    >>> import os
+    >>> os.uname().release
 
 If the version number is lower than the latest release found in
 `the releases <https://github.com/wipy/wipy/releases>`_, go ahead and update your WiPy!
@@ -144,9 +144,9 @@ and the WiPy will proceed to boot. The firmware selection mechanism is as follow
 **Safe Boot Pin** ``GP28`` **released during:**
 
 +-------------------------+-------------------------+----------------------------+
-| 1st 3 secs window       | 2nd 3 secs window       | Final 1.5 secs window      |
+| 1st 3 secs window        | 2nd 3 secs window        | Final 1.5 secs window       |
 +=========================+=========================+============================+
-| | Safe boot, *latest*   | | Safe boot, *previous* | | Safe boot, the *factory* |
+| | Safe boot, *latest*    | | Safe boot, *previous* | | Safe boot, the *factory* |
 | | firmware is selected  | | user update selected  | | firmware is selected     |
 +-------------------------+-------------------------+----------------------------+
 
@@ -162,15 +162,15 @@ The heartbeat LED
 By default the heartbeat LED flashes once every 4s to signal that the system is
 alive. This can be overridden through the :mod:`wipy` module::
 
-   >>> import wipy
-   >>> wipy.heartbeat(False)
+    >>> import wipy
+    >>> wipy.heartbeat(False)
 
 There are currently 2 kinds of errors that you might see:
 
 1. If the heartbeat LED flashes quickly, then a Python script (eg ``main.py``)
-   has an error.  Use the REPL to debug it.
+    has an error.  Use the REPL to debug it.
 2. If the heartbeat LED stays on, then there was a hard fault, you cannot
-   recover from this, the only way out is to press the reset switch.
+    recover from this, the only way out is to press the reset switch.
 
 Details on sleep modes
 ----------------------
@@ -239,8 +239,8 @@ Additional Pin methods:
 
 .. method:: machine.Pin.alt_list()
 
-   Returns a list of the alternate functions supported by the pin. List items are
-   a tuple of the form: ``('ALT_FUN_NAME', ALT_FUN_INDEX)``
+    Returns a list of the alternate functions supported by the pin. List items are
+    a tuple of the form: ``('ALT_FUN_NAME', ALT_FUN_INDEX)``
 
 Additional details for machine.I2C
 ----------------------------------
@@ -310,11 +310,11 @@ initial one) is a multiple of 4 bytes.** The last chunk may be of any length.
 
 Example::
 
-   hash = uhashlib.sha1('abcd1234', 1001)    # length of the initial piece is multiple of 4 bytes
-   hash.update('1234')                       # also multiple of 4 bytes
-   ...
-   hash.update('12345')                      # last chunk may be of any length
-   hash.digest()
+    hash = uhashlib.sha1('abcd1234', 1001)    # length of the initial piece is multiple of 4 bytes
+    hash.update('1234')                        # also multiple of 4 bytes
+    ...
+    hash.update('12345')                        # last chunk may be of any length
+    hash.digest()
 
 Unrelated function in machine module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -343,24 +343,24 @@ Example::
 
 .. class:: network.Server(id, ...)
 
-   Create a server instance, see ``init`` for parameters of initialization.
+    Create a server instance, see ``init`` for parameters of initialization.
 
 .. method:: server.init(\*, login=('micro', 'python'), timeout=300)
 
-   Init (and effectively start the server). Optionally a new ``user``, ``password``
-   and ``timeout`` (in seconds) can be passed.
+    Init (and effectively start the server). Optionally a new ``user``, ``password``
+    and ``timeout`` (in seconds) can be passed.
 
 .. method:: server.deinit()
 
-   Stop the server
+    Stop the server
 
 .. method:: server.timeout([timeout_in_seconds])
 
-   Get or set the server timeout.
+    Get or set the server timeout.
 
 .. method:: server.isrunning()
 
-   Returns ``True`` if the server is running, ``False`` otherwise.
+    Returns ``True`` if the server is running, ``False`` otherwise.
 
 Adhoc VFS-like support
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -370,18 +370,18 @@ functions are defined in ``uos`` module:
 
 .. function:: mount(block_device, mount_point, \*, readonly=False)
 
-   Mounts a block device (like an ``SD`` object) in the specified mount
-   point. Example::
+    Mounts a block device (like an ``SD`` object) in the specified mount
+    point. Example::
 
-      os.mount(sd, '/sd')
+       os.mount(sd, '/sd')
 
 .. function:: unmount(path)
 
-   Unmounts a previously mounted block device from the given path.
+    Unmounts a previously mounted block device from the given path.
 
 .. function:: mkfs(block_device or path)
 
-   Formats the specified path, must be either ``/flash`` or ``/sd``.
-   A block device can also be passed like an ``SD`` object before
-   being mounted.
+    Formats the specified path, must be either ``/flash`` or ``/sd``.
+    A block device can also be passed like an ``SD`` object before
+    being mounted.
 

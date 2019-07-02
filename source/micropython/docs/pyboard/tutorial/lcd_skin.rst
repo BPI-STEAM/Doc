@@ -37,10 +37,10 @@ You can make a simple animation using the code::
     lcd = pyb.LCD('X')
     lcd.light(True)
     for x in range(-80, 128):
-        lcd.fill(0)
-        lcd.text('Hello uPy!', x, 10, 1)
-        lcd.show()
-        pyb.delay(25)
+       lcd.fill(0)
+       lcd.text('Hello uPy!', x, 10, 1)
+       lcd.show()
+       pyb.delay(25)
 
 Using the touch sensor
 ----------------------

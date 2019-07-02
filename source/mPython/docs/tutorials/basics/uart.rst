@@ -57,7 +57,7 @@ UART通信基本上使用2个引脚进行数据传输。Tx-用于发送数据的
 
 ::
 
-    from MicroPython import *                            # 导入MicroPython所有对象
+    from MicroPython import *                       # 导入MicroPython所有对象
 
     uart=UART(1,baudrate=9600,tx=Pin.P15,rx=Pin.P16) # 构建UART对象，设置波特率为9600，TX、RX 引脚分别为P15、P16
 
@@ -84,17 +84,17 @@ HC06(blue:bit 蓝牙从机模块)默认出厂的波特率为9600。所以我们�
 板子接收串口数据，并将数据显示至OLED屏幕上::
 
 
-    from MicroPython import *                               # 导入MicroPython所有对象
+    from MicroPython import *                         # 导入MicroPython所有对象
 
     uart=UART(1,baudrate=9600,tx=Pin.P15,rx=Pin.P16,timeout=200)    # 实例UART，设置波特率9600，TX、RX映射引脚为P15、P16，超时设为200ms
 
     while True:
-        if(uart.any()):                     # 当串口有可读数据时
-            data = uart.readline()          # 从串口读取一行数据
-            print("received:",data)         # 打印接收到的数据
-            oled.DispChar("接收:%s" %data.decode('utf-8'),0,30)     # 将数据显示的OLED上，注意需要将字节码解码为字符串
-            oled.show()                     # 生效    
-            oled.fill(0)                    # 清屏
+       if(uart.any()):                 # 当串口有可读数据时
+          data = uart.readline()        # 从串口读取一行数据
+          print("received:",data)        # 打印接收到的数据
+          oled.DispChar("接收:%s" %data.decode('utf-8'),0,30)    # 将数据显示的OLED上，注意需要将字节码解码为字符串
+          oled.show()                 # 生效    
+          oled.fill(0)                # 清屏
 
 
 

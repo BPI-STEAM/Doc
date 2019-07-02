@@ -111,7 +111,7 @@ Classes
 
     .. method:: getvalue()
 
-        Get the current contents of the underlying buffer which holds data.
+       Get the current contents of the underlying buffer which holds data.
 
 .. class:: StringIO(alloc_size)
 .. class:: BytesIO(alloc_size)
@@ -124,6 +124,6 @@ Classes
     cases and in system-level libraries, not for end-user applications.
 
     .. admonition:: Difference to CPython
-        :class: attention
+       :class: attention
 
-        These constructors are a MicroPython extension.
+       These constructors are a MicroPython extension.

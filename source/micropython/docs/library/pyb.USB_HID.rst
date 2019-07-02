@@ -25,9 +25,9 @@ Methods
 
    Receive data on the bus:
    
-     - ``data`` can be an integer, which is the number of bytes to receive,
-       or a mutable buffer, which will be filled with received bytes.
-     - ``timeout`` is the timeout in milliseconds to wait for the receive.
+    - ``data`` can be an integer, which is the number of bytes to receive,
+      or a mutable buffer, which will be filled with received bytes.
+    - ``timeout`` is the timeout in milliseconds to wait for the receive.
    
    Return value: if ``data`` is an integer then a new buffer of the bytes received,
    otherwise the number of bytes read into ``data`` is returned.
@@ -36,5 +36,5 @@ Methods
 
    Send data over the USB HID interface:
 
-     - ``data`` is the data to send (a tuple/list of integers, or a
-       bytearray).
+    - ``data`` is the data to send (a tuple/list of integers, or a
+      bytearray).

@@ -15,30 +15,30 @@ Python 标准库
 
 
  .. toctree::
-      :maxdepth: 1
+     :maxdepth: 1
 
-      builtins.rst
-      array.rst
-      gc.rst
-      math.rst
-      sys.rst
-      ubinascii.rst
-      ucollections.rst
-      uerrno.rst
-      uhashlib.rst
-      uheapq.rst
-      uio.rst
-      ujson.rst
-      uos.rst
-      ure.rst
-      uselect.rst
-      usocket.rst
-      ussl.rst
-      ustruct.rst
-      utime.rst
-      uzlib.rst
+     builtins.rst
+     array.rst
+     gc.rst
+     math.rst
+     sys.rst
+     ubinascii.rst
+     ucollections.rst
+     uerrno.rst
+     uhashlib.rst
+     uheapq.rst
+     uio.rst
+     ujson.rst
+     uos.rst
+     ure.rst
+     uselect.rst
+     usocket.rst
+     ussl.rst
+     ustruct.rst
+     utime.rst
+     uzlib.rst
 
 
-      
+     
 
 

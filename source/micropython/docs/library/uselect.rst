@@ -77,9 +77,9 @@ Methods
    In case of timeout, an empty list is returned.
 
    .. admonition:: Difference to CPython
-      :class: attention
+     :class: attention
 
-      Tuples returned may contain more than 2 elements as described above.
+     Tuples returned may contain more than 2 elements as described above.
 
 .. method:: poll.ipoll(timeout=-1, flags=0)
 
@@ -94,6 +94,6 @@ Methods
    behavior is useful for asynchronous I/O schedulers.
 
    .. admonition:: Difference to CPython
-      :class: attention
+     :class: attention
 
-      This function is a MicroPython extension.
+     This function is a MicroPython extension.

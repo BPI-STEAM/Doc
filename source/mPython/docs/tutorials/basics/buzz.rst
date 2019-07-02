@@ -51,7 +51,7 @@
     import music
 
     tune = ["C4:4", "D4:4", "E4:4", "C4:4", "C4:4", "D4:4", "E4:4", "C4:4",
-            "E4:4", "F4:4", "G4:8", "E4:4", "F4:4", "G4:8"]
+          "E4:4", "F4:4", "G4:8", "E4:4", "F4:4", "G4:8"]
     music.play(tune)
 
 每个音符都有一个名字（比如C＃或F），一个八度和一个持续时间。八度用数字表示〜0表示最低八度，4表示中央C，8表示您需要的高度。持续时间也表示为数字。 持续时间的值越高，持续时间越长。例如，持续时间4将持续两倍于持续时间2（依此类推）。
@@ -72,10 +72,10 @@
     import music
 
     while True:
-        for freq in range(880, 1760, 16):
-            music.pitch(freq, 20)
-        for freq in range(1760, 880, -16):
-            music.pitch(freq,20)
+       for freq in range(880, 1760, 16):
+          music.pitch(freq, 20)
+       for freq in range(1760, 880, -16):
+          music.pitch(freq,20)
 
 
 在这个实例中是如何使用 ``music.pitch`` 方法，它需要一个频率。

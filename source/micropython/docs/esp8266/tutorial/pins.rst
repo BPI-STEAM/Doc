@@ -51,7 +51,7 @@ being the pin that triggered the function.  We will make the function just print
 the pin::
 
     >>> def callback(p):
-    ...     print('pin change', p)
+    ...    print('pin change', p)
 
 Next we will create two pins and configure them as inputs::
 

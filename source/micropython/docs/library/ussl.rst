@@ -42,7 +42,7 @@ Constants
 ---------
 
 .. data:: ussl.CERT_NONE
-          ussl.CERT_OPTIONAL
-          ussl.CERT_REQUIRED
+        ussl.CERT_OPTIONAL
+        ussl.CERT_REQUIRED
 
     Supported values for *cert_reqs* parameter.

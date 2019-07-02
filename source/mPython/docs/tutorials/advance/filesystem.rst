@@ -35,7 +35,7 @@ Python编程语言包含易于使用且功能强大的方式来使用计算机�
 确保这一点的最好方法是使用如下with语句::
 
     with open('story.txt') as my_file:
-        content = my_file.read()
+       content = my_file.read()
     print(content)
 
 该 ``with`` 语句使用该 ``open`` 函数打开文件并将其分配给对象。在上面的示例中，该 ``open`` 函数打开调用的文件 ``story.txt``（显然是包含某种故事的文本文件）。
@@ -52,7 +52,7 @@ Python编程语言包含易于使用且功能强大的方式来使用计算机�
 不要。我们只是说你的代码应该是这样的::
 
     with open('some_file') as some_object:
-        # 在这段代码块中完成文件的读写
+       # 在这段代码块中完成文件的读写
 
     # 当块完成时，然后使用MicroPython
     # 自动为您关闭文件。
@@ -61,7 +61,7 @@ Python编程语言包含易于使用且功能强大的方式来使用计算机�
 默认模式是读取文件。如果要写入文件，则需要 ``open`` 按以下方式告诉函数::
 
     with open('hello.txt', 'w') as my_file:
-        my_file.write("Hello, World!")
+       my_file.write("Hello, World!")
 
 请注意，该 ``'w'`` 参数用于将 ``my_file`` 对象设置为写入模式。
 您还可以传递一个 ``'r'`` 参数来将文件对象设置为读取模式，但由于这是默认设置，因此通常会将其保留。
@@ -116,7 +116,7 @@ boot.py和main.py，这两个文件在启动时由MicroPython专门处理。 首
 例如，如果您有一个 ``hello.py`` 包含以下简单代码的文件::
 
     def say_hello(name="World"):
-        return "Hello, {}!".format(name)
+       return "Hello, {}!".format(name)
 
 你可以导入并使用这样的 ``say_hello`` 函数::
 

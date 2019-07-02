@@ -53,20 +53,20 @@ Constructors
 
 .. class:: pyb.ExtInt(pin, mode, pull, callback)
 
-   Create an ExtInt object:
-   
+    Create an ExtInt object:
+    
      - ``pin`` is the pin on which to enable the interrupt (can be a pin object or any valid pin name).
      - ``mode`` can be one of:
-       - ``ExtInt.IRQ_RISING`` - trigger on a rising edge;
-       - ``ExtInt.IRQ_FALLING`` - trigger on a falling edge;
-       - ``ExtInt.IRQ_RISING_FALLING`` - trigger on a rising or falling edge.
+        - ``ExtInt.IRQ_RISING`` - trigger on a rising edge;
+        - ``ExtInt.IRQ_FALLING`` - trigger on a falling edge;
+        - ``ExtInt.IRQ_RISING_FALLING`` - trigger on a rising or falling edge.
      - ``pull`` can be one of:
-       - ``pyb.Pin.PULL_NONE`` - no pull up or down resistors;
-       - ``pyb.Pin.PULL_UP`` - enable the pull-up resistor;
-       - ``pyb.Pin.PULL_DOWN`` - enable the pull-down resistor.
+        - ``pyb.Pin.PULL_NONE`` - no pull up or down resistors;
+        - ``pyb.Pin.PULL_UP`` - enable the pull-up resistor;
+        - ``pyb.Pin.PULL_DOWN`` - enable the pull-down resistor.
      - ``callback`` is the function to call when the interrupt triggers.  The
-       callback function must accept exactly 1 argument, which is the line that
-       triggered the interrupt.
+        callback function must accept exactly 1 argument, which is the line that
+        triggered the interrupt.
 
 
 Class methods
@@ -74,7 +74,7 @@ Class methods
 
 .. classmethod:: ExtInt.regs()
 
-   Dump the values of the EXTI registers.
+    Dump the values of the EXTI registers.
 
 
 Methods
@@ -82,20 +82,20 @@ Methods
 
 .. method:: ExtInt.disable()
 
-   Disable the interrupt associated with the ExtInt object.
-   This could be useful for debouncing.
+    Disable the interrupt associated with the ExtInt object.
+    This could be useful for debouncing.
 
 .. method:: ExtInt.enable()
 
-   Enable a disabled interrupt.
+    Enable a disabled interrupt.
 
 .. method:: ExtInt.line()
 
-   Return the line number that the pin is mapped to.
+    Return the line number that the pin is mapped to.
 
 .. method:: ExtInt.swint()
 
-   Trigger the callback from software.
+    Trigger the callback from software.
 
 
 Constants
@@ -103,12 +103,12 @@ Constants
 
 .. data:: ExtInt.IRQ_FALLING
 
-   interrupt on a falling edge
+    interrupt on a falling edge
 
 .. data:: ExtInt.IRQ_RISING
 
-   interrupt on a rising edge
+    interrupt on a rising edge
 
 .. data:: ExtInt.IRQ_RISING_FALLING
 
-   interrupt on a rising or falling edge
+    interrupt on a rising or falling edge

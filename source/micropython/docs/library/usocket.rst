@@ -74,10 +74,10 @@ Functions
    ``IPPROTO_*`` constants). Instead, *type* argument will select needed
    protocol automatically::
 
-        # Create STREAM TCP socket
-        socket(AF_INET, SOCK_STREAM)
-        # Create DGRAM UDP socket
-        socket(AF_INET, SOCK_DGRAM)
+       # Create STREAM TCP socket
+       socket(AF_INET, SOCK_STREAM)
+       # Create DGRAM UDP socket
+       socket(AF_INET, SOCK_DGRAM)
 
 .. function:: getaddrinfo(host, port, af=0, type=0, proto=0, flags=0)
 
@@ -90,66 +90,66 @@ Functions
 
    The resulting list of 5-tuples has the following structure::
 
-      (family, type, proto, canonname, sockaddr)
+     (family, type, proto, canonname, sockaddr)
 
    The following example shows how to connect to a given url::
 
-      s = usocket.socket()
-      # This assumes that if "type" is not specified, an address for
-      # SOCK_STREAM will be returned, which may be not true
-      s.connect(usocket.getaddrinfo('www.micropython.org', 80)[0][-1])
+     s = usocket.socket()
+     # This assumes that if "type" is not specified, an address for
+     # SOCK_STREAM will be returned, which may be not true
+     s.connect(usocket.getaddrinfo('www.micropython.org', 80)[0][-1])
 
    Recommended use of filtering params::
 
-      s = usocket.socket()
-      # Guaranteed to return an address which can be connect'ed to for
-      # stream operation.
-      s.connect(usocket.getaddrinfo('www.micropython.org', 80, 0, SOCK_STREAM)[0][-1])
+     s = usocket.socket()
+     # Guaranteed to return an address which can be connect'ed to for
+     # stream operation.
+     s.connect(usocket.getaddrinfo('www.micropython.org', 80, 0, SOCK_STREAM)[0][-1])
 
    .. admonition:: Difference to CPython
-      :class: attention
+     :class: attention
 
-      CPython raises a ``socket.gaierror`` exception (`OSError` subclass) in case
-      of error in this function. MicroPython doesn't have ``socket.gaierror``
-      and raises OSError directly. Note that error numbers of `getaddrinfo()`
-      form a separate namespace and may not match error numbers from
-      the :mod:`uerrno` module. To distinguish `getaddrinfo()` errors, they are
-      represented by negative numbers, whereas standard system errors are
-      positive numbers (error numbers are accessible using ``e.args[0]`` property
-      from an exception object). The use of negative values is a provisional
-      detail which may change in the future.
+     CPython raises a ``socket.gaierror`` exception (`OSError` subclass) in case
+     of error in this function. MicroPython doesn't have ``socket.gaierror``
+     and raises OSError directly. Note that error numbers of `getaddrinfo()`
+     form a separate namespace and may not match error numbers from
+     the :mod:`uerrno` module. To distinguish `getaddrinfo()` errors, they are
+     represented by negative numbers, whereas standard system errors are
+     positive numbers (error numbers are accessible using ``e.args[0]`` property
+     from an exception object). The use of negative values is a provisional
+     detail which may change in the future.
 
 .. function:: inet_ntop(af, bin_addr)
 
    Convert a binary network address *bin_addr* of the given address family *af*
    to a textual representation::
 
-        >>> usocket.inet_ntop(usocket.AF_INET, b"\x7f\0\0\1")
-        '127.0.0.1'
+       >>> usocket.inet_ntop(usocket.AF_INET, b"\x7f\0\0\1")
+       '127.0.0.1'
 
 .. function:: inet_pton(af, txt_addr)
 
    Convert a textual network address *txt_addr* of the given address family *af*
    to a binary representation::
 
-        >>> usocket.inet_pton(usocket.AF_INET, "1.2.3.4")
-        b'\x01\x02\x03\x04'
+       >>> usocket.inet_pton(usocket.AF_INET, "1.2.3.4")
+       b'\x01\x02\x03\x04'
 
 Constants
 ---------
 
 .. data:: AF_INET
-          AF_INET6
+        AF_INET6
 
    Address family types. Availability depends on a particular `MicroPython port`.
 
 .. data:: SOCK_STREAM
-          SOCK_DGRAM
+        SOCK_DGRAM
 
    Socket types.
 
 .. data:: IPPROTO_UDP
-          IPPROTO_TCP
+        IPPROTO_TCP
 
    IP protocol numbers. Availability depends on a particular `MicroPython port`.
    Note that you don't need to specify these in a call to `usocket.socket()`,
@@ -264,24 +264,24 @@ Methods
    multiple objects at the same time (and not just on sockets, but on generic
    `stream` objects which support polling). Example::
 
-        # Instead of:
-        s.settimeout(1.0)  # time in seconds
-        s.read(10)  # may timeout
+       # Instead of:
+       s.settimeout(1.0)  # time in seconds
+       s.read(10)  # may timeout
 
-        # Use:
-        poller = uselect.poll()
-        poller.register(s, uselect.POLLIN)
-        res = poller.poll(1000)  # time in milliseconds
-        if not res:
-            # s is still not ready for input, i.e. operation timed out
+       # Use:
+       poller = uselect.poll()
+       poller.register(s, uselect.POLLIN)
+       res = poller.poll(1000)  # time in milliseconds
+       if not res:
+          # s is still not ready for input, i.e. operation timed out
 
    .. admonition:: Difference to CPython
-      :class: attention
+     :class: attention
 
-      CPython raises a ``socket.timeout`` exception in case of timeout,
-      which is an `OSError` subclass. MicroPython raises an OSError directly
-      instead. If you use ``except OSError:`` to catch the exception,
-      your code will work both in MicroPython and CPython.
+     CPython raises a ``socket.timeout`` exception in case of timeout,
+     which is an `OSError` subclass. MicroPython raises an OSError directly
+     instead. If you use ``except OSError:`` to catch the exception,
+     your code will work both in MicroPython and CPython.
 
 .. method:: socket.setblocking(flag)
 
@@ -300,16 +300,16 @@ Methods
    CPython's arguments: *encoding*, *errors* and *newline* are not supported.
 
    .. admonition:: Difference to CPython
-      :class: attention
+     :class: attention
 
-      As MicroPython doesn't support buffered streams, values of *buffering*
-      parameter is ignored and treated as if it was 0 (unbuffered).
+     As MicroPython doesn't support buffered streams, values of *buffering*
+     parameter is ignored and treated as if it was 0 (unbuffered).
 
    .. admonition:: Difference to CPython
-      :class: attention
+     :class: attention
 
-      Closing the file object returned by makefile() WILL close the
-      original socket as well.
+     Closing the file object returned by makefile() WILL close the
+     original socket as well.
 
 .. method:: socket.read([size])
 
@@ -347,7 +347,7 @@ Methods
    MicroPython does NOT have this exception.
 
    .. admonition:: Difference to CPython
-        :class: attention
+       :class: attention
 
-        CPython used to have a ``socket.error`` exception which is now deprecated,
-        and is an alias of `OSError`. In MicroPython, use `OSError` directly.
+       CPython used to have a ``socket.error`` exception which is now deprecated,
+       and is an alias of `OSError`. In MicroPython, use `OSError` directly.

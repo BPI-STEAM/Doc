@@ -69,17 +69,17 @@ Tab键可以查看模块中所有成员列表。这对于找出模块或对象�
 假设您在上面的例子中导入了machine然后键入 ``.`` 再按Tab键以查看machine模块所有成员列表::
 
     >>> machine.
-    __class__       __name__        ADC             DAC
-    DEEPSLEEP       DEEPSLEEP_RESET                 EXT0_WAKE
-    EXT1_WAKE       HARD_RESET      I2C             PIN_WAKE
-    PWM             PWRON_RESET     Pin             RTC
-    SLEEP           SOFT_RESET      SPI             Signal
-    TIMER_WAKE      TOUCHPAD_WAKE   Timer           TouchPad
-    UART            ULP_WAKE        WDT             WDT_RESET
-    deepsleep       disable_irq     enable_irq      freq
-    idle            mem16           mem32           mem8
-    reset           reset_cause     sleep           time_pulse_us
-    unique_id       wake_reason
+    __class__      __name__       ADC           DAC
+    DEEPSLEEP      DEEPSLEEP_RESET              EXT0_WAKE
+    EXT1_WAKE      HARD_RESET     I2C           PIN_WAKE
+    PWM           PWRON_RESET    Pin           RTC
+    SLEEP         SOFT_RESET     SPI           Signal
+    TIMER_WAKE     TOUCHPAD_WAKE   Timer         TouchPad
+    UART          ULP_WAKE       WDT           WDT_RESET
+    deepsleep      disable_irq    enable_irq     freq
+    idle          mem16         mem32         mem8
+    reset         reset_cause    sleep         time_pulse_us
+    unique_id      wake_reason
     >>> machine.
 
 
@@ -109,8 +109,8 @@ Tab键可以查看模块中所有成员列表。这对于找出模块或对象�
 
     >>> import time
     >>> while True:
-    ...     toggle(pin)
-    ...     time.sleep_ms(500)
+    ...    toggle(pin)
+    ...    time.sleep_ms(500)
     ...    
     ...    
     ...    

@@ -10,11 +10,11 @@ I2C是用于设备之间通信的双线协议。在物理层面，它由2条线�
 
 示例::
 
-        from machine import I2C,Pin
+       from machine import I2C,Pin
 
-        i2c = I2C(scl=Pin(22), sda=Pin(23), freq=400000)          # create I2C peripheral at frequency of 400kHz
-                                                                                                                                                                                                                                                # depending on the port, extra parameters may be required
-                                                                                                                                                                                                                                                # to select the peripheral and/or pins to use
+       i2c = I2C(scl=Pin(22), sda=Pin(23), freq=400000)        # create I2C peripheral at frequency of 400kHz
+                                                                                                                                                                                                # depending on the port, extra parameters may be required
+                                                                                                                                                                                                                        # to select the peripheral and/or pins to use
 
         i2c.scan()                      # scan for slaves, returning a list of 7-bit addresses
 

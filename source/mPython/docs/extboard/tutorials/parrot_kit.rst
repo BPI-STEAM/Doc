@@ -16,20 +16,20 @@ Python 入门套装含板子、掌控拓展板parrot、RGB光环板、直流电�
 套装含:
 
 =============  =================== ====
- 名称           参数                数量
+ 名称         参数             数量
 =============  =================== ====
-板子                                1                      
-掌控拓展板                            1
-RGB光环板        24颗                 1
-超声波模块                            1
-颜色模块                              1                  
-按键模块                              1  
-RGB灯带                               1
-满天星LED灯条                         1 
-TT马达                                2
-舵机                                  1
-热敏电阻                              1  
-光敏电阻                              1  
+板子                          1                  
+掌控拓展板                       1
+RGB光环板       24颗              1
+超声波模块                       1
+颜色模块                        1               
+按键模块                        1  
+RGB灯带                         1
+满天星LED灯条                    1 
+TT马达                          2
+舵机                            1
+热敏电阻                        1  
+光敏电阻                        1  
 =============  =================== ====
 
 
@@ -44,9 +44,9 @@ TT马达                                2
 
 ::
 
-    import parrot                           # 导入parrot 模块
+    import parrot                      # 导入parrot 模块
 
-    parrot.led_on(parrot.MOTOR_1,50)        # 亮度为50%
+    parrot.led_on(parrot.MOTOR_1,50)       # 亮度为50%
  
 
 
@@ -71,10 +71,10 @@ RGB光环板
 
 使用前，先将ledstrip.py拷至板子::
 
-    from ledstrip import *                      # 导入ledstrip
-    from machine import Pin                     # 导入machine的Pin类
+    from ledstrip import *                  # 导入ledstrip
+    from machine import Pin                 # 导入machine的Pin类
 
-    strip=LedStrip(pin=Pin.P15,n=24,brightness=0.5)     # 实例LedStrip,引脚P15，灯数24，亮度50%
+    strip=LedStrip(pin=Pin.P15,n=24,brightness=0.5)    # 实例LedStrip,引脚P15，灯数24，亮度50%
 
     # 以下为不同效果演示
     print("rainbow")
@@ -99,7 +99,7 @@ RGB光环板
 
     print("meteorRain")
     for i in  range(5):
-        strip.meteorRain((100,100,100),8,60,True,20)
+       strip.meteorRain((100,100,100),8,60,True,20)
 
 blue:bit模块
 +++++++++++
@@ -114,15 +114,15 @@ blue:bit模块
 
 按键模块的 ``Do`` 连接到拓展板的 ``P5`` ；``VCC`` 、``GND`` 分别连接至板子的 ``3.3V`` 、``GND`` ::
 
-    from MicroPython import *           # 导入MicroPython模块
+    from MicroPython import *         # 导入MicroPython模块
 
-    p5=MicroPythonPin(5,PinMode.IN)     # 实例化MicroPythonPin,将按键a引脚(P5)设置为"PinMode.IN"模式
+    p5=MicroPythonPin(5,PinMode.IN)    # 实例化MicroPythonPin,将按键a引脚(P5)设置为"PinMode.IN"模式
 
     while True:
-        value=p5.read_digital()      # 读取P5引脚的数字输入
-        oled.DispChar("Button:%d" %value,30,20)   # 将读取到值显示至oled上
-        oled.show()                                  # 刷新
-        oled.fill(0)                                 # 清屏
+       value=p5.read_digital()     # 读取P5引脚的数字输入
+       oled.DispChar("Button:%d" %value,30,20)   # 将读取到值显示至oled上
+       oled.show()                            # 刷新
+       oled.fill(0)                           # 清屏
 
 
 
@@ -133,34 +133,34 @@ blue:bit模块
 
 超声波模块的 ``TRIG``、``ECHO`` 连接到拓展板的 ``SCL`` 、``SDA`` ；``VCC`` 、``GND`` 分别连接至拓展板的 ``3.3V`` 、``GND`` ::
 
-    from bluebit import *               # 导入bluebit
-    from MicroPython import *               # 导入MicroPython
+    from bluebit import *            # 导入bluebit
+    from MicroPython import *            # 导入MicroPython
 
-    ultr=Ultrasonic()                   # 实例Ultrasonic类
+    ultr=Ultrasonic()                # 实例Ultrasonic类
 
     while True:
-        data=ultr.distance()                    # 读取超声波测距值
-        oled.DispChar("超声波：%d" %data,30,20)  # oled显示数据
-        oled.show()                             # 刷新
-        oled.fill(0)                            # 清屏
+       data=ultr.distance()                # 读取超声波测距值
+       oled.DispChar("超声波：%d" %data,30,20)  # oled显示数据
+       oled.show()                        # 刷新
+       oled.fill(0)                       # 清屏
 
 颜色模块
 ~~~~~~
 
 颜色模块的 ``SCL``、``SDA`` 连接到拓展板的 ``SCL`` 、``SDA`` ；``VCC`` 、``GND`` 分别连接至拓展板的 ``3.3V`` 、``GND`` ::
 
-    from bluebit import *               # 导入bluebit
-    from MicroPython import *               # 导入MicroPython
+    from bluebit import *            # 导入bluebit
+    from MicroPython import *            # 导入MicroPython
 
-    color=Color()                       # 实例Color类
+    color=Color()                   # 实例Color类
 
     while True:
-        c=color.getRGB()                # 获取颜色的RGB值，返回(r,g,b)数组
-        oled.DispChar("R:%d,G:%d,B:%d" %(c[0],c[1],c[2]),10,20)   # oled显示数据
-        print(c)                                                # 打印RGB值
-        oled.show()                                             # 刷新
-        oled.fill(0)                                            # 清屏
-        sleep_ms(500)                                           # 延时
+       c=color.getRGB()             # 获取颜色的RGB值，返回(r,g,b)数组
+       oled.DispChar("R:%d,G:%d,B:%d" %(c[0],c[1],c[2]),10,20)   # oled显示数据
+       print(c)                                       # 打印RGB值
+       oled.show()                                    # 刷新
+       oled.fill(0)                                    # 清屏
+       sleep_ms(500)                                   # 延时
 
 
 颜色模块工作时，rgb灯会发出RGB颜色的光，将被测物体置于距颜色传感器1CM左右，通过被测物反射回来的颜色光线来测量物体的颜色。
@@ -175,14 +175,14 @@ blue:bit模块
 
 通过鳄鱼夹线将阻性元件(如光敏、热敏电阻)接到板子的 ``EXT`` 和 ``GND`` 焊盘，读取P3引脚的模拟输入::
 
-    from MicroPython import *           # 导入MicroPython模块
+    from MicroPython import *         # 导入MicroPython模块
 
-        p3=MicroPythonPin(3,PinMode.ANALOG)     # 实例化MicroPythonPin,将P3设置为"PinMode.ANALOG"模式
-        while True:
-            value=p3.read_analog()          # 读取EXT(P3)引脚模拟量
-            oled.DispChar("analog:%d" %value,30,20)
-            oled.show()
-            oled.fill(0)
+       p3=MicroPythonPin(3,PinMode.ANALOG)    # 实例化MicroPythonPin,将P3设置为"PinMode.ANALOG"模式
+       while True:
+          value=p3.read_analog()        # 读取EXT(P3)引脚模拟量
+          oled.DispChar("analog:%d" %value,30,20)
+          oled.show()
+          oled.fill(0)
 
 .. image:: ../../images/tutorials/ext.png
     :width: 180

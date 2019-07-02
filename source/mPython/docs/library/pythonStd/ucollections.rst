@@ -21,13 +21,13 @@
 
     除了支持 ``bool`` 和 ``len`` deque对象还有以下方法：
 
-     .. method:: deque.append(x)
+    .. method:: deque.append(x)
 
     在deque的右边加上x。如果启用溢出检查，并且没有剩余的空间，则会引发索引错误。
 
-     .. method:: deque.popleft()
+    .. method:: deque.popleft()
 
-     从deque的左侧移除并返回一个项目。如果没有项出现，就会引起索引错误。
+    从deque的左侧移除并返回一个项目。如果没有项出现，就会引起索引错误。
 
 
 .. function:: namedtuple(name, fields)
@@ -38,32 +38,32 @@
 
     使用示例::
 
-        from ucollections import namedtuple
+       from ucollections import namedtuple
 
-        MyTuple = namedtuple("MyTuple", ("id", "name"))
-        t1 = MyTuple(1, "foo")
-        t2 = MyTuple(2, "bar")  
-        print(t1.name)
-        assert t2.name == t2[1]
+       MyTuple = namedtuple("MyTuple", ("id", "name"))
+       t1 = MyTuple(1, "foo")
+       t2 = MyTuple(2, "bar")  
+       print(t1.name)
+       assert t2.name == t2[1]
 
 .. function:: OrderedDict(...)
 
     ``dict`` 类型子类，它能记住和保留添加的keys的顺序。当遍历有序字典时，keys/items按照添加的顺序返回::
 
-        from ucollections import OrderedDict
+       from ucollections import OrderedDict
 
-        # To make benefit of ordered keys, OrderedDict should be initialized
-        # from sequence of (key, value) pairs.
-        d = OrderedDict([("z", 1), ("a", 2)])
-        # More items can be added as usual
-        d["w"] = 5
-        d["b"] = 3
-        for k, v in d.items():
-            print(k, v)
+       # To make benefit of ordered keys, OrderedDict should be initialized
+       # from sequence of (key, value) pairs.
+       d = OrderedDict([("z", 1), ("a", 2)])
+       # More items can be added as usual
+       d["w"] = 5
+       d["b"] = 3
+       for k, v in d.items():
+          print(k, v)
 
     Output::
 
-        z 1
-        a 2
-        w 5
-        b 3
+       z 1
+       a 2
+       w 5
+       b 3

@@ -27,7 +27,7 @@
     import ntptime
 
     mywifi=wifi()
-    mywifi.connectWiFi('tang','tang123456')        
+    mywifi.connectWiFi('tang','tang123456')       
 
     print("同步前本地时间：%s" %str(time.localtime()))
     ntptime.settime()

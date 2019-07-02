@@ -5,8 +5,8 @@ Power control
 event such as an interrupt.  You would use it in the following situation::
 
     while True:
-        do_some_processing()
-        pyb.wfi()
+       do_some_processing()
+       pyb.wfi()
 
 Control the frequency using :meth:`pyb.freq`::
 

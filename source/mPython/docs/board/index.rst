@@ -2,11 +2,11 @@
 ========
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
 
-   introduction.rst
-   hardware.rst
-   drive.rst
-   MicroPythonX.rst
-   MicroPython2.rst
-   flashburn.rst
+    introduction.rst
+    hardware.rst
+    drive.rst
+    MicroPythonX.rst
+    MicroPython2.rst
+    flashburn.rst

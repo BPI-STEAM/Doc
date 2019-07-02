@@ -59,11 +59,11 @@ MicroPython支持这一启用ISR来与底层代码共享实例变量的强大技
     import pyb, micropython
     micropython.alloc_emergency_exception_buf(100)
     class Foo(object):
-        def __init__(self, timer, led):
-            self.led = led
-            timer.callback(self.cb)
-        def cb(self, tim):
-            self.led.toggle()
+       def __init__(self, timer, led):
+          self.led = led
+          timer.callback(self.cb)
+       def cb(self, tim):
+          self.led.toggle()
 
     red = Foo(pyb.Timer(4, freq=1), pyb.LED(1))
     greeen = Foo(pyb.Timer(2, freq=0.8), pyb.LED(2))
@@ -94,10 +94,10 @@ MicroPython库I/O方法通常提供使用预分配缓冲区的选项。例如，
 .. code:: python
 
     def set_volume(t, buf=bytearray(3)):
-        buf[0] = 0xa5
-        buf[1] = t >> 4
-        buf[2] = 0x5a
-        return buf
+       buf[0] = 0xa5
+       buf[1] = t >> 4
+       buf[2] = 0x5a
+       return buf
 
 首次加载函数时，编译程序实例化默认 ``buf`` 参数（通常在其所在模块被导入时）。
 
@@ -183,31 +183,31 @@ MicroPython支持任意精度的整数。介于2**30 -1和-2**30之间的值将�
     micropython.alloc_emergency_exception_buf(100)
 
     class BoundsException(Exception):
-        pass
+       pass
 
     ARRAYSIZE = const(20)
     index = 0
     data = array.array('i', 0 for x in range(ARRAYSIZE))
 
     def callback1(t):
-        global data, index
-        for x in range(5):
-            data[index] = pyb.rng() # simulate input 模拟输入
-            index += 1
-            if index >= ARRAYSIZE:
-                raise BoundsException('Array bounds exceeded')
+       global data, index
+       for x in range(5):
+          data[index] = pyb.rng() # simulate input 模拟输入
+          index += 1
+          if index >= ARRAYSIZE:
+             raise BoundsException('Array bounds exceeded')
 
     tim4 = pyb.Timer(4, freq=100, callback=callback1)
 
     for loop in range(1000):
-        if index > 0:
-            irq_state = pyb.disable_irq() # Start of critical section 临界区的开始
-            for x in range(index):
-                print(data[x])
-            index = 0
-            pyb.enable_irq(irq_state) # End of critical section 临界区的结束
-            print('loop {}'.format(loop))
-        pyb.delay(1)
+       if index > 0:
+          irq_state = pyb.disable_irq() # Start of critical section 临界区的开始
+          for x in range(index):
+             print(data[x])
+          index = 0
+          pyb.enable_irq(irq_state) # End of critical section 临界区的结束
+          print('loop {}'.format(loop))
+       pyb.delay(1)
 
     tim4.callback(None)
 
@@ -217,11 +217,11 @@ MicroPython支持任意精度的整数。介于2**30 -1和-2**30之间的值将�
 
     count = 0
     def cb(): # An interrupt callback 一个中断回调
-        count +=1
+       count +=1
     def main():
-        # Code to set up the interrupt callback omitted 设置省略的中断回调的代码
-        while True:
-            count += 1
+       # Code to set up the interrupt callback omitted 设置省略的中断回调的代码
+       while True:
+          count += 1
 
 此示例说明了故障的潜在原因。主循环中的 ``count += 1`` 行携带了一个称为"读-修改-写"的特定的竞态条件问题。这是实时系统中故障的典型原因。
 在主循环中，读取 ``t.counter`` 值，将其增加1，并写回。在少数情况下，中断发生在读取后、写入前。中断更改 ``t.counter`` ，但其改变在ISR返回时被主循环覆盖。
@@ -251,7 +251,7 @@ MicroPython支持任意精度的整数。介于2**30 -1和-2**30之间的值将�
 .. code:: python
 
     def bar():
-        foo = pyb.Timer(2, freq=4, callback=lambda t: print('.', end=''))
+       foo = pyb.Timer(2, freq=4, callback=lambda t: print('.', end=''))
 
     bar()
 

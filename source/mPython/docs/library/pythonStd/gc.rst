@@ -27,19 +27,19 @@ Functions
   返回分配的堆RAM的字节数.
 
    .. admonition:: 与CPython的区别
-      :class: attention
-      
+     :class: attention
+     
 
-      此功能是MicroPython扩展.
+     此功能是MicroPython扩展.
 
 .. function:: mem_free()
 
    返回可用堆RAM的字节数，如果此数量未知，则返回-1.
 
    .. admonition:: 与CPython的区别
-      :class: attention
+     :class: attention
 
-       此功能是MicroPython扩展.
+      此功能是MicroPython扩展.
 
 .. function:: isenabled()
 
@@ -55,6 +55,6 @@ Functions
    不带参数调用函数将返回阈值的当前值。值-1表示禁用的分配阈值。
 
    .. admonition:: 与CPython的区别
-      :class: attention
+     :class: attention
 
-      函数是MicroPython扩展。CPython具有类似的功能 - ``set_threshold()`` 但由于不同的GC实现，它的签名和语义是不同的。
+     函数是MicroPython扩展。CPython具有类似的功能 - ``set_threshold()`` 但由于不同的GC实现，它的签名和语义是不同的。

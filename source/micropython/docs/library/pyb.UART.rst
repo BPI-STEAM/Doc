@@ -13,7 +13,7 @@ UART objects can be created and initialised using::
 
     from pyb import UART
 
-    uart = UART(1, 9600)                         # init with given baudrate
+    uart = UART(1, 9600)                    # init with given baudrate
     uart.init(9600, bits=8, parity=None, stop=1) # init with given parameters
 
 Bits can be 7, 8 or 9.  Parity can be None, 0 (even) or 1 (odd).  Stop can be 1 or 2.
@@ -24,20 +24,20 @@ only 7 and 8 bits are supported.
 A UART object acts like a `stream` object and reading and writing is done
 using the standard stream methods::
 
-    uart.read(10)       # read 10 characters, returns a bytes object
-    uart.read()         # read all available characters
-    uart.readline()     # read a line
+    uart.read(10)      # read 10 characters, returns a bytes object
+    uart.read()        # read all available characters
+    uart.readline()    # read a line
     uart.readinto(buf)  # read and store into the given buffer
     uart.write('abc')   # write the 3 characters
 
 Individual characters can be read/written using::
 
-    uart.readchar()     # read 1 character and returns it as an integer
+    uart.readchar()    # read 1 character and returns it as an integer
     uart.writechar(42)  # write 1 character
 
 To check if there is anything to be read, use::
 
-    uart.any()          # returns the number of characters waiting
+    uart.any()        # returns the number of characters waiting
 
 
 *Note:* The stream functions ``read``, ``write``, etc. are new in MicroPython v1.3.4.
@@ -56,15 +56,15 @@ Constructors
 
    The physical pins of the UART busses are:
 
-     - ``UART(4)`` is on ``XA``: ``(TX, RX) = (X1, X2) = (PA0, PA1)``
-     - ``UART(1)`` is on ``XB``: ``(TX, RX) = (X9, X10) = (PB6, PB7)``
-     - ``UART(6)`` is on ``YA``: ``(TX, RX) = (Y1, Y2) = (PC6, PC7)``
-     - ``UART(3)`` is on ``YB``: ``(TX, RX) = (Y9, Y10) = (PB10, PB11)``
-     - ``UART(2)`` is on: ``(TX, RX) = (X3, X4) = (PA2, PA3)``
+    - ``UART(4)`` is on ``XA``: ``(TX, RX) = (X1, X2) = (PA0, PA1)``
+    - ``UART(1)`` is on ``XB``: ``(TX, RX) = (X9, X10) = (PB6, PB7)``
+    - ``UART(6)`` is on ``YA``: ``(TX, RX) = (Y1, Y2) = (PC6, PC7)``
+    - ``UART(3)`` is on ``YB``: ``(TX, RX) = (Y9, Y10) = (PB10, PB11)``
+    - ``UART(2)`` is on: ``(TX, RX) = (X3, X4) = (PA2, PA3)``
 
    The Pyboard Lite supports UART(1), UART(2) and UART(6) only. Pins are as above except:
 
-     - ``UART(2)`` is on: ``(TX, RX) = (X1, X2) = (PA2, PA3)``
+    - ``UART(2)`` is on: ``(TX, RX) = (X1, X2) = (PA2, PA3)``
 
 Methods
 -------
@@ -73,15 +73,15 @@ Methods
 
    Initialise the UART bus with the given parameters:
 
-     - ``baudrate`` is the clock rate.
-     - ``bits`` is the number of bits per character, 7, 8 or 9.
-     - ``parity`` is the parity, ``None``, 0 (even) or 1 (odd).
-     - ``stop`` is the number of stop bits, 1 or 2.
-     - ``flow`` sets the flow control type. Can be 0, ``UART.RTS``, ``UART.CTS``
-       or ``UART.RTS | UART.CTS``.
-     - ``timeout`` is the timeout in milliseconds to wait for writing/reading the first character.
-     - ``timeout_char`` is the timeout in milliseconds to wait between characters while writing or reading.
-     - ``read_buf_len`` is the character length of the read buffer (0 to disable).
+    - ``baudrate`` is the clock rate.
+    - ``bits`` is the number of bits per character, 7, 8 or 9.
+    - ``parity`` is the parity, ``None``, 0 (even) or 1 (odd).
+    - ``stop`` is the number of stop bits, 1 or 2.
+    - ``flow`` sets the flow control type. Can be 0, ``UART.RTS``, ``UART.CTS``
+      or ``UART.RTS | UART.CTS``.
+    - ``timeout`` is the timeout in milliseconds to wait for writing/reading the first character.
+    - ``timeout_char`` is the timeout in milliseconds to wait between characters while writing or reading.
+    - ``read_buf_len`` is the character length of the read buffer (0 to disable).
 
    This method will raise an exception if the baudrate could not be set within
    5% of the desired value.  The minimum baudrate is dictated by the frequency
@@ -163,7 +163,7 @@ Constants
 ---------
 
 .. data:: UART.RTS
-          UART.CTS
+        UART.CTS
 
    to select the flow control type.
 

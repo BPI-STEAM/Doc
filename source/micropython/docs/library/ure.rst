@@ -155,8 +155,8 @@ Compiled regular expression. Instances of this class are created using
 `ure.compile()`.
 
 .. method:: regex.match(string)
-            regex.search(string)
-            regex.sub(replace, string, count=0, flags=0)
+          regex.search(string)
+          regex.sub(replace, string, count=0, flags=0)
 
    Similar to the module-level functions :meth:`match`, :meth:`search`
    and :meth:`sub`.
@@ -187,7 +187,7 @@ to the replacement function in `sub()`.
    Note: availability of this method depends on `MicroPython port`.
 
 .. method:: match.start([index])
-            match.end([index])
+          match.end([index])
 
    Return the index in the original string of the start or end of the
    substring group that was matched.  *index* defaults to the entire

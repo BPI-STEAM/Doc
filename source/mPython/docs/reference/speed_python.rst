@@ -70,9 +70,9 @@ MicroPython库通常为预分配的缓冲区提供支持。例如，支持流接
 .. code:: python
 
     ba = bytearray(10000)  # big array
-    func(ba[30:2000])      # a copy is passed, ~2K new allocation 传递一个副本，~2K新分配
+    func(ba[30:2000])     # a copy is passed, ~2K new allocation 传递一个副本，~2K新分配
     mv = memoryview(ba)    # small object is allocated 分配小对象
-    func(mv[30:2000])      # a pointer to memory is passed 传递指向内存的指针
+    func(mv[30:2000])     # a pointer to memory is passed 传递指向内存的指针
 
 `memoryview` 仅可应用于支持缓冲区协议的对象-这包括数组但不包括列表。小提示：memoryview对象是有用的，
 它保留了原始的缓冲区对象。因此，memoryview并非万能的灵丹妙药。例如，在上述示例中，若您用10K缓冲区完成，
@@ -95,14 +95,14 @@ MicroPython库通常为预分配的缓冲区提供支持。例如，支持流接
 .. code:: python
 
     def timed_function(f, *args, **kwargs):
-        myname = str(f).split(' ')[1]
-        def new_func(*args, **kwargs):
-            t = utime.ticks_us()
-            result = f(*args, **kwargs)
-            delta = utime.ticks_diff(utime.ticks_us(), t)
-            print('Function {} Time = {:6.3f}ms'.format(myname, delta/1000))
-            return result
-        return new_func
+       myname = str(f).split(' ')[1]
+       def new_func(*args, **kwargs):
+          t = utime.ticks_us()
+          result = f(*args, **kwargs)
+          delta = utime.ticks_diff(utime.ticks_us(), t)
+          print('Function {} Time = {:6.3f}ms'.format(myname, delta/1000))
+          return result
+       return new_func
 
 MicroPython代码改进
 -----------------------------
@@ -124,12 +124,12 @@ MicroPython提供了一个 ``const()`` 声明。 其运行方式与C语言中的
 .. code:: python
 
     class foo(object):
-        def __init__(self):
-            ba = bytearray(100)
-        def bar(self, obj_display):
-            ba_ref = self.ba
-            fb = obj_display.framebuffer
-            # iterative code using these two objects 使用这两个对象的代码
+       def __init__(self):
+          ba = bytearray(100)
+       def bar(self, obj_display):
+          ba_ref = self.ba
+          fb = obj_display.framebuffer
+          # iterative code using these two objects 使用这两个对象的代码
 
 这就避免了在方法 ``bar()`` 中重复查找 ``self.ba`` 和 ``obj_display.framebuffer`` 。
 
@@ -155,8 +155,8 @@ MicroPython提供了一个 ``const()`` 声明。 其运行方式与C语言中的
 
     @micropython.native
     def foo(self, arg):
-        buf = self.linebuf # Cached object 缓存对象
-        # code
+       buf = self.linebuf # Cached object 缓存对象
+       # code
 
 目前本地代码发送器仍然存在一些局限性。
 
@@ -178,7 +178,7 @@ Viper代码发送器
 
     @micropython.viper
     def foo(self, arg: int) -> int:
-        # code
+       # code
 
 如上所述，使用Python提示类型来辅助Viper优化器大有益处。类型提示提供参数的数据类型和返回值的信息；
 这些是在此正式定义的标准Python语言特性 `PEP0484 <https://www.python.org/dev/peps/pep-0484/>`_.
@@ -209,10 +209,10 @@ Python程序员可能不熟悉指针的概念。 它与Python `memoryview` 对�
 
     @micropython.viper
     def foo(self, arg: int) -> int:
-        buf = ptr8(self.linebuf) # self.linebuf is a bytearray or bytes object 是一个字节数组或一个字节对象
-        for x in range(20, 30):
-            bar = buf[x] # Access a data item through the pointer 通过指针访问数据项目
-            # code omitted 省略的代码
+       buf = ptr8(self.linebuf) # self.linebuf is a bytearray or bytes object 是一个字节数组或一个字节对象
+       for x in range(20, 30):
+          bar = buf[x] # Access a data item through the pointer 通过指针访问数据项目
+          # code omitted 省略的代码
 
 在此示例中，编译器"知道" ``buf`` 为字节组的地址；其可发送代码，以在运行时快速计算 ``buf[x]`` 的地址。
 在使用转换将对象转换为Viper本机类型时，应在函数启动时执行，而不是在关键计时回路中执行，因为转换操作可能需要数微秒。转换要求如下:
@@ -233,9 +233,9 @@ Python程序员可能不熟悉指针的概念。 它与Python `memoryview` 对�
     BIT0 = const(1)
     @micropython.viper
     def toggle_n(n: int):
-        odr = ptr16(stm.GPIOA + stm.GPIO_ODR)
-        for _ in range(n):
-            odr[0] ^= BIT0
+       odr = ptr16(stm.GPIOA + stm.GPIO_ODR)
+       for _ in range(n):
+          odr[0] ^= BIT0
 
 这三个代码发送器的详细技术说明，请参见Kickstarter的 `Note 1 <https://www.kickstarter.com/projects/214379695/micro-python-python-for-microcontrollers/posts/664832>`_
 和 `Note 2 <https://www.kickstarter.com/projects/214379695/micro-python-python-for-microcontrollers/posts/665145>`_

@@ -57,65 +57,65 @@ MicroPython板子载3颗WS2812灯珠，WS2812是一种集成了电流控制芯�
 
 
     def wheel(pos):
-        # 通过改变在0和255之间的每个颜色参数产生彩虹色光谱
-        # Input a value 0 to 255 to get a color value.
-        # The colours are a transition r - g - b - back to r.
-        if pos < 0 or pos > 255:
-            r = g = b = 0
-        elif pos < 85:
-            r = int(pos * 3)
-            g = int(255 - pos*3)
-            b = 0
-        elif pos < 170:
-            pos -= 85
-            r = int(255 - pos*3)
-            g = 0
-            b = int(pos*3)
-        else:
-            pos -= 170
-            r = 0
-            g = int(pos*3)
-            b = int(255 - pos*3)
-        return (r, g, b) 
+       # 通过改变在0和255之间的每个颜色参数产生彩虹色光谱
+       # Input a value 0 to 255 to get a color value.
+       # The colours are a transition r - g - b - back to r.
+       if pos < 0 or pos > 255:
+          r = g = b = 0
+       elif pos < 85:
+          r = int(pos * 3)
+          g = int(255 - pos*3)
+          b = 0
+       elif pos < 170:
+          pos -= 85
+          r = int(255 - pos*3)
+          g = 0
+          b = int(pos*3)
+       else:
+          pos -= 170
+          r = 0
+          g = int(pos*3)
+          b = int(255 - pos*3)
+       return (r, g, b) 
 
     def cycle(np,r,g,b,wait=20):
-        # 循环效果,有一个像素在所有灯带位置上运行，而其他像素关闭。
-        for i in range(4 * np.n):
-            for j in range(np.n):
-                np[j] = (0, 0, 0)
-            np[i % np.n] = (r, g, b)
-            np.write()
-            sleep_ms(wait)
+       # 循环效果,有一个像素在所有灯带位置上运行，而其他像素关闭。
+       for i in range(4 * np.n):
+          for j in range(np.n):
+             np[j] = (0, 0, 0)
+          np[i % np.n] = (r, g, b)
+          np.write()
+          sleep_ms(wait)
 
 
     def bounce(np,r,g,b,wait=20):
-        # 弹跳效果,等待时间决定了弹跳效果的速度
-        n=np.n
-        for i in range(4 * n):
-            for j in range(n):
-                np[j] = (r, g, b)
-            if (i // n) % 2 == 0:
-                np[i % n] = (0, 0, 0)
-            else:
-                np[n - 1 - (i % n)] = (0, 0, 0)
-            np.write()
-            sleep_ms(wait)
+       # 弹跳效果,等待时间决定了弹跳效果的速度
+       n=np.n
+       for i in range(4 * n):
+          for j in range(n):
+             np[j] = (r, g, b)
+          if (i // n) % 2 == 0:
+             np[i % n] = (0, 0, 0)
+          else:
+             np[n - 1 - (i % n)] = (0, 0, 0)
+          np.write()
+          sleep_ms(wait)
 
 
     def rainbow_cycle(np,wait_us):
-        # 彩虹效果
-        n=np.n
-        for j in range(255):
-            for i in range(n):
-                pixel_index = (i * 256 // n) + j
-                np[i] = wheel(pixel_index & 255)
-            np.write()
-            sleep_us(wait_us)
+       # 彩虹效果
+       n=np.n
+       for j in range(255):
+          for i in range(n):
+             pixel_index = (i * 256 // n) + j
+             np[i] = wheel(pixel_index & 255)
+          np.write()
+          sleep_us(wait_us)
 
     while True:
-        cycle(np,50,50,50,wait=20)
-        bounce(np,50,0,0,wait=20)
-        rainbow_cycle(np,20)
+       cycle(np,50,50,50,wait=20)
+       bounce(np,50,0,0,wait=20)
+       rainbow_cycle(np,20)
 
 
 .. figure:: ../../images/tutorials/neopixel_control_leds_cycle.png

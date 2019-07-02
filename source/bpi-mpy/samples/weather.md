@@ -20,7 +20,7 @@ help(“modules”)
 ### 二、准备天气api
 
 - 1.这里我用到了国家气象局的API
-`http://www.weather.com.cn/data/cityinfo/101200801.html   # 101200801为荆州市`
+`http://www.weather.com.cn/data/cityinfo/101200801.html    # 101200801为荆州市`
 各城市ID详见：http://mobile.weather.com.cn/js/citylist.xml
 - 2.请求返回Json数据样列
 ```python

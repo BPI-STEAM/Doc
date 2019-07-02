@@ -20,7 +20,7 @@ Let's start with the simplest example::
 
     @micropython.asm_thumb
     def fun():
-        movw(r0, 42)
+       movw(r0, 42)
 
 You can enter this in a script or at the REPL.  This function takes no
 arguments and returns the number 42.  ``r0`` is a register, and the value
@@ -37,9 +37,9 @@ For something a bit more complicated, let's turn on an LED::
 
     @micropython.asm_thumb
     def led_on():
-        movwt(r0, stm.GPIOA)
-        movw(r1, 1 << 13)
-        strh(r1, [r0, stm.GPIO_BSRRL])
+       movwt(r0, stm.GPIOA)
+       movw(r1, 1 << 13)
+       strh(r1, [r0, stm.GPIO_BSRRL])
 
 This code uses a few new concepts:
 
@@ -72,7 +72,7 @@ Here is a function that adds its arguments::
 
     @micropython.asm_thumb
     def asm_add(r0, r1):
-        add(r0, r0, r1)
+       add(r0, r0, r1)
 
 This performs the computation ``r0 = r0 + r1``.  Since the result is put
 in ``r0``, that is what is returned.  Try ``asm_add(1, 2)``, it should return
@@ -88,41 +88,41 @@ The following example flashes the green LED.  It flashes it ``r0`` times. ::
 
     @micropython.asm_thumb
     def flash_led(r0):
-        # get the GPIOA address in r1
-        movwt(r1, stm.GPIOA)
+       # get the GPIOA address in r1
+       movwt(r1, stm.GPIOA)
 
-        # get the bit mask for PA14 (the pin LED #2 is on)
-        movw(r2, 1 << 14)
+       # get the bit mask for PA14 (the pin LED #2 is on)
+       movw(r2, 1 << 14)
 
-        b(loop_entry)
+       b(loop_entry)
 
-        label(loop1)
+       label(loop1)
 
-        # turn LED on
-        strh(r2, [r1, stm.GPIO_BSRRL])
+       # turn LED on
+       strh(r2, [r1, stm.GPIO_BSRRL])
 
-        # delay for a bit
-        movwt(r4, 5599900)
-        label(delay_on)
-        sub(r4, r4, 1)
-        cmp(r4, 0)
-        bgt(delay_on)
+       # delay for a bit
+       movwt(r4, 5599900)
+       label(delay_on)
+       sub(r4, r4, 1)
+       cmp(r4, 0)
+       bgt(delay_on)
 
-        # turn LED off
-        strh(r2, [r1, stm.GPIO_BSRRH])
+       # turn LED off
+       strh(r2, [r1, stm.GPIO_BSRRH])
 
-        # delay for a bit
-        movwt(r4, 5599900)
-        label(delay_off)
-        sub(r4, r4, 1)
-        cmp(r4, 0)
-        bgt(delay_off)
+       # delay for a bit
+       movwt(r4, 5599900)
+       label(delay_off)
+       sub(r4, r4, 1)
+       cmp(r4, 0)
+       bgt(delay_off)
 
-        # loop r0 times
-        sub(r0, r0, 1)
-        label(loop_entry)
-        cmp(r0, 0)
-        bgt(loop1)
+       # loop r0 times
+       sub(r0, r0, 1)
+       label(loop_entry)
+       cmp(r0, 0)
+       bgt(loop1)
 
 Further reading
 ---------------

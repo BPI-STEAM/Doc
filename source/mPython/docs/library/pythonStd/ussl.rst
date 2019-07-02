@@ -37,7 +37,7 @@ Functions
 ---------
 
 .. data:: ssl.CERT_NONE
-          ssl.CERT_OPTIONAL
-          ssl.CERT_REQUIRED
+        ssl.CERT_OPTIONAL
+        ssl.CERT_REQUIRED
 
     cert_reqs参数支持的值。

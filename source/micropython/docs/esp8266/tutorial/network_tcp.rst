@@ -41,8 +41,8 @@ Using the IP address we can make a socket and connect to the server::
 Now that we are connected we can download and display the data::
 
     >>> while True:
-    ...     data = s.recv(500)
-    ...     print(str(data, 'utf8'), end='')
+    ...    data = s.recv(500)
+    ...    print(str(data, 'utf8'), end='')
     ...
  
 When this loop executes it should start showing the animation (use ctrl-C to
@@ -61,18 +61,18 @@ of the request you need to specify the page to retrieve.
 Let's define a function that can download and print a URL::
 
     def http_get(url):
-        _, _, host, path = url.split('/', 3)
-        addr = socket.getaddrinfo(host, 80)[0][-1]
-        s = socket.socket()
-        s.connect(addr)
-        s.send(bytes('GET /%s HTTP/1.0\r\nHost: %s\r\n\r\n' % (path, host), 'utf8'))
-        while True:
-            data = s.recv(100)
-            if data:
-                print(str(data, 'utf8'), end='')
-            else:
-                break
-        s.close()
+       _, _, host, path = url.split('/', 3)
+       addr = socket.getaddrinfo(host, 80)[0][-1]
+       s = socket.socket()
+       s.connect(addr)
+       s.send(bytes('GET /%s HTTP/1.0\r\nHost: %s\r\n\r\n' % (path, host), 'utf8'))
+       while True:
+          data = s.recv(100)
+          if data:
+             print(str(data, 'utf8'), end='')
+          else:
+             break
+       s.close()
 
 Make sure that you import the socket module before running this function.  Then
 you can try::
@@ -92,10 +92,10 @@ that contains a table with the state of all the GPIO pins::
 
     html = """<!DOCTYPE html>
     <html>
-        <head> <title>ESP8266 Pins</title> </head>
-        <body> <h1>ESP8266 Pins</h1>
-            <table border="1"> <tr><th>Pin</th><th>Value</th></tr> %s </table>
-        </body>
+       <head> <title>ESP8266 Pins</title> </head>
+       <body> <h1>ESP8266 Pins</h1>
+          <table border="1"> <tr><th>Pin</th><th>Value</th></tr> %s </table>
+       </body>
     </html>
     """
 
@@ -109,14 +109,14 @@ that contains a table with the state of all the GPIO pins::
     print('listening on', addr)
 
     while True:
-        cl, addr = s.accept()
-        print('client connected from', addr)
-        cl_file = cl.makefile('rwb', 0)
-        while True:
-            line = cl_file.readline()
-            if not line or line == b'\r\n':
-                break
-        rows = ['<tr><td>%s</td><td>%d</td></tr>' % (str(p), p.value()) for p in pins]
-        response = html % '\n'.join(rows)
-        cl.send(response)
-        cl.close()
+       cl, addr = s.accept()
+       print('client connected from', addr)
+       cl_file = cl.makefile('rwb', 0)
+       while True:
+          line = cl_file.readline()
+          if not line or line == b'\r\n':
+             break
+       rows = ['<tr><td>%s</td><td>%d</td></tr>' % (str(p), p.value()) for p in pins]
+       response = html % '\n'.join(rows)
+       cl.send(response)
+       cl.close()

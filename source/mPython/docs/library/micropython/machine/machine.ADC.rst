@@ -18,9 +18,9 @@
 
 示例::
 
-      from machine import ADC, Pin
+     from machine import ADC, Pin
 
-      adc = ADC(Pin(33))      # create an ADC object
+     adc = ADC(Pin(33))     # create an ADC object
 
 
 方法
@@ -35,27 +35,27 @@
 
 .. method:: ADC.atten(db)
 
-      设置衰减比（即满量程的电压，比如11db满量程时电压为3.3V）,默认为``ADC.ATTIN_0DB``。
+     设置衰减比（即满量程的电压，比如11db满量程时电压为3.3V）,默认为``ADC.ATTIN_0DB``。
 
-       - ``db``：衰减比, ``ADC.ATTIN_0DB`` 、``ADC.ATTN_2_5_DB``、``ADC.ATTN_6DB``、``ADC.ATTN_11DB``
+      - ``db``：衰减比, ``ADC.ATTIN_0DB`` 、``ADC.ATTN_2_5_DB``、``ADC.ATTN_6DB``、``ADC.ATTN_11DB``
 
 
 .. method:: ADC.width(bit)
 
-      设置数据宽度
+     设置数据宽度
 
-       - ``bit``： ``ADC.WIDTH_9BIT`` 、 ``ADC.WIDTH_10BIT`` 、 ``ADC.WIDTH_11BIT`` 、 ``ADC.WIDTH_12BIT``
+      - ``bit``： ``ADC.WIDTH_9BIT`` 、 ``ADC.WIDTH_10BIT`` 、 ``ADC.WIDTH_11BIT`` 、 ``ADC.WIDTH_12BIT``
 
 
 
 示例::
 
-      from machine import ADC, Pin
+     from machine import ADC, Pin
 
-      adc = ADC(Pin(34))      # create an ADC object
-      adc.atten(adc.ATTN_11DB)   # set 3.3V Range
-      x = adc.read()
-      print(x)
+     adc = ADC(Pin(34))     # create an ADC object
+     adc.atten(adc.ATTN_11DB)   # set 3.3V Range
+     x = adc.read()
+     print(x)
 
 常量
 ---------

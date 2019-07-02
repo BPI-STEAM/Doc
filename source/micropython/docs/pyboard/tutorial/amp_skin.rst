@@ -30,7 +30,7 @@ To set the volume, define the following function::
 
     import pyb
     def volume(val):
-        pyb.I2C(1, pyb.I2C.MASTER).mem_write(val, 46, 0)
+       pyb.I2C(1, pyb.I2C.MASTER).mem_write(val, 46, 0)
 
 Then you can do::
 
@@ -46,7 +46,7 @@ For example::
     # create a buffer containing a sine-wave
     buf = bytearray(100)
     for i in range(len(buf)):
-        buf[i] = 128 + int(127 * math.sin(2 * math.pi * i / len(buf)))
+       buf[i] = 128 + int(127 * math.sin(2 * math.pi * i / len(buf)))
 
     # output the sine-wave at 400Hz
     dac = DAC(1)
@@ -83,14 +83,14 @@ play 8-bit wave files with up to 16kHz sampling::
     dac = DAC(1)
 
     def play(filename):
-        f = wave.open(filename, 'r')
-        total_frames = f.getnframes()
-        framerate = f.getframerate()
+       f = wave.open(filename, 'r')
+       total_frames = f.getnframes()
+       framerate = f.getframerate()
 
-        for position in range(0, total_frames, framerate):
-            f.setpos(position)
-            dac.write_timed(f.readframes(framerate), framerate)
-            delay(1000)
+       for position in range(0, total_frames, framerate):
+          f.setpos(position)
+          dac.write_timed(f.readframes(framerate), framerate)
+          delay(1000)
 
 This function reads one second worth of data and sends it to DAC.  It then waits
 one second and moves the file cursor to the new position to read the next second

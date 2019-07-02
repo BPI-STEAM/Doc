@@ -167,8 +167,8 @@ print some text instead of calling toggle, to see the effect)::
 
     >>> import time
     >>> while True:
-    ...     toggle(pin)
-    ...     time.sleep_ms(500)
+    ...    toggle(pin)
+    ...    time.sleep_ms(500)
     ...    
     ...    
     ...    

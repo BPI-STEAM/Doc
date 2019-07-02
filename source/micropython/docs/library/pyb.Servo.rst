@@ -16,8 +16,8 @@ Example usage::
     s1 = pyb.Servo(1)   # create a servo object on position X1
     s2 = pyb.Servo(2)   # create a servo object on position X2
 
-    s1.angle(45)        # move servo 1 to 45 degrees
-    s2.angle(0)         # move servo 2 to 0 degrees
+    s1.angle(45)       # move servo 1 to 45 degrees
+    s2.angle(0)        # move servo 2 to 0 degrees
 
     # move servo1 and servo2 synchronously, taking 1500ms
     s1.angle(-60, 1500)
@@ -44,10 +44,10 @@ Methods
 
    If arguments are given, this function sets the angle of the servo:
 
-     - ``angle`` is the angle to move to in degrees.
-     - ``time`` is the number of milliseconds to take to get to the specified
-       angle.  If omitted, then the servo moves as quickly as possible to its
-       new position.
+    - ``angle`` is the angle to move to in degrees.
+    - ``time`` is the number of milliseconds to take to get to the specified
+      angle.  If omitted, then the servo moves as quickly as possible to its
+      new position.
 
 .. method:: Servo.speed([speed, time=0])
 
@@ -55,9 +55,9 @@ Methods
 
    If arguments are given, this function sets the speed of the servo:
 
-     - ``speed`` is the speed to change to, between -100 and 100.
-     - ``time`` is the number of milliseconds to take to get to the specified
-       speed.  If omitted, then the servo accelerates as quickly as possible.
+    - ``speed`` is the speed to change to, between -100 and 100.
+    - ``time`` is the number of milliseconds to take to get to the specified
+      speed.  If omitted, then the servo accelerates as quickly as possible.
 
 .. method:: Servo.pulse_width([value])
 
@@ -73,8 +73,8 @@ Methods
 
    If arguments are given, this function sets the timing calibration:
 
-     - ``pulse_min`` is the minimum allowed pulse width.
-     - ``pulse_max`` is the maximum allowed pulse width.
-     - ``pulse_centre`` is the pulse width corresponding to the centre/zero position.
-     - ``pulse_angle_90`` is the pulse width corresponding to 90 degrees.
-     - ``pulse_speed_100`` is the pulse width corresponding to a speed of 100.
+    - ``pulse_min`` is the minimum allowed pulse width.
+    - ``pulse_max`` is the maximum allowed pulse width.
+    - ``pulse_centre`` is the pulse width corresponding to the centre/zero position.
+    - ``pulse_angle_90`` is the pulse width corresponding to 90 degrees.
+    - ``pulse_speed_100`` is the pulse width corresponding to a speed of 100.

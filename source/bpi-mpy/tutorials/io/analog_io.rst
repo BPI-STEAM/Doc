@@ -24,11 +24,11 @@
 
 以下是使用P0引脚读取模拟输入::
 
-    from MicroPython import *           # 导入MicroPython模块
+    from MicroPython import *            # 导入MicroPython模块
 
     p0=MicroPythonPin(0,PinMode.ANALOG)     # 实例化MicroPythonPin,将P0设置为"PinMode.ANALOG"模式
     while True:
-        value=p0.read_analog()          # 读取P0引脚模拟量
+        value=p0.read_analog()           # 读取P0引脚模拟量
         oled.DispChar("analog:%d" %value,30,20)
         oled.show()
         oled.fill(0)
@@ -62,14 +62,14 @@ EXT鳄鱼夹
 
 EXT连接是板子的P3引脚::
 
-    from MicroPython import *           # 导入MicroPython模块
+    from MicroPython import *            # 导入MicroPython模块
 
         p3=MicroPythonPin(3,PinMode.ANALOG)     # 实例化MicroPythonPin,将P3设置为"PinMode.ANALOG"模式
         while True:
-            value=p3.read_analog()          # 读取EXT(P3)引脚模拟量
-            oled.DispChar("analog:%d" %value,30,20)
-            oled.show()
-            oled.fill(0)
+             value=p3.read_analog()           # 读取EXT(P3)引脚模拟量
+             oled.DispChar("analog:%d" %value,30,20)
+             oled.show()
+             oled.fill(0)
 
 .. image:: ../../images/tutorials/ext.png
     :width: 180
@@ -88,11 +88,11 @@ EXT连接是板子的P3引脚::
 
 输出某电压的PWM信号::
 
-    from MicroPython import *           # 导入MicroPython模块
+    from MicroPython import *            # 导入MicroPython模块
 
     p0=MicroPythonPin(0,PinMode.PWM)     # 实例化MicroPythonPin,将P0设置为"PinMode.PWM"模式
 
-    voltage=2.0                      # 电压2V
+    voltage=2.0                        # 电压2V
     p0.write_analog(int(voltage/3.3*1023))    #计算对应电压PWM的占空比    
 
 .. Note::

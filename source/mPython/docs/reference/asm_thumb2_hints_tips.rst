@@ -44,7 +44,7 @@
         bl(DOFIB)
         mov(r1, r0) # r1 = fib(n -1)
         sub(r0, r2, 1)
-        bl(DOFIB)   # r0 = fib(n -2)
+        bl(DOFIB)    # r0 = fib(n -2)
         add(r0, r0, r1)
         label(FIBDONE)
         pop({r1, r2, lr})
@@ -144,9 +144,9 @@ MicroPython将对象实例的地址作为第一个参数传输给类方法。通
 ::
 
     class foo:
-      @staticmethod
-      @micropython.asm_thumb
-      def bar(r0):
+       @staticmethod
+       @micropython.asm_thumb
+       def bar(r0):
         add(r0, r0, r0)
 
 使用不支持的指令

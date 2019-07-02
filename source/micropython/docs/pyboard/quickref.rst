@@ -11,23 +11,23 @@ or `PYBLITEv1.0 <http://micropython.org/resources/pyblitev10-pinout.jpg>`__.
 
 .. only:: not latex
 
-   .. image:: http://micropython.org/resources/pybv11-pinout.jpg
-      :alt: PYBv1.1 pinout
-      :width: 700px
+    .. image:: http://micropython.org/resources/pybv11-pinout.jpg
+       :alt: PYBv1.1 pinout
+       :width: 700px
 
 .. only:: latex
 
-   .. image:: http://micropython.org/resources/pybv11-pinout-800px.jpg
-      :alt: PYBv1.1 pinout
+    .. image:: http://micropython.org/resources/pybv11-pinout-800px.jpg
+       :alt: PYBv1.1 pinout
 
 Below is a quick reference for the pyboard.  If it is your first time working with
 this board please consider reading the following sections first:
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
 
-   general.rst
-   tutorial/index.rst
+    general.rst
+    tutorial/index.rst
 
 General board control
 ---------------------
@@ -49,9 +49,9 @@ Use the :mod:`time <utime>` module::
 
     import time
 
-    time.sleep(1)           # sleep for 1 second
-    time.sleep_ms(500)      # sleep for 500 milliseconds
-    time.sleep_us(10)       # sleep for 10 microseconds
+    time.sleep(1)            # sleep for 1 second
+    time.sleep_ms(500)       # sleep for 500 milliseconds
+    time.sleep_us(10)        # sleep for 10 microseconds
     start = time.ticks_ms() # get value of millisecond counter
     delta = time.ticks_diff(time.ticks_ms(), start) # compute time difference
 
@@ -207,15 +207,15 @@ eg ``I2C(1)``.  Software I2C is also available by explicitly specifying the
 
     from machine import I2C
 
-    i2c = I2C('X', freq=400000)                 # create hardware I2c object
+    i2c = I2C('X', freq=400000)                  # create hardware I2c object
     i2c = I2C(scl='X1', sda='X2', freq=100000)  # create software I2C object
 
-    i2c.scan()                          # returns list of slave addresses
-    i2c.writeto(0x42, 'hello')          # write 5 bytes to slave with address 0x42
-    i2c.readfrom(0x42, 5)               # read 5 bytes from slave
+    i2c.scan()                            # returns list of slave addresses
+    i2c.writeto(0x42, 'hello')           # write 5 bytes to slave with address 0x42
+    i2c.readfrom(0x42, 5)                # read 5 bytes from slave
 
     i2c.readfrom_mem(0x42, 0x10, 2)     # read 2 bytes from slave 0x42, slave memory 0x10
-    i2c.writeto_mem(0x42, 0x10, 'xy')   # write 2 bytes to slave 0x42, slave memory 0x10
+    i2c.writeto_mem(0x42, 0x10, 'xy')    # write 2 bytes to slave 0x42, slave memory 0x10
 
 Note: for legacy I2C support see :ref:`pyb.I2C <pyb.I2C>`.
 
@@ -228,8 +228,8 @@ See :ref:`pyb.CAN <pyb.CAN>`. ::
 
     can = CAN(1, CAN.LOOPBACK)
     can.setfilter(0, CAN.LIST16, 0, (123, 124, 125, 126))
-    can.send('message!', 123)   # send a message with id 123
-    can.recv(0)                 # receive message on FIFO 0
+    can.send('message!', 123)    # send a message with id 123
+    can.recv(0)                  # receive message on FIFO 0
 
 Internal accelerometer
 ----------------------

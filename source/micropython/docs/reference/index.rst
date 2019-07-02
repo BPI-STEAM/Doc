@@ -17,12 +17,12 @@ This chapter describes features and peculiarities of MicroPython
 implementation and the best practices to use them.
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
 
-   glossary.rst
-   repl.rst
-   isr_rules.rst
-   speed_python.rst
-   constrained.rst
-   packages.rst
-   asm_thumb2_index.rst
+    glossary.rst
+    repl.rst
+    isr_rules.rst
+    speed_python.rst
+    constrained.rst
+    packages.rst
+    asm_thumb2_index.rst

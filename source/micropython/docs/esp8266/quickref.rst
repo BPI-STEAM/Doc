@@ -13,10 +13,10 @@ Below is a quick reference for ESP8266-based boards.  If it is your first time
 working with this board please consider reading the following sections first:
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
 
-   general.rst
-   tutorial/index.rst
+    general.rst
+    tutorial/index.rst
 
 Installing MicroPython
 ----------------------
@@ -36,15 +36,15 @@ The :mod:`machine` module::
 
     import machine
 
-    machine.freq()          # get the current frequency of the CPU
+    machine.freq()           # get the current frequency of the CPU
     machine.freq(160000000) # set the CPU frequency to 160 MHz
 
 The :mod:`esp` module::
 
     import esp
 
-    esp.osdebug(None)       # turn off vendor O/S debugging messages
-    esp.osdebug(0)          # redirect vendor O/S debugging messages to UART(0)
+    esp.osdebug(None)        # turn off vendor O/S debugging messages
+    esp.osdebug(0)           # redirect vendor O/S debugging messages to UART(0)
 
 Networking
 ----------
@@ -54,15 +54,15 @@ The :mod:`network` module::
     import network
 
     wlan = network.WLAN(network.STA_IF) # create station interface
-    wlan.active(True)       # activate the interface
-    wlan.scan()             # scan for access points
-    wlan.isconnected()      # check if the station is connected to an AP
+    wlan.active(True)        # activate the interface
+    wlan.scan()              # scan for access points
+    wlan.isconnected()       # check if the station is connected to an AP
     wlan.connect('essid', 'password') # connect to an AP
-    wlan.config('mac')      # get the interface's MAC adddress
-    wlan.ifconfig()         # get the interface's IP/netmask/gw/DNS addresses
+    wlan.config('mac')       # get the interface's MAC adddress
+    wlan.ifconfig()          # get the interface's IP/netmask/gw/DNS addresses
 
     ap = network.WLAN(network.AP_IF) # create access-point interface
-    ap.active(True)         # activate the interface
+    ap.active(True)          # activate the interface
     ap.config(essid='ESP-AP') # set the ESSID of the access point
 
 A useful function for connecting to your local WiFi network is::
@@ -72,10 +72,10 @@ A useful function for connecting to your local WiFi network is::
         wlan = network.WLAN(network.STA_IF)
         wlan.active(True)
         if not wlan.isconnected():
-            print('connecting to network...')
-            wlan.connect('essid', 'password')
-            while not wlan.isconnected():
-                pass
+             print('connecting to network...')
+             wlan.connect('essid', 'password')
+             while not wlan.isconnected():
+                 pass
         print('network config:', wlan.ifconfig())
 
 Once the network is established the :mod:`socket <usocket>` module can be used
@@ -88,9 +88,9 @@ Use the :mod:`time <utime>` module::
 
     import time
 
-    time.sleep(1)           # sleep for 1 second
-    time.sleep_ms(500)      # sleep for 500 milliseconds
-    time.sleep_us(10)       # sleep for 10 microseconds
+    time.sleep(1)            # sleep for 1 second
+    time.sleep_ms(500)       # sleep for 500 milliseconds
+    time.sleep_us(10)        # sleep for 10 microseconds
     start = time.ticks_ms() # get millisecond counter
     delta = time.ticks_diff(time.ticks_ms(), start) # compute time difference
 
@@ -116,12 +116,12 @@ Use the :ref:`machine.Pin <machine.Pin>` class::
     from machine import Pin
 
     p0 = Pin(0, Pin.OUT)    # create output pin on GPIO0
-    p0.on()                 # set pin to "on" (high) level
-    p0.off()                # set pin to "off" (low) level
-    p0.value(1)             # set pin to on/high
+    p0.on()                  # set pin to "on" (high) level
+    p0.off()                 # set pin to "off" (low) level
+    p0.value(1)              # set pin to on/high
 
     p2 = Pin(2, Pin.IN)     # create input pin on GPIO2
-    print(p2.value())       # get value, 0 or 1
+    print(p2.value())        # get value, 0 or 1
 
     p4 = Pin(4, Pin.IN, Pin.PULL_UP) # enable internal pull-up resistor
     p5 = Pin(5, Pin.OUT, value=1) # set pin high on creation
@@ -149,12 +149,12 @@ Use the ``machine.PWM`` class::
 
     from machine import Pin, PWM
 
-    pwm0 = PWM(Pin(0))      # create PWM object from a pin
-    pwm0.freq()             # get current frequency
-    pwm0.freq(1000)         # set frequency
-    pwm0.duty()             # get current duty cycle
-    pwm0.duty(200)          # set duty cycle
-    pwm0.deinit()           # turn off PWM on the pin
+    pwm0 = PWM(Pin(0))       # create PWM object from a pin
+    pwm0.freq()              # get current frequency
+    pwm0.freq(1000)          # set frequency
+    pwm0.duty()              # get current duty cycle
+    pwm0.duty(200)           # set duty cycle
+    pwm0.deinit()            # turn off PWM on the pin
 
     pwm2 = PWM(Pin(2), freq=500, duty=512) # create and configure in one go
 
@@ -168,8 +168,8 @@ Use the :ref:`machine.ADC <machine.ADC>` class::
 
     from machine import ADC
 
-    adc = ADC(0)            # create ADC object on ADC pin
-    adc.read()              # read value, 0-1024
+    adc = ADC(0)             # create ADC object on ADC pin
+    adc.read()               # read value, 0-1024
 
 Software SPI bus
 ----------------
@@ -187,16 +187,16 @@ class::
 
     spi.init(baudrate=200000) # set the baudrate
 
-    spi.read(10)            # read 10 bytes on MISO
-    spi.read(10, 0xff)      # read 10 bytes while outputing 0xff on MOSI
+    spi.read(10)             # read 10 bytes on MISO
+    spi.read(10, 0xff)       # read 10 bytes while outputing 0xff on MOSI
 
     buf = bytearray(50)     # create a buffer
-    spi.readinto(buf)       # read into the given buffer (reads 50 bytes in this case)
+    spi.readinto(buf)        # read into the given buffer (reads 50 bytes in this case)
     spi.readinto(buf, 0xff) # read into the given buffer and output 0xff on MOSI
 
     spi.write(b'12345')     # write 5 bytes on MOSI
 
-    buf = bytearray(4)      # create a buffer
+    buf = bytearray(4)       # create a buffer
     spi.write_readinto(b'1234', buf) # write to MOSI and read from MISO into the buffer
     spi.write_readinto(buf, buf) # write buf to MOSI and read MISO back into buf
 
@@ -226,7 +226,7 @@ and is accessed via the :ref:`machine.I2C <machine.I2C>` class::
     # construct an I2C bus
     i2c = I2C(scl=Pin(5), sda=Pin(4), freq=100000)
 
-    i2c.readfrom(0x3a, 4)   # read 4 bytes from slave device with address 0x3a
+    i2c.readfrom(0x3a, 4)    # read 4 bytes from slave device with address 0x3a
     i2c.writeto(0x3a, '12') # write '12' to slave device with address 0x3a
 
     buf = bytearray(10)     # create a buffer with 10 bytes
@@ -274,11 +274,11 @@ The OneWire driver is implemented in software and works on all pins::
     import onewire
 
     ow = onewire.OneWire(Pin(12)) # create a OneWire bus on GPIO12
-    ow.scan()               # return a list of devices on the bus
-    ow.reset()              # reset the bus
-    ow.readbyte()           # read a byte
-    ow.writebyte(0x12)      # write a byte on the bus
-    ow.write('123')         # write bytes on the bus
+    ow.scan()                # return a list of devices on the bus
+    ow.reset()               # reset the bus
+    ow.readbyte()            # read a byte
+    ow.writebyte(0x12)       # write a byte on the bus
+    ow.write('123')          # write bytes on the bus
     ow.select_rom(b'12345678') # select a specific device by its ROM code
 
 There is a specific driver for DS18S20 and DS18B20 devices::
@@ -303,11 +303,11 @@ Use the ``neopixel`` module::
     from machine import Pin
     from neopixel import NeoPixel
 
-    pin = Pin(0, Pin.OUT)   # set GPIO0 to output to drive NeoPixels
-    np = NeoPixel(pin, 8)   # create NeoPixel driver on GPIO0 for 8 pixels
+    pin = Pin(0, Pin.OUT)    # set GPIO0 to output to drive NeoPixels
+    np = NeoPixel(pin, 8)    # create NeoPixel driver on GPIO0 for 8 pixels
     np[0] = (255, 255, 255) # set the first pixel to white
-    np.write()              # write data to all pixels
-    r, g, b = np[0]         # get first pixel colour
+    np.write()               # write data to all pixels
+    r, g, b = np[0]          # get first pixel colour
 
 For low-level driving of a NeoPixel::
 
@@ -323,10 +323,10 @@ Use the ``apa102`` module::
     from apa102 import APA102
 
     clock = Pin(14, Pin.OUT)     # set GPIO14 to output to drive the clock
-    data = Pin(13, Pin.OUT)      # set GPIO13 to output to drive the data
+    data = Pin(13, Pin.OUT)       # set GPIO13 to output to drive the data
     apa = APA102(clock, data, 8) # create APA102 driver on the clock and the data pin for 8 pixels
     apa[0] = (255, 255, 255, 31) # set the first pixel to white with a maximum brightness of 31
-    apa.write()                  # write data to all pixels
+    apa.write()                    # write data to all pixels
     r, g, b, brightness = apa[0] # get first pixel colour
 
 For low-level driving of an APA102::

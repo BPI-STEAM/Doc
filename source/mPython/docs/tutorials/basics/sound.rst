@@ -8,10 +8,10 @@
     from MicroPython import *
     
     while True:
-        oled.fill(0) 
-        oled.DispChar('声音：',0,16)
-        oled.DispChar("%d" % (sound.read()),40,20)
-        oled.show()
+       oled.fill(0) 
+       oled.DispChar('声音：',0,16)
+       oled.DispChar("%d" % (sound.read()),40,20)
+       oled.show()
 
 
 使用前，导入MicroPython模块

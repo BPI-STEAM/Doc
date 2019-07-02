@@ -260,17 +260,17 @@ Socket须为阻塞模式；允许超时存在，但若出现超时，文件对�
 ------
 
 .. data:: AF_INET
-          AF_INET6
+        AF_INET6
 
    地址簇
 
 .. data:: SOCK_STREAM
-          SOCK_DGRAM
+        SOCK_DGRAM
 
    套接字类型
 
 .. data:: IPPROTO_UDP
-          IPPROTO_TCP
+        IPPROTO_TCP
 
 IP协议号
 

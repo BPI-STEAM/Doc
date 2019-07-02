@@ -13,18 +13,18 @@
 
 .. code:: python
 
-   from microbit import *
+    from microbit import *
 
-   sleep(2000)
+    sleep(2000)
 
-   display.scroll(str(button_a.get_presses()))
+    display.scroll(str(button_a.get_presses()))
 
 这段代码运行时候会先暂停两秒，然后你才开始按键，此时将会滚动显示你按下 A
 的次数。就是这样简单，虽然这些代码并没有什么用，但还是提供了些许新思路，让你可以去想象更多控制硬件的方式。
 
 1. 这个 sleep
-   函数可以让板子暂停些许时间，暂停的时间为方块数字的毫秒，如果你想在你的程序某个时候暂停，就按照上面那样写个
-   sleep 函数就行。
+    函数可以让板子暂停些许时间，暂停的时间为方块数字的毫秒，如果你想在你的程序某个时候暂停，就按照上面那样写个
+    sleep 函数就行。
 2. button_a 对象允许你通过 get_presses 方法 获取一个时间内被按的次数
 
 然后一旦 get_presses 获取到了值，将其传递到 display.sroll
@@ -52,19 +52,19 @@ str(“10”)。
 
 .. code:: python
 
-   while True:
-       # Do stuff
+    while True:
+        # Do stuff
 
 所以我们可以构筑一个很简单的代码
 
 .. code:: python
 
-   from microbit import *
+    from microbit import *
 
-   while True:
-       if button_a.is_pressed():
-           display.show(Image.HAPPY)
-           display.clear()
+    while True:
+        if button_a.is_pressed():
+            display.show(Image.HAPPY)
+            display.clear()
 
 此时可以按下按键 A 显示我们之前学习到的 Image ，这便是所谓的学以致用了。
 

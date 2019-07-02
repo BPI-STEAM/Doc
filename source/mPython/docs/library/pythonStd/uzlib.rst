@@ -23,6 +23,6 @@
    这允许使用大于可用堆大小的数据处理压缩流。除 `decompress()` 中所述的值外， *wbits* 可能取值24..31 (16 + 8..15)，这也就意味着输入流带有gzip首标。
 
    .. admonition:: 与CPython区别
-      :class: attention
+     :class: attention
 
-      该类为MicroPython的扩展，暂时使用该类，在后续版本中可能会进行较大的修改或删除。
+     该类为MicroPython的扩展，暂时使用该类，在后续版本中可能会进行较大的修改或删除。

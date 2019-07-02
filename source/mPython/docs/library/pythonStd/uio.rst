@@ -103,4 +103,4 @@ to implement, or subclass, a stream class in pure Python.
 
     .. method:: getvalue()
 
-       获取保存数据的底层缓冲区的当前内容。
+      获取保存数据的底层缓冲区的当前内容。

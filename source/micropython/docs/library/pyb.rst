@@ -50,9 +50,9 @@ Time related functions
    
    Example::
 
-       start = pyb.millis()
-       while pyb.elapsed_millis(start) < 1000:
-           # Perform some operation
+      start = pyb.millis()
+      while pyb.elapsed_millis(start) < 1000:
+         # Perform some operation
 
 .. function:: elapsed_micros(start)
 
@@ -63,10 +63,10 @@ Time related functions
    
    Example::
 
-       start = pyb.micros()
-       while pyb.elapsed_micros(start) < 1000:
-           # Perform some operation
-           pass
+      start = pyb.micros()
+      while pyb.elapsed_micros(start) < 1000:
+         # Perform some operation
+         pass
 
 Reset related functions
 -----------------------
@@ -213,7 +213,7 @@ Miscellaneous functions
 .. function:: mount(device, mountpoint, \*, readonly=False, mkfs=False)
 
    .. note:: This function is deprecated. Mounting and unmounting devices should
-      be performed by :meth:`uos.mount` and :meth:`uos.umount` instead.
+     be performed by :meth:`uos.mount` and :meth:`uos.umount` instead.
 
    Mount a block device and make it available as part of the filesystem.
    ``device`` must be an object that provides the block protocol. (The

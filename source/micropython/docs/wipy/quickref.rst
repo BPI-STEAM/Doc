@@ -11,10 +11,10 @@ Below is a quick reference for CC3200/WiPy.  If it is your first time
 working with this board please consider reading the following sections first:
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
 
-   general.rst
-   tutorial/index.rst
+    general.rst
+    tutorial/index.rst
 
 General board control (including sleep modes)
 ---------------------------------------------
@@ -29,8 +29,8 @@ See the :mod:`machine` module::
 
     machine.idle()        # average current decreases to (~12mA), any interrupts wake it up
     machine.lightsleep()  # everything except for WLAN is powered down (~950uA avg. current)
-                          # wakes from Pin, RTC or WLAN
-    machine.deepsleep()   # deepest sleep mode, MCU starts from reset. Wakes from Pin and RTC.
+                            # wakes from Pin, RTC or WLAN
+    machine.deepsleep()    # deepest sleep mode, MCU starts from reset. Wakes from Pin and RTC.
 
 Pins and GPIO
 -------------
@@ -223,5 +223,5 @@ See :mod:`wipy`. ::
     import wipy
 
     wipy.heartbeat(False)  # disable the heartbeat LED
-    wipy.heartbeat(True)   # enable the heartbeat LED
-    wipy.heartbeat()       # get the heartbeat state
+    wipy.heartbeat(True)    # enable the heartbeat LED
+    wipy.heartbeat()        # get the heartbeat state

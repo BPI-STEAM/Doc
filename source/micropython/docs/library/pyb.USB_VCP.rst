@@ -86,9 +86,9 @@ Methods
 
    Receive data on the bus:
    
-     - ``data`` can be an integer, which is the number of bytes to receive,
-       or a mutable buffer, which will be filled with received bytes.
-     - ``timeout`` is the timeout in milliseconds to wait for the receive.
+    - ``data`` can be an integer, which is the number of bytes to receive,
+      or a mutable buffer, which will be filled with received bytes.
+    - ``timeout`` is the timeout in milliseconds to wait for the receive.
    
    Return value: if ``data`` is an integer then a new buffer of the bytes received,
    otherwise the number of bytes read into ``data`` is returned.
@@ -97,7 +97,7 @@ Methods
 
    Send data over the USB VCP:
    
-     - ``data`` is the data to send (an integer to send, or a buffer object).
-     - ``timeout`` is the timeout in milliseconds to wait for the send.
+    - ``data`` is the data to send (an integer to send, or a buffer object).
+    - ``timeout`` is the timeout in milliseconds to wait for the send.
    
    Return value: number of bytes sent.

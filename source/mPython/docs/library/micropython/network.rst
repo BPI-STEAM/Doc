@@ -113,16 +113,16 @@
 
   import network
 
-  SSID = "yourSSID"                  #WiFi名称
-  PASSWORD = "yourPASSWD"            #WiFi密码
+  SSID = "yourSSID"               #WiFi名称
+  PASSWORD = "yourPASSWD"          #WiFi密码
 
   wlan = network.WLAN(network.STA_IF)  #创建WLAN对象
-  wlan.active(True)                  #激活界面
-  wlan.scan()                        #扫描接入点
-  wlan.isconnected()                 #检查站点是否连接到AP
-  wlan.connect(SSID, PASSWORD)       #连接到AP
-  wlan.config('mac')                 #获取接口的MAC adddress
-  wlan.ifconfig()                    #获取接口的IP/netmask/gw/DNS地址
+  wlan.active(True)               #激活界面
+  wlan.scan()                    #扫描接入点
+  wlan.isconnected()              #检查站点是否连接到AP
+  wlan.connect(SSID, PASSWORD)      #连接到AP
+  wlan.config('mac')              #获取接口的MAC adddress
+  wlan.ifconfig()                #获取接口的IP/netmask/gw/DNS地址
 
 
 
@@ -130,8 +130,8 @@
 
   import network
 
-  ap = network.WLAN(network.AP_IF)     #创建接入点界面
-  ap.active(True)                      #激活界面
+  ap = network.WLAN(network.AP_IF)    #创建接入点界面
+  ap.active(True)                  #激活界面
   ap.config(essid='ESP-AP',channel=1)  #设置接入点的ESSID，和WiFi 通道
 
   
@@ -145,8 +145,8 @@ WiFi连接实例::
   if not wlan.isconnected():
     print('connecting to network...')
     wlan.connect('SSID', 'PASSWORD')   #连接到AP
-      #'SSID'： WiFi账号名
-      #'PASSWORD'：WiFi密码
+     #'SSID'： WiFi账号名
+     #'PASSWORD'：WiFi密码
     while not wlan.isconnected():
-      pass
+     pass
   print('network config:', wlan.ifconfig())

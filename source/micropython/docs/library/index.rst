@@ -5,12 +5,12 @@ MicroPython libraries
 
 .. warning::
 
-   Important summary of this section
+    Important summary of this section
 
-   * MicroPython implements a subset of Python functionality for each module.
-   * To ease extensibility, MicroPython versions of standard Python modules
+    * MicroPython implements a subset of Python functionality for each module.
+    * To ease extensibility, MicroPython versions of standard Python modules
      usually have ``u`` ("micro") prefix.
-   * Any particular MicroPython variant or port may miss any feature/function
+    * Any particular MicroPython variant or port may miss any feature/function
      described in this general documentation (due to resource constraints or
      other limitations).
 
@@ -71,30 +71,30 @@ directory ``json``) and load that module if it is found.  If nothing is found,
 it will fallback to loading the built-in ``ujson`` module.
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
 
-   builtins.rst
-   array.rst
-   cmath.rst
-   gc.rst
-   math.rst
-   sys.rst
-   ubinascii.rst
-   ucollections.rst
-   uerrno.rst
-   uhashlib.rst
-   uheapq.rst
-   uio.rst
-   ujson.rst
-   uos.rst
-   ure.rst
-   uselect.rst
-   usocket.rst
-   ussl.rst
-   ustruct.rst
-   utime.rst
-   uzlib.rst
-   _thread.rst
+    builtins.rst
+    array.rst
+    cmath.rst
+    gc.rst
+    math.rst
+    sys.rst
+    ubinascii.rst
+    ucollections.rst
+    uerrno.rst
+    uhashlib.rst
+    uheapq.rst
+    uio.rst
+    ujson.rst
+    uos.rst
+    ure.rst
+    uselect.rst
+    usocket.rst
+    ussl.rst
+    ustruct.rst
+    utime.rst
+    uzlib.rst
+    _thread.rst
 
 
 MicroPython-specific libraries
@@ -104,15 +104,15 @@ Functionality specific to the MicroPython implementation is available in
 the following libraries.
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
 
-   btree.rst
-   framebuf.rst
-   machine.rst
-   micropython.rst
-   network.rst
-   ucryptolib.rst
-   uctypes.rst
+    btree.rst
+    framebuf.rst
+    machine.rst
+    micropython.rst
+    network.rst
+    ucryptolib.rst
+    uctypes.rst
 
 
 Libraries specific to the pyboard
