@@ -1,15 +1,12 @@
-编程概念
-========================================
+.. toctree::
+   :maxdepth: 2
 
-.. toctree ::
-   ：maxdepth：2
-   ：编号：
-
-   变量
-   逻辑
-   环
-   数学
-   文本
-   排列
-   颜色
-   功能
+   variables
+   logic
+   loop
+   math
+   text
+   array
+   color
+   function
+   

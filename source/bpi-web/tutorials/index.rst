@@ -7,8 +7,6 @@ Web:bit 离线教育版
     
 - `在线编程<https://webbit.webduino.io/blockly/>`_ & `学习手册（繁体版） <https://tutorials.webduino.io/zh-tw/docs/webbit/index.html >`_
 
-正在准备简体版内容，敬请期待。
-
 .. toctree::
    :maxdepth: 2
 
