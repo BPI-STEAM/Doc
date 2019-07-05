@@ -4,7 +4,7 @@
 
 本产品采用 CH340 / CH341 串口驱动芯片，可以轻松的在 Windows 、 Linux 等系统下自动安装驱动。
 
-> [CH341SER 相关系统驱动](http://www.wch.cn/download/CH341SER_ZIP.html)
+> [CH341SER win系统驱动](http://www.wch.cn/downloads/file/5.html)
 
 将板子通过 MicroUSB 线连接到你的电脑里，以下以 Windows 10 为例。
 
