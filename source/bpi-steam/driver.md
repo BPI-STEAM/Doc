@@ -2,9 +2,10 @@
 
 ## 连接板子
 
-本产品采用 CH340 / CH341 串口驱动芯片，可以轻松的在 Windows 、 Linux 等系统下自动安装驱动。
+板子采用 CH340 / CH341 串口驱动芯片，可以轻松的在 Windows 、 Linux 等系统下自动安装驱动。
 
-> [CH341SER win系统驱动](http://www.wch.cn/downloads/file/5.html)
+> [CH341SER Win系统驱动](http://www.wch.cn/downloads/file/5.html)
+> [各类系统驱动下载链接](https://blog.csdn.net/jazzsoldier/article/details/70169732)
 
 将板子通过 MicroUSB 线连接到你的电脑里，以下以 Windows 10 为例。
 
@@ -40,6 +41,10 @@
 
 可以看到原来的 **USB2.0-Serial** 消失了，取而代之的是 **USB-SERIAL CH340(COM3)**，这意味着你已经成功安装驱动，并且得到板子串口名称为（**COM3**），你可以通过各种串口工具来查看串口名（COM3）的板子传出的信息。
 
-## 其他系统
+## MAC 系统安装
 
-- 至此板子连接成功，是 Linux 或 Mac 系统则需要你自行 baidu 或 Google 了。
+- [CH340 MAC 驱动使用教程](https://blog.csdn.net/jazzsoldier/article/details/70171771)
+
+## Linux 系统安装
+
+- 官方 linux Kernel2.6 以后默认自带，也可在[此处下载](http://www.wch.cn/download/CH341SER_LINUX_ZIP.html)。

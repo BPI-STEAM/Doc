@@ -8,17 +8,12 @@ Welcome to BPI-STEAM documentation!
 
 .. Hint::
 
-    欢迎来到 BPI-STEAM 的用户使用文档，本项目托管于 `Github BPI-STEAM <https://github.com/BPI-STEAM>`_ 开源组织。
+    欢迎来到 BPI-STEAM 的用户使用文档，本文档托管于 `Github <https://github.com/BPI-STEAM>`_ 。
 
-.. Attention::
+.. image:: bpi-steam/readme/product.jpg
+    :alt: 正面外观
 
-    由于开源发展迅速，文档中可以搜索得到英文参考文档，有助于开发者在日后的学习和查阅 API 所用，无法完全中文内容，还请谅解。
-
-为您介绍一下 BPI-BIT 这款产品的基本信息。
-
-.. image:: _static/facade.gif
-
-BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源 STEAM 教育产品。
+BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源 STEAM 教育玩具。
 
 .. toctree::
     :maxdepth: 2
@@ -47,7 +42,7 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
 
 用户通过烧写 MicroPython 固件，就可以使用当下世界上最流行的 Python 语言进行编程。
 
-配合专业 IDE 的支持（如：VsCode、PyCharm），以便您轻松地将代码从电脑传输到板子中，从而体验程序创作的无穷乐趣！
+提供丰富的 examples 配合专业 IDE 的支持（如：VsCode、PyCharm），以便您轻松地将代码从电脑传输到板子中，从而体验程序创作的无穷乐趣！
 
 .. toctree::
     :maxdepth: 2

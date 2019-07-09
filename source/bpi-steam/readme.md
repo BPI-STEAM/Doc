@@ -38,33 +38,13 @@ Bit 开发板长 5 公分宽 5 公分，重量约 10 ~ 12 公克，除了下方 
 
 ![](readme/version.jpg)
 
-## 产品支持
-
-### [安装驱动](driver.md)
-
-### Webduino
-
-- [Webduino 基础教学](https://webduino.com.cn/site/zh_cn/tutorials.html)
-- [Webduino 玩家指南](https://github.com/BPI-STEAM/BPI-BIT-WebDuino)
-- [Webduino 中文社区](https://forum.banana-pi.org.cn/c/bpi-bit/webduino)
-
-### MicroPython
-
-- [MicroPython 玩家指南](https://github.com/BPI-STEAM/BPI-BIT-MicroPython)
-- [MicroPython 示例代码](https://github.com/BPI-STEAM/BPI-BIT-Samples)
-- [MicroPython 中文社区](https://forum.banana-pi.org.cn/c/bpi-bit/micropython)
-
-### Arduino
-
-- [Arduino 玩家指南](https://github.com/BPI-STEAM/BPI-BIT-Arduino)
-
 ## 硬件设计
 
 ### 引脚占用
 
 ![](readme/extern.png)
 
-### 外观资料
+### 丝印图
 
 ![](readme/bot.png)
 
