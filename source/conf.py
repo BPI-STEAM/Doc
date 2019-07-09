@@ -22,7 +22,7 @@ copyright = '2019, Open Source'
 author = 'junhuanchen'
 
 # The full version, including alpha/beta/rc tags
-release = 'alpha'
+release = '1.0.0'
 
 
 # -- General configuration ---------------------------------------------------
