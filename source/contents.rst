@@ -3,17 +3,20 @@
     You can adapt this file completely to your liking, but it should at least
     contain the root `toctree` directive.
 
-Welcome to BPI-STEAM documentation!
+BPI-STEAM 用户文档
 =====================================================
 
 .. Hint::
 
-    欢迎来到 BPI-STEAM 的用户使用文档，本文档托管于 `Github <https://github.com/BPI-STEAM>`_ 。
+    本文档托管于 `BPI-STEAM <https://github.com/BPI-STEAM>`_ 组织。
+
+认识 BPI-BIT 板子
+---------------------------
+
+BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源 STEAM 教育开发板。
 
 .. image:: bpi-steam/readme/product.jpg
     :alt: 正面外观
-
-BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源 STEAM 教育玩具。
 
 .. toctree::
     :maxdepth: 2
