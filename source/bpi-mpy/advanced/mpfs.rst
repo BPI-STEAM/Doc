@@ -4,6 +4,8 @@
 .. Attention::
 
     请确认您的编程环境里已经安装了 Python3 和 pip 工具，否则下面的内容你都无法开始。
+    
+    这里推荐使用 `MicroPython-Samples <https://github.com/BPI-STEAM/MicroPython-Samples>`_ 来部署你的开发环境。
 
 我们已经知道 REPL 可以进行一些简单的代码交互和反馈，现在我们就要让重新认识一下 REPL 了。
 
