@@ -10,7 +10,7 @@
 
 ### 点击小怪兽发出音效
 
-搭配点击小怪兽的积木，点击执行后，用鼠标点击小怪兽就会发出对应的特殊音效。
+搭配「点击小怪兽」积木，点击执行后，用鼠标点击小怪兽就会发出对应的特殊音效。
 
 ![](https://codimd.s3.shivering-isles.com/demo/uploads/upload_f34f3980273799bfb98a1058ece8e423.png)
 
@@ -24,6 +24,6 @@
 
 ![](https://codimd.s3.shivering-isles.com/demo/uploads/upload_6288679620bdf7de696162aeb65f8e45.png)
 
-开启范例后，找到「当绿色怪兽碰到舞台画面的四边缘」选择在积木中加入，并在执行的区域内加入特殊音效，网页执行后，当绿色怪兽碰到画面边缘时，就会发出特殊音效。
+开启范例后，找到「当绿色怪兽碰到舞台画面的四边缘」选择在积木中加入，并在执行的区域内加入特殊音效，执行后，当绿色怪兽碰到画面边缘时，就会发出特殊音效。
 
 ![](https://codimd.s3.shivering-isles.com/demo/uploads/upload_b9ab26b295f96de6e39a2c3e54f09697.png)
