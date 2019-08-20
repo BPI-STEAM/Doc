@@ -1,11 +1,8 @@
-认识软件
-========================================
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
-
+   
+   software
+   update
    setup
-   ota
-   toolbar
-   interface
+

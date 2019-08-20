@@ -11,3 +11,4 @@
    photocell-thermistor
    buzzer
    mpu9250
+   pin_io

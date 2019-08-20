@@ -1,4 +1,4 @@
-语音 & 音效
+音效 & 语音
 ========================================
 
 .. toctree::
@@ -6,5 +6,7 @@
    :numbered:
 
    sound-effect
-   speak-aloud
-   speech-recognition
+
+   :speak-aloud
+   :speech-recognition
+   
