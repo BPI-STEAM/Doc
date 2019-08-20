@@ -23,7 +23,7 @@ Web:Bit 编辑器是 Webduino 的学习积木编程的软件，积木编程大�
 
 #### 安装版
 
-> 安装版下载：[WebBitSetup_x.x.x.exe](https://banana-pi.dev/Image/BPI-BIT/)
+> 安装版下载：[WebBitSetup.exe](https://banana-pi.dev/Image/BPI-BIT/WebBitSetup.exe)
 
 **安裝版**目前只提供 Windows 7 以上的系统版本，界面与网页版保持一致，还能够更方便的初始化设置和使用「USB 连接」开发板。
 
