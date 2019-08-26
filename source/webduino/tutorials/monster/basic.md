@@ -30,7 +30,7 @@
 
 举例来说，从百度百科上搜寻[蒙娜丽莎]，可以得到这张图片的「[网址](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/460px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg#_blank)」，复制图片网址，贴到小怪兽展示图片的文字空格内，执行后，就会看见小怪兽展示这张图片。
 
-> 目前图片格式仅支持 jpg、jpeg、png、gif
+> 目前图片格式仅支持 jpg、jpeg、png、gif（图片网址结尾必须带有图片格式才能显示图片）
 
 ![](basic/upload_0e42941e1908cd0eee54be33f33dc605.png)
 
