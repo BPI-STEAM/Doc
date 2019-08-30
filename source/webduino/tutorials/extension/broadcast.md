@@ -1,6 +1,38 @@
-- | 测试日期      | 测试环境          | 硬件版本  | 固件版本           | 软件版本 | 测试人员      |测试结果 |
-  | ------------- | ----------------- | --------- | ------------------ | -------- | ------------- |------------- |
-  | 2019年8月26日 |  Windwos7 &Windwos10 & browser |  1.4 | 7NJfWecLminDsnEtpD | 1.2.5   | 陈渊&徐光发 |软件上模拟广播时，只有最后一个接受积木能够占用频道 |
+ <ul>
+<li><table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 18%" />
+<col style="width: 9%" />
+<col style="width: 19%" />
+<col style="width: 8%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>测试日期</th>
+<th>测试环境</th>
+<th>硬件版本</th>
+<th>固件版本</th>
+<th>软件版本</th>
+<th>测试人员</th>
+<th>测试结果</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2019年8月26日</td>
+<td>Windwos7 &amp;Windwos10 &amp; browser</td>
+<td>1.4</td>
+<td>7NJfWecLminDsnEtpD</td>
+<td>1.2.5</td>
+<td>陈渊&amp;徐光发</td>
+<td>软件上模拟广播时，只有最后一个接受积木能够占用频道</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
 # 网络广播
 
 网络广播功能，不仅能让与开发板彼此交换信息，更可以实现一对多、多对一、虚实互动、远距广播...等多样化的操控，通过广播功能的实现，便能将物联网的应用发挥到极致。
