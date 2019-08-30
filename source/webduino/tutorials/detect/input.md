@@ -1,7 +1,32 @@
-- | 测试日期      | 测试环境          | 硬件版本  | 固件版本           | 软件版本 | 测试人员      |测试结果 |
-  | ------------- | ----------------- | --------- | ------------------ | -------- | ------------- |------------- |
-  | 2019年8月22日 |  Windwos7 &Windwos10 & browser |  1.4 | 7NJfWecLminDsnEtpD | 1.2.5   | 陈渊&徐光发 |存在小问题 |
-  - 输入对话框的勾号存在bug
+ <ul>
+<li><table>
+<thead>
+<tr class="header">
+<th>测试日期</th>
+<th>测试环境</th>
+<th>硬件版本</th>
+<th>固件版本</th>
+<th>软件版本</th>
+<th>测试人员</th>
+<th>测试结果</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2019年8月22日</td>
+<td>Windwos7 &amp;Windwos10 &amp; browser</td>
+<td>1.4</td>
+<td>7NJfWecLminDsnEtpD</td>
+<td>1.2.5</td>
+<td>陈渊&amp;徐光发</td>
+<td>存在小问题</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>输入对话框的勾号存在bug</li>
+</ul></li>
+</ul>
 
 ## 对话框输入文字
 
