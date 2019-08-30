@@ -1,6 +1,38 @@
-- | 测试日期      | 测试环境          | 硬件版本  | 固件版本           | 软件版本 | 测试人员      |测试结果 |
-  | ------------- | ----------------- | --------- | ------------------ | -------- | ------------- |------|
-  | 2019年8月24日 | Windwos10 & Windwos7 |  1.4 | 7NJfWecLminDsnEtpD | 1.2.5   | 陈渊 &徐光发|小建议：引脚图后面可附上一个引脚中文解释链接|
+ <ul>
+<li><table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 21%" />
+<col style="width: 9%" />
+<col style="width: 15%" />
+<col style="width: 7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>测试日期</th>
+<th>测试环境</th>
+<th>硬件版本</th>
+<th>固件版本</th>
+<th>软件版本</th>
+<th>测试人员</th>
+<th>测试结果</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2019年8月24日</td>
+<td>Windwos10 &amp; Windwos7</td>
+<td>1.4</td>
+<td>7NJfWecLminDsnEtpD</td>
+<td>1.2.5</td>
+<td>陈渊 &amp;徐光发</td>
+<td>小建议：引脚图后面可附上一个引脚中文解释链接</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
 
 ## 输入 & 输出
 
