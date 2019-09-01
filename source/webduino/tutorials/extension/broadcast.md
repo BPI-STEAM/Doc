@@ -1,49 +1,15 @@
- <ul>
-<li><table>
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 18%" />
-<col style="width: 9%" />
-<col style="width: 19%" />
-<col style="width: 8%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>测试日期</th>
-<th>测试环境</th>
-<th>硬件版本</th>
-<th>固件版本</th>
-<th>软件版本</th>
-<th>测试人员</th>
-<th>测试结果</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2019年8月26日</td>
-<td>Windwos7 &amp;Windwos10 &amp; browser</td>
-<td>1.4</td>
-<td>7NJfWecLminDsnEtpD</td>
-<td>1.2.5</td>
-<td>陈渊&amp;徐光发</td>
-<td>软件上模拟广播时，只有最后一个接受积木能够占用频道</td>
-</tr>
-</tbody>
-</table></li>
-</ul>
-# 网络广播
+
+## 网络广播
 
 网络广播功能，不仅能让与开发板彼此交换信息，更可以实现一对多、多对一、虚实互动、远距广播...等多样化的操控，通过广播功能的实现，便能将物联网的应用发挥到极致。
 
-## 广播积木清单
+### 广播积木清单
 
 广播积木包含一块负责发送广播消息的积木、一块负责接收广播消息的积木和一块呈现广播消息的积木。
 
 ![](broadcast/upload_66313af34ac597a959f48048083c90b8.png)
 
-## 发送广播消息
+### 发送广播消息
 
 「发送广播消息」积木可以指定一个频道名称，以及要向这个频道发送的文字，只要频道名称相同，所有在该频道上的装置或人员，都能收到广播消息，*发送广播消息不限制只有实体装置能发送，不论是实体装置、虚拟装置、没有开发板的程序...等，都能够向指定频道发送消息*。
 
@@ -51,7 +17,7 @@
 
 ![](broadcast/upload_3d0b521e0853faeef5db3cce155ccedb.png)
 
-## 接收广播消息
+### 接收广播消息
 
 「接收广播消息」积木可以指定一个频道名称，就能不断收听这个频道的变化，只要有人或开发板向这个频道发送消息，就能够通过广播消息的积木显示，*接收广播消息不限制只有实体装置能接收，不论是实体装置、虚拟装置、没有开发板的程序...等，都能够接收指定频道的消息*。
 
@@ -74,3 +40,30 @@
 两块开发板的程序都执行后，点击负责发送广播的开发板的按钮开关，就可以看到另外一块开发板显示对应的消息。
 
 ![](broadcast/broadcast-07.gif)
+
+### 测试报告
+
+<table>
+<thead>
+<tr class="header">
+<th>测试日期</th>
+<th>测试环境</th>
+<th>硬件版本</th>
+<th>固件版本</th>
+<th>软件版本</th>
+<th>测试人员</th>
+<th>测试结果</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2019年8月26日</td>
+<td>Windwos7 &amp;Windwos10 &amp; browser</td>
+<td>1.4</td>
+<td>7NJfWecLminDsnEtpD</td>
+<td>1.2.5</td>
+<td>陈渊&amp;徐光发</td>
+<td>软件上模拟广播时，只有最后一个接受积木能够占用频道</td>
+</tr>
+</tbody>
+</table>

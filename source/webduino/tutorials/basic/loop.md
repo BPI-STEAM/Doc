@@ -1,27 +1,3 @@
-<table>
-<thead>
-<tr class="header">
-<th>测试日期</th>
-<th>测试环境</th>
-<th>硬件版本</th>
-<th>固件版本</th>
-<th>软件版本</th>
-<th>测试人员</th>
-<th>测试结果</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2019年8月22日</td>
-<td>Windwos7 &amp;Windwos10 &amp; browser</td>
-<td>1.4</td>
-<td>7NJfWecLminDsnEtpD</td>
-<td>1.2.5</td>
-<td>陈渊&amp;徐光发</td>
-<td>通过</td>
-</tr>
-</tbody>
-</table>
 
 ## 循环
 
@@ -144,3 +120,30 @@
 如果有多个循环，也可以使用「停止所有循环」来停止，例如下方的程序，当小怪兽旋转角度大于 90 度，就会停止所有循环。 ( 此处勾选了后台执行，请参阅「[后台执行](loop.html#id9)」章节 )
 
 ![](loop/upload_55f343e086261afb02b6988c542ea8f3.gif)
+
+### 测试报告
+
+<table>
+<thead>
+<tr class="header">
+<th>测试日期</th>
+<th>测试环境</th>
+<th>硬件版本</th>
+<th>固件版本</th>
+<th>软件版本</th>
+<th>测试人员</th>
+<th>测试结果</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2019年8月22日</td>
+<td>Windwos7 &amp;Windwos10 &amp; browser</td>
+<td>1.4</td>
+<td>7NJfWecLminDsnEtpD</td>
+<td>1.2.5</td>
+<td>陈渊&amp;徐光发</td>
+<td>通过</td>
+</tr>
+</tbody>
+</table>

@@ -1,27 +1,3 @@
-<table>
-<thead>
-<tr class="header">
-<th>测试日期</th>
-<th>测试环境</th>
-<th>硬件版本</th>
-<th>固件版本</th>
-<th>软件版本</th>
-<th>测试人员</th>
-<th>测试结果</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2019年8月22日</td>
-<td>Windwos7 &amp;Windwos10 &amp; browser</td>
-<td>1.4</td>
-<td>7NJfWecLminDsnEtpD</td>
-<td>1.2.5</td>
-<td>陈渊&amp;徐光发</td>
-<td>通过</td>
-</tr>
-</tbody>
-</table>
 
 ## 逻辑
 
@@ -144,3 +120,30 @@
 比如上面提到的及格与不及格的例子，因为只有两种条件，就可以通过三元逻辑运算符来轻松实现，且还可以使用比较少的积木来完成同样的结果。
 
 ![](logic/upload_e71e8699fedf0988d8a4d0b7a122f5d1.jpg)
+
+### 测试报告
+
+<table>
+<thead>
+<tr class="header">
+<th>测试日期</th>
+<th>测试环境</th>
+<th>硬件版本</th>
+<th>固件版本</th>
+<th>软件版本</th>
+<th>测试人员</th>
+<th>测试结果</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2019年8月22日</td>
+<td>Windwos7 &amp;Windwos10 &amp; browser</td>
+<td>1.4</td>
+<td>7NJfWecLminDsnEtpD</td>
+<td>1.2.5</td>
+<td>陈渊&amp;徐光发</td>
+<td>通过</td>
+</tr>
+</tbody>
+</table>

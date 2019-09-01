@@ -1,29 +1,3 @@
-<ul>
-<li><table>
-<thead>
-<tr class="header">
-<th>测试日期</th>
-<th>测试环境</th>
-<th>硬件版本</th>
-<th>固件版本</th>
-<th>软件版本</th>
-<th>测试人员</th>
-<th>测试结果</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2019年8月22日</td>
-<td>Windwos7 &amp;Windwos10 &amp; browser</td>
-<td>1.4</td>
-<td>7NJfWecLminDsnEtpD</td>
-<td>1.2.5</td>
-<td>陈渊&amp;徐光发</td>
-<td>通过</td>
-</tr>
-</tbody>
-</table></li>
-</ul>
 
 ## 数学
 
@@ -146,3 +120,30 @@
 「常数」积木会表现是一个不会变动的常数数值，常数包含了以下几种：圆周率(π)、指数(e)、黄金分割率(φ)、sqrt(2)、sqrt(½) 和无限大(∞)。
 
 ![](math/upload_20dde89c350cda10c9fc1b08b0f242d7.jpg)
+
+### 测试报告
+
+<table>
+<thead>
+<tr class="header">
+<th>测试日期</th>
+<th>测试环境</th>
+<th>硬件版本</th>
+<th>固件版本</th>
+<th>软件版本</th>
+<th>测试人员</th>
+<th>测试结果</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2019年8月22日</td>
+<td>Windwos7 &amp;Windwos10 &amp; browser</td>
+<td>1.4</td>
+<td>7NJfWecLminDsnEtpD</td>
+<td>1.2.5</td>
+<td>陈渊&amp;徐光发</td>
+<td>通过</td>
+</tr>
+</tbody>
+</table>

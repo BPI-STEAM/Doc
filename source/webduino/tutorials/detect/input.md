@@ -1,32 +1,3 @@
- <ul>
-<li><table>
-<thead>
-<tr class="header">
-<th>测试日期</th>
-<th>测试环境</th>
-<th>硬件版本</th>
-<th>固件版本</th>
-<th>软件版本</th>
-<th>测试人员</th>
-<th>测试结果</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2019年8月22日</td>
-<td>Windwos7 &amp;Windwos10 &amp; browser</td>
-<td>1.4</td>
-<td>7NJfWecLminDsnEtpD</td>
-<td>1.2.5</td>
-<td>陈渊&amp;徐光发</td>
-<td>存在小问题</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>输入对话框的勾号存在bug</li>
-</ul></li>
-</ul>
 
 ## 对话框输入文字
 
@@ -65,3 +36,30 @@
 通过输入文字的方式，能够轻松实现「一问一答」的效果，在输入文字积木之前摆放小怪兽询问姓名的文字，执行后会停留在输入文字的阶段，输入文字之后，通过「建立字串」积木，让小怪兽说出「XXX 你好」的文字组合。
 
 ![](input/upload_449cda52190c8c863ac236a261af0653.gif)
+
+### 测试报告
+
+<table>
+<thead>
+<tr class="header">
+<th>测试日期</th>
+<th>测试环境</th>
+<th>硬件版本</th>
+<th>固件版本</th>
+<th>软件版本</th>
+<th>测试人员</th>
+<th>测试结果</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2019年8月22日</td>
+<td>Windwos7 &amp;Windwos10 &amp; browser</td>
+<td>1.4</td>
+<td>7NJfWecLminDsnEtpD</td>
+<td>1.2.5</td>
+<td>陈渊&amp;徐光发</td>
+<td>输入对话框的勾号存在bug</td>
+</tr>
+</tbody>
+</table>

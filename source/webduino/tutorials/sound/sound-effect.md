@@ -1,29 +1,3 @@
-  <ul>
-<li><table>
-<thead>
-<tr class="header">
-<th>测试日期</th>
-<th>测试环境</th>
-<th>硬件版本</th>
-<th>固件版本</th>
-<th>软件版本</th>
-<th>测试人员</th>
-<th>测试结果</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2019年8月23日</td>
-<td>Windwos7 &amp;Windwos10 &amp; browser</td>
-<td>1.4</td>
-<td>7NJfWecLminDsnEtpD</td>
-<td>1.2.5</td>
-<td>陈渊&amp;徐光发</td>
-<td>通过</td>
-</tr>
-</tbody>
-</table></li>
-</ul>
 
 ## 特殊音效
 
@@ -54,3 +28,30 @@
 开启范例后，找到「当绿色怪兽碰到舞台画面的四边缘」选择在积木中加入，并在执行的区域内加入特殊音效，执行后，当绿色怪兽碰到画面边缘时，就会发出特殊音效。
 
 ![](https://codimd.s3.shivering-isles.com/demo/uploads/upload_b9ab26b295f96de6e39a2c3e54f09697.png)
+
+### 测试报告
+
+<table>
+<thead>
+<tr class="header">
+<th>测试日期</th>
+<th>测试环境</th>
+<th>硬件版本</th>
+<th>固件版本</th>
+<th>软件版本</th>
+<th>测试人员</th>
+<th>测试结果</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2019年8月23日</td>
+<td>Windwos7 &amp;Windwos10 &amp; browser</td>
+<td>1.4</td>
+<td>7NJfWecLminDsnEtpD</td>
+<td>1.2.5</td>
+<td>陈渊&amp;徐光发</td>
+<td>通过</td>
+</tr>
+</tbody>
+</table>

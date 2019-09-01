@@ -1,29 +1,4 @@
- <ul>
-<li><table>
-<thead>
-<tr class="header">
-<th>测试日期</th>
-<th>测试环境</th>
-<th>硬件版本</th>
-<th>固件版本</th>
-<th>软件版本</th>
-<th>测试人员</th>
-<th>测试结果</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2019年8月22日</td>
-<td>Windwos7 &amp;Windwos10</td>
-<td>1.4</td>
-<td>7NJfWecLminDsnEtpD</td>
-<td>1.2.5</td>
-<td>陈渊&amp;徐光发</td>
-<td>通过</td>
-</tr>
-</tbody>
-</table></li>
-</ul>
+
 ## 按钮开关
 
 在开发板正面的左右两侧，有两颗按钮开关，通过使用这两个开关，可以打造真实的游戏遥控器或智能家居控制的应用，更符合物联网的使用场景。
@@ -51,3 +26,30 @@
 通过开关的按下、放开和长按三种行为，就能做出「按下时有图案，变成长按后图案会变色，最后放开开关就会关灯」的范例，执行后，如果是使用模拟器，就可以用鼠标点击 A 按钮查看变化效果，如果是使用实体开发板，则可以直接用手指按压开关。
 
 ![](ab-button/upload_2bc8f9ecd689421f9d4a0d8dfb538eb3.gif)
+
+### 测试报告
+
+<table>
+<thead>
+<tr class="header">
+<th>测试日期</th>
+<th>测试环境</th>
+<th>硬件版本</th>
+<th>固件版本</th>
+<th>软件版本</th>
+<th>测试人员</th>
+<th>测试结果</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2019年8月22日</td>
+<td>Windwos7 &amp;Windwos10</td>
+<td>1.4</td>
+<td>7NJfWecLminDsnEtpD</td>
+<td>1.2.5</td>
+<td>陈渊&amp;徐光发</td>
+<td>通过</td>
+</tr>
+</tbody>
+</table>

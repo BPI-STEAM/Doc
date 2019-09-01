@@ -1,38 +1,4 @@
- <ul>
-<li><table>
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 18%" />
-<col style="width: 9%" />
-<col style="width: 19%" />
-<col style="width: 8%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>测试日期</th>
-<th>测试环境</th>
-<th>硬件版本</th>
-<th>固件版本</th>
-<th>软件版本</th>
-<th>测试人员</th>
-<th>测试结果</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2019年8月23日</td>
-<td>Windwos7 &amp;Windwos10 &amp; browser</td>
-<td>1.4</td>
-<td>7NJfWecLminDsnEtpD</td>
-<td>1.2.5</td>
-<td>陈渊&amp;徐光发</td>
-<td>有小问题：【停止演奏】积木需要内置部分延时</td>
-</tr>
-</tbody>
-</table></li>
-</ul>
+
 ## 音乐＆声音
 
 开发板内有一个微型蜂鸣器，可以发出三个八度音阶的单一声响，通过不同音符代码的组合，或者搭配内置的范例音乐，就能让开发板发出各种美妙的旋律。
@@ -108,3 +74,30 @@
 如果要将「音乐」、「音阶拍子」积木混合控制，在切换音乐之前加入「停止播放」积木，就可完全停止现有的音乐并进行切换。
 
 ![](buzzer/upload_ebad84f9b0d0904fe82e662ec2d62282.png)
+
+### 测试报告
+
+<table>
+<thead>
+<tr class="header">
+<th>测试日期</th>
+<th>测试环境</th>
+<th>硬件版本</th>
+<th>固件版本</th>
+<th>软件版本</th>
+<th>测试人员</th>
+<th>测试结果</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2019年8月23日</td>
+<td>Windwos7 &amp;Windwos10 &amp; browser</td>
+<td>1.4</td>
+<td>7NJfWecLminDsnEtpD</td>
+<td>1.2.5</td>
+<td>陈渊&amp;徐光发</td>
+<td>有小问题：【停止演奏】积木需要内置部分延时</td>
+</tr>
+</tbody>
+</table>
