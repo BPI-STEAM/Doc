@@ -32,6 +32,7 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
     :maxdepth: 2
     :caption: Webduino 目录
 
+    webduino/install&use
     webduino/tutorials/index
     webduino/advanced/index
     webduino/modules/index
