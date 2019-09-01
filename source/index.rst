@@ -12,6 +12,7 @@ BPI-STEAM 用户文档
     :maxdepth: 2
     :caption: Webduino 目录
 
+    webduino/install&use
     webduino/tutorials/index
     webduino/advanced/index
     webduino/modules/index
