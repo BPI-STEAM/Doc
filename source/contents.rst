@@ -48,6 +48,7 @@ BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源
     :maxdepth: 2
     :caption: MicroPython 目录
 
+    micropython/install&use
     micropython/tutorials/index
     micropython/advanced/index
     micropython/samples/index

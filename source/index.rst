@@ -21,6 +21,7 @@ BPI-STEAM 用户文档
     :maxdepth: 2
     :caption: MicroPython 目录
 
+    micropython/install&use
     micropython/tutorials/index
     micropython/advanced/index
     micropython/samples/index
