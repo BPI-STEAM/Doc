@@ -11,9 +11,8 @@ The document content is in [source](https://github.com/BPI-STEAM/Docs/tree/maste
 文档结构如下：（如果你需要操作，请扫一遍关键目录，可以用 markdown 也可以用 rst，看自己喜欢）
 
 - [source](https://github.com/BPI-STEAM/Docs/tree/master/source)
-- [source/bpi-dev](https://github.com/BPI-STEAM/Docs/tree/master/source/bpi-dev) 工具类、归档类、目录类相关。
-- [source/bpi-mpy](https://github.com/BPI-STEAM/Docs/tree/master/source/bpi-mpy) micropython 教程相关。
-- [source/bpi-web](https://github.com/BPI-STEAM/Docs/tree/master/source/bpi-web) webduino 教程相关。
+- [source/micropython](https://github.com/BPI-STEAM/Docs/tree/master/source/micropython) micropython 教程相关。
+- [source/webduino](https://github.com/BPI-STEAM/Docs/tree/master/source/webduino) webduino 教程相关。
 - [source/bpi-steam](https://github.com/BPI-STEAM/Docs/tree/master/source/bpi-steam) bpi-bit 产品、介绍相关。
 - mPython/docs 引用掌控板的公共文档。
 - micropython/docs 引用官方英文的公共文档。
