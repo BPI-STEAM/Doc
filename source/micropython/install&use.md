@@ -46,11 +46,11 @@
 
 - [烧录开发固件](https://doc.bpi-steam.com/zh_CN/latest/micropython/tutorials/flash_mpy.html)
 
-- [搭建开发环境](readme/build.md)
+- [搭建开发环境](https://github.com/BPI-STEAM/MicroPython-Samples/blob/master/readme/build.md)
   
-- [新手入门示例](readme/example.md)
+- [新手入门示例](https://github.com/BPI-STEAM/MicroPython-Samples/blob/master/readme/example.md)
 
-- [常见问题解答](readme/FAQ.md)
+- [常见问题解答](https://github.com/BPI-STEAM/MicroPython-Samples/blob/master/readme/FAQ.md)
 
 ## 第五步，看看巨佬们的博客，进入更大的世界。
 
