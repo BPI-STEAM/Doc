@@ -10,7 +10,7 @@ The document content is in [source](https://github.com/BPI-STEAM/Docs/tree/maste
 
 文档结构如下：（如果你需要操作，请扫一遍关键目录，可以用 markdown 也可以用 rst，看自己喜欢）
 
-- [source](https://github.com/BPI-STEAM/Docs/tree/master/source)
+- [source](https://github.com/BPI-STEAM/Docs/tree/master/source) 文档原料。
 - [source/micropython](https://github.com/BPI-STEAM/Docs/tree/master/source/micropython) micropython 教程相关。
 - [source/webduino](https://github.com/BPI-STEAM/Docs/tree/master/source/webduino) webduino 教程相关。
 - [source/bpi-steam](https://github.com/BPI-STEAM/Docs/tree/master/source/bpi-steam) bpi-bit 产品、介绍相关。
