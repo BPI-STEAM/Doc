@@ -4,9 +4,9 @@
 
 ### 第一步，安装编程软件 
 
-#### win10
+[点击链接](https://banana-pi.dev/Image/BPI-BIT/WebBitSetup.exe) 下载软件。
 
-点击链接 https://banana-pi.dev/Image/BPI-BIT/WebBitSetup.exe 下载软件。
+#### win10
 
 ![](install&use/20190821221729518.png)
 
