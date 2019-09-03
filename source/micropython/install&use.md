@@ -32,15 +32,15 @@
 
 ### 第三步，使用简单的编辑器，编写简单的 Python 代码。
 
-下载安装使用简易的 MicroPython 编辑器（[点此进入教程](tutorials/simple_use.html)），点开连接硬件后，编写 Python 代码 `print('hello')` 运行查看效果。
+下载安装使用简易的 MicroPython 编辑器（[点此进入教程](tutorials/simple_use.html)）。
 
 ### 第四步，看本站教学文档，体验各种有趣的案例。
 
-- 基础文档 [doc-bpi-steam/micropython](https://bpi-steam-docs.readthedocs.io/zh_CN/latest/micropython/tutorials/index.html#)
+点此转到 MicroPython 目录下的基础文档 [doc-bpi-steam/micropython](https://bpi-steam-docs.readthedocs.io/zh_CN/latest/micropython/tutorials/index.html#)
 
 ### 第五步，使用示例代码，学习 Python 编程。
 
-进入如下官方的 SDK 示例仓库，欢迎提出需求或提交代码，和我们一起建设开源吧。
+进入我们的 SDK 示例仓库，欢迎提出需求或提交代码，和我们一起建设开源吧。
 
 - 示例代码 [MicroPython-Samples](https://github.com/BPI-STEAM/MicroPython-Samples)
 
