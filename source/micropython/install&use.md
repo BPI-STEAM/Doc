@@ -38,13 +38,13 @@
 
 - 基础文档 [doc-bpi-steam/micropython](https://bpi-steam-docs.readthedocs.io/zh_CN/latest/micropython/tutorials/index.html#)
 
-### 第四步，使用示例代码，学习 Python 编程。
+### 第五步，使用示例代码，学习 Python 编程。
 
 进入如下官方的 SDK 示例仓库，欢迎提出需求或提交代码，和我们一起建设开源吧。
 
 - 示例代码 [MicroPython-Samples](https://github.com/BPI-STEAM/MicroPython-Samples)
 
-### 第四步，升级编程环境，走进专业开发。
+### 第六步，升级编程环境，走进专业开发。
 
 在 [MicroPython-Samples](https://github.com/BPI-STEAM/MicroPython-Samples) 的 Getting Started 目录下对开发者有用的文档。
 
@@ -54,7 +54,7 @@
 
 - [常见问题解答](https://github.com/BPI-STEAM/MicroPython-Samples/blob/master/readme/FAQ.md)
 
-### 第五步，看看别人的博客，了解更广阔的世界。
+### 第七步，看看别人的博客，了解更广阔的世界。
 
 此处是预留给大佬们的位置，欢迎入驻。
 
