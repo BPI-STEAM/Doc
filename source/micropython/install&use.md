@@ -48,12 +48,6 @@
 
 在 [MicroPython-Samples](https://github.com/BPI-STEAM/MicroPython-Samples) 的 Getting Started 目录下对开发者有用的文档。
 
-- [搭建开发环境](https://github.com/BPI-STEAM/MicroPython-Samples/blob/master/readme/build.md)
-  
-- [新手入门示例](https://github.com/BPI-STEAM/MicroPython-Samples/blob/master/readme/example.md)
-
-- [常见问题解答](https://github.com/BPI-STEAM/MicroPython-Samples/blob/master/readme/FAQ.md)
-
 ### 七、看看别人的博客，了解更广阔的世界。
 
 此处是预留给大佬们的位置，欢迎入驻。
